@@ -43,7 +43,7 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-12">
                             <div className="blog-details-slider-wrapper">
                                 <Swiper {...setting} className="swiper-container blog-slider-active pb-50">
@@ -82,7 +82,7 @@ const Portfolio = () => {
                                 </Swiper>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>

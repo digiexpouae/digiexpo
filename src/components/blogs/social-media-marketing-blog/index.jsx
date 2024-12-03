@@ -16,7 +16,7 @@ const SocialMediaMarketingBlog = () => {
             <BreadcrumbSix sub_title="Social Media Marketing" title="How to Dominate the UAE Market with Effective Social Media Strategies" />
             <Banner />
             <PostboxArea />
-            <Portfolio />
+            {/* <Portfolio /> */}
           </main>
           <FooterFour/>
         </div>

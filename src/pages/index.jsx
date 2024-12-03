@@ -7,10 +7,14 @@ import HomeOne from "../components/homes/home";
 import Wrapper from "../layout/wrapper";
 
 const Home = () => {
+  const seoMetaData = {
+    pageTitle: "Digital marketing agency Dubai | Digital marketing agency UAE",
+    pageDesc:"Boost your business progress with a professional digital marketing agency UAE. DigiExpo, your professional digital marketing agency Dubai service provider."
+  }
 
   return (
     <Wrapper>
-      <SEO pageTitle={"Digital marketing agency Dubai | Digital marketing agency UAE"} pageDesc={"Looking for a Digital marketing agency UAE? DigiExpo, the best marketing agency Dubai offers top-notch services to enhance your business and drive sales."} canonicalUrl={"https://www.digiexpo.ae/"}/>
+      <SEO pageTitle={seoMetaData.pageTitle} pageDesc={ seoMetaData.pageDesc} />
       <HomeOne />
     </Wrapper>
   );

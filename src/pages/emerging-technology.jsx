@@ -4,9 +4,11 @@ import NextGen from "../components/nextGen";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
+  const title = `Emerging Technologies Development Agency Dubai | Emerging Technologies UAE`;
+  const desc = `DigiExpo, a emerging technologies development agency Dubai, can help you grow your company. We act as great partners of marketing and emerging technologies UAE.`;
   return (
     <Wrapper>
-      <SEO pageTitle={"Quality Assurance Jobs in Dubai | Cyber Security Services Uae"} pageDesc={"DigiExpo is the emerging technologies development agency Dubai. Specialized in emergency services technology and advanced technical services across the UAE."} canonicalUrl={"https://www.digiexpo.ae/emerging-technology"}/>
+      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/emerging-technology"}/>
       <NextGen />
     </Wrapper>
   );

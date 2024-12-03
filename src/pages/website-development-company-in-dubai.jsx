@@ -4,9 +4,13 @@ import WebDevelopment from "../components/webDevelopment";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
+  const [title, desc] = [
+    ` Web Design And Development Agency | Web Development Services`,
+    `Work with a great web design and development agency to grow your brand. To improve the visibility of your company, DigiExpo offers great web development services.`,
+  ];
   return (
     <Wrapper>
-      <SEO pageTitle={"web design and development agency | web development services"} pageDesc={"Choose the best website development company in Dubai for cutting-edge web solutions. Our web development services will enhance your brand and drive growth."} canonicalUrl={"https://www.digiexpo.ae/website-development-company-in-dubai"}/>
+      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/website-development-company-in-dubai"}/>
       <WebDevelopment />
     </Wrapper>
   );

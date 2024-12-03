@@ -1,22 +1,55 @@
-import "../styles/index.scss"; 
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import "../styles/index.scss";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
 
-const allowedPaths = ['/', '/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies', '/contact', '/digital-marketing-agency-dubai', '/website-development-company-in-dubai', '/best-web-design-company-dubai', '/mobile-app-development-company-dubai', '/dubai-ecommerce-agency', '/emerging-technology'];
+import client from "@/sanityConfig";
+
+const allowedPaths = [
+  "/",
+  "/contact",
+  "/digital-marketing-agency-dubai",
+  "/website-development-company-in-dubai",
+  "/best-web-design-company-dubai",
+  "/mobile-app-development-company-dubai",
+  "/dubai-ecommerce-agency",
+  "/emerging-technology",
+];
+
+export async function getAllowedPaths() {
+  const query = `*[_type == "blog"]{ "slug": slug.current }`;
+  const blogs = await client.fetch(query);
+
+  const blogPaths = blogs.map((blog) => `/blogs/${blog.slug}`);
+  return [...allowedPaths, ...blogPaths];
+}
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+  const [allowedPaths, setAllowedPaths] = useState([]);
 
-  useEffect(() => {
-    // Redirect to 404 if the current path is not in the allowed list
-    if (!allowedPaths.includes(router.pathname)) {
-      router.replace('/404'); // Redirects to custom 404 page
-    }
-  }, [router.pathname]);
+  // useEffect(() => {
+  //   async function fetchPaths() {
+  //     const paths = await getAllowedPaths();
+  //     setAllowedPaths(paths);
+  //   }
+  //   fetchPaths();
+  // }, []);
+
+  // useEffect(() => {
+  //   if (allowedPaths.length > 0) {
+  //     const isAllowed =
+  //       allowedPaths.includes(router.pathname) || // Check exact paths
+  //       router.pathname.startsWith("/blogs/"); // Allow dynamic blog routes
+
+  //     if (!isAllowed) {
+  //       router.replace("/404");
+  //     }
+  //   }
+  // }, [router.pathname, allowedPaths]);
 
   return <Component {...pageProps} />;
 }

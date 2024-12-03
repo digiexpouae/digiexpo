@@ -4,9 +4,13 @@ import DigitalMarketing from "../components/digitalMarketing";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
+  const [pageTitle, pageDescription] = [
+    `Best Digital Marketing Agency In UAE | Digital Marketing Agency`,
+    `Increase your company's growth with the best Digital Marketing agency in UAE. DigiExpo is your top choice for digital marketing agency services in Dubai.`,
+  ];
   return (
     <Wrapper>
-      <SEO pageTitle={"Best digital marketing agency in uae | Digital marketing agency"} pageDesc={"DigiExpo, best digital marketing agency in UAE, provides innovative and effective solutions. Our digital services are designed to maximize your online presence." } canonicalUrl={"https://www.digiexpo.ae/digital-marketing-agency-dubai"}/>
+      <SEO pageTitle={pageTitle} pageDesc={pageDescription } canonicalUrl={"https://www.digiexpo.ae/digital-marketing-agency-dubai"}/>
       <DigitalMarketing />
     </Wrapper>
   );

@@ -4,9 +4,13 @@ import DesignPage from "../components/designPage";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
+  consty[(title, desc)] = [
+    `Best Web Design Company In Dubai | UI UX Design Services Company`,
+    `The Best Web Design Company in Dubai helps you to grow your business. DigiExpo is the top destination that provides solutions from UI/UX design services Company.`,
+  ];
   return (
     <Wrapper>
-      <SEO pageTitle={"Best Web Design Company in Dubai | UI UX Design Services Company"} pageDesc={"DigiExpo will transform your brand’s vision into reality with our best web design company in Dubai. Our design agency UAE will create impactful designs"} canonicalUrl={"https://www.digiexpo.ae/best-web-design-company-dubai"}/>
+      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/best-web-design-company-dubai"}/>
       <DesignPage />
     </Wrapper>
   );

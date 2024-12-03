@@ -4,9 +4,11 @@ import MobileApp from "../components/mobileApp";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
+  const title = `Mobile App Development Company Dubai | Mobile App Development UAE`;
+  const desc = `Avail the skilled mobile app development company Dubai to grow your company. DigiExpo is your reliable growth partner for mobile app development UAE services.`;
   return (
     <Wrapper>
-      <SEO pageTitle={"mobile app development company in uae | app development services"} pageDesc={"DigiExpo is the leading mobile app development company in UAE. Our app development services provide innovative solutions to bring your app ideas to life."} canonicalUrl={"https://www.digiexpo.ae/mobile-app-development-company-dubai"}/>
+      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/mobile-app-development-company-dubai"}/>
       <MobileApp />
     </Wrapper>
   );
