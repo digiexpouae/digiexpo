@@ -6,7 +6,7 @@ import Wrapper from "../../layout/wrapper";
 const index = () => {
   return (
     <Wrapper>
-      {/* <SEO pageTitle={"How To Dominate The UAE Market With Effective Social Media Strategies"} canonicalUrl={"https://digiexpo.ae/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies"}/> */}
+      <SEO pageTitle={"How To Dominate The UAE Market With Effective Social Media Strategies"} canonicalUrl={"https://digiexpo.ae/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies"}/>
       <SocialMediaMarketingBlog />
     </Wrapper>
   );

@@ -1,10 +1,19 @@
 import  { createClient } from '@sanity/client';
-
+import  ImageUrlBuilder from '@sanity/image-url';
 const client = createClient({
   projectId: "sszv4zrt",
-  dataset: "production",
+  dataset: "digiexpo",
   apiVersion: "2022-03-07",
-  useCdn: true,
+  useCdn: false,
 });
 
+
+
+
+
 export default client;
+
+const builder = ImageUrlBuilder(client)
+export const urlForImage =(source) => {
+  return builder.image(source)
+}

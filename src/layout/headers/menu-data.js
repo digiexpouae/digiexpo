@@ -49,10 +49,10 @@ const menu_data = [
   //     { link: "/price", title: "Price" },
   //     { link: "/register", title: "Register" },
   //     { link: "/sign-in", title: "Signin" },
-  //     { link: "/404", title: "404" }, 
+  //     { link: "/404", title: "404" },
   //   ],
   // },
-  
+
   // {
   //   id: 3,
   //   mega_menu: false,
@@ -62,7 +62,7 @@ const menu_data = [
   //   active: "",
   //   sub_menus: [
   //     { link: "/project", title: "Project" },
-  //     { link: "/project-details", title: "Project Details" }, 
+  //     { link: "/project-details", title: "Project Details" },
   //   ],
   // },
   {
@@ -74,7 +74,7 @@ const menu_data = [
     active: "",
     sub_menus: [
       { link: "/hyggeBikes", title: "Hygge Bikes" },
-      // { link: "/project-details", title: "Project Details" }, 
+      // { link: "/project-details", title: "Project Details" },
     ],
   },
 
@@ -83,7 +83,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "Blog",
-    link: "/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies",
+    link: "/blogs",
     active: "",
     sub_menus: [
       { link: "/blog", title: "Blog" },
@@ -92,7 +92,7 @@ const menu_data = [
       { link: "/blog-details-2", title: "Blog Details 02" },
     ],
   },
-  
+
   {
     id: 5,
     mega_menu: false,
@@ -101,7 +101,7 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
-  
+
 
 ];
 export default menu_data;
