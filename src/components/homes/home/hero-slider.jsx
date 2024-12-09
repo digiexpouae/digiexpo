@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";  
+import React, { useEffect, useRef } from "react";
 //use gsap
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
@@ -19,57 +19,64 @@ import LineShape from "@/svg/line-shape";
 
 // hero content data
 const hero_content = {
-	hero_shape: [
-		{
-			id: 1,
-			cls: "tp-hero-shape-1",
-			img: shape_1,
-		},
-		{
-			id: 2,
-			cls: "tp-hero-shape-2",
-			img: shape_2,
-		},
-	],
-	hero_title: (
-		<>
-			<span className="tp_title">
-				<span className="child">DigiExpo Helps Brand With</span>
-			</span>{" "}
-			<br />
-			<span>
-				<span className="child">Business Growth</span>
-			</span>{" "}
-		</>
-	),
-	sub_title: <> We're Not Just Digital Wizards, We're Magicians With Metrics</>,
-	hero_shape_img: [
-		{
-			id: 1,
-			cls: "1",
-			img: shape_img_1,
-		},
-		{
-			id: 2,
-			cls: "2",
-			img: shape_img_2,
-		},
-	],
+  hero_shape: [
+    {
+      id: 1,
+      cls: "tp-hero-shape-1",
+      img: shape_1,
+    },
+    {
+      id: 2,
+      cls: "tp-hero-shape-2",
+      img: shape_2,
+    },
+  ],
+  hero_title: (
+    <>
+      <span className='tp_title'>
+        <span className='child'>DigiExpo Helps Brand With</span>
+      </span>{" "}
+      <br />
+      <span>
+        <span className='child'>Business Growth</span>
+      </span>{" "}
+    </>
+  ),
+  sub_title: (
+    <>
+      {" "}
+      Welcome to Dubai’s great digital marketing agency. We specialize in
+      offering digital marketing agency UAE services that help companies grow in
+      competitive industries.
+    </>
+  ),
+  hero_shape_img: [
+    {
+      id: 1,
+      cls: "1",
+      img: shape_img_1,
+    },
+    {
+      id: 2,
+      cls: "2",
+      img: shape_img_2,
+    },
+  ],
 
-	hero_thumbs: [
-		{
-			id: 1,
-			col: "4",
-			cls: "tp-hero__sm-img",
-			img: thumb_1,
-		},
-		{
-			id: 2,
-			col: "8",
-			cls: "",
-			img: thumb_2,
-		},
-	],
+  hero_thumbs: [
+    {
+      id: 1,
+      col: "4",
+      cls: "tp-hero__sm-img",
+      img: thumb_1,
+    },
+    {
+      id: 2,
+      col: "8",
+      cls: "",
+      img: thumb_2,
+    },
+  ],
 };
 const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
 	hero_content;

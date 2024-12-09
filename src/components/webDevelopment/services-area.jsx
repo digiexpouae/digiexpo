@@ -11,8 +11,9 @@ const service_content = {
   title: "Stand Out. Get Results. Our Dubai Web Development Services Deliver",
   sub_title: (
     <>
-      DigiExpo, the best website development company in Dubai will help your
-      business to craft user-friendly and unique websites
+      We work as a web design and development agency and specialize in building
+      user-friendly and attractive content. These are customized to meet the
+      demands of your company.
     </>
   ),
 
@@ -234,7 +235,7 @@ const ServicesArea = () => {
             </div>
 
             {/* <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                        <div className="tp-service__dashboard" 
+                        <div className="tp-service__dashboard"
                         style={{backgroundImage: `url(${bg_img})`}} >
                            <div className="tp-service__top-content">
                               <h3 className="tp-service__title-white">{title_2}</h3>
@@ -245,7 +246,7 @@ const ServicesArea = () => {
                               </Link>
                            </div>
                            <div className="tp-service__dashdboard-sm-img">
-                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" 
+                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
                               src={img} alt="theme-pure" />
                            </div>
                         </div>

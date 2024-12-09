@@ -6,11 +6,27 @@ import React from 'react';
 
 
 const feature_content = {
-    title: <>About Customer <span>Stories</span></>,
-    des: <>Take your business to the next level with <span>09</span> accessible premium  extensions <br /> & different features</>,
-    integraton_title: "Strategic Digital Marketing Roadmap",
-    integraton_des: <>DigiExpo, the best digital marketing agency in Dubai develops plans<br /> that successfully deliver target results and generate more revenue.</>,
-}
+  title: (
+    <>
+      About Customer <span>Stories</span>
+    </>
+  ),
+  des: (
+    <>
+      Take your business to the next level with <span>09</span> accessible
+      premium extensions <br /> & different features
+    </>
+  ),
+  integraton_title: "Strategic Digital Marketing Roadmap",
+  integraton_des: (
+    <>
+      This is one of our specialties as the{" "}
+      <b>best digital marketing agency in UAE.</b>
+      <br /> To meet the specific goals of your company, a wide range of
+      services are provided by our staff.
+    </>
+  ),
+};
 const {title, des, integraton_title, integraton_des}  = feature_content
 
 
@@ -22,7 +38,7 @@ const FeatureArea = ({style_integraton}) => {
                      <div className="row">
                         <div className="col-12">
                            <div className="tp-feature-five-section-box text-center mb-40">
-                            {style_integraton ? 
+                            {style_integraton ?
                                 <>
                                 <h3 className="tp-section-title-5 text-purple">
                                     <span>
@@ -34,7 +50,7 @@ const FeatureArea = ({style_integraton}) => {
                                 :
                                 <>
                                 <h3 className="tp-section-title-5 text-purple">{title}</h3>
-                                <p>{des}</p>                                
+                                <p>{des}</p>
                                 </>
                             }
                            </div>
@@ -47,7 +63,7 @@ const FeatureArea = ({style_integraton}) => {
                                         <div className="tp-feature-five-icon p-relative">
                                             {/* <Image src={item.img} alt="theme-pure" /> */}
                                             <video autoPlay muted loop width="100px">
-                                                <source src="/assets/img/feature/analysis.webm" type="video/webm" /> 
+                                                <source src="/assets/img/feature/analysis.webm" type="video/webm" />
                                             </video>
                                             <div className={`tp-feature-five-shape-color tp-feature-five-shape-color-1`}></div>
                                         </div>
@@ -67,7 +83,7 @@ const FeatureArea = ({style_integraton}) => {
                                         <div className="tp-feature-five-icon p-relative">
                                             {/* <Image src={item.img} alt="theme-pure" /> */}
                                             <video autoPlay muted loop width="100px">
-                                                <source src="/assets/img/feature/planning.webm" type="video/webm" /> 
+                                                <source src="/assets/img/feature/planning.webm" type="video/webm" />
                                             </video>
                                             <div className={`tp-feature-five-shape-color tp-feature-five-shape-color-2`}></div>
                                         </div>
@@ -87,7 +103,7 @@ const FeatureArea = ({style_integraton}) => {
                                         <div className="tp-feature-five-icon p-relative">
                                             {/* <Image src={item.img} alt="theme-pure" /> */}
                                             <video autoPlay muted loop width="100px">
-                                                <source src="/assets/img/feature/tracking.webm" type="video/webm" /> 
+                                                <source src="/assets/img/feature/tracking.webm" type="video/webm" />
                                             </video>
                                             <div className={`tp-feature-five-shape-color tp-feature-five-shape-color-3`}></div>
                                         </div>
@@ -107,7 +123,7 @@ const FeatureArea = ({style_integraton}) => {
                                         <div className="tp-feature-five-icon p-relative">
                                             {/* <Image src={item.img} alt="theme-pure" /> */}
                                             <video autoPlay muted loop width="100px">
-                                                <source src="/assets/img/feature/improvement.webm" type="video/webm" /> 
+                                                <source src="/assets/img/feature/improvement.webm" type="video/webm" />
                                             </video>
                                             <div className={`tp-feature-five-shape-color tp-feature-five-shape-color-4`}></div>
                                         </div>

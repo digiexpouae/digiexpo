@@ -12,7 +12,13 @@ import bg_img from "../../../public/assets/img/service/sv-bg-2-1.jpg";
 
 const service_content = {
   title: <>Our Comprehensive Ecommerce Development Process</>,
-  des: <>From Concept to Launch</>,
+  des: (
+    <>
+      E-commerce service include SEO, mobile optimization and digital marketing.
+      End-to-end solutions for e-commerce are provided by us. This helps in
+      increasing sales and building your brand
+    </>
+  ),
 
   users_data: [
     {

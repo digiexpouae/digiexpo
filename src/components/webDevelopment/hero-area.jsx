@@ -12,14 +12,22 @@ import img_1 from "../../../public/assets/img/hero/hero-img-3-1.png";
 import img_2 from "../../../public/assets/img/hero/hero-img-3-1-3.png" ;
 import Link from 'next/link';
 
-const hero_content = { 
-   title_1: <>Your <span>Vision</span> .Our <span>Code</span>.</>,
-   title_2: "Websites That Convert, Guaranteed.",
-   info: <>At DigiExpo, our professional web developers understand<br /> your vision, target audience, and business goals.</>,
-   btn_1: "Live Demo",
-   btn_2: "Try it on Browser",
-   
-}
+const hero_content = {
+  title_1: (
+    <>
+      Your <span>Vision</span> .Our <span>Code</span>.
+    </>
+  ),
+  title_2: "Websites That Convert, Guaranteed.",
+  info: (
+    <>
+      At DigiExpo, Creative designs and modern <b> web development services </b>{" "}
+      <br /> are combined by a skilled team.
+    </>
+  ),
+  btn_1: "Live Demo",
+  btn_2: "Try it on Browser",
+};
 const { title_1, title_2, info, btn_1, btn_2 } = hero_content
 
 const HeroArea = () => {

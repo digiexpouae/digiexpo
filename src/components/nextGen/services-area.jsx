@@ -11,7 +11,9 @@ const service_content = {
   title: "Our Emerging Technology Development Services",
   sub_title: (
     <>
-      DigiExpo deliver Innovation & Positive Change
+      By using <b> emerging technologies development agency Dubai </b> services
+      help in revolutionizing businesses. It offers modern strategies like IOT,
+      AI, block chain, and machine learning.
     </>
   ),
 
@@ -230,7 +232,7 @@ const ServicesArea = () => {
             </div>
 
             {/* <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                        <div className="tp-service__dashboard" 
+                        <div className="tp-service__dashboard"
                         style={{backgroundImage: `url(${bg_img})`}} >
                            <div className="tp-service__top-content">
                               <h3 className="tp-service__title-white">{title_2}</h3>
@@ -241,7 +243,7 @@ const ServicesArea = () => {
                               </Link>
                            </div>
                            <div className="tp-service__dashdboard-sm-img">
-                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" 
+                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
                               src={img} alt="theme-pure" />
                            </div>
                         </div>

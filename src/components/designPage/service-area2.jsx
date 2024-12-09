@@ -12,7 +12,12 @@ import bg_img from "../../../public/assets/img/service/sv-bg-2-1.jpg";
 
 const service_content = {
   title: <>Our Comprehensive Ecommerce Development Process</>,
-  des: <>From Concept to Launch</>,
+  des: (
+    <>
+      Searching for the <b> best web design company in Dubai </b> is important
+      to create an attractive website.
+    </>
+  ),
 
   users_data: [
     {
