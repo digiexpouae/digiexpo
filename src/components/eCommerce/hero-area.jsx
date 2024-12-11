@@ -14,16 +14,16 @@ const hero_content = {
   title: (
     <>
       <span>
-        <span className='child'>E-commerce web</span>
+        <span className='child'>Best E-commerce </span>
       </span>{" "}
       <span>
-        <span className='child'>development Dubai</span>
+        <span className='child'>Websites Development Company Dubai</span>
       </span>{" "}
       <span>
-        <span className='child'>turns visitors into</span>
+        <span className='child'>Turns Visitors </span>
       </span>{" "}
       <span>
-        <span className='child'>loyal customers</span>
+        <span className='child'>Into Loyal Customers</span>
       </span>
     </>
   ),

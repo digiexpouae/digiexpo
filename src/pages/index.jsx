@@ -14,7 +14,11 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <SEO pageTitle={seoMetaData.pageTitle} pageDesc={ seoMetaData.pageDesc} />
+      <SEO
+        pageTitle={seoMetaData.pageTitle}
+        pageDesc={seoMetaData.pageDesc}
+        canonicalUrl={"https://www.digiexpo.ae"}
+      />
       <HomeOne />
     </Wrapper>
   );

@@ -6,30 +6,33 @@ import Image from 'next/image';
 
 const BreadcrumbThree = () => {
     return (
-        <>
-            <div className="breadcrumb__area breadcrumb-height-3 p-relative purple-bg-2 fix">
-               <div className="breadcrumb__shape-1">
-                  <Image src={shape_1} alt="theme-pure" />
-               </div>
-               <div className="breadcrumb__shape-2">
-                  <Image src={shape_2} alt="theme-pure" />
-               </div>
-               <div className="container">
-                  <div className="breadcrumb__content-wrap">
-                     <div className="row justify-content-center">
-                        <div className="col-xl-12">
-                           <div className="breadcrumb__content text-center z-index-3 mb-60">
-                              <h3 className="breadcrumb__title">Future-Proof Your Business With The Best Emerging Technology Development Company Dubai</h3>
-                              {/* <div className="breadcrumb__text">
+      <>
+        <div className='breadcrumb__area breadcrumb-height-3 p-relative purple-bg-2 fix'>
+          <div className='breadcrumb__shape-1'>
+            <Image src={shape_1} alt='theme-pure' />
+          </div>
+          <div className='breadcrumb__shape-2'>
+            <Image src={shape_2} alt='theme-pure' />
+          </div>
+          <div className='container'>
+            <div className='breadcrumb__content-wrap'>
+              <div className='row justify-content-center'>
+                <div className='col-xl-12'>
+                  <div className='breadcrumb__content text-center z-index-3 mb-60'>
+                    <h3 className='breadcrumb__title'>
+                      Future-Proof Your Business With The Best Emerging
+                      Technologies Development Agency Dubai
+                    </h3>
+                    {/* <div className="breadcrumb__text">
                                  <p>Work without distraction on your own or with your team.</p>
                               </div> */}
-                           </div>
-                        </div>
-                     </div>
                   </div>
-               </div>
+                </div>
+              </div>
             </div>
-        </>
+          </div>
+        </div>
+      </>
     );
 };
 

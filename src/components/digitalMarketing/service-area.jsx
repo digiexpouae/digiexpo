@@ -19,15 +19,17 @@ const service_content = {
   service_title: "Turn data into results.",
   service_info: (
     <>
-      Achieve measurable results with our <br />
-      digital Marketing Agency in UAE
+      Achieve Measurable Results With
+      <br />
+      Our Best Digital Marketing Agency In UAE
     </>
   ),
   sub_text: (
     <>
-      Services of a <b> digital marketing agency </b> include PPC, SEO, <br /> content
-      production, and social media marketing. <br /> Our goal helps in connecting with
-      your audience, <br /> producing quality leads, and building brand awareness.
+      Services of a <b> digital marketing agency </b> include PPC, SEO, <br />{" "}
+      content production, and social media marketing. <br /> Our goal helps in
+      connecting with your audience, <br /> producing quality leads, and
+      building brand awareness.
     </>
   ),
 };

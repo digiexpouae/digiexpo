@@ -20,15 +20,27 @@ import hero_shape_5 from "../../../public/assets/img/hero/hero-shape-2-2.png";
 const hero_content = {
   bg_img: "/assets/img/hero/hero-bg-2.png",
   scroll_btn: "Scroll Down",
-  title: <><i><i className="child-1">Redefine </i> </i>{" "}
-  <i><i className="child-1">Your Mobile</i> </i>{" "}
-  <i><i className="child-1">Experience </i> </i>
-  {/* <i><i className="child-1">ways.</i></i> */}
-  </>,
+  title: (
+    <>
+      <i>
+        <i className='child-1'>Redefine Your </i>{" "}
+      </i>{" "}
+      <i>
+        <i className='child-1'>Mobile App Development</i>{" "}
+      </i>{" "}
+      <i>
+        <i className='child-1'>Company Dubai </i>{" "}
+      </i>
+      {/* <i><i className="child-1">ways.</i></i> */}
+    </>
+  ),
   btn_text: "Get Started For Free",
-  sub_title: <>Over<span>5Ok+ Client</span> all over the world</>,
-
-}
+  sub_title: (
+    <>
+      Over<span>5Ok+ Client</span> all over the world
+    </>
+  ),
+};
 const {
   bg_img,
   scroll_btn,

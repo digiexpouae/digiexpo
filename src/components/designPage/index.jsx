@@ -20,12 +20,13 @@ const DesignPage = () => {
   return (
     <>
       <HeaderSix />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+      <div id='smooth-wrapper'>
+        <div id='smooth-content'>
           <main>
-            <StickyIcons/>
-            <StickyButtons/>
-            <BreadcrumbTwoCopy title="Get Your Desired Business Growth with Intuitive UI/UX Design Services in Dubai" />
+            <StickyIcons />
+            <StickyButtons />
+            <BreadcrumbTwoCopy
+              title='Get Your Desired Business Growth With Intuitive UI/UX Design Services Company In Dubai' />
             <Brand />
             <ServiceArea />
             <ContactArea2 />
@@ -38,7 +39,7 @@ const DesignPage = () => {
             <BlogArea />
             <ContactArea />
           </main>
-          <FooterFour/>
+          <FooterFour />
         </div>
       </div>
     </>
