@@ -22,7 +22,7 @@ const ContactUsFormMuz = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
-    fetch("/main.php", {
+    fetch("api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
