@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
+import { useRouter } from 'next/navigation';
 
 const ContactUsFormMuz = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,6 +23,10 @@ const ContactUsFormMuz = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
+
+    
+    
     // Send form data to the PHP backend
     fetch("api/contact", {
       method: "POST",
@@ -32,21 +38,14 @@ const ContactUsFormMuz = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert("Message sent successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            inquiry: "Your Inquiry about",
-            message: "",
-          });
+          router.push('/thank-you');
         } else {
           alert("Failed to send message.");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("There was an error sending your message.");
+        alert("An error occurred while sending the message.");
       });
   };
 
@@ -56,7 +55,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
-
+  console.log( process.env.INTERNAL_EMAIL_USERNAME);
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
