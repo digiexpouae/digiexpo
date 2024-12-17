@@ -19,7 +19,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: true,
     title: "Services",
-    link: "#",
+    link: "/services",
     active: "",
     sub_menus: [
       { link: "/digital-marketing-agency-dubai", title: "Digital Marketing" },
