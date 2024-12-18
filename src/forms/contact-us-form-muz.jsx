@@ -23,10 +23,9 @@ const ContactUsFormMuz = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
 
-    
-    
+
+
     // Send form data to the PHP backend
     fetch("api/contact", {
       method: "POST",
@@ -54,7 +53,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
-
+  console.log( process.env.INTERNAL_EMAIL_USERNAME);
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
