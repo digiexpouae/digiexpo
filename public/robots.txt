@@ -1,4 +1,8 @@
 User-agent: *
-Disallow:
 Disallow: /admin/
-Disallow: /login/
+Disallow: /login/
+Disallow: /ads.txt/
+Disallow: /?
+Disallow: /*?
+
+Sitemap: https://www.digiexpo.ae/sitemap.xml 
