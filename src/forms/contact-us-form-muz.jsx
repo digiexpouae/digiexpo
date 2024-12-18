@@ -44,7 +44,6 @@ const ContactUsFormMuz = () => {
         }
       })
       .catch((error) => {
-        console.error("Error:", error);
         alert("An error occurred while sending the message.");
       });
   };
@@ -55,7 +54,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
-  console.log( process.env.INTERNAL_EMAIL_USERNAME);
+
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
