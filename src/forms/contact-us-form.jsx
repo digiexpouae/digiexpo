@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
+import { useRouter } from 'next/navigation';
 
 const ContactUsForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,7 +24,7 @@ const ContactUsForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
-    fetch("/main.php", {
+    fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,21 +34,14 @@ const ContactUsForm = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          alert("Message sent successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            inquiry: "Your Inquiry about",
-            message: "",
-          });
+          router.push('/thank-you');
         } else {
           alert("Failed to send message.");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("There was an error sending your message.");
+        alert("An error occurred while sending the message.");
       });
   };
 
@@ -104,11 +99,12 @@ const ContactUsForm = () => {
             <NiceSelect
               options={[
                 { value: "Your Inquiry about", text: "Your Inquiry about" },
-                { value: "01 Year", text: "01 Year" },
-                { value: "02 Year", text: "02 Year" },
-                { value: "03 Year", text: "03 Year" },
-                { value: "04 Year", text: "04 Year" },
-                { value: "05 Year", text: "05 Year" },
+                { value: "Digital Marketing", text: "Digital Marketing" },
+                { value: "Website Development", text: "Website Development" },
+                { value: "UI / UX Design", text: "UI / UX Design" },
+                { value: "Mobile Apps", text: "Mobile Apps" },
+                { value: "E-Commerce", text: "E-Commerce" },
+                { value: "Emerging Technology", text: "Emerging Technology" },
               ]}
               defaultCurrent={0}
               onChange={selectHandler}
