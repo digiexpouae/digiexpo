@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 const ContactUsForm = () => {
   const router = useRouter();
@@ -12,7 +13,12 @@ const ContactUsForm = () => {
     phone: "",
     inquiry: "Your Inquiry about",
     message: "",
+    captchaValue: "",
   });
+
+  useEffect(() => {
+    loadCaptchaEnginge(6, undefined, undefined, 'numbers');
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,9 +27,24 @@ const ContactUsForm = () => {
     });
   };
 
+  const handleCaptchaChange = (e) => {
+    setFormData(prevState => ({
+      ...prevState,
+      captchaValue: e.target.value,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send form data to the PHP backend
+    
+    // Validate captcha first
+    const userValue = formData.captchaValue;
+    if (!validateCaptcha(userValue)) {
+      alert('Captcha Does Not Match');
+      return;
+    }
+
+    // Send form data to the backend
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -123,9 +144,32 @@ const ContactUsForm = () => {
             <span className="floating-label-2">Message...</span>
           </div>
         </div>
+        <div className="col-12 mb-30">
+          <div className="row justify-content-left align-items-center">
+            <div className="col-md-6 text-center">
+              <div className="captcha-container mb-3">
+                <LoadCanvasTemplate reloadText="↻ Reload" reloadColor="blue" />
+              </div>
+              <div className="postbox__comment-input">
+                <input
+                  type="text"
+                  placeholder="Enter Captcha"
+                  name="captcha"
+                  className="inputText text-center"
+                  onChange={handleCaptchaChange}
+                  value={formData.captchaValue}
+                  maxLength={6}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="col-xxl-12">
           <div className="postbox__btn-box">
-            <button className="submit-btn w-100" type="submit">
+            <button 
+              className="submit-btn w-100" 
+              type="submit"
+            >
               Send your Request
             </button>
           </div>

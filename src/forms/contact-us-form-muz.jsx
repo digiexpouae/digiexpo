@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 const ContactUsFormMuz = () => {
   const router = useRouter();
@@ -12,7 +13,12 @@ const ContactUsFormMuz = () => {
     phone: "",
     inquiry: "Your Inquiry about",
     message: "",
+    captchaValue: "",
   });
+
+  useEffect(() => {
+    loadCaptchaEnginge(6, undefined, undefined, 'numbers');
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,10 +27,22 @@ const ContactUsFormMuz = () => {
     });
   };
 
+  const handleCaptchaChange = (e) => {
+    setFormData(prevState => ({
+      ...prevState,
+      captchaValue: e.target.value,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-
+    
+    // Validate captcha first
+    const userValue = formData.captchaValue;
+    if (!validateCaptcha(userValue)) {
+      alert('Captcha Does Not Match');
+      return;
+    }
 
     // Send form data to the PHP backend
     fetch("api/contact", {
@@ -125,6 +143,24 @@ const ContactUsFormMuz = () => {
               onChange={handleChange}
               required
             ></textarea>
+          </div>
+        </div>
+        <div className="col-xl-12 mb-20">
+          <div className="d-flex justify-content-center align-items-center flex-column">
+            <div className="captcha-container mb-3">
+              <LoadCanvasTemplate reloadText="↻ Reload" reloadColor="blue" />
+            </div>
+            <div className="tp-contact-input w-50">
+              <input
+                type="text"
+                placeholder="Enter Captcha"
+                name="captcha"
+                className="text-center"
+                onChange={handleCaptchaChange}
+                value={formData.captchaValue}
+                maxLength={6}
+              />
+            </div>
           </div>
         </div>
         <div className="col-xl-12">
