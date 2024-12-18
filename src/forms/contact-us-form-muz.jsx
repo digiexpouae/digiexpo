@@ -53,7 +53,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
-  console.log( process.env.INTERNAL_EMAIL_USERNAME);
+
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
