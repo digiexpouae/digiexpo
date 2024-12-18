@@ -3,7 +3,6 @@ import Link from 'next/link';
 import SEO from "../common/seo";
 import HeaderFive from "../layout/headers/header-5";
 import error_shape_1 from "../../public/assets/img/login/error-shape.png";
-import error_shape_2 from "../../public/assets/img/login/thank-you.png";
 import Image from "next/image";
 import FooterFour from "@/layout/footers/footer-4";
 import StickyIcons from "@/common/sticky-icons";
@@ -24,10 +23,9 @@ export default function ThankYouPage() {
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
-                    <div className="tp-error-content-box text-center mb-40">
-                      <Image src={error_shape_2} alt="theme-pure"
-                      />
-                    </div>
+                  <div className="tp-error-content-box text-center mb-40">
+                       <h1 className="thank-you-title">Thank You</h1>
+                  </div>
                     <div className="tp-error-text-box text-center">
                       <p>Your submission has been received successfully.</p>
                       <p>Our team will contact you soon.</p>
