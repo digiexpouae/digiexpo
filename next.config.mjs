@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/services", 
         permanent: true,
       },
+      {
+        source: "/about", 
+        destination: "/contact", 
+        permanent: true,
+      },
     ];
   },
   reactStrictMode: true,
