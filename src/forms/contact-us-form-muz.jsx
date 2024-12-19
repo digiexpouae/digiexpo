@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const ContactUsFormMuz = () => {
   const router = useRouter();
@@ -16,9 +16,7 @@ const ContactUsFormMuz = () => {
     captchaValue: "",
   });
 
-  useEffect(() => {
-    loadCaptchaEnginge(6, undefined, undefined, 'numbers');
-  }, []);
+  const captchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -27,10 +25,10 @@ const ContactUsFormMuz = () => {
     });
   };
 
-  const handleCaptchaChange = (e) => {
+  const handleCaptchaChange = (token) => {
     setFormData(prevState => ({
       ...prevState,
-      captchaValue: e.target.value,
+      captchaValue: token,
     }));
   };
 
@@ -39,8 +37,8 @@ const ContactUsFormMuz = () => {
     
     // Validate captcha first
     const userValue = formData.captchaValue;
-    if (!validateCaptcha(userValue)) {
-      alert('Captcha Does Not Match');
+    if (!userValue) {
+      alert('Please complete the hCaptcha verification');
       return;
     }
 
@@ -50,7 +48,10 @@ const ContactUsFormMuz = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        ...formData,
+        'h-captcha-response': userValue // Add hCaptcha token to the payload
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -147,20 +148,11 @@ const ContactUsFormMuz = () => {
         </div>
         <div className="col-xl-12 mb-20">
           <div className="d-flex justify-content-center align-items-center flex-column">
-            <div className="captcha-container mb-3">
-              <LoadCanvasTemplate reloadText="↻ Reload" reloadColor="blue" />
-            </div>
-            <div className="tp-contact-input w-50">
-              <input
-                type="text"
-                placeholder="Enter Captcha"
-                name="captcha"
-                className="text-center"
-                onChange={handleCaptchaChange}
-                value={formData.captchaValue}
-                maxLength={6}
-              />
-            </div>
+            <HCaptcha
+              ref={captchaRef}
+              sitekey="cee46b90-4e4c-4a04-8f6e-f3bc510c277a"
+              onVerify={handleCaptchaChange}
+            />
           </div>
         </div>
         <div className="col-xl-12">
