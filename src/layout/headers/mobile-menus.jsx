@@ -38,8 +38,11 @@ const MobileMenus = () => {
                     className={`mean-expand ${
                       navTitle === menu.title ? "mean-clicked" : ""
                       }`}
-                    href="$"
-                    onClick={() => openMobileMenu(menu.title)}
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault(); 
+                      openMobileMenu(menu.title);
+                    }}
                     style={{ fontSize: "18px", cursor: "pointer" }}
                   >
                     <i className="fal fa-plus"></i>
