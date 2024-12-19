@@ -53,6 +53,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
+
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
