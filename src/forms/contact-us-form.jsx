@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const ContactUsForm = () => {
   const router = useRouter();
@@ -12,7 +13,10 @@ const ContactUsForm = () => {
     phone: "",
     inquiry: "Your Inquiry about",
     message: "",
+    captchaValue: "",
   });
+
+  const captchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,15 +25,33 @@ const ContactUsForm = () => {
     });
   };
 
+  const handleCaptchaChange = (token) => {
+    setFormData(prevState => ({
+      ...prevState,
+      captchaValue: token,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send form data to the PHP backend
+    
+    // Validate captcha first
+    const userValue = formData.captchaValue;
+    if (!userValue) {
+      alert('Please complete the hCaptcha verification');
+      return;
+    }
+
+    // Send form data to the backend
     fetch("/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        ...formData,
+        'h-captcha-response': userValue // Add hCaptcha token to the payload
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -123,9 +145,23 @@ const ContactUsForm = () => {
             <span className="floating-label-2">Message...</span>
           </div>
         </div>
+        <div className="col-12 mb-30">
+          <div className="row justify-content-left align-items-center">
+            <div className="col-md-6 text-center">
+              <HCaptcha
+                sitekey="cee46b90-4e4c-4a04-8f6e-f3bc510c277a"
+                onVerify={handleCaptchaChange}
+                ref={captchaRef}
+              />
+            </div>
+          </div>
+        </div>
         <div className="col-xxl-12">
           <div className="postbox__btn-box">
-            <button className="submit-btn w-100" type="submit">
+            <button 
+              className="submit-btn w-100" 
+              type="submit"
+            >
               Send your Request
             </button>
           </div>
