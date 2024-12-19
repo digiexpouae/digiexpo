@@ -7,6 +7,22 @@ const nextConfig = {
         destination: "/blogs", // The path you want to redirect to
         permanent: true, // Use true for a 308 permanent redirect, or false for a 307 temporary redirect
       },
+      {
+        source: "/service-details", 
+        destination: "/services", 
+        permanent: true,
+      },
+      {
+        source: "/about", 
+        destination: "/contact", 
+        permanent: true,
+      },
+      {
+        source: "/blog-details", 
+        destination: "/blogs", 
+        permanent: true,
+      },
+      
     ];
   },
   reactStrictMode: true,
