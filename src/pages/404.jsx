@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SEO from "../common/seo";
 import HeaderFive from "../layout/headers/header-5";
 
@@ -10,8 +10,16 @@ import Image from "next/image";
 import FooterFour from "@/layout/footers/footer-4";
 import StickyIcons from "@/common/sticky-icons";
 
+const NotFoundPage = () => {
+  const [originalPath, setOriginalPath] = useState('Unknown');
 
-const index = () => {
+  useEffect(() => {
+    if (window.history.pushState) {
+      window.history.replaceState(null, '', '/404');
+    }
+    setOriginalPath(window.location.pathname);
+  }, []);
+
   return (
     <>
     <SEO pageTitle={"Oops.! Page Not Found!"} canonicalUrl={"https://www.digiexpo.ae/404"}/>
@@ -34,6 +42,7 @@ const index = () => {
                     <div className="tp-error-text-box text-center">
                       <h4 className="error-title-sm">Oops.Page Not Found!</h4>
                       <p>The page you are looking for does not exist.</p>
+                      <p>Attempted URL: {originalPath}</p>
                       <Link
                         className="tp-btn-inner tp-btn-hover alt-color-black"
                         href="/"
@@ -54,4 +63,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NotFoundPage;
