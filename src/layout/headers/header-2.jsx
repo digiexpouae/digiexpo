@@ -30,67 +30,67 @@ const HeaderTwo = () => {
 
   return (
     <>
-      <header className="tp-header-height">
+      <header className='tp-header-height'>
         <div
-          id="header-sticky"
+          id='header-sticky'
           className={`"tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3 ${
             sticky && "header-sticky"
           }`}
         >
-          <div className="container-fluid g-0">
-            <div className="row g-0 align-items-center">
-              <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
-                <div className="tp-header-2__logo">
-                  <Link className="white-logo" href="/">
-                    <Image src={white_logo} alt="theme-pure" />
+          <div className='container-fluid g-0'>
+            <div className='row g-0 align-items-center'>
+              <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6'>
+                <div className='tp-header-2__logo'>
+                  <Link className='white-logo' href='/'>
+                    <Image src={white_logo} alt='theme-pure' />
                   </Link>
-                  <Link className="black-logo" href="/">
-                    <Image src={black_logo} alt="theme-pure" />
+                  <Link className='black-logo' href='/'>
+                    <Image src={black_logo} alt='theme-pure' />
                   </Link>
                 </div>
               </div>
-              <div className="col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block">
-                <div className="tp-header-2__main-menu text-center">
-                  <nav id="mobile-menu">
+              <div className='col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block'>
+                <div className='tp-header-2__main-menu text-center'>
+                  <nav id='mobile-menu'>
                     <NavMenu />
                   </nav>
                 </div>
               </div>
-              <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6">
-                <div className="tp-header-2__right d-flex align-items-center justify-content-end">
-                  <div className="header-bottom__action">
+              <div className='col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6'>
+                <div className='tp-header-2__right d-flex align-items-center justify-content-end'>
+                  <div className='header-bottom__action'>
                     {/* <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} >
                                     <SearchIconTwo />
                                  </a> */}
                     <Link
-                      className="d-none d-lg-inline-block"
-                      href="tel:+971501435647"
+                      className='d-none d-lg-inline-block'
+                      href='tel:+971501435647'
                     >
                       {sticky ? <PhoneFour /> : <PhoneFourWhite />}
                     </Link>
                     <Link
-                      className="d-none d-lg-inline-block last-child"
-                      href="https://wa.me/971501435647?text=Hello%20DigiExpo!%20%F0%9F%91%8B"
+                      className='d-none d-lg-inline-block last-child'
+                      href='https://api.whatsapp.com/send?phone=971501435647&text=Hello%20DigiExpo!%20%F0%9F%91%8B'
                     >
                       {sticky ? <WhatsappIcon /> : <WhatsappIconWhite />}
                     </Link>
                   </div>
-                  <div className="header-bottom__btn d-flex align-items-center">
+                  <div className='header-bottom__btn d-flex align-items-center'>
                     <Link
-                      className="tp-btn-white tp-btn-hover alt-color-black d-none d-md-inline-block"
-                      href="#"
+                      className='tp-btn-white tp-btn-hover alt-color-black d-none d-md-inline-block'
+                      href='#'
                       onClick={toggleForm}
                     >
-                      <span className="white-text">Let's Talk</span>
+                      <span className='white-text'>Let's Talk</span>
                       <b></b>
                     </Link>
                     <a
-                      className="header-bottom__bar d-lg-none tp-menu-bar"
-                      href="#"
+                      className='header-bottom__bar d-lg-none tp-menu-bar'
+                      href='#'
                       onClick={() => setSidebarOpen(true)}
                     >
-                      <i className="fal fa-bars"></i>
+                      <i className='fal fa-bars'></i>
                     </a>
                   </div>
                 </div>
@@ -99,14 +99,14 @@ const HeaderTwo = () => {
           </div>
         </div>
         <div
-          id="formContainer"
+          id='formContainer'
           className={`form-container ${isFormOpen ? "open" : ""}`}
         >
-          <p className="tp-section-title-4 text-white">Let's Talk</p>
-          <span onClick={toggleForm} className="close-btn">
+          <p className='tp-section-title-4 text-white'>Let's Talk</p>
+          <span onClick={toggleForm} className='close-btn'>
             &times;
           </span>
-          <div className="form-content">
+          <div className='form-content'>
             <ContactUsFormMuz />
           </div>
         </div>
