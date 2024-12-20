@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 const ContactUsFormMuz = () => {
   const router = useRouter();
@@ -12,7 +13,10 @@ const ContactUsFormMuz = () => {
     phone: "",
     inquiry: "Your Inquiry about",
     message: "",
+    captchaValue: "",
   });
+
+  const captchaRef = useRef(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -21,10 +25,22 @@ const ContactUsFormMuz = () => {
     });
   };
 
+  const handleCaptchaChange = (token) => {
+    setFormData(prevState => ({
+      ...prevState,
+      captchaValue: token,
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
-
+    
+    // Validate captcha first
+    const userValue = formData.captchaValue;
+    if (!userValue) {
+      alert('Please complete the hCaptcha verification');
+      return;
+    }
 
     // Send form data to the PHP backend
     fetch("api/contact", {
@@ -32,7 +48,10 @@ const ContactUsFormMuz = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        ...formData,
+        'h-captcha-response': userValue // Add hCaptcha token to the payload
+      }),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -53,6 +72,7 @@ const ContactUsFormMuz = () => {
       inquiry: selectedOption.value,
     });
   };
+
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
@@ -124,6 +144,15 @@ const ContactUsFormMuz = () => {
               onChange={handleChange}
               required
             ></textarea>
+          </div>
+        </div>
+        <div className="col-xl-12 mb-20">
+          <div className="d-flex justify-content-center align-items-center flex-column">
+            <HCaptcha
+              ref={captchaRef}
+              sitekey="cee46b90-4e4c-4a04-8f6e-f3bc510c277a"
+              onVerify={handleCaptchaChange}
+            />
           </div>
         </div>
         <div className="col-xl-12">
