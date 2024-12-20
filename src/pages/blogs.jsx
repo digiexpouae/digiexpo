@@ -35,10 +35,13 @@ const Index = ({ page }) => {
   return (
     <Wrapper>
       <SEO
-        pageTitle={"Blog - DigiExpo"}
+        pageTitle={
+          "DigiExpo - Blogs | Best e-commerce websites development company"
+        }
+        pageDesc={`DigiExpo's blog gives insights on digital marketing and advertising and marketing,are looking for SEO,SMM to help companies thrive in the UAE's aggressive market.`}
         canonicalUrl={"https://www.digiexpo.ae/blogs"}
       />
-      <Blog  blogArr={page} />
+      <Blog blogArr={page} />
     </Wrapper>
   );
 };

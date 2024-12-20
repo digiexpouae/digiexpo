@@ -1,11 +1,18 @@
-import Service from "@/components/service"
+import Service from "@/components/service";
+import SEO from "../common/seo";
+import Wrapper from "../layout/wrapper";
 const Services = () => {
   return (
     <>
-    <Service />
-     
+      <Wrapper>
+        <SEO
+          pageTitle={`Creative Web Design Services in UAE - DigiExpo`}
+          pageDesc={`Explore DigiExpo's wide range of digital marketing services, including SEO, web development, social media management, and PPC, designed to elevate your business success.`}
+        />
+        <Service />
+      </Wrapper>
     </>
-  ) 
-}
+  );
+};
 
-export default Services
+export default Services;
