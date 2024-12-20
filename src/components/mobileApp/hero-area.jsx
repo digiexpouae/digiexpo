@@ -52,6 +52,16 @@ const {
 
 const HeroArea = () => {
   useCharAnimation('.tp-hero-2__title i.child-1');
+  
+
+  const handleScrollDown = (e) => {
+    e.preventDefault();
+    window.scrollBy({
+      top: window.innerHeight * 5, 
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <div
@@ -62,7 +72,12 @@ const HeroArea = () => {
           <Image src={scroll_bg} alt='theme-pure' />
         </div>
         <div className='tp-hero-2__mouse-scroll smooth d-none d-sm-block'>
-          <a className='mouse-scroll-btn' href='#payment-method'></a>
+          
+          <a 
+            className='mouse-scroll-btn' 
+            href='#'
+            onClick={handleScrollDown}
+          ></a>
           <span>{scroll_btn}</span>
         </div>
         <div className='tp-hero-2__shape-img-1 d-none d-sm-block'>
