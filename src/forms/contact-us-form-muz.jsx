@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsFormMuz = () => {
   const router = useRouter();
@@ -11,8 +12,10 @@ const ContactUsFormMuz = () => {
     email: "",
     phone: "",
     inquiry: "Your Inquiry about",
-    message: "",
+    messreage: "",
   });
+
+const [recapchatoken, setrecapchatoken] = useState("")
 
   const handleChange = (e) => {
     setFormData({
@@ -23,9 +26,6 @@ const ContactUsFormMuz = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-
-
     // Send form data to the PHP backend
     fetch("api/contact", {
       method: "POST",
@@ -47,6 +47,9 @@ const ContactUsFormMuz = () => {
       });
   };
 
+  const capchahandlechange =(value)=>{
+    setrecapchatoken(value)
+  }
   const selectHandler = (selectedOption) => {
     setFormData({
       ...formData,
@@ -125,6 +128,12 @@ const ContactUsFormMuz = () => {
               required
             ></textarea>
           </div>
+        </div>
+        <div>
+         <ReCAPTCHA
+            sitekey="6Lc1lKEqAAAAANDNxF09qvtciCqYZXXorXgjh8ni" // Replace with your reCAPTCHA site key
+            onChange={capchahandlechange}
+          />  
         </div>
         <div className="col-xl-12">
           <div className="tp-contact-btn">
