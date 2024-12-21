@@ -3,9 +3,12 @@
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
+import ReCAPTCHA from 'react-google-recaptcha';
+
 
 const ContactUsForm = () => {
   const router = useRouter();
+  const [recaptchaToken, setRecaptchaToken] = useState('');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +23,9 @@ const ContactUsForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+  // const [verified, setVerified] = useState(false);
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -51,6 +57,10 @@ const ContactUsForm = () => {
       inquiry: selectedOption.value,
     });
   };
+  const handleRecaptchaChange = (value) => {
+    setRecaptchaToken(value);
+  };
+
 
   return (
     <form onSubmit={handleSubmit} className="box">
@@ -98,13 +108,13 @@ const ContactUsForm = () => {
           <div className="postbox__select mb-30">
             <NiceSelect
               options={[
-                { value: "Your Inquiry about", text: "Your Inquiry about" },
-                { value: "Digital Marketing", text: "Digital Marketing" },
-                { value: "Website Development", text: "Website Development" },
-                { value: "UI / UX Design", text: "UI / UX Design" },
-                { value: "Mobile Apps", text: "Mobile Apps" },
-                { value: "E-Commerce", text: "E-Commerce" },
-                { value: "Emerging Technology", text: "Emerging Technology" },
+                { value: 'Your Inquiry about', text: 'Your Inquiry about' },
+                { value: 'Digital Marketing', text: 'Digital Marketing' },
+                { value: 'Website Development', text: 'Website Development' },
+                { value: 'UI / UX Design', text: 'UI / UX Design' },
+                { value: 'Mobile Apps', text: 'Mobile Apps' },
+                { value: 'E-Commerce', text: 'E-Commerce' },
+                { value: 'Emerging Technology', text: 'Emerging Technology' },
               ]}
               defaultCurrent={0}
               onChange={selectHandler}
@@ -123,6 +133,15 @@ const ContactUsForm = () => {
             <span className="floating-label-2">Message...</span>
           </div>
         </div>
+
+        {/* Add Google reCAPTCHA */}
+        <div className="col-xxl-12 mb-30">
+          <ReCAPTCHA
+            sitekey="6Lc1lKEqAAAAANDNxF09qvtciCqYZXXorXgjh8ni" // Replace with your reCAPTCHA site key
+            onChange={handleRecaptchaChange}
+          />
+        </div>
+
         <div className="col-xxl-12">
           <div className="postbox__btn-box">
             <button className="submit-btn w-100" type="submit">

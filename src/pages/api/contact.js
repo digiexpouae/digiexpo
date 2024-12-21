@@ -19,15 +19,15 @@ export default async function handler(req, res) {
       port: parseInt(process.env.EMAIL_PORT || '587'),
       secure: false, // Use TLS
       auth: {
-        user: process.env.INTERNAL_EMAIL_USERNAME,
-        pass: process.env.INTERNAL_EMAIL_PASSWORD
+        user:'Tech1.digiexpo@gmail.com',
+        pass: process.env.Tech_DigiExpo
       }
     });
 
     // Send email to business email
     await transporter.sendMail({
       from: `"${process.env.SITE_NAME} Contact Form" <${process.env.INTERNAL_EMAIL_USERNAME}>`,
-      to: process.env.BUSINESS_EMAIL,
+      to:'rimshasaleem1993@gmail.com',
       subject: `New Contact Form Submission: ${inquiry}`,
       html: `
         <h2>New Contact Form Submission</h2>
