@@ -56,6 +56,7 @@ const [recapchatoken, setrecapchatoken] = useState("")
       inquiry: selectedOption.value,
     });
   };
+
   return (
     <form onSubmit={handleSubmit} className="box">
       <div className="row">
