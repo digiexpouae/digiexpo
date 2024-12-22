@@ -18,10 +18,10 @@ const service_content = {
   bg_img: "/assets/img/service/service-3-bg.png",
   service_title: "Turn data into results.",
   service_info: (
-    <>
+    < >
       Achieve Measurable Results With
       <br />
-      Our Best Digital Marketing Agency In UAE
+      <h1 style={{fontSize:'24px'}}>Our Best Digital Marketing Agency In UAE</h1>
     </>
   ),
   sub_text: (

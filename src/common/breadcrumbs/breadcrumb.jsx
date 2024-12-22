@@ -32,12 +32,12 @@ const Breadcrumb = ({ title_top, title_bottom }) => {
                   <div className="row">
                      <div className="col-xl-12">
                         <div className="about-banner-content">
-                           <h4 style={{ transform: `translateY(${offset * 0.9}px)` }} 
+                           <div style={{ transform: `translateY(${offset * 0.9}px)` }} 
                                  className="about-banner-title" 
                                  data-parallax='{"y": 1000, "smoothness": 10}'>
-                              <span>{title_top}</span> <br />
-                              <span>{title_bottom}</span>
-                           </h4>
+                              <h1 style={{fontSize:'90px'}}>{title_top}</h1> <br />
+                              <h1>{title_bottom}</h1>
+                           </div>
                         </div>
                      </div>
                   </div>

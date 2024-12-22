@@ -23,13 +23,13 @@ const hero_content = {
   title: (
     <>
       <i>
-        <i className='child-1'>Redefine Your </i>{" "}
+        <h1 style={{fontSize:'65px'}} className='child-1'>Redefine Your </h1>{" "}
       </i>{" "}
       <i>
-        <i className='child-1'>Mobile App Development</i>{" "}
+        <h1  style={{fontSize:'65px'}} className='child-1'>Mobile App Development</h1>{" "}
       </i>{" "}
       <i>
-        <i className='child-1'>Company Dubai </i>{" "}
+        <h1 style={{fontSize:'65px'}} className='child-1'>Company Dubai </h1>{" "}
       </i>
       {/* <i><i className="child-1">ways.</i></i> */}
     </>
@@ -87,7 +87,7 @@ const HeroArea = () => {
           <div className='row g-0 align-items-end'>
             <div className='col-xl-6 col-lg-6'>
               <div className='tp-hero-2__title-box'>
-                <h3 className='tp-hero-2__title tp-char-animation'>{title}</h3>
+                <div className='tp-hero-2__title tp-char-animation'>{title}</div>
                 <p style={{ color: "white" }}>
                   <b> Mobile app development company Dubai </b>services are
                   important in order to attract modern population

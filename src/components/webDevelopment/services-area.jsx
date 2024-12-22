@@ -8,7 +8,9 @@ import React, { useRef } from "react";
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 
 const service_content = {
-  title: "Stand Out. Get Results. Our Dubai Web Development Services Deliver",
+  title:(
+  <>Stand Out. Get Results. Our Dubai <div style={{display:'flex'}}><h1 style={{color:'#7B42F7',fontSize:'40px'
+  }}>Web Development Services </h1> Deliver</div></>),
   sub_title: (
     <>
       We work as a web design and development agency and specialize in building
@@ -46,7 +48,7 @@ const ServicesArea = () => {
                 ref={titleRef}
                 className="tp-service__section-box tp__title_anime mb-50 text-center tp-title-anim"
               >
-                <h2 className="tp-section-title">{title}</h2>
+                <div className="tp-section-title">{title}</div>
                 <p>{sub_title}</p>
               </div>
             </div>

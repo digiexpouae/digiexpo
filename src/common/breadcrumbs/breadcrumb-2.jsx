@@ -30,12 +30,12 @@ const BreadcrumbTwo = ({ title, innertitle, team_details, career_details }) => {
           <div className="row">
             <div className="col-xl-8 col-lg-7">
               <div className="breadcrumb__content">
-                <h3
+                <h1
                   ref={animeRef}
                   className="breadcrumb__title tp-char-animation anime_text"
                 >
                   {title}
-                </h3>
+                </h1>
                 <div ref={subtitleRef} className="breadcrumb__list tp-title-anim tp__title_anime">
                   <span className="child-one">
                     <Link href="/">Home</Link>
