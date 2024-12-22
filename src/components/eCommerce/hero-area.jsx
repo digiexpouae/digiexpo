@@ -13,18 +13,18 @@ const hero_content = {
   sub_title: "Wellcome to Softec",
   title: (
     <>
-      <span>
-        <span className='child'>Best E-commerce </span>
-      </span>{" "}
-      <span>
-        <span className='child'>Websites Development Company Dubai</span>
-      </span>{" "}
-      <span>
-        <span className='child'>Turns Visitors </span>
-      </span>{" "}
-      <span>
-        <span className='child'>Into Loyal Customers</span>
-      </span>
+    <div className='head'>
+        <h1 className='child'>Best E-commerce </h1></div>
+      {" "}
+      
+       <div className='head'> <h1 className='child'>Websites Development Company Dubai</h1></div>
+     {" "}
+    
+   <div className='head'>     <h1 className='child'>Turns Visitors </h1></div>
+      {" "}
+    
+        <div className='head'><h1 className='child'>Into Loyal Customers</h1></div>
+   
     </>
   ),
   sub_title: (
@@ -60,9 +60,9 @@ const HeroArea = () => {
                 <div className='tp-hero-4-section-box pt-10 z-index-3'>
                   {/* <h5 className="tp-section-subtitle-4 tp-char-animation wow tpfadeRight" data-wow-duration="1s" data-wow-delay=".6s">{sub_title}</h5> */}
 
-                  <h3 className='tp-hero-title-4 pb-35 tp-char-animation ecom'>
+                  <div className='tp-hero-title-4 pb-35 tp-char-animation ecom'>
                     {title}
-                  </h3>
+                  </div>
                   <p style={{ color: "white" }}> {sub_title}</p>
 
                   <Link

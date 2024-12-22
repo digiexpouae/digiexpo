@@ -19,10 +19,11 @@ const BreadcrumbThree = () => {
               <div className='row justify-content-center'>
                 <div className='col-xl-12'>
                   <div className='breadcrumb__content text-center z-index-3 mb-60'>
-                    <h3 className='breadcrumb__title'>
-                      Future-Proof Your Business With The Best Emerging
-                      Technologies Development Agency Dubai
-                    </h3>
+                    <div className='breadcrumb__title'>
+                     <h3>Future-Proof Your Business <br /> With The</h3>
+                      <h1> Best Emerging
+                      Technologies Development Agency Dubai</h1>
+                    </div>
                     {/* <div className="breadcrumb__text">
                                  <p>Work without distraction on your own or with your team.</p>
                               </div> */}

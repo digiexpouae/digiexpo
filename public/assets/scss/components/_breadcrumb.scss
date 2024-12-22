@@ -223,6 +223,7 @@
         letter-spacing: -0.02em;
         color: #FFFFFF;
         padding-bottom: 12px;
+        // white-space: nowrap;
         @media #{$lg}{
             font-size: 60px;
         }
@@ -240,6 +241,46 @@
             font-style: normal;
         }
     }
+    &__title h3{
+  
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        padding-bottom: 12px;
+    
+        @media #{$lg}{
+            font-size: 60px;
+        }
+        @media #{$md}{
+            font-size: 55px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+            line-height: 1.2;
+        }}
+        &__title h1{
+  
+            font-weight: 700;
+            font-size: 70px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+            padding-bottom: 12px;
+        
+            @media #{$lg}{
+                font-size: 60px;
+            }
+            @media #{$md}{
+                font-size: 55px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+                line-height: 1.2;
+            }}
+    
+
     &__list{
         display: inline-block;
         & span{ 
@@ -343,7 +384,7 @@
 
 .breadcrumb__content-wrap{
     @media #{$xl}{
-        padding-left: 80px;   
+   
     }
     @media #{$lg}{
         padding-left: 50px;   

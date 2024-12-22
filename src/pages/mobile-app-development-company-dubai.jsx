@@ -4,8 +4,7 @@ import MobileApp from "../components/mobileApp";
 import Wrapper from "../layout/wrapper";
 
 const index = () => {
-  const titletext=`Mobile App Development Company Dubai | Mobile App Development UAE`
-  const title = <h1>{titletext}</h1>;
+  const title = `Mobile App Development Company Dubai | Mobile App Development UAE`;
   const desc = `Avail the skilled mobile app development company Dubai to grow your company. DigiExpo is your reliable growth partner for mobile app development UAE services.`;
   return (
     <Wrapper>
