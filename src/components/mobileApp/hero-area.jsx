@@ -23,14 +23,16 @@ const hero_content = {
   title: (
     <>
       <i>
-        <h1 style={{fontSize:'65px'}} className='child-1'>Redefine Your </h1>{" "}
+        <i className='child-1'>Redefine Your </i>{" "}
       </i>{" "}
       <i>
         <h1  style={{fontSize:'65px'}} className='child-1'>Mobile App Development</h1>{" "}
       </i>{" "}
+  
       <i>
-        <h1 style={{fontSize:'65px'}} className='child-1'>Company Dubai </h1>{" "}
+        <h1 style={{fontSize:'65px'}} className='child-1'>Company  <br />Dubai  </h1>{" "}
       </i>
+   
       {/* <i><i className="child-1">ways.</i></i> */}
     </>
   ),
