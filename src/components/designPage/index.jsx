@@ -26,7 +26,8 @@ const DesignPage = () => {
             <StickyIcons />
             <StickyButtons />
             <BreadcrumbTwoCopy
-              title='Get Your Desired Business Growth With Intuitive UI/UX Design Services Company In Dubai' />
+              title='Get Your Desired Business Growth With Intuitive' maintitle='UI/UX Design Services Company In Dubai'/>
+
             <Brand />
             <ServiceArea />
             <ContactArea2 />

@@ -32,7 +32,7 @@ const BreadcrumbSix = ({sub_title , title}) => {
                      <div className="blog-details-banner z-index-2">
                         <div className="blog-details-title-box">
                            <span>{sub_title}</span>
-                           <h3 className="blog-details-banner-title">{title}</h3>
+                           <h1 className="blog-details-banner-title">{title}</h1>
                         </div>
                         {/* <div className="tp-blog-author-info-box d-flex align-items-center">
                            <div className="tp-blog-avata">
