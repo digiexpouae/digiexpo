@@ -26,10 +26,10 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl }) => {
         <meta name="description" content={pageDesc && `${pageDesc}`} />
         {/* <meta name="robots" content="noindex, follow" /> */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        <script
+        {/* <script
           async
           src="https://connect.facebook.net/en_US/fbevents.js"
-        ></script>
+        ></script> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
