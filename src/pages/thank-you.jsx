@@ -1,28 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
-import Head from 'next/head';
+import SEO from "../common/seo";
+import HeaderFive from "../layout/headers/header-5";
+import error_shape_1 from "../../public/assets/img/login/error-shape.png";
+import Image from "next/image";
+import FooterFour from "@/layout/footers/footer-4";
+import StickyIcons from "@/common/sticky-icons";
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen mt-50 flex items-center justify-center bg-gray-100 p-4">
-      <Head>
-        <title>Thank You - DigiExpo</title>
-        <meta name="description" content="Thank you for your submission" />
-      </Head>
-      
-      <div className="bg-white shadow-md rounded-lg p-6 text-center max-w-md w-full">
-        <h1 className="text-2xl font-semibold text-blue-600 mb-3">
-          Thank You for Your Submission
-        </h1>
-        
-        <p className="text-blue-500 mb-4 text-sm">
-          We have received your message and will get back to you soon.
-        </p>
-        
-        <Link href="/" className="inline-block bg-red-500 hover:bg-blue-600 text-black text-sm font-medium py-2 px-4 rounded">
-          Return to Home
-        </Link>
+    <>
+      <SEO pageTitle={"Thank You!"} canonicalUrl={"https://www.digiexpo.ae/thank-you"}/>
+      <HeaderFive />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <main>
+            <StickyIcons/>
+            <div className="tp-error-area tp-error-ptb p-relative">
+              <div className="tp-error-left-shape">
+                <Image src={error_shape_1} alt="theme-pure" />
+              </div>
+              <div className="container">
+                <div className="row">
+                  <div className="col-xl-12">
+                  <div className="tp-error-content-box text-center mb-40">
+                       <h1 className="thank-you-title">Thank You</h1>
+                  </div>
+                    <div className="tp-error-text-box text-center">
+                      <p>Your submission has been received successfully.</p>
+                      <p>Our team will contact you soon.</p>
+                      <Link
+                        className="tp-btn-inner tp-btn-hover alt-color-black"
+                        href="/"
+                      >
+                        <span> Back To Home</span>
+                        <b></b>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <FooterFour />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
