@@ -1,14 +1,13 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
-import ReCAPTCHA from 'react-google-recaptcha';
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
   const router = useRouter();
-  const [recaptchaToken, setRecaptchaToken] = useState('');
+  const recaptchaRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,38 +16,118 @@ const ContactUsForm = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-  // const [verified, setVerified] = useState(false);
+
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token);
+  };
+
+  const validateForm = () => {
+    const { name, email, phone, message } = formData;
+    
+    // Basic form validation
+    if (!name || !email || !phone || !message) {
+      alert("Please fill in all required fields.");
+      return false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
 
 
+    // Captcha validation
+    if (!captchaToken) {
+      alert("Please complete the reCAPTCHA verification.");
+      return false;
+    }
 
-  const handleSubmit = (e) => {
+    return true;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send form data to the PHP backend
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          router.push('/thank-you');
-        } else {
-          alert("Failed to send message.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred while sending the message.");
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // First, verify the captcha
+      const captchaVerifyResponse = await fetch("/api/captcha-verify", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token: captchaToken }),
       });
+
+      // Check if the response is OK and is JSON
+      if (!captchaVerifyResponse.ok) {
+        logger.error("Captcha verification failed");
+        const errorText = await captchaVerifyResponse.text();
+        throw new Error(`Captcha verification failed: ${errorText}`);
+      }
+
+      const captchaVerifyData = await captchaVerifyResponse.json();
+
+      if (!captchaVerifyData.success) {
+        throw new Error("Captcha verification failed");
+      }
+
+      // If captcha is verified, proceed with form submission
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if the response is OK and is JSON
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Submission failed: ${errorText}`);
+      }
+
+      const data = await response.json();
+
+      if (data.success) {
+        router.push('/thank-you');
+      } else {
+        alert(data.message || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      
+      // More detailed error handling
+      if (error instanceof TypeError) {
+        alert("Network error. Please check your internet connection.");
+      } else {
+        alert(error.message || "An error occurred while sending the message.");
+      }
+      
+      // Reset captcha if submission fails
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const selectHandler = (selectedOption) => {
@@ -57,10 +136,6 @@ const ContactUsForm = () => {
       inquiry: selectedOption.value,
     });
   };
-  const handleRecaptchaChange = (value) => {
-    setRecaptchaToken(value);
-  };
-
 
   return (
     <form onSubmit={handleSubmit} className='box'>
@@ -133,19 +208,21 @@ const ContactUsForm = () => {
             <span className='floating-label-2'>Message...</span>
           </div>
         </div>
-
-        {/* Add Google reCAPTCHA */}
         <div className='col-xxl-12 mb-30'>
           <ReCAPTCHA
-            sitekey='6LeGTKIqAAAAAHmdkm-7ZD7DxJ5OizWJcRLn_-NI' // Replace with your reCAPTCHA site key
-            onChange={handleRecaptchaChange}
+            ref={recaptchaRef}
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={handleCaptchaChange}
           />
         </div>
-
         <div className='col-xxl-12'>
           <div className='postbox__btn-box'>
-            <button className='submit-btn w-100' type='submit'>
-              Send your Request
+            <button 
+              className='submit-btn w-100' 
+              type='submit'
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send your Request'}
             </button>
           </div>
         </div>
