@@ -48,6 +48,7 @@ const BlogPost = ({ blog }) => {
   
   console.log(blog)
   if (!blog) {
+    
     return <div>Blog post not found</div>; // Handle the case where no blog is found
   
   }
