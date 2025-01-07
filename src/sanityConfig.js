@@ -6,11 +6,6 @@ const client = createClient({
   apiVersion: "2022-03-07",
   useCdn: false,
 });
-
-
-
-
-
 export default client;
 
 const builder = ImageUrlBuilder(client)
