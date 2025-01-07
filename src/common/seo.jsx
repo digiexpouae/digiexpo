@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { useEffect } from "react";
 
-const SEO = ({ pageTitle, pageDesc, canonicalUrl }) => {
+const SEO = ({ pageTitle, pageDesc, canonicalUrl ,ogImage, ogDescription,ogTitle ,
+  metaTags,
+
+  }) => {
   useEffect(() => {
     // Facebook Pixel initialization
     window.fbq = function () {
@@ -26,10 +29,18 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl }) => {
         <meta name="description" content={pageDesc && `${pageDesc}`} />
         {/* <meta name="robots" content="noindex, follow" /> */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        <meta name="og:Image" content={ogImage} />
+        <meta name="og:Description" content={ogDescription} />
+        <meta name="og:Title" content={ogTitle} />
+        {Array.isArray(metaTags) && metaTags?.length> 0 && metaTags.map((item,index)=>{
+          return <meta name="metaTags" content={item} key={index} />
+
+        })}
+{/*    
         <script
           async
           src="https://connect.facebook.net/en_US/fbevents.js"
-        ></script>
+        ></script> */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

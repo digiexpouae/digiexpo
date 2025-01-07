@@ -6,7 +6,6 @@ import client, { urlForImage } from "@/sanityConfig";
 import { PortableText } from "@portabletext/react";
 import SEO from "../../common/seo";
 import Wrapper from "../../layout/wrapper";
-
 // Fetch the blog data based on the slug
 export async function getServerSideProps(context) {
   const { slug } = context.params; // Get the slug from the URL
@@ -15,7 +14,8 @@ export async function getServerSideProps(context) {
     title,
     "currentSlug": slug.current,
     body,
-    mainImage
+    mainImage,ogImage,ogDescription,
+    ogTitle,metaTags,description
   }`;
 
   try {
@@ -44,18 +44,29 @@ export async function getServerSideProps(context) {
 }
 
 const BlogPost = ({ blog }) => {
-  const { title, currentSlug, mainImage, body } = blog;
+  const { title, currentSlug, mainImage, body,ogImage,ogDescription,ogTitle ,metaTags,description} = blog;
+  
+  console.log(blog)
   if (!blog) {
     return <div>Blog post not found</div>; // Handle the case where no blog is found
+  
   }
+
 
   const bannerSrc = urlForImage(mainImage.asset).url();
 
   return (
     <Wrapper>
+  
       <SEO
-        pageTitle={blog.title}
+        pageTitle={title}
         canonicalUrl={`https://digiexpo.ae/blogs/${currentSlug}`}
+        ogImage={ogImage}
+ogDescription={ogDescription}
+ogTitle={ogTitle}
+metaTags={metaTags}
+description={description}
+
       />
       <HeaderSix />
       <div id='smooth-wrapper'>
@@ -71,6 +82,7 @@ const BlogPost = ({ blog }) => {
                       className='prose prose-blue prose-xl prose-headings:underline text-justify'
                       style={{ textAlign: "justify" }}
                     >
+           
                       <PortableText value={body} />
                     </div>
                   </div>
