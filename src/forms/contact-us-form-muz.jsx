@@ -132,7 +132,7 @@ const [recapchatoken, setrecapchatoken] = useState("")
         </div>
         <div>
           <ReCAPTCHA
-            sitekey='6LeGTKIqAAAAAHmdkm-7ZD7DxJ5OizWJcRLn_-NI' // Replace with your reCAPTCHA site key
+            sitekey='6LcgnLEqAAAAACc6SGBFLzOKkoIlwzNnfDllZSrh' // Replace with your reCAPTCHA site key
             onChange={capchahandlechange}
           />
         </div>
