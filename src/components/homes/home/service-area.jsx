@@ -19,9 +19,7 @@ const service_content = {
 const {bg_img, sub_title, title, description, btn_text}  = service_content
 
 
-const ServiceArea = () => {
-
-   
+const ServiceArea = () => {   
    return (
         <>
             <div className="tp-service-area tp-services-five-item-bg-color p-relative fix">

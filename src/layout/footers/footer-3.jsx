@@ -169,7 +169,7 @@ const FooterThree = () => {
 
             <footer> 
 
-            <div className="tp-footer-slide pb-80">
+            <div className="-slide pb-80">
                 <div className="container-fluid g-0">
                     <div className="row g-0 justify-content-center">
                         <Slider {...setting} className="footer-slide-active">
@@ -188,19 +188,19 @@ const FooterThree = () => {
             </div> 
 
 
-            <div className="tp-footer__pl-pr">
-                <div className="tp-footer__area tp-footer__tp-border-bottom">
+            <div className="__pl-pr">
+                <div className="__area __tp-border-bottom">
                     <div className="container">
                         <div className="row">
 
                         <div className="col-xl-3 col-lg-3 col-md-6 pb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                            <div className="tp-footer__widget footer-widget-3 footer-col-3-1">
-                                <div className="tp-footer__logo mb-25">
+                            <div className="__widget footer-widget-3 footer-col-3-1">
+                                <div className="__logo mb-25">
                                     <Link href="/">
                                     <Image src={footer_logo} alt="" /> 
                                     </Link>
                                 </div>
-                                <div className="tp-footer__contact-info">
+                                <div className="__contact-info">
                                     <p>{description}</p>
                                     <ul>
                                     <li>
@@ -222,9 +222,9 @@ const FooterThree = () => {
 
                         {footer_lisks.map((item, i)  => 
                             <div key={i} className={`${item.cls_1} col-md-6 pb-30 wow tpfadeUp`} data-wow-duration=".9s" data-wow-delay=".7s">
-                            <div className={`tp-footer__widget footer-widget-3 ${item.cls_2}`}>
-                                <h4 className="tp-footer__widget-title">{item.title}</h4>
-                                <div className="tp-footer__content">
+                            <div className={`__widget footer-widget-3 ${item.cls_2}`}>
+                                <h4 className="__widget-title">{item.title}</h4>
+                                <div className="__content">
                                     <ul>
                                         {item.links.map((link, i)  => <li key={i}><Link href={link.link}>{link.name}</Link></li>)} 
                                     </ul>
@@ -235,9 +235,9 @@ const FooterThree = () => {
                         } 
 
                         <div className="col-xl-4 col-lg-4 col-md-6 pb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                            <div className="tp-footer__widget footer-widget-3 footer-col-3-4">
-                                <h4 className="tp-footer__widget-title">Our Newsletter</h4>
-                                <div className="tp-footer__input mb-35 p-relative">
+                            <div className="__widget footer-widget-3 footer-col-3-4">
+                                <h4 className="__widget-title">Our Newsletter</h4>
+                                <div className="__input mb-35 p-relative">
                                     <form  onSubmit={(e) => e.preventDefault()}>
                                     <input type="text" placeholder="Business email adress" />
                                     <span>
@@ -248,7 +248,7 @@ const FooterThree = () => {
                                     </button>
                                     </form>
                                 </div>
-                                <div className="tp-footer__social-3">
+                                <div className="__social-3">
                                     <h4>Social media</h4>
                                     {social_links.map((l, i) => (
                                         <Link
