@@ -19,6 +19,8 @@ const service_content = {
 
 
 const ServiceArea = () => {
+ 
+  
     return (
         <>
             <div className="tp-service-area pb-120 pt-120 z-index pb-sm-50 pt-sm-50">

@@ -1,9 +1,14 @@
 import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-
-
+import React, { useState } from 'react';
+import seo from  '../../../../public/animation/seo.json'
+import dynamic from 'next/dynamic';
+import social from '../../../../public/animation/social.json'
+// Import Lottie component with no SSR
+import digitalmarketing from '../../../../public/animation/digitalmarketing.json'
+import webdev from '../../../../public/animation/webdev.json'
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 const service_content = {
     bg_img: "/assets/img/service/service-5-1-bg.png",
     sub_title: "What we Offer",
@@ -15,7 +20,9 @@ const {bg_img, sub_title, title, description, btn_text}  = service_content
 
 
 const ServiceArea = () => {
-    return (
+
+   
+   return (
         <>
             <div className="tp-service-area tp-services-five-item-bg-color p-relative fix">
                   <div className="container-fluid p-0">                    
@@ -45,11 +52,20 @@ const ServiceArea = () => {
                                     <div className="tp-service-five-wrapper">
                                        <div className="tp-service-five-icon">
                                           {/* <Image src={item.img} alt="theme-pure" /> */}
-                                          <video autoPlay muted loop width="100px">
-                                             <source src="/assets/img/service/dm-icon.webm" type="video/webm" />
+                                          {/* <video autoPlay muted loop width="100px"> */}
+                                             {/* <source src="/assets/img/service/dm-icon.webm" type="video/webm" /> */}
                                              {/* <source src={item.img} type="video/webm" /> */}
-                                          </video>
-                                       </div>
+                                          {/* </video> */}
+                     <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: digitalmarketing,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                    />                                       </div>
                                        <div className="tp-service-five-content">
                                           <h3 className="tp-service-five-title-sm">
                                             <Link href="/digital-marketing-agency-dubai">Digital <br /> Marketing</Link>
@@ -70,10 +86,20 @@ const ServiceArea = () => {
                                     <div className="tp-service-five-wrapper">
                                        <div className="tp-service-five-icon">
                                           {/* <Image src={item.img} alt="theme-pure" /> */}
-                                          <video autoPlay muted loop width="100px">
+                                          {/* <video autoPlay muted loop width="100px">
                                              <source src="/assets/img/service/web-icon.webm" type="video/webm" />
                                              {/* <source src={item.img} type="video/webm" /> */}
-                                          </video>
+                                          {/* </video> */}
+                                          <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: webdev,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                    />
                                        </div>
                                        <div className="tp-service-five-content">
                                           <h3 className="tp-service-five-title-sm">
@@ -95,10 +121,20 @@ const ServiceArea = () => {
                                     <div className="tp-service-five-wrapper">
                                        <div className="tp-service-five-icon">
                                           {/* <Image src={item.img} alt="theme-pure" /> */}
-                                          <video autoPlay muted loop width="100px">
+                                          {/* <video autoPlay muted loop width="100px">
                                              <source src="/assets/img/service/seo-icon.webm" type="video/webm" />
                                              {/* <source src={item.img} type="video/webm" /> */}
-                                          </video>
+                                          {/* </video> */} 
+                                          <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: seo,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                    />
                                        </div>
                                        <div className="tp-service-five-content">
                                           <h3 className="tp-service-five-title-sm">
@@ -120,10 +156,21 @@ const ServiceArea = () => {
                                     <div className="tp-service-five-wrapper">
                                        <div className="tp-service-five-icon">
                                           {/* <Image src={item.img} alt="theme-pure" /> */}
-                                          <video autoPlay muted loop width="100px">
+                                          {/* <video autoPlay muted loop width="100px">
                                              <source src="/assets/img/service/smm-icon.webm" type="video/webm" />
                                              {/* <source src={item.img} type="video/webm" /> */}
-                                          </video>
+                                          {/* </video> */} 
+                                          <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: social,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                    /> 
+                                          
                                        </div>
                                        <div className="tp-service-five-content">
                                           <h3 className="tp-service-five-title-sm">
