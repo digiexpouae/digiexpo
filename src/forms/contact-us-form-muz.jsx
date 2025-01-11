@@ -56,73 +56,74 @@ const [recapchatoken, setrecapchatoken] = useState("")
       inquiry: selectedOption.value,
     });
   };
+
   return (
-    <form onSubmit={handleSubmit} className="box">
-      <div className="row">
-        <div className="col-xl-6">
-          <div className="tp-contact-input mb-20">
+    <form onSubmit={handleSubmit} className='box'>
+      <div className='row'>
+        <div className='col-xl-6'>
+          <div className='tp-contact-input mb-20'>
             <input
-              type="text"
-              className=""
-              name="name"
-              placeholder="Full name"
+              type='text'
+              className=''
+              name='name'
+              placeholder='Full name'
               value={formData.name}
               onChange={handleChange}
               required
             />
           </div>
         </div>
-        <div className="col-xl-6">
-          <div className="tp-contact-input mb-20">
+        <div className='col-xl-6'>
+          <div className='tp-contact-input mb-20'>
             <input
-              type="email"
-              className=""
-              name="email"
-              placeholder="Email address"
+              type='email'
+              className=''
+              name='email'
+              placeholder='Email address'
               value={formData.email}
               onChange={handleChange}
               required
             />
           </div>
         </div>
-        <div className="col-xl-6">
-          <div className="tp-contact-input mb-20">
+        <div className='col-xl-6'>
+          <div className='tp-contact-input mb-20'>
             <input
-              type="text"
-              className=""
-              name="phone"
-              placeholder="Phone Number"
+              type='text'
+              className=''
+              name='phone'
+              placeholder='Phone Number'
               value={formData.phone}
               onChange={handleChange}
               required
             />
           </div>
         </div>
-        <div className="col-xl-6">
-        <div className="tp-contact-select">
-          <div className="tp-select-icon">
-            <NiceSelect
-              options={[
-                { value: "Your Inquiry about", text: "Your Inquiry about" },
-                { value: "Digital Marketing", text: "Digital Marketing" },
-                { value: "Website Development", text: "Website Development" },
-                { value: "UI / UX Design", text: "UI / UX Design" },
-                { value: "Mobile Apps", text: "Mobile Apps" },
-                { value: "E-Commerce", text: "E-Commerce" },
-                { value: "Emerging Technology", text: "Emerging Technology" },
-              ]}
-              defaultCurrent={0}
-              onChange={selectHandler}
-            />
-          </div>
+        <div className='col-xl-6'>
+          <div className='tp-contact-select'>
+            <div className='tp-select-icon'>
+              <NiceSelect
+                options={[
+                  { value: "Your Inquiry about", text: "Your Inquiry about" },
+                  { value: "Digital Marketing", text: "Digital Marketing" },
+                  { value: "Website Development", text: "Website Development" },
+                  { value: "UI / UX Design", text: "UI / UX Design" },
+                  { value: "Mobile Apps", text: "Mobile Apps" },
+                  { value: "E-Commerce", text: "E-Commerce" },
+                  { value: "Emerging Technology", text: "Emerging Technology" },
+                ]}
+                defaultCurrent={0}
+                onChange={selectHandler}
+              />
+            </div>
           </div>
         </div>
-        <div className="col-xl-12">
-          <div className="tp-contact-input mb-20">
+        <div className='col-xl-12'>
+          <div className='tp-contact-input mb-20'>
             <textarea
-              className=""
-              name="message"
-              placeholder="Enter your message"
+              className=''
+              name='message'
+              placeholder='Enter your message'
               value={formData.message}
               onChange={handleChange}
               required
@@ -130,14 +131,14 @@ const [recapchatoken, setrecapchatoken] = useState("")
           </div>
         </div>
         <div>
-         <ReCAPTCHA
-            sitekey="6Lc1lKEqAAAAANDNxF09qvtciCqYZXXorXgjh8ni" // Replace with your reCAPTCHA site key
+          <ReCAPTCHA
+            sitekey='6LcgnLEqAAAAACc6SGBFLzOKkoIlwzNnfDllZSrh' // Replace with your reCAPTCHA site key
             onChange={capchahandlechange}
-          />  
+          />
         </div>
-        <div className="col-xl-12">
-          <div className="tp-contact-btn">
-            <button className="tp-btn-yellow-lg w-100" type="submit">
+        <div className='col-xl-12'>
+          <div className='tp-contact-btn'>
+            <button className='tp-btn-yellow-lg w-100' type='submit'>
               Get a free consultation
             </button>
           </div>

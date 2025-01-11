@@ -60,6 +60,7 @@
         opacity: 0;
         font-style: normal;
       }
+    
     }
   }
   &__title-shape {
@@ -656,7 +657,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--tp-common-white);
-  &.ecom {
+  &.ecom h1 {
     font-size: 80px;
     @media #{$xs} {
       font-size: 37px;
@@ -673,7 +674,7 @@
     font-size: 42px;
     padding-bottom: 20px;
   }
-  & span {
+  & .head {
     font-style: normal;
     overflow: hidden;
     display: inline-block;
@@ -695,6 +696,7 @@
       opacity: 0;
       font-style: normal;
     }
+
   }
 }
 

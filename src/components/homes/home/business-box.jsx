@@ -11,14 +11,14 @@ const business_content = {
   title: (
     <>
       Drive Growth With Best
-      <br /> <span>Digital Marketing Agency UAE</span>{" "}
     </>
   ),
+  maintitle:"Digital Marketing Agency UAE",
   sub_text:
     "The experts provided by our digital marketing agency Dubai offer great services. These include social media marketing, performance marketing, SEO, and content production.",
   btn_text: "Get in Touch",
 };
-const {bg_img, sub_title, title, btn_text, sub_text}  = business_content
+const {bg_img, sub_title, title, btn_text,maintitle, sub_text}  = business_content
 const BusinessBox = () => {
     return (
       <>
@@ -38,6 +38,7 @@ const BusinessBox = () => {
                 <div className='tp-cta-five-section-box text-center'>
                   <span className='tp-section-subtitle-5'>{sub_title}</span>
                   <h3 className='tp-section-title-5 pb-30'>{title}</h3>
+                  <h1 className=' pb-30'>{maintitle}</h1>
                   <span className='tp-section-subtitle-5'>{sub_text}</span>
                   <div className='tp-cta-five-btn'>
                     <Link

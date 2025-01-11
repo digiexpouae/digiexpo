@@ -29,6 +29,7 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl ,ogImage, ogDescription,ogTitle
         <meta name="description" content={pageDesc && `${pageDesc}`} />
         {/* <meta name="robots" content="noindex, follow" /> */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
         <meta name="og:Image" content={ogImage} />
         <meta name="og:Description" content={ogDescription} />
         <meta name="og:Title" content={ogTitle} />
@@ -36,11 +37,7 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl ,ogImage, ogDescription,ogTitle
           return <meta name="metaTags" content={item} key={index} />
 
         })}
-{/*    
-        <script
-          async
-          src="https://connect.facebook.net/en_US/fbevents.js"
-        ></script> */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

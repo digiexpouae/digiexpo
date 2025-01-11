@@ -28,7 +28,7 @@ export async function getServerSideProps(context) {
       };
     }
 
-    return {
+    return { 
       props: {
         blog, // Pass the blog data as props
       },
