@@ -5,10 +5,12 @@ import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
 
 // images import
-import hero_frame from "../../../../public/assets/img/hero/hero-frame.webp"
-// import hero_frame from "../../../../public/assets/img/hero/hero-frame.png";
-import shape_1 from "../../../../public/assets/img/hero/hero_frame_line.webp";
-import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.f573ebe0.webp";
+
+import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
+import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.png";
+import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
+
+
 import shape_img_1 from "../../../../public/assets/img/hero/hero-shape-1.png";
 import shape_img_2 from "../../../../public/assets/img/hero/hero-shape-2.png";
 import hero_thumb_1 from "../../../../public/assets/img/hero/hero-sm-1.jpg";
@@ -109,6 +111,7 @@ const HeroSlider = () => {
 							// style={{width: "auto", height: "auto"}}
 							src={hero_frame}
 							alt="theme-pure"
+		                    priority						
 						/>
 					</div>
 					<div className="tp-hero-shape">
