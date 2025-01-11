@@ -26,9 +26,9 @@ const ServiceArea = () => {
                         <div className="col-lg-6">
                            <div className="tp-service-five-section-box">
                               <span className="tp-section-subtitle-5">{sub_title}</span>
-                              <h3 className="tp-section-title-5 pb-15">
+                              <h1 className="tp-section-title-5 pb-15">
                                  {title} 
-                              </h3>
+                              </h1>
                               <p className="pb-20">
                                 {description}
                               </p>
@@ -51,9 +51,9 @@ const ServiceArea = () => {
                                           </video>
                                        </div>
                                        <div className="tp-service-five-content">
-                                          <h3 className="tp-service-five-title-sm">
+                                          <h1 className="tp-service-five-title-sm">
                                             <Link href="/digital-marketing-agency-dubai">Digital <br /> Marketing</Link>
-                                          </h3>
+                                          </h1>
                                           <p>Our Digital Marketers will help to increase traffic, boost conversion rates, and maximize your business's revenue.</p>
                                        </div>
                                     </div>
