@@ -138,7 +138,7 @@ const ContactUsForm = () => {
         <div className='col-xxl-12 mb-30'>
           <ReCAPTCHA
    // Replace with your reCAPTCHA site key
-   sitekey={process.env.SITE_KEY}
+
             onChange={handleRecaptchaChange}
           />
         </div>
