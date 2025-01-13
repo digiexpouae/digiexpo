@@ -77,7 +77,7 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl }) => {
           />
         </noscript>
         <meta
-          name="google-site-verification"
+          name="google--verification"
           content="4OIjRBBSzprqzeFICro6NWDNkOGlWTIWvV_ixDoYCFM"
         />
         <meta

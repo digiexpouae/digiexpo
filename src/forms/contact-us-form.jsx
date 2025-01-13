@@ -137,7 +137,8 @@ const ContactUsForm = () => {
         {/* Add Google reCAPTCHA */}
         <div className='col-xxl-12 mb-30'>
           <ReCAPTCHA
-            sitekey='6LeGTKIqAAAAAHmdkm-7ZD7DxJ5OizWJcRLn_-NI' // Replace with your reCAPTCHA site key
+   // Replace with your reCAPTCHA site key
+   sitekey={process.env.SITE_KEY}
             onChange={handleRecaptchaChange}
           />
         </div>
