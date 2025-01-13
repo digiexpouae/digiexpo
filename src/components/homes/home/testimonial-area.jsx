@@ -174,7 +174,7 @@ const TestimonialArea = () => {
                                                 <Image src={item.img} alt={item.name} />
                                              </div>
                                              <div>
-                                                <h5>{item.name}</h5>
+                                                <h1>{item.name}</h1>
                                                 <span>{item.job_title}</span>
                                              </div>
                                           </div>

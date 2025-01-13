@@ -42,7 +42,7 @@ const Brand = () => {
               <div className="row">
                 <div className="col-12">
                   <div className="ab-brand-section-box text-center mb-50">
-                    <h4 className="ab-brand-title text-purple">{titel}</h4>
+                    <h1 className="ab-brand-title text-purple">{titel}</h1>
                     <p>{description}</p>
                   </div>
                 </div>

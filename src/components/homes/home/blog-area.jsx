@@ -18,9 +18,9 @@ const BlogArea = () => {
             <div className="col-xl-6 col-lg-6">
               <div className="tp-blog-four-section-box">
                 <h3 className="tp-section-title-4 text-purple">{title}</h3>
-                <h5 className="tp-section-subtitle-4 pt-10 text-purple">
+                <h4 className="tp-section-subtitle-4 pt-10 text-purple">
                   {sub_title}
-                </h5>
+                </h4>
               </div>
             </div>
             {/* <div
