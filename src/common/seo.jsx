@@ -85,7 +85,7 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl ,ogImage, ogDescription,ogTitle
           />
         </noscript>
         <meta
-          name="google-site-verification"
+          name="google--verification"
           content="4OIjRBBSzprqzeFICro6NWDNkOGlWTIWvV_ixDoYCFM"
         />
         <meta
