@@ -107,10 +107,10 @@
         }
     }
     &__widget-title{
-        font-weight: 700;
-        font-size: 18px;
+        // font-weight: 700;
+        // font-size: 18px;
         color: var(--tp-common-white);
-        padding-bottom: 25px;
+        // padding-bottom: 25px;
     }
     &__social{
         & a{
@@ -504,11 +504,12 @@
     }
     &__text{
         & span{
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 12px;                       
-           color: rgba(245, 245, 250, 0.6);
-           display: inline-block;
+            // comment
+        //     font-weight: 500;
+        //     font-size: 15px;
+        //     line-height: 12px;                       
+        //    color: rgba(245, 245, 250, 0.6);
+        //    display: inline-block;
            @media #{$md}{
             font-size: 13px;
            }
@@ -516,9 +517,10 @@
             font-size: 12px;
             margin-bottom: 20px;
            }
-           & a{
-            color: var(--tp-common-red);
-           }            
+        //    common
+        //    & a{
+        //     color: var(--tp-common-red);
+        //    }            
         }
     }
     &__lang {
@@ -611,6 +613,7 @@
     &__text-4{
         & span{
             color: rgba(255, 255, 255, 0.6);
+    
             & a{
                 color: rgba(255, 255, 255, 0.6);
             }
@@ -694,6 +697,7 @@
 }
 
 .footer-widget-4{
+// comment
     & .tp-footer__widget-title{
         font-weight: 700;
         font-size: 22px;
@@ -702,8 +706,9 @@
     & .tp-footer__content{
         & ul{
             & li{
-                width: 100%;
-                float: left;
+                // comment
+                // width: 100%;
+                // float: left;
                 & a{
                     font-weight: 500;
                     font-size: 16px;                   
@@ -744,6 +749,8 @@
                 }
             }
         }
+
+
     }
 }
 
@@ -757,6 +764,7 @@
     }
 }
 .footer-col-4-2{
+
     padding-left: 70px;
     @media #{$lg,$md}{
         padding-left: 20px;
@@ -847,10 +855,10 @@
         }
     }
 }
-
-.tp-custom-accordion{
-   min-height: 550px;
-}
+// first comment
+// .tp-custom-accordion{
+//    min-height: 550px;
+// }
 
 
 
