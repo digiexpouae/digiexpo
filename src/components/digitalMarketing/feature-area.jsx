@@ -40,11 +40,11 @@ const FeatureArea = ({style_integraton}) => {
                            <div className="tp-feature-five-section-box text-center mb-40">
                             {style_integraton ?
                                 <>
-                                <h3 className="tp-section-title-5 text-purple">
+                                <h1 className="tp-section-title-5 text-purple">
                                     <span>
                                         {integraton_title}
                                     </span>
-                                </h3>
+                                </h1>
                                     <p>{integraton_des}</p>
                                 </>
                                 :
