@@ -34,7 +34,7 @@ const HomeOne = () => {
 						<PaymentMethodArea/>
 						<BusinessBox />
 						<ProjectArea />
-						<TestimonialArea />
+						{/* <TestimonialArea /> */}
 						<AboutArea />
 						<FunFactArea />
 						<FaqArea />
