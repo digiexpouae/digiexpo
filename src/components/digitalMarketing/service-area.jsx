@@ -152,15 +152,15 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'135px',height:'100%'}}
+                  style={{width:'150px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Search Engine Optimization(SEO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
-                        Our SEO pros help you achieve top search rankings and
-                        outrank your rivals.
+                        Our SEO pros help you achieve top <br /> <div style={{whiteSpace:'nowrap'}}>search rankings and
+                        outrank your rivals.</div>
                       </Link>
                     </h3>
                     <div className='tp-service-sm-link'>
