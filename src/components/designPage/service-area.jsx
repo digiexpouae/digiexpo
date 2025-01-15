@@ -2,10 +2,8 @@ import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -101,6 +99,7 @@ const ServiceArea = () => {
                               <video autoPlay muted loop width="150px">
                                  <source src="/assets/img/service/performance.webm" type="video/webm" /> 
                               </video>
+                  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>UX Design</span>

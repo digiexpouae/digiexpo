@@ -2,10 +2,17 @@ import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+import emailmarketing from '../../../public/animation/emailnews.json'
+import dynamic from 'next/dynamic';
+import target from '../../../public/animation/target.json'
+import ecommerce from '../../../public/animation/ecommerce.json'
+import mobilesearch from '../../../public/animation/mobilesearch.json'
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-
+import videomarketing from "../../../public/animation/videomarketing.json"
+import presentation from '../../../public/animation/presentation.json'
+import document from "../../../public/animation/document.json"
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
   title: (
@@ -97,12 +104,14 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                 <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/smm.webm'
                         type='video/webm'
                       />
                     </video>
+ 
+              
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Social Media Marketing (SMM)</span>
@@ -128,12 +137,23 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
+                    {/* <video autoPlay muted loop width='150px'>
                       <source
                         src='/assets/img/service/seo.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                           <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: mobilesearch,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'135px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Search Engine Optimization(SEO)</span>
@@ -159,12 +179,23 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
+                    {/* <video autoPlay muted loop width='150px'>
                       <source
                         src='/assets/img/service/performance.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                         <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:target,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Performance Marketing</span>
@@ -189,12 +220,19 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
-                      <source
-                        src='/assets/img/service/email.webm'
-                        type='video/webm'
-                      />
-                    </video>
+                 
+                    
+  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: emailmarketing,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Email Marketing</span>
@@ -219,12 +257,24 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/app.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                                               
+                  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: ecommerce,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>App Store Optimization(ASO)</span>
@@ -249,12 +299,23 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/writing.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                      <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: document,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Content Writing</span>
@@ -279,12 +340,23 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/influence.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                        <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:videomarketing,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Influencer Marketing</span>
@@ -309,12 +381,24 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/creating.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                        <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:presentation,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'150px',height:'100%'}}
+                    />  
+
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Content Creation</span>
