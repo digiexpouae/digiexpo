@@ -130,12 +130,12 @@ const [recapchatoken, setrecapchatoken] = useState("")
             ></textarea>
           </div>
         </div>
-        <div>
+        {/* <div>
           <ReCAPTCHA
             sitekey='6LcgnLEqAAAAACc6SGBFLzOKkoIlwzNnfDllZSrh' // Replace with your reCAPTCHA site key
             onChange={capchahandlechange}
           />
-        </div>
+        </div> */}
         <div className='col-xl-12'>
           <div className='tp-contact-btn'>
             <button className='tp-btn-yellow-lg w-100' type='submit'>

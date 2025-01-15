@@ -29,10 +29,10 @@ const AboutArea = () => {
                <div className="container">
                   <div className="row align-items-center">
                      <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div className="tp-about-left-img text-md-center p-relative text-start z-index">
+                        <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
                            {/* <Image src={img_2} alt="theme-pure" /> */}
                            <video autoPlay muted loop className='tp-about-left-video'>
-                              <source src="/assets/img/about/colorful.webm" type="video/webm" />
+                              <source src="/assets/img/about/colorful-1 (2).mp4" type="video/webm" />
                            </video>
                            {/* <div className="tp-about-top-img">
                               <Image src={img_3} alt="theme-pure" />

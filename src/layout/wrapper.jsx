@@ -34,7 +34,7 @@ const Wrapper = ({ children }) => {
 
          gsapModule.registerPlugin(ScrollTriggerModule);
          // Now you can safely call animationCreate or any gsap logic
-         animationCreate();
+        //  animationCreate();
        }
      };
 
