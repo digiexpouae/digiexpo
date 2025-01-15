@@ -29,7 +29,9 @@ const AboutArea = () => {
                <div className="container">
                   <div className="row align-items-center">
                      <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
+                        <div className="tp-about-left-img text-md-center p-relative text-start z-index "style={{position: "relative",width: "100%",
+    height: "371px",overflow: "hidden"
+}}>
                            {/* <Image src={img_2} alt="theme-pure" /> */}
                            <video autoPlay muted loop className='tp-about-left-video'>
                               <source src="/assets/img/about/colorful-1 (2).mp4" type="video/webm" />

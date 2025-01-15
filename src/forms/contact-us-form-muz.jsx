@@ -74,7 +74,7 @@ const [recapchatoken, setrecapchatoken] = useState("")
           </div>
         </div>
         <div className='col-xl-6'>
-          <div className='tp-contact-input mb-20'>
+          <div className='tp-contact-input mb-20' >
             <input
               type='email'
               className=''
