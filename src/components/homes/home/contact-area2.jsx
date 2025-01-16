@@ -37,6 +37,7 @@ const ContactArea2 = () => {
                            {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                            <video autoPlay muted loop width="500px">
                               <source src="/assets/img/contact/contact.mp4" type="video/webm" /> 
+                              <source src="/assets/img/contact/contact.mov" />
                            </video>
                            {/* <p className=''>Looking for the best digital marketing agency in Dubai? DigiExpo team of specialists will help to grow your online business by offering multi-channel digital marketing services.  We deliver measurable results through data-driven strategies and innovative solutions. Let's grow your brand together.</p> */}
                         </div>

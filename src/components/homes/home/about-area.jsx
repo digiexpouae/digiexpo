@@ -6,8 +6,7 @@ import img_1 from "../../../../public/assets/img/about/about-4-3.png";
 import img_2 from "../../../../public/assets/img/about/about-4-1.png";
 import img_3 from "../../../../public/assets/img/about/about-4-2.png";
 
-// about content here"
-// video fixed
+// about content here
 const about_content = { 
    //  sub_title: "Who we are",
     title: <>We Are Visionary Marketers</>, 
@@ -30,13 +29,16 @@ const AboutArea = () => {
                <div className="container">
                   <div className="row align-items-center">
                      <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div className="tp-about-left-img text-md-center p-relative text-start z-index "style={{position: "relative",width: "100%",
-    height: "371px",overflow: "hidden"
-}}>
+                        <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
                            {/* <Image src={img_2} alt="theme-pure" /> */}
-                           <video autoPlay muted loop className='tp-about-left-video'>
-                              <source src="/assets/img/about/colorful.mp4" type="video/webm" />
-                           </video>
+    
+                           <video  autoplay muted loop className="tp-about-left-video">
+   <source src="/assets/img/about/colorful.mp4" type="video/mp4" />
+   <source src="/assets/img/about/colorful.mov" type="video/quicktime" />
+   Your browser does not support the video tag.
+</video>
+
+
                            {/* <div className="tp-about-top-img">
                               <Image src={img_3} alt="theme-pure" />
                            </div> */}
