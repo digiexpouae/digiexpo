@@ -12,6 +12,7 @@ import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1
 import videomarketing from "../../../public/animation/videomarketing.json"
 import presentation from '../../../public/animation/presentation.json'
 import document from "../../../public/animation/document.json"
+import message from "../../../public/animation/message.json"
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
@@ -104,14 +105,24 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                 <video autoPlay muted loop width='125px'>
+                 {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/smm.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
  
-              
+ <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: message,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                   </div>
                   <div className='tp-service-sm-content'>
                     <span>Social Media Marketing (SMM)</span>
@@ -152,7 +163,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -194,7 +205,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -231,7 +242,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -273,7 +284,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -314,7 +325,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -355,7 +366,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
                   </div>
                   <div className='tp-service-sm-content'>
@@ -396,7 +407,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'150px',height:'100%'}}
+                  style={{width:'122px',height:'100%'}}
                     />  
 
                   </div>

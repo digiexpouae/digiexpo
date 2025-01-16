@@ -426,7 +426,8 @@
     transition: 0.3s;
     & span {
       font-weight: 700;
-      font-size: 15px;
+      white-space: nowrap;
+      font-size: 14px;
       line-height: 8px;
       letter-spacing: 0.03em;
       text-transform: capitalize;
