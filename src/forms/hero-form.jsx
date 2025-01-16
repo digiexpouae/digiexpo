@@ -6,9 +6,9 @@ const HeroForm = () => {
     <>
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="p-relative">
-          <input type="text" placeholder="Business email adress" />
+          {/* <input type="text" placeholder="Business email adress" /> */}
          {/* email icon */}
-         <EmailIcon />
+         {/* <EmailIcon /> */}
         </div>
         <button className="tp-btn tp-btn-hover alt-color-black">
           <span>Get In Touch</span>

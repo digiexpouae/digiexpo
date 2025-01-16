@@ -102,8 +102,8 @@
     }
   }
   &__input {
-    margin: 0px 170px;
-    margin-bottom: 20px;
+    // margin: 0px 170px;
+    // margin-bottom: 20px;
     @media #{$md} {
       margin: 0px 70px;
       margin-bottom: 20px;
@@ -127,13 +127,15 @@
       }
     }
     & button {
-      position: absolute;
+      // position: absolute;
       top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
+      // right: 10px;
+    margin-bottom: 40px;
+      // transform: translateY(-50%);
       @media #{$xs} {
         position: static;
         transform: translate(0);
+        margin-bottom: 20px;
         margin-top: 20px;
       }
     }
