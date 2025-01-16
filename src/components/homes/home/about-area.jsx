@@ -7,9 +7,9 @@ import img_2 from "../../../../public/assets/img/about/about-4-1.png";
 import img_3 from "../../../../public/assets/img/about/about-4-2.png";
 
 // about content here
-const about_content = { 
+const about_content = {
    //  sub_title: "Who we are",
-    title: <>We Are Visionary Marketers</>, 
+    title: <>We Are Visionary Marketers</>,
     des: <>With impressive clientele, enriching experience and impeccable track record, we are the most reliable digital marketing agency in Dubai. At DigiExpo, we blend strategic insights with unparalleled creativity and advanced technology to upgrade the visibility of your online brand and to deliver tangible outcomes.</>,
     feature_1: <>High-Performance <br /> Solutions</>,
     feature_2: <>Best Cyber Security <br /> Solutions.</>,
@@ -31,8 +31,8 @@ const AboutArea = () => {
                      <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
                         <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
                            {/* <Image src={img_2} alt="theme-pure" /> */}
-    
-                           <video  autoplay muted loop className="tp-about-left-video">
+
+                           <video  autoPlay muted loop className="tp-about-left-video">
    <source src="/assets/img/about/colorful.mp4" type="video/mp4" />
    <source src="/assets/img/about/colorful.mov" type="video/quicktime" />
    Your browser does not support the video tag.
