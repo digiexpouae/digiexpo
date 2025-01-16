@@ -53,6 +53,7 @@ const BlogArea = () => {
                           src="/assets/img/hero/hero.mp4"
                           type="video/webm"
                         />
+                        <source src="/assets/img/hero/hero-video.mov" />
                       </video>
                     </Link>
                   </div>
@@ -95,6 +96,7 @@ const BlogArea = () => {
                           src="/assets/img/hero/hero.mp4"
                           type="video/webm"
                         />
+                        <source src="/assets/img/hero/hero-video.mov"/>
                       </video>
                     </Link>
                   </div>
