@@ -50,7 +50,7 @@ const BlogArea = () => {
                     <Link href="/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies">
                       <video autoPlay muted loop width="570px">
                         <source
-                          src="/assets/img/hero/hero-video (1).mp4"
+                          src="/assets/img/hero/hero.mp4"
                           type="video/webm"
                         />
                       </video>
@@ -92,7 +92,7 @@ const BlogArea = () => {
                     <Link href="/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses">
                       <video autoPlay muted loop width="570px">
                         <source
-                          src="/assets/img/hero/hero-video (1).mp4"
+                          src="/assets/img/hero/hero.mp4"
                           type="video/webm"
                         />
                       </video>
