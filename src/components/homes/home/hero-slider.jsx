@@ -103,77 +103,77 @@ const HeroSlider = () => {
 	useCharAnimation(".tp-hero__hero-title span.child");
 
 	return (
-		<>
-			<div className="tp-hero__area tp-hero__pl-pr">
-				<div className="tp-hero__bg p-relative">
-					<div className="tp-hero-bg tp-hero-bg-single" ref={hero_bg}>
-						<Image
-							// style={{width: "auto", height: "auto"}}
-							src={hero_frame}
-							alt="theme-pure"
-		                    priority						
-						/>
-					</div>
-					<div className="tp-hero-shape">
-						{hero_shape.map((item, i) => (
-							<Image
-								// style={{width: "auto", height: "auto"}}
-								key={i}
-								className={item.cls}
-								src={item.img}
-								alt="theme-pure"
-							/>
-						))}
-					</div>
-					<div className="container">
-						<div className="row justify-content-center">
-							<div className="col-xl-10">
-								<div className="tp-hero__content-box text-center z-index-3">
-									<div className="tp-hero__title-box p-relative">
-										<h2 className="tp-hero__hero-title tp-title-anim">
-											{hero_title}
-										</h2>
-										<div className="tp-hero__title-shape d-none d-sm-block">
-											<LineShape />
-										</div>
-									</div>
-									<div
-										className="tp-hero__input p-relative wow tpfadeUp"
-										data-wow-duration=".9s"
-										data-wow-delay=".5s"
-									>
-										<HeroForm />
-									</div>
-									<p
-										className="wow tpfadeUp"
-										data-wow-duration=".9s"
-										data-wow-delay=".7s"
-									>
-										{sub_title}
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    <>
+      <div className='tp-hero__area tp-hero__pl-pr'>
+        <div className='tp-hero__bg p-relative'>
+          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
+            <Image
+              // style={{width: "auto", height: "auto"}}
+              src={hero_frame}
+              alt='theme-pure'
+              priority
+            />
+          </div>
+          <div className='tp-hero-shape'>
+            {hero_shape.map((item, i) => (
+              <Image
+                // style={{width: "auto", height: "auto"}}
+                key={i}
+                className={item.cls}
+                src={item.img}
+                alt='theme-pure'
+              />
+            ))}
+          </div>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-xl-10'>
+                <div className='tp-hero__content-box text-center z-index-3'>
+                  <div className='tp-hero__title-box p-relative'>
+                    <h2 className='tp-hero__hero-title tp-title-anim'>
+                      {hero_title}
+                    </h2>
+                    <div className='tp-hero__title-shape d-none d-sm-block'>
+                      <LineShape />
+                    </div>
+                  </div>
+                  <div
+                    className='tp-hero__input p-relative wow tpfadeUp'
+                    data-wow-duration='.9s'
+                    data-wow-delay='.5s'
+                  >
+                    <HeroForm />
+                  </div>
+                  <p
+                    className='wow tpfadeUp'
+                    data-wow-duration='.9s'
+                    data-wow-delay='.7s'
+                  >
+                    {sub_title}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div className="tp-hero__bottom z-index-5">
-					<div className="container">
-						<div className="row justify-content-center">
-							<div className="col-xl-10">
-								<div className="tp-hero__thumb-wrapper-main p-relative">
-									{hero_shape_img.map((item, i) => (
-										<div
-											key={i}
-											className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
-										>
-											<Image src={item.img} alt="theme-pure" />
-										</div>
-									))}
-									<div>
-										<div className="tp-hero__thumb-wrapper p-relative">
-											<div className="row">
-												{/* <div className="col-8">
+        <div className='tp-hero__bottom z-index-5'>
+          <div className='container'>
+            <div className='row justify-content-center'>
+              <div className='col-xl-10'>
+                <div className='tp-hero__thumb-wrapper-main p-relative'>
+                  {hero_shape_img.map((item, i) => (
+                    <div
+                      key={i}
+                      className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
+                    >
+                      <Image src={item.img} alt='theme-pure' />
+                    </div>
+                  ))}
+                  <div>
+                    <div className='tp-hero__thumb-wrapper p-relative'>
+                      <div className='row'>
+                        {/* <div className="col-8">
 													<div className="tp-hero__thumb-box">
 														<div className="row">
 															<div className="col-md-12">
@@ -215,21 +215,27 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
-												<video autoPlay muted loop>
-                                             <source src="/assets/img/hero/hero.mp4" type="video/webm" />
-											 <source src="/assets/img/hero/hero-video.mov" />
-                                          </video>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+                        <video autoPlay muted loop>
+                          <source
+                            src='/assets/img/hero/hero.mp4'
+                            type='video/mp4'
+                          />
+                          <source
+                            src='/assets/img/hero/hero-video.mov'
+                            type='video/quicktime'
+                          />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default HeroSlider;
