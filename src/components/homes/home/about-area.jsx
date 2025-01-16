@@ -35,7 +35,7 @@ const AboutArea = () => {
 }}>
                            {/* <Image src={img_2} alt="theme-pure" /> */}
                            <video autoPlay muted loop className='tp-about-left-video'>
-                              <source src="/assets/img/about/colorful-1 (2).mp4" type="video/webm" />
+                              <source src="/assets/img/about/colorful.mp4" type="video/webm" />
                            </video>
                            {/* <div className="tp-about-top-img">
                               <Image src={img_3} alt="theme-pure" />

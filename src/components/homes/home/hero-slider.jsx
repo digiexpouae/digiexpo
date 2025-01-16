@@ -216,7 +216,7 @@ const HeroSlider = () => {
 													</div>
 												</div> */}
 												<video autoPlay muted loop>
-                                             <source src="/assets/img/hero/hero-video (1).mp4" type="video/webm" />
+                                             <source src="/assets/img/hero/hero.mp4" type="video/webm" />
                                           </video>
 											</div>
 										</div>
