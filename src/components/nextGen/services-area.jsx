@@ -3,9 +3,11 @@ import service_data from "@/data/service-data";
 import RightArrow from "@/svg/right-arrow";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
-
 import img from "../../../public/assets/img/service/sv-dashbord.png";
+import React, { useRef } from "react";
+import send from '../../../public/animation/send.json'
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+
 
 const service_content = {
   title: "Our Emerging Technology Development Services",
@@ -66,6 +68,8 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video>
+ 
+ 
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">

@@ -4,9 +4,14 @@ import RightArrow from "@/svg/right-arrow";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-
+import send from '../../../public/animation/send.json'
+import dynamic from "next/dynamic";
 import img from "../../../public/assets/img/service/sv-dashbord.png";
+import sales from '../../../public/animation/sales.json'
 
+
+
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 const service_content = {
   title:(
   <>Stand Out. Get Results. Our Dubai <div style={{display:'flex'}}><h1 style={{color:'#7B42F7',fontSize:'40px'
@@ -62,12 +67,23 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="150px">
+                  {/* <video autoPlay muted loop width="150px">
                     <source
                       src="/assets/img/service/wordpress.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: send,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -158,6 +174,8 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video>
+
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -182,12 +200,24 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/maintenance.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  
+<Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: sales,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
