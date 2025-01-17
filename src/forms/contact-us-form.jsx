@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const ContactUsForm = () => {
@@ -136,11 +136,11 @@ const ContactUsForm = () => {
 
         {/* Add Google reCAPTCHA */}
         <div className='col-xxl-12 mb-30'>
-          <ReCAPTCHA
+          {/* <ReCAPTCHA
    // Replace with your reCAPTCHA site key
    sitekey={process.env.SITE_KEY}
             onChange={handleRecaptchaChange}
-          />
+          /> */}
         </div>
 
         <div className='col-xxl-12'>
