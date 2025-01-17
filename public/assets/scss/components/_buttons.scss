@@ -1,6 +1,8 @@
 @use '../utils' as *;
 
-.tp-btn{
+
+
+.tp-home{
 	display: inline-block;
 	background-color: var(--tp-common-blue);
 	color: var(--tp-common-white);
@@ -8,6 +10,43 @@
 	line-height: 45px;
 	border-radius: 6px;
 	padding: 0 90px;
+	font-size: 15px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: capitalize;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: .5s;
+	  & span {
+		position: relative;
+		z-index: 5;
+		transition: .3s;
+		transition-delay: .3s;
+		color: var(--tp-common-white);
+	  }
+	  &:hover{
+		& span{
+			color: var(--tp-common-white);
+			transition-delay: .1s;
+		}
+	}
+}
+
+
+
+
+
+
+
+.tp-btn{
+	display: inline-block;
+	background-color: var(--tp-common-blue);
+	color: var(--tp-common-white);
+	height: 45px;
+	line-height: 45px;
+	border-radius: 30px;
+	padding: 0 30px;
 	font-size: 15px;
 	font-weight: 600;
 	text-align: center;
