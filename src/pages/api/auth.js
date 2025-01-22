@@ -1,76 +1,92 @@
-import axios from 'axios'
-// Replace with your credentials and tokens
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-let accessToken = process.env.ACCESS_TOKEN;
-const refreshToken = process.env.REFRESH_TOKEN;
+const clientId = "1000.T5B83P7WPR5KW1XAPWUZ1X3NUR57SS";
+const clientSecret = "e2d61f8d53e352b20ecb1fd929ac2503549892c8e2";
+const refreshToken =
+  "1000.da520b9b6d82e40868f045db92226416.e8a52c0244c77124f2fc3de1634c20bd";
 
-// Function to get the access token (either by refreshing or from initial access)
-async function getAccessToken() {
-  try {
-    if (!accessToken) {
-      console.log('Access token is not available, initiating OAuth flow...');
-      return await refreshAccessToken();
-    }
-
-    // Check if the token is expired by sending a test request (optional)
-    const response = await axios.get('https://www.zohoapis.com/crm/v2/lead', {
-      headers: { Authorization: `Bearer ${accessToken}` },
-    });
-
-    return accessToken; // If the request is successful, the token is still valid.
-  } catch (error) {
-    // If the token is expired or invalid, refresh it
-    if (error.response && error.response.status === 401) {
-      console.log('Access token expired or invalid, refreshing...');
-      return await refreshAccessToken();
-    }
-    throw new Error('Error getting access token: ' + error.message);
-  }
-}
-
-// Function to refresh the access token
 async function refreshAccessToken() {
   try {
-    const response = await axios.post('https://accounts.zoho.com/oauth/v2/token', null, {
-      params: {
-        client_id: clientId,
-        client_secret: clientSecret,
-        grant_type: 'refresh_token',
-        refresh_token: refreshToken,
+    const params = new URLSearchParams();
+    params.append("client_id", clientId);
+    params.append("client_secret", clientSecret);
+    params.append("grant_type", "refresh_token");
+    params.append("refresh_token", refreshToken);
+
+    const response = await fetch("https://accounts.zoho.com/oauth/v2/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
       },
+      body: params.toString(),
     });
-    accessToken = response.data.access_token; // Update the access token
-    console.log('Access token refreshed:', accessToken);
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`HTTP error ${response.status}: ${errorText}`);
+    }
+
+    const data = await response.json();
+
+    const accessToken = data.access_token;
+
     return accessToken;
   } catch (error) {
-    console.error('Error refreshing access token:', error.response?.data || error.message);
-    throw new Error('Error refreshing access token');
-  }
-}
-
-// Function to send data to Zoho CRM
-export async function sendDataToZoho(formdata) {
-  try {
-    const token = await getAccessToken(); // Get the valid access token
-    const response = await axios.post(
-      'https://www.zohoapis.com/crm/v2/Leads',
-      { data: [formdata] },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      }
+    console.error(
+      "Error refreshing access token:",
+      error.response?.data || error.message
     );
-    console.log('Data sent successfully:', response.data);
-  } catch (error) {
-    console.error('Error sending data:', error.response?.data || error.message);
+    throw new Error("Error refreshing access token");
   }
 }
+function splitName(fullName) {
+  const nameParts = fullName.split(" ");
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join(" "); // Handles multiple last names
+  return { firstName, lastName };
+}
+export default async function sendDataToZoho(req, res) {
+  try {
+    const accessToken = await refreshAccessToken();
+    // in this formData variable, you will get data from frontend. Jsut map it with payload below and remove dummy data
+    const formData = req.body;
+    const info = JSON.parse(formData);
+    const { name, email, inquiry, phone, message } = info;
 
-// Example user data
+    const { firstName, lastName } = splitName(name);
 
+    const zohoLeadData = {
+      data: [
+        {
+          Last_Name: lastName ?? "N/A",
+          First_Name: firstName,
+          Email: email,
+          Phone: phone,
+          Lead_Source: "Website",
+          Designation: inquiry,
+          Description: message,
+        },
+      ],
+    };
 
-// Call the function
+    const response = await fetch("https://www.zohoapis.com/crm/v2/Leads", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(zohoLeadData),
+    });
 
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Error sending data : ${errorText}`);
+    }
+
+    const data = await response.json();
+
+    return res.status(200).json({ message: "Data sent successfully " });
+  } catch (error) {
+    console.error("Error sending data:", error);
+
+    return res.status(500).json({ message: "Error sending data " });
+  }
+}

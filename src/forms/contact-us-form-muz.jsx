@@ -27,8 +27,12 @@ const [recapchatoken, setrecapchatoken] = useState("")
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
-  try{
-    const res= await sendDataToZoho(formData)
+    try {
+      const res = await fetch("/api/auth", {
+        method:"POST", 
+      body: JSON.stringify(formData)
+    })
+    // const res= await sendDataToZoho(formData)
     console.log(res)
      // Check if the response indicates success
      if (res && res.data && res.data.success) {
