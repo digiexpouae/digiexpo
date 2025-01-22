@@ -50,12 +50,12 @@ async function refreshAccessToken() {
 }
 
 // Function to send data to Zoho CRM
-export async function sendDataToZoho(data) {
+export async function sendDataToZoho(formdata) {
   try {
     const token = await getAccessToken(); // Get the valid access token
     const response = await axios.post(
       'https://www.zohoapis.com/crm/v2/Leads',
-      { data: [data] },
+      { data: [formdata] },
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -73,4 +73,4 @@ export async function sendDataToZoho(data) {
 
 
 // Call the function
-sendDataToZoho(userData);
+
