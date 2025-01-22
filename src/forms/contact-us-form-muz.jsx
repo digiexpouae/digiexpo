@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import ReCAPTCHA from "react-google-recaptcha";
-
+import { sendDataToZoho } from "../pages/api/auth";
 const ContactUsFormMuz = () => {
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -24,27 +24,28 @@ const [recapchatoken, setrecapchatoken] = useState("")
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
-    fetch("api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
+    try {
+      const res = await fetch("/api/auth", {
+        method:"POST", 
+      body: JSON.stringify(formData)
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          router.push('/thank-you');
-        } else {
-          alert("Failed to send message.");
-        }
-      })
-      .catch((error) => {
-        alert("An error occurred while sending the message.");
-      });
+    // const res= await sendDataToZoho(formData)
+    console.log(res)
+     // Check if the response indicates success
+     if (res && res.data && res.data.success) {
+      // Redirect to thank you page if successful
+      router.push('/thank-you');
+    } else {
+      // Show error message if something went wrong
+      alert("Failed to send message.");
+    }
+  }
+catch(error){
+  console.log('Error')
+}
   };
 
   const capchahandlechange =(value)=>{
