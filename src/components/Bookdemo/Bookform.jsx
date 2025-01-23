@@ -5,7 +5,7 @@ import HeaderFive from '../../layout/headers/header-5'
 import Form from './Form'
 const Bookform = () => {
   return (
-    <div style={{display:'flex',alignItems:'center',justifyContent:'center',height:'100vh',padding:'180px 50px'}}>
+    <div  className='tpforms'>
     <Content />
         <Form />
  </div>)

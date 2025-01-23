@@ -39,11 +39,11 @@ const Brandtwo = () => {
         
               <div className="row justify-content-center">
                 <div className="col-xl-10">
-                  <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 justify-content-center">
+                  <div className="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 justify-content-center">
                     {brand_img.map((item, i) => (
                       <div
                         key={i}
-                        className="col wow tpfadeUp"
+                        className="col wow tpfadechange"
                         data-wow-duration=".9s"
                         data-wow-delay={item.delay}
                       >

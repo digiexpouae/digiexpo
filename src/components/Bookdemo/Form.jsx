@@ -3,7 +3,7 @@ import ContactUsFormMuz from '../../forms/contact-us-form-muz'
 
 const Form = () => {
   return (
-    <div className='tp-contact-input-wrapper' style={{backgroundColor:'black',width:'60%'}}>
+    <div className='tpContact-input-wrapper' style={{backgroundColor:'black',height:'45%'}} >
 <ContactUsFormMuz />
 </div>
   )
