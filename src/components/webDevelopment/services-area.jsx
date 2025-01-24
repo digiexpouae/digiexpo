@@ -8,9 +8,8 @@ import web from '../../../public/animation/website.json'
 import webanalysis  from '../../../public/animation/web-analysis.json'
 import user from '../../../public/animation/user.json'
 import img from "../../../public/assets/img/service/sv-dashbord.png";
-
 import dynamic from 'next/dynamic';
-
+import whatsapp from '../../../public/animation/pie-chart.json'
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
@@ -252,12 +251,24 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/whatsapp.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: whatsapp,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">

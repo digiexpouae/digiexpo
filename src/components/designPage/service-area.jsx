@@ -8,6 +8,7 @@ import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1
 import web from '../../../public/animation/website.json'
 import target from '../../../public/animation/goal.json'
 import todo from '../../../public/animation/checklist-board.json'
+import like from '../../../public/animation/image.json'
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
@@ -188,6 +189,17 @@ const ServiceArea = () => {
                               {/* <video autoPlay muted loop width="125px">
                                  <source src="/assets/img/service/influence.webm" type="video/webm" /> 
                               </video> */}
+                               <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: like,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                               
                            </div>
                            <div className="tp-service-sm-content">

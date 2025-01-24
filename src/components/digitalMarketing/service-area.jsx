@@ -3,7 +3,7 @@ import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import emailmarketing from '../../../public/animation/emailnews.json'
+// import emailmarketing from '../../../public/animation/emailnews.json'
 import dynamic from 'next/dynamic';
 import target from '../../../public/animation/target.json'
 import ecommerce from '../../../public/animation/ecommerce.json'
@@ -14,6 +14,7 @@ import videomarketing from "../../../public/animation/videomarketing.json"
 import presentation from '../../../public/animation/presentation.json'
 import document from "../../../public/animation/document.json"
 import message from "../../../public/animation/message.json"
+import emailmarketing from "../../../public/animation/emailmarketing.json"
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
