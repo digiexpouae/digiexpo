@@ -30,7 +30,7 @@ const ContactArea2 = () => {
           <div className='container'>
             <div className='row align-items-center'>
               <div className='col-12 text-center'>
-                <h1 className='tp-section-title-4 pb-50'>{title}</h1>
+                <h2 className='tp-section-title-4 pb-50'>{title}</h2>
               </div>
               <div
                 className='col-xl-5 col-12 z-index-3 wow tpfadeLeft'

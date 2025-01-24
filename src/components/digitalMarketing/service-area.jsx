@@ -21,7 +21,7 @@ const service_content = {
     < >
       Achieve Measurable Results With
       <br />
-      <h1 style={{fontSize:'24px'}}>Our Best Digital Marketing Agency In UAE</h1>
+      <h1 style={{fontSize:'24px',color:'white'}}>Our Best Digital Marketing Agency In UAE</h1>
     </>
   ),
   sub_text: (
