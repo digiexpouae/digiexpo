@@ -5,16 +5,18 @@ import Link from 'next/link';
 import React from 'react';
 // import emailmarketing from '../../../public/animation/emailnews.json'
 import dynamic from 'next/dynamic';
-import target from '../../../public/animation/target.json'
-import ecommerce from '../../../public/animation/ecommerce.json'
-import mobilesearch from '../../../public/animation/mobilesearch.json'
+import target from '../../../public/animation/performance.json'
+import contentcreation from '../../../public/animation/contentcreation.json'
+import appstore from '../../../public/animation/appstore.json'
+import SEO from '../../../public/animation/seo.json'
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
 import videomarketing from "../../../public/animation/videomarketing.json"
 import presentation from '../../../public/animation/presentation.json'
-import document from "../../../public/animation/document.json"
-import message from "../../../public/animation/message.json"
+import content from "../../../public/animation/content.json"
+import SMM from "../../../public/animation/SMM.json"
 import emailmarketing from "../../../public/animation/emailmarketing.json"
+import influencer from '../../../public/animation/influencer.json'
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
@@ -118,7 +120,7 @@ const ServiceArea = () => {
                       options={{
                         loop: true,
                         autoplay: true,
-                        animationData: message,  // Animation for Digital Marketing
+                        animationData: SMM,  // Animation for Digital Marketing
                         rendererSettings: {
                           preserveAspectRatio: "xMidYMid slice"
                         }
@@ -160,7 +162,7 @@ const ServiceArea = () => {
                       options={{
                         loop: true,
                         autoplay: true,
-                        animationData: mobilesearch,  // Animation for Digital Marketing
+                        animationData: SEO,  // Animation for Digital Marketing
                         rendererSettings: {
                           preserveAspectRatio: "xMidYMid slice"
                         }
@@ -281,7 +283,7 @@ const ServiceArea = () => {
                       options={{
                         loop: true,
                         autoplay: true,
-                        animationData: ecommerce,  // Animation for Digital Marketing
+                        animationData: appstore,  // Animation for Digital Marketing
                         rendererSettings: {
                           preserveAspectRatio: "xMidYMid slice"
                         }
@@ -322,7 +324,7 @@ const ServiceArea = () => {
                       options={{
                         loop: true,
                         autoplay: true,
-                        animationData: document,  // Animation for Digital Marketing
+                        animationData: content,  // Animation for Digital Marketing
                         rendererSettings: {
                           preserveAspectRatio: "xMidYMid slice"
                         }
@@ -363,7 +365,7 @@ const ServiceArea = () => {
                       options={{
                         loop: true,
                         autoplay: true,
-                        animationData:videomarketing,  // Animation for Digital Marketing
+                        animationData:contentcreation,  // Animation for Digital Marketing
                         rendererSettings: {
                           preserveAspectRatio: "xMidYMid slice"
                         }
