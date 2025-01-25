@@ -657,13 +657,20 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--tp-common-white);
-  &.ecom h1 {
-    font-size: 80px;
-    @media #{$xs} {
-      font-size: 37px;
-      padding-bottom: 20px;
+  &.ecom {
+    h1,
+    h2 {
+      font-size: 80px;
+      color: white;
+
+      @media #{$xs} {
+        font-size: 37px;
+        padding-bottom: 20px;
+      }
     }
   }
+
+  
   @media #{$xl} {
     font-size: 85px;
   }
