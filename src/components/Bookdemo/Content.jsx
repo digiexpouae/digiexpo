@@ -6,7 +6,7 @@ const Content = () => {
     <ul style={{listStyle:'none',lineHeight:'30px'}}>
     <li>Book a demo and discovery call to get a look at:</li>
     <li>How DigiExpo works</li>
-    <li>Elevate your marketing with efficient, impactful, and budget-friendly strategies!</li>
+    <li>Drive your marketing success with innovative and impactful strategies!</li>
     <li>What sets us apart: We’re quicker than agencies and more reliable than in-house teams!</li>
     <li>The subscription plan that best fits your needs</li></ul>
  <Brandtwo />
