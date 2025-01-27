@@ -21,7 +21,7 @@ const service_content = {
     < >
       Achieve Measurable Results With
       <br />
-      <h1 style={{fontSize:'24px'}}>Our Best Digital Marketing Agency In UAE</h1>
+      <h1 style={{fontSize:'24px',color:'white'}}>Our Best Digital Marketing Agency In UAE</h1>
     </>
   ),
   sub_text: (
@@ -139,7 +139,7 @@ const ServiceArea = () => {
                     <span>Search Engine Optimization(SEO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
-                        Our SEO pros help you achieve top search rankings and
+                        Our SEO pros help you achieve top <br />  search rankings and
                         outrank your rivals.
                       </Link>
                     </h3>

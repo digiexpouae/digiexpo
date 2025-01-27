@@ -434,10 +434,11 @@
       height: 46px;
       line-height: 24px;
       display: inline-block;
-      padding: 10px 25px;
+      padding: 10px 23px;
       margin-bottom: 13px;
       background-color: #7a42f7;
       color: white;
+      white-space: nowrap;
 
       &.ecomm {
         font-size: 13px;
