@@ -1,15 +1,12 @@
-const clientId = "1000.T5B83P7WPR5KW1XAPWUZ1X3NUR57SS";
-const clientSecret = "e2d61f8d53e352b20ecb1fd929ac2503549892c8e2";
-const refreshToken =
-  "1000.da520b9b6d82e40868f045db92226416.e8a52c0244c77124f2fc3de1634c20bd";
+
 
 async function refreshAccessToken() {
   try {
     const params = new URLSearchParams();
-    params.append("client_id", clientId);
-    params.append("client_secret", clientSecret);
+    params.append("client_id", process.env.CLIENT_ID);
+    params.append("client_secret", process.env.CLIENT_SECRET);
     params.append("grant_type", "refresh_token");
-    params.append("refresh_token", refreshToken);
+    params.append("refresh_token", process.env.REFRESH_TOKEN);
 
     const response = await fetch("https://accounts.zoho.com/oauth/v2/token", {
       method: "POST",
