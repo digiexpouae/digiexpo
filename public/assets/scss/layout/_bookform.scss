@@ -11,14 +11,25 @@ padding: 180px 50px;
     padding: 100px 20px;
 
 }
+@media #{$md} {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
+}
 }
 .tp-book{
-    color:black;width:50%;
-    
+    color:black;
+    width:50%;
+ 
    @media #{$xs}{
     width:100%;
     }
-
+    @media #{$md}{
+        width:100%;
+        padding: 30px 30px;
+        
+        }
+    
 }
 // .tpContact{
 // background-color:black;
@@ -102,7 +113,17 @@ padding: 180px 50px;
             @media #{$xs} {
                 padding: 30px 20px;
                 width: 100%; /* Full width on xs screens */
-            }}
+            }
+           
+            @media #{$md} {
+                padding: 30px 20px;
+                width: 100%; /* Full width on xs screens */
+            }
+           
+        
+        
+        }
+            
         &-input{
             & input{
                 background: rgba(2, 2, 2, 0.12);
