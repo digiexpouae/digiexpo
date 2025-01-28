@@ -215,15 +215,16 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
+                        {/* videos removed */}
                         <video autoPlay muted loop>
                           <source
-                            src='/assets/img/hero/hero.mp4'
+                            src='/assets/img/hero/hero-video compress.mp4'
                             type='video/mp4'
                           />
-                          <source
-                            src='/assets/img/hero/hero-video.mov'
+                          {/* <source
+                            src='/assets/img/hero/hero-video compress.mp4'
                             type='video/quicktime'
-                          />
+                          /> */}
                         </video>
                       </div>
                     </div>
