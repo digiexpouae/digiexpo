@@ -122,6 +122,7 @@ const HeroSlider = () => {
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
+                layout="intrinsic"
               />
             ))}
           </div>
