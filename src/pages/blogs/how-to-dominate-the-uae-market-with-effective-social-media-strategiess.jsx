@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import SEO from "../../common/seo";
 import SocialMediaMarketingBlog from "../../components/blogs/social-media-marketing-blog";
 import Wrapper from "../../layout/wrapper";
