@@ -19,7 +19,7 @@
     "bootstrap": "^5.3.3",
     "file-loader": "^6.2.0",
     "gsap": "^3.12.5",
-    "next": "^15.1.4",
+    "next": "^15.1.6",
     "nodemailer": "^6.9.16",
     "react": "^18",
     "react-countup": "^6.5.0",

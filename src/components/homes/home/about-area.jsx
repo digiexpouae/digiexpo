@@ -32,11 +32,12 @@ const AboutArea = () => {
                         <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
                            {/* <Image src={img_2} alt="theme-pure" /> */}
 
-                           <video  autoPlay muted loop className="tp-about-left-video">
-   <source src="/assets/img/about/colorful.mp4" type="video/mp4" />
-   <source src="/assets/img/about/colorful.mov" type="video/quicktime" />
+                           <video  autoPlay muted loop playsInline className="tp-about-left-video">
+   <source src="/assets/img/about/Outputvideo2.mp4" type="video/mp4" />
+   {/* <source src="/assets/img/about/colorful.mov" type="video/quicktime" /> */}
    Your browser does not support the video tag.
 </video>
+       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
 
                            {/* <div className="tp-about-top-img">

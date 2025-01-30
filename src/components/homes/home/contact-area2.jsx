@@ -40,17 +40,17 @@ const ContactArea2 = () => {
                 <div className='tp-contact-section-box pb-25'>
                   {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                  {/* video removed */}
-                  {/* <video autoPlay muted loop width='500px'>
+                  <video autoPlay muted loop playsInline width='500px'>
                     <source
-                      src='/assets/img/contact/contact compress.mp4'
+                      src='/assets/img/contact/contactc.mp4'
                       type='video/mp4'
-                    /> */}
-                    {/* <source
+                    /> 
+                      {/* <source
                       src='/assets/img/contact/contact.mov'
                       type='video/quicktime'
                     /> */}
-                  {/* </video> */}
-                  <iframe
+                   </video> 
+                  {/* <iframe
   src="https://player.vimeo.com/video/246115326?autoplay=1&muted=1&loop=1&background=1"
   // width="100%"
   // height="100%"
@@ -59,7 +59,9 @@ const ContactArea2 = () => {
   allowFullScreen
   // style={{ display: 'block' }}
 />
-      
+       */}
+       {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
                   {/* <p className=''>Looking for the best digital marketing agency in Dubai? DigiExpo team of specialists will help to grow your online business by offering multi-channel digital marketing services.  We deliver measurable results through data-driven strategies and innovative solutions. Let's grow your brand together.</p> */}
                 </div>
                 {/* <div className="tp-contact-info-box tp-title-anim">
