@@ -27,6 +27,8 @@
   }
   &__icon {
     margin-bottom: 25px;
+    height: 134px;
+
   }
   &__title-sm {
     font-weight: 700;
@@ -394,7 +396,7 @@
     border: 1px solid #7a42f7;
     border-radius: 20px;
     padding: 45px;
-    min-height: 360px;
+    min-height: 395px;
     overflow: hidden;
     transition: 0.3s;
     &:hover {
@@ -424,6 +426,7 @@
   &-content {
     margin-bottom: -47px;
     transition: 0.3s;
+    height: 209px;
     & span {
       font-weight: 700;
       font-size: 15px;

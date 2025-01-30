@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
+import progressive from '../../../public/animation/progressive.json'
 import ios from "../../../public/animation/ios.json"
 import appstore from "../../../public/animation/appstore.json"
 import android from "../../../public/animation/android.json"
@@ -63,7 +64,7 @@ const ServicesArea = () => {
               data-wow-delay=".4s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -80,7 +81,7 @@ const ServicesArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'166px',height:'100%'}}
                     />  
 
 
@@ -107,7 +108,7 @@ const ServicesArea = () => {
               data-wow-delay=".6s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -124,7 +125,7 @@ const ServicesArea = () => {
                                             preserveAspectRatio: "xMidYMid slice"
                                           }
                                         }}
-                                    style={{width:'122px',height:'100%'}}
+                                    style={{width:'122px',height:'80%'}}
                                       />  
                   
                 </div>
@@ -149,7 +150,7 @@ const ServicesArea = () => {
               data-wow-delay=".7s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -166,7 +167,7 @@ const ServicesArea = () => {
                                             preserveAspectRatio: "xMidYMid slice"
                                           }
                                         }}
-                                    style={{width:'122px',height:'100%'}}
+                                    style={{width:'122px',height:'80%'}}
                                       />  
                   
                 </div>
@@ -189,7 +190,7 @@ const ServicesArea = () => {
               data-wow-delay=".8s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon"  >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -206,7 +207,7 @@ const ServicesArea = () => {
                                             preserveAspectRatio: "xMidYMid slice"
                                           }
                                         }}
-                                    style={{width:'122px',height:'100%'}}
+                                    style={{width:'186px',height:'100%'}}
                                       />  
                   
                 </div>
@@ -231,7 +232,7 @@ const ServicesArea = () => {
               data-wow-delay=".9s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -248,7 +249,7 @@ const ServicesArea = () => {
                                             preserveAspectRatio: "xMidYMid slice"
                                           }
                                         }}
-                                    style={{width:'122px',height:'100%'}}
+                                    style={{width:'122px',height:'70%'}}
                                       />  
                   
                 </div>
@@ -287,12 +288,12 @@ const ServicesArea = () => {
                                         options={{
                                           loop: true,
                                           autoplay: true,
-                                          animationData: appstore,  // Animation for Digital Marketing
+                                          animationData: progressive,  // Animation for Digital Marketing
                                           rendererSettings: {
                                             preserveAspectRatio: "xMidYMid slice"
                                           }
                                         }}
-                                    style={{width:'122px',height:'100%'}}
+                                    style={{width:'186px',height:'100%'}}
                                       />  
                   
                 </div>

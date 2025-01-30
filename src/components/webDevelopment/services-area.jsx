@@ -86,7 +86,7 @@ const ServicesArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'295px',height:'100%'}}
                     />  
 
 
@@ -124,7 +124,7 @@ const ServicesArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'295px',height:'100%'}}
                     />  
                 </div>
                 <div className="tp-service__content">

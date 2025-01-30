@@ -109,7 +109,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'162px',height:'100%'}}
                     />  
                            </div>
                            <div className="tp-service-sm-content">
@@ -137,7 +137,7 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'142px',height:'100%'}}
                     />  
                            </div>
                            <div className="tp-service-sm-content">
@@ -162,12 +162,12 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'132px',height:'100%'}}
                     />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Landing Page Design</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Drive sales with expertly crafted landing pages designed to engage, inform, and convert visitors with precision and style.</Link></h3>
+                              <h3 className="tp-service-sm-title"><Link href="/service-details">Drive sales with expertly crafted landing pages designed  to engage, inform, and convert visitors with precision and style.</Link></h3>
                               <div className="tp-service-sm-link">
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>

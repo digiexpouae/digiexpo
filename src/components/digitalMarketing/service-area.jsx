@@ -125,11 +125,11 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'132px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Social Media Marketing (SMM)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Social Media Marketing (SMM)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Transform casual clicks into loyal customers with our
@@ -170,8 +170,8 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Search Engine Optimization(SEO)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Search Engine Optimization(SEO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Our SEO pros help you achieve top <br /> <div style={{whiteSpace:'nowrap'}}>search rankings and
@@ -209,11 +209,11 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'152px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Performance Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Performance Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Boost Your ROI with our Performance Marketing Service
@@ -249,8 +249,8 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Email Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Email Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Reach more, convert more with our Email Marketing
@@ -288,11 +288,11 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'142px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>App Store Optimization(ASO)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>App Store Optimization(ASO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Boost your app’s visibility with our ASO magic
@@ -332,8 +332,8 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Content Writing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Writing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Connect with your audience through compelling content.
@@ -373,8 +373,8 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Influencer Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Influencer Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Connect with Your Target Audience Through Influencers.
@@ -411,12 +411,12 @@ const ServiceArea = () => {
                           preserveAspectRatio: "xMidYMid slice"
                         }
                       }}
-                  style={{width:'122px',height:'100%'}}
+                  style={{width:'132px',height:'100%'}}
                     />  
 
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Content Creation</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Creation</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Building Brand Connections Through Compelling Digital
