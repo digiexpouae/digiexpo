@@ -395,7 +395,7 @@
   &-item {
     border: 1px solid #7a42f7;
     border-radius: 20px;
-    padding: 45px;
+    padding: 37px;
     min-height: 395px;
     overflow: hidden;
     transition: 0.3s;
@@ -443,7 +443,8 @@
       color: white;
 
       &.ecomm {
-        font-size: 13px;
+        font-size: 12px;
+        white-space: nowrap;
         @media #{$xs} {
           font-size: 11px;
         }
@@ -463,14 +464,14 @@
       color: var(--tp-theme-1);
     }
     @media #{$md} {
-      font-size: 22px;
+      font-size: 15px;
       line-height: 28px;
       & br {
         display: none;
       }
     }
     @media #{$xs} {
-      font-size: 18px;
+      font-size: 15px;
       line-height: 23px;
       & br {
         display: none;
