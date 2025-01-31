@@ -3,10 +3,16 @@
 import React, { useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
-// import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 const ContactUsForm = () => {
+  
+    const [recaptchaValue, setRecaptchaValue] = useState(null);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [submissionError, setSubmissionError] = useState(null);
+    const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+    const [recaptchaError, setRecaptchaError] = useState(null); 
   const router = useRouter();
   const [recaptchaToken, setRecaptchaToken] = useState('');
   const [formData, setFormData] = useState({
@@ -27,39 +33,74 @@ const ContactUsForm = () => {
 
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
+    if(isSubmitDisabled){
+      setSubmissionError('Please complete the reCAPTCHA first')
+      return;
+    }
+    try {
+      const res = await fetch("/api/auth", {
+        method:"POST", 
+      body: JSON.stringify(formData)
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          router.push('/thank-you');
-        } else {
-          alert("Failed to send message.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("An error occurred while sending the message.");
-      });
+    // const res= await sendDataToZoho(formData)
+    console.log(res)
+     // Check if the response indicates success
+     if (res && res.data && res.data.success) {
+      // Redirect to thank you page if successful
+      router.push('/thank-you');
+      setFormSubmitted(true);
+      setIsSubmitDisabled(true); 
+    } else {
+      // Show error message if something went wrong
+      alert("Failed to send message.");
+      const errorData = await response.json();
+      setSubmissionError(errorData.message || "Form submission failed.")
+    }
+  }
+catch(error){
+  console.log('Error')
+}
   };
-
   const selectHandler = (selectedOption) => {
     setFormData({
       ...formData,
       inquiry: selectedOption.value,
     });
   };
-  const handleRecaptchaChange = (value) => {
-    setRecaptchaToken(value);
-  };
+  const capchahandlechange = async (value)=>{
+    setRecaptchaValue(value)
+  setRecaptchaError(null)
+  if(!value){
+    setIsSubmitDisabled(true)
+    return;
+  }
+  try{
+    const response= await fetch('/api/verifyRecapcha',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+      },
+      body: JSON.stringify({recapchatoken:value})
+  })
+  const data =await response.json
+  if(data.success){
+  setIsSubmitDisabled(false)
+  }
+  else{
+    setIsSubmitDisabled(true)
+    setRecaptchaValue(null)
+    setRecaptchaError('Recapcha verification failed.Try again')
+  }
+  }catch (error){
+    setIsSubmitDisabled(true)
+    setRecaptchaValue(null)
+    setRecaptchaError('Recapcha verification failed.Try again')
+  }
+  
+    }  
 
 
   return (
@@ -136,11 +177,11 @@ const ContactUsForm = () => {
 
         {/* Add Google reCAPTCHA */}
         <div className='col-xxl-12 mb-30'>
-          {/* <ReCAPTCHA
+          <ReCAPTCHA
    // Replace with your reCAPTCHA site key
-   sitekey={process.env.SITE_KEY}
-            onChange={handleRecaptchaChange}
-          /> */}
+   sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={capchahandlechange}
+          />
         </div>
 
         <div className='col-xxl-12'>

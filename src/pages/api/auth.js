@@ -1,7 +1,4 @@
-const clientId = "1000.T5B83P7WPR5KW1XAPWUZ1X3NUR57SS";
-const clientSecret = "e2d61f8d53e352b20ecb1fd929ac2503549892c8e2";
-const refreshToken =
-  "1000.da520b9b6d82e40868f045db92226416.e8a52c0244c77124f2fc3de1634c20bd";
+
 
 async function refreshAccessToken() {
   try {
