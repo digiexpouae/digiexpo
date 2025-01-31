@@ -122,6 +122,7 @@ const HeroSlider = () => {
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
+                layout="intrinsic"
               />
             ))}
           </div>
@@ -215,16 +216,24 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
-                        <video autoPlay muted loop>
+                        <video autoPlay muted loop playsInline>
                           <source
-                            src='/assets/img/hero/hero.mp4'
+                            src='/assets/img/hero/herovideo.mp4'
                             type='video/mp4'
                           />
-                          <source
+                          {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'
-                          />
+                          /> */}
                         </video>
+{/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
+        width="640" height="360" frameborder="0" 
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
+        allowfullscreen title="hero-video compress">
+</iframe> */}
+{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+
                       </div>
                     </div>
                   </div>

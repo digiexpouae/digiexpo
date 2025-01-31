@@ -22,10 +22,20 @@ const {bg_img, sub_title, title, btn_text,maintitle, sub_text}  = business_conte
 const BusinessBox = () => {
     return (
       <>
-        <div
-          className='tp-cta-area pt-120 pb-120 mb-120 mt-120 mb-sm-50 mt-sm-0 tp-cta-five-bg p-relative'
-          style={{ backgroundImage: `url(${bg_img})` }}
-        >
+      <div className="tp-cta-area pt-120 pb-120 mb-120 mt-120 mb-sm-50 mt-sm-0 tp-cta-five-bg p-relative z-40">
+      {/* Wrapper for the background image */}
+   
+        {/* Next.js Image component with layout="fill" */}
+        <Image
+          src={bg_img}  // Path to the background image
+          alt="Background image"  // Alt text for accessibility
+          layout="fill"  // Makes the image fill the parent div
+          objectFit="cover"  // Ensures the image covers the div without distortion
+          priority  
+          style={{zIndex:'-1',borderRadius:'25px'}}// Optional: Prioritize loading the image
+        />
+    
+
           <div className='tp-cta-five-shape-1 d-none d-md-block'>
             <Image src={shape_1} alt='theme-pure' />
           </div>
