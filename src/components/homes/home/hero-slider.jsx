@@ -218,9 +218,9 @@ const HeroSlider = () => {
 												</div> */}
                         <video autoPlay muted loop playsInline>
                           <source
-                            src='/assets/img/hero/herovideo.mp4'
-                            type='video/mp4'
-                          />
+                  src='/assets/img/hero/herosection.mp4'                        
+                 type='video/mp4'
+                    />
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'

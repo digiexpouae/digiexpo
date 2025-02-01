@@ -42,7 +42,7 @@ const ContactArea2 = () => {
                  {/* video removed */}
                   <video autoPlay muted loop playsInline width='500px'>
                     <source
-                      src='/assets/img/contact/contactc.mp4'
+                      src='/assets/img/contact/Contactp.mp4'
                       type='video/mp4'
                     /> 
                       {/* <source

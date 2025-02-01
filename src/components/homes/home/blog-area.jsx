@@ -50,8 +50,8 @@ const BlogArea = () => {
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
                     <video autoPlay muted loop playsInline width='570px'>
                       <source
-                        src='/assets/img/hero/herovideo.mp4'
-                        type='video/mp4'
+                  src='/assets/img/hero/herosection.mp4'                        
+                  type='video/mp4'
                       />
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
@@ -107,8 +107,8 @@ const BlogArea = () => {
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
                     <video autoPlay muted loop playsInline width='570px'>
                       <source
-                        src='/assets/img/hero/herovideo.mp4'
-                        type='video/mp4'
+                  src='/assets/img/hero/herosection.mp4'                        
+                  type='video/mp4'
                       />
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
