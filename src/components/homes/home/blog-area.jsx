@@ -107,7 +107,7 @@ const BlogArea = () => {
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
                     <video autoPlay muted loop playsInline width='570px'>
                       <source
-                  src='public/assets/img/hero/herosection.mp4'                        
+                  src='/assets/img/hero/herosection.mp4'                        
                   type='video/mp4'
                       />
                       {/* <source
