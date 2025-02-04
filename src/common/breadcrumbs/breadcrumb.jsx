@@ -36,7 +36,7 @@ const Breadcrumb = ({ title_top, title_bottom }) => {
                                  className="about-banner-title" 
                                  data-parallax='{"y": 1000, "smoothness": 10}'>
                               <h1 style={{fontSize:'90px'}}>{title_top}</h1> <br />
-                              <h1>{title_bottom}</h1>
+                              <h2>{title_bottom}</h2>
                            </div>
                         </div>
                      </div>

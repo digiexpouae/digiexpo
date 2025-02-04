@@ -30,7 +30,7 @@ const hero_content = {
       </i>{" "}
   
       <i>
-        <h1 style={{fontSize:'65px'}} className='child-1'>Company  <br />Dubai  </h1>{" "}
+        <h2 style={{fontSize:'65px',color:'white'}} className='child-1'>Company  <br />Dubai  </h2>{" "}
       </i>
    
       {/* <i><i className="child-1">ways.</i></i> */}

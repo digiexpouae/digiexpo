@@ -19,7 +19,7 @@ const CtaArea = () => {
                      <div className="col-12">
                         <div className="tp-cta-bg" style={{backgroundImage: `url(${bg_img})`}}>
                            <div className="tp-cta-content tp-inner-font text-center">
-                              <h1 className="tp-section-title text-white">{title}</h1>
+                              <h2 className="tp-section-title text-white">{title}</h2>
                               <p>{description}</p>
                                  <Link className="tp-btn-inner white-bg text-black" href="/service-details">{btn_text}</Link>
                            </div>
