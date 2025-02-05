@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
-import progressive from '../../../public/animation/progressive.json'
+import progressive from '../../../public/animation/Progressive.json'
 import ios from "../../../public/animation/ios.json"
 import appstore from "../../../public/animation/appstore.json"
 import android from "../../../public/animation/android.json"

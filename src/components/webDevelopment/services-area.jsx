@@ -7,7 +7,7 @@ import React, { useRef } from "react";
 import user from '../../../public/animation/user.json'
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 import dynamic from 'next/dynamic';
-import whatsapp from '../../../public/animation/Whatsapp.json'
+import whatsapp from '../../../public/animation/WhatsApp.json'
 import wordpress from '../../../public/animation/wordpress.json'
 import webmaintain from '../../../public/animation/websitemaintainance.json'
 import php from '../../../public/animation/php.json'
