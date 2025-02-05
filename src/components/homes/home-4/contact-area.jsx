@@ -24,7 +24,8 @@ const ContactArea = () => {
         <>
             <div className="tp-contact-area tp-contact-overlay pt-120 pb-120 blue-bg z-index p-relative fix">
                <div className="tp-contact-glob-img">
-                  <Image src={contact_img} alt="theme-pure" />
+                  <Image src={contact_img} alt="theme-pure" 
+                  layout='intrinsinc'/>
                </div>
                <div className="container">
                   <div className="row">

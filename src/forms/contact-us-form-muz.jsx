@@ -5,7 +5,14 @@ import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import ReCAPTCHA from "react-google-recaptcha";
 import { sendDataToZoho } from "../pages/api/auth";
+import { Value } from "sass";
 const ContactUsFormMuz = () => {
+
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState(null);
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [recaptchaError, setRecaptchaError] = useState(null); 
   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
@@ -15,7 +22,7 @@ const ContactUsFormMuz = () => {
     messreage: "",
   });
 
-const [recapchatoken, setrecapchatoken] = useState("")
+
 
   const handleChange = (e) => {
     setFormData({
@@ -27,6 +34,10 @@ const [recapchatoken, setrecapchatoken] = useState("")
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Send form data to the PHP backend
+    if(isSubmitDisabled){
+      setSubmissionError('Please complete the reCAPTCHA first')
+      return;
+    }
     try {
       const res = await fetch("/api/auth", {
         method:"POST", 
@@ -38,9 +49,13 @@ const [recapchatoken, setrecapchatoken] = useState("")
      if (res && res.data && res.data.success) {
       // Redirect to thank you page if successful
       router.push('/thank-you');
+      setFormSubmitted(true);
+      setIsSubmitDisabled(true); 
     } else {
       // Show error message if something went wrong
       alert("Failed to send message.");
+      const errorData = await response.json();
+      setSubmissionError(errorData.message || "Form submission failed.")
     }
   }
 catch(error){
@@ -48,16 +63,43 @@ catch(error){
 }
   };
 
-  const capchahandlechange =(value)=>{
-    setrecapchatoken(value)
-  }
+  const capchahandlechange = async (value)=>{
+  setRecaptchaValue(value)
+setRecaptchaError(null)
+if(!value){
+  setIsSubmitDisabled(true)
+  return;
+}
+try{
+  const response= await fetch('/api/verifyRecapcha',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+    },
+    body: JSON.stringify({recapchatoken:value})
+})
+const data =await response.json
+if(data.success){
+setIsSubmitDisabled(false)
+}
+else{
+  setIsSubmitDisabled(true)
+  setRecaptchaValue(null)
+  setRecaptchaError('Recapcha verification failed.Try again')
+}
+}catch (error){
+  setIsSubmitDisabled(true)
+  setRecaptchaValue(null)
+  setRecaptchaError('Recapcha verification failed.Try again')
+}
+
+  }  
   const selectHandler = (selectedOption) => {
     setFormData({
       ...formData,
       inquiry: selectedOption.value,
     });
   };
-
   return (
     <form onSubmit={handleSubmit} className='box'>
       <div className='row'>
@@ -131,12 +173,12 @@ catch(error){
             ></textarea>
           </div>
         </div>
-        {/* <div>
-          <ReCAPTCHA
-            sitekey='6LcgnLEqAAAAACc6SGBFLzOKkoIlwzNnfDllZSrh' // Replace with your reCAPTCHA site key
-            onChange={capchahandlechange}
+        <div>
+           <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+         onChange={capchahandlechange}
           />
-        </div> */}
+        </div>
         <div className='col-xl-12'>
           <div className='tp-contact-btn'>
             <button className='tp-btn-yellow-lg w-100' type='submit'>

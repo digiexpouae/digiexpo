@@ -61,7 +61,7 @@ const BlogPost = ({ blog }) => {
   
       <SEO
         pageTitle={title}
-        canonicalUrl={`https://digiexpo.ae/blogs/${currentSlug}`}
+        canonicalUrl={`https://www.digiexpo.ae/blogs/${currentSlug}`}
         ogImage={ogImage}
 ogDescription={ogDescription}
 ogTitle={ogTitle}

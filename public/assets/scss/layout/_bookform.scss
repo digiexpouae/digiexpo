@@ -1,0 +1,171 @@
+@use "../utils" as *;
+
+.tpforms{
+display: flex;
+gap:15px;
+justify-content: center;
+padding: 180px 50px;
+@media #{$xs}{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
+
+}
+@media #{$md} {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
+}
+}
+.tp-book{
+    color:black;
+    width:50%;
+ 
+   @media #{$xs}{
+    width:100%;
+    }
+    @media #{$md}{
+        width:100%;
+        padding: 30px 30px;
+        
+        }
+    
+}
+// .tpContact{
+// background-color:black;
+// height: 40%;
+// width:60%;
+// @media #{$xs}{
+//     width:100%;
+//     }
+// }
+.tpContact{
+
+        &-overlay{
+            position: relative;
+            &::after{
+                position: absolute;
+                background: linear-gradient(359.33deg, #7A41F8 0.59%, rgba(13, 92, 225, 0) 99.43%);
+                transform: matrix(1, 0, 0, -1, 0, 0);
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: "";
+                z-index: -1;
+            }
+        }
+        &-glob-img{
+            position: absolute;
+            top: -11%;
+            left: 5%;
+            animation: animationglob 30s cubic-bezier(1, 0.99, 0.03, 0.01) infinite;
+        }
+        &-info-box{
+            & ul{
+                & li{
+                    position: relative;
+                    padding-left: 40px;
+                    margin-bottom: 15px;
+                    list-style-type: none;
+                    &:first-child{
+                        & a{
+                            font-weight: 600;
+                            font-size: 22px;
+                            line-height: 16px;                       
+                            letter-spacing: -0.06em;
+                            color: #FFFFFF;
+                        }
+                    }
+                    &:nth-child(2){
+                        & svg{
+                            top: 4px;
+                        }
+                    }
+                    &:nth-child(3){
+                        & svg{
+                            top: 4px;
+                        }
+                    }
+                    & a{
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 22px;
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                    & svg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        &-input-wrapper {
+            background: rgba(255, 255, 255, 0.020);
+            border: 1px solid rgba(255, 255, 255, 1);
+            box-shadow: 0px -1px 1px rgba(15, 56, 191, 0.2), 0px 1px 1px rgba(8, 18, 79, 0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 60px 50px;
+            width: 60%; /* Default width for larger screens */
+            
+            @media #{$xs} {
+                padding: 30px 20px;
+                width: 100%; /* Full width on xs screens */
+            }
+           
+            @media #{$md} {
+                padding: 30px 20px;
+                width: 100%; /* Full width on xs screens */
+            }
+           
+        
+        
+        }
+            
+        &-input{
+            & input{
+                background: rgba(2, 2, 2, 0.12);
+                border: 2px solid rgba(255, 255, 255, 1);
+                box-shadow: 0px 1px 1px rgba(12, 40, 133, 0.2);
+                border-radius: 30px;
+                padding: 20px 30px;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 14px;
+                color: var(--tp-common-white);
+                width: 100%;
+                @include tp-placeholder{
+                    color: rgba(255, 255, 255, 0.54); 
+                }  
+                &:focus{
+                    border-color: var(--tp-common-white);
+                }         
+            }
+            & textarea{
+                margin-top: 20px;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.12);
+                border: 2px solid rgba(255, 255, 255, 1);
+                box-shadow: 0px 1px 1px rgba(12, 40, 133, 0.2);
+                border-radius: 30px;
+                padding: 20px 30px;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 14px;
+                color: var(--tp-common-white);
+                width: 100%;
+                resize: none;
+                height: 160px;
+                &:focus{
+                    border-color: var(--tp-common-white);
+                } 
+                @include tp-placeholder{
+                    color: rgba(255, 255, 255, 0.54); 
+                } 
+            }
+        }
+    }
+    
+    

@@ -17,13 +17,13 @@ const hero_content = {
         <h1 className='child'>Best E-commerce </h1></div>
       {" "}
       
-       <div className='head'> <h1 className='child'>Websites Development Company Dubai</h1></div>
+       <div className='head'> <h2 className='child'>Websites Development Company Dubai</h2></div>
      {" "}
     
-   <div className='head'>     <h1 className='child'>Turns Visitors </h1></div>
+   <div className='head'>     <h2 className='child'>Turns Visitors </h2></div>
       {" "}
     
-        <div className='head'><h1 className='child'>Into Loyal Customers</h1></div>
+        <div className='head'><h2 className='child'>Into Loyal Customers</h2></div>
    
     </>
   ),
