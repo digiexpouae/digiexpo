@@ -1,13 +1,9 @@
 import useTitleAnimation from "@/hooks/useTitleAnimation";
-import service_data from "@/data/service-data";
 import RightArrow from "@/svg/right-arrow";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-import user from '../../../public/animation/user.json'
-import img from "../../../public/assets/img/service/sv-dashbord.png";
 import dynamic from 'next/dynamic';
-import whatsapp from '../../../public/animation/Whatsapp.json'
+import whatsapp from '../../../public/animation/WhatsApp.json'
 import wordpress from '../../../public/animation/wordpress.json'
 import webmaintain from '../../../public/animation/websitemaintainance.json'
 import php from '../../../public/animation/php.json'
@@ -77,7 +73,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
 
-<Lootie 
+<Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -87,7 +83,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'295px',height:'100%'}}
-                    />  
+                    />
 
 
                 </div>
@@ -115,7 +111,7 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <Lootie 
+                  <Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -125,7 +121,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'295px',height:'100%'}}
-                    />  
+                    />
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -157,7 +153,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -167,7 +163,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -190,7 +186,7 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <Lootie 
+                  <Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -200,7 +196,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -231,7 +227,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-    <Lootie 
+    <Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -241,7 +237,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />
 
                 </div>
                 <div className="tp-service__content">
@@ -276,7 +272,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -286,7 +282,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />
 
                 </div>
                 <div className="tp-service__content">

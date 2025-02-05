@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
-import progressive from '../../../public/animation/progressive.json'
+import progressive from '../../../public/animation/Progressive.json'
 import ios from "../../../public/animation/ios.json"
 import appstore from "../../../public/animation/appstore.json"
 import android from "../../../public/animation/android.json"
@@ -72,7 +72,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-<Lootie 
+<Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -82,7 +82,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'166px',height:'100%'}}
-                    />  
+                    />
 
 
 
@@ -116,7 +116,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -126,8 +126,8 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'80%'}}
-                                      />  
-                  
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -158,7 +158,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -168,8 +168,8 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'80%'}}
-                                      />  
-                  
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -198,7 +198,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -208,8 +208,8 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'186px',height:'100%'}}
-                                      />  
-                  
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -240,7 +240,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -250,8 +250,8 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'70%'}}
-                                      />  
-                  
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -284,7 +284,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  <Lootie 
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -294,8 +294,8 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'186px',height:'100%'}}
-                                      />  
-                  
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -312,7 +312,7 @@ const ServicesArea = () => {
             </div>
 
             {/* <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                        <div className="tp-service__dashboard" 
+                        <div className="tp-service__dashboard"
                         style={{backgroundImage: `url(${bg_img})`}} >
                            <div className="tp-service__top-content">
                               <h3 className="tp-service__title-white">{title_2}</h3>
@@ -323,7 +323,7 @@ const ServicesArea = () => {
                               </Link>
                            </div>
                            <div className="tp-service__dashdboard-sm-img">
-                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" 
+                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
                               src={img} alt="theme-pure" />
                            </div>
                         </div>
