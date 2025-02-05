@@ -9,21 +9,28 @@ import { Value } from "sass";
 const ContactUsFormMuz = () => {
 
   const [recaptchaValue, setRecaptchaValue] = useState(null);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitted, setformSubmitted] = useState(false);
+  const [isSubmitted, setisSubmitted] = useState(false)
   const [submissionError, setSubmissionError] = useState(null);
-  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [isSubmitDisabled, setisSubmitDisabled] = useState(true);
   const [recaptchaError, setRecaptchaError] = useState(null); 
   const router = useRouter();
   const [formData, setFormData] = useState({
+
     name: "",
     email: "",
     phone: "",
     inquiry: "Your Inquiry about",
-    messreage: "",
+    message: "",
   });
 
-
-
+  const submitForm = () => {
+    if (isSubmitted) {
+      setpoint({ cursor: 'disabled' });
+    } else {
+      setpoint(null);
+    }
+  };
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -33,9 +40,13 @@ const ContactUsFormMuz = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setisSubmitted(true); // Set loading state
+
     // Send form data to the PHP backend
     if(isSubmitDisabled){
       setSubmissionError('Please complete the reCAPTCHA first')
+      setisSubmitted(false); // Set loading state
+
       return;
     }
     try {
@@ -46,20 +57,24 @@ const ContactUsFormMuz = () => {
     // const res= await sendDataToZoho(formData)
     console.log(res)
      // Check if the response indicates success
-     if (res && res.data && res.data.success) {
+     if (res &&  res.ok){
       // Redirect to thank you page if successful
+      console.log('sucess')
       router.push('/thank-you');
-      setFormSubmitted(true);
-      setIsSubmitDisabled(true); 
+      setformSubmitted(true);
+      setisSubmitDisabled(true); 
     } else {
       // Show error message if something went wrong
-      alert("Failed to send message.");
-      const errorData = await response.json();
-      setSubmissionError(errorData.message || "Form submission failed.")
+      alert("Failed to send message."); 
     }
   }
 catch(error){
+  setSubmissionError(error.message || "Form submission failed.")
+  alert("Failed to send message.");
   console.log('Error')
+}
+finally {
+  setisSubmitted(false); // Reset loading state after request completion
 }
   };
 
@@ -67,7 +82,7 @@ catch(error){
   setRecaptchaValue(value)
 setRecaptchaError(null)
 if(!value){
-  setIsSubmitDisabled(true)
+  setisSubmitDisabled(true)
   return;
 }
 try{
@@ -78,17 +93,14 @@ try{
     },
     body: JSON.stringify({recapchatoken:value})
 })
-const data =await response.json
+const data =await response.json()
 if(data.success){
-setIsSubmitDisabled(false)
+setisSubmitDisabled(false) 
+console.log(data)
 }
-else{
-  setIsSubmitDisabled(true)
-  setRecaptchaValue(null)
-  setRecaptchaError('Recapcha verification failed.Try again')
-}
+
 }catch (error){
-  setIsSubmitDisabled(true)
+  setisSubmitDisabled(true)
   setRecaptchaValue(null)
   setRecaptchaError('Recapcha verification failed.Try again')
 }
@@ -174,16 +186,32 @@ else{
           </div>
         </div>
         <div>
-           <ReCAPTCHA
+            <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
          onChange={capchahandlechange}
-          />
+         /> 
         </div>
         <div className='col-xl-12'>
           <div className='tp-contact-btn'>
-            <button className='tp-btn-yellow-lg w-100' type='submit'>
-              Get a free consultation
-            </button>
+            
+    
+            <button
+  className="tp-btn-yellow-lg w-100 flex items-center justify-center"
+  type="submit"
+
+
+   // Disable the button when submitting
+>
+  {/* Button text */}
+  {!isSubmitted ? (
+    'Get a free consultation'
+  ) : (
+    <>
+    <span className="animate-spin border-2 border-white border-t-transparent rounded-full w-5 h-5"></span>
+    <span>Loading...</span>
+  </>
+  )}
+</button>
           </div>
         </div>
       </div>
