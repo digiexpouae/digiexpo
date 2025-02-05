@@ -1,11 +1,23 @@
+
 import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+// import emailmarketing from '../../../public/animation/emailnews.json'
+import dynamic from 'next/dynamic';
+import target from '../../../public/animation/performance.json'
+import contentcreation from '../../../public/animation/contentcreation.json'
+import appstore from '../../../public/animation/appstore.json'
+import SEO from '../../../public/animation/seo.json'
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-
+import videomarketing from "../../../public/animation/videomarketing.json"
+import presentation from '../../../public/animation/presentation.json'
+import content from "../../../public/animation/content.json"
+import SMM from "../../../public/animation/SMM.json"
+import emailmarketing from "../../../public/animation/emailmarketing.json"
+import influencer from '../../../public/animation/influencer.json'
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
   title: (
@@ -97,15 +109,27 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                 {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/smm.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+ 
+ <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: SMM,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'132px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Social Media Marketing (SMM)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Social Media Marketing (SMM)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Transform casual clicks into loyal customers with our
@@ -128,19 +152,30 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
+                    {/* <video autoPlay muted loop width='150px'>
                       <source
                         src='/assets/img/service/seo.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                           <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: SEO,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Search Engine Optimization(SEO)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Search Engine Optimization(SEO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
-                        Our SEO pros help you achieve top <br />  search rankings and
-                        outrank your rivals.
+                        Our SEO pros help you achieve top <br /> <div style={{whiteSpace:'nowrap'}}>search rankings and
+                        outrank your rivals.</div>
                       </Link>
                     </h3>
                     <div className='tp-service-sm-link'>
@@ -159,15 +194,26 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
+                    {/* <video autoPlay muted loop width='150px'>
                       <source
                         src='/assets/img/service/performance.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                         <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:target,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'152px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Performance Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Performance Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Boost Your ROI with our Performance Marketing Service
@@ -189,15 +235,22 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='150px'>
-                      <source
-                        src='/assets/img/service/email.webm'
-                        type='video/webm'
-                      />
-                    </video>
+                 
+                    
+  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: emailmarketing,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Email Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Email Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Reach more, convert more with our Email Marketing
@@ -219,15 +272,27 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/app.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                                               
+                  <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: appstore,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'142px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>App Store Optimization(ASO)</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>App Store Optimization(ASO)</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Boost your app’s visibility with our ASO magic
@@ -249,15 +314,26 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/writing.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                      <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: content,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Content Writing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Writing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Connect with your audience through compelling content.
@@ -279,15 +355,26 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/influence.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                        <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:contentcreation,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Influencer Marketing</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Influencer Marketing</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Connect with Your Target Audience Through Influencers.
@@ -309,15 +396,27 @@ const ServiceArea = () => {
                 <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
-                    <video autoPlay muted loop width='125px'>
+                    {/* <video autoPlay muted loop width='125px'>
                       <source
                         src='/assets/img/service/creating.webm'
                         type='video/webm'
                       />
-                    </video>
+                    </video> */}
+                        <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData:presentation,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'132px',height:'100%'}}
+                    />  
+
                   </div>
-                  <div className='tp-service-sm-content'>
-                    <span>Content Creation</span>
+                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                    <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Creation</span>
                     <h3 className='tp-service-sm-title'>
                       <Link href='/service-details'>
                         Building Brand Connections Through Compelling Digital

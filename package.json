@@ -23,6 +23,7 @@
     "next": "^15.1.6",
     "node-fetch": "^3.3.2",
     "nodemailer": "^6.10.0",
+    "lottie-react-native": "^7.2.2",
     "react": "^18",
     "react-countup": "^6.5.0",
     "react-dom": "^18",

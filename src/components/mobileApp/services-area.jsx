@@ -4,8 +4,16 @@ import RightArrow from "@/svg/right-arrow";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
-
+import dynamic from 'next/dynamic';
+import progressive from '../../../public/animation/Progressive.json'
+import ios from "../../../public/animation/ios.json"
+import appstore from "../../../public/animation/appstore.json"
+import android from "../../../public/animation/android.json"
+import flutter from "../../../public/animation/flutter.json"
+import hybrid from "../../../public/animation/hybrid.json"
+import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
   title: "Create. Connect.  Our Mobile App Development Services Fuel Your Business.",
@@ -56,14 +64,28 @@ const ServicesArea = () => {
               data-wow-delay=".4s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/hybrid-apps.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+<Lootie
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: hybrid,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'166px',height:'100%'}}
+                    />
+
+
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -86,14 +108,26 @@ const ServicesArea = () => {
               data-wow-delay=".6s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/andriod-app.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie
+                                        options={{
+                                          loop: true,
+                                          autoplay: true,
+                                          animationData: android,  // Animation for Digital Marketing
+                                          rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                          }
+                                        }}
+                                    style={{width:'122px',height:'80%'}}
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -116,14 +150,26 @@ const ServicesArea = () => {
               data-wow-delay=".7s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/ios-app.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie
+                                        options={{
+                                          loop: true,
+                                          autoplay: true,
+                                          animationData: ios,  // Animation for Digital Marketing
+                                          rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                          }
+                                        }}
+                                    style={{width:'122px',height:'80%'}}
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -144,14 +190,26 @@ const ServicesArea = () => {
               data-wow-delay=".8s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon"  >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/react-native.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie
+                                        options={{
+                                          loop: true,
+                                          autoplay: true,
+                                          animationData: native,  // Animation for Digital Marketing
+                                          rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                          }
+                                        }}
+                                    style={{width:'186px',height:'100%'}}
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -174,14 +232,26 @@ const ServicesArea = () => {
               data-wow-delay=".9s"
             >
               <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+                <div className="tp-service__icon" >
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/flutter.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie
+                                        options={{
+                                          loop: true,
+                                          autoplay: true,
+                                          animationData: flutter,  // Animation for Digital Marketing
+                                          rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                          }
+                                        }}
+                                    style={{width:'122px',height:'70%'}}
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -208,12 +278,24 @@ const ServicesArea = () => {
               <div className="tp-service__item mb-30">
                 <div className="tp-service__icon">
                   {/* <Image src={item.img} alt="theme-pure" /> */}
-                  <video autoPlay muted loop width="125px">
+                  {/* <video autoPlay muted loop width="125px">
                     <source
                       src="/assets/img/service/pwa.webm"
                       type="video/webm"
                     />
-                  </video>
+                  </video> */}
+                  <Lootie
+                                        options={{
+                                          loop: true,
+                                          autoplay: true,
+                                          animationData: progressive,  // Animation for Digital Marketing
+                                          rendererSettings: {
+                                            preserveAspectRatio: "xMidYMid slice"
+                                          }
+                                        }}
+                                    style={{width:'186px',height:'100%'}}
+                                      />
+
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -230,7 +312,7 @@ const ServicesArea = () => {
             </div>
 
             {/* <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                        <div className="tp-service__dashboard" 
+                        <div className="tp-service__dashboard"
                         style={{backgroundImage: `url(${bg_img})`}} >
                            <div className="tp-service__top-content">
                               <h3 className="tp-service__title-white">{title_2}</h3>
@@ -241,7 +323,7 @@ const ServicesArea = () => {
                               </Link>
                            </div>
                            <div className="tp-service__dashdboard-sm-img">
-                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" 
+                              <Image className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
                               src={img} alt="theme-pure" />
                            </div>
                         </div>
