@@ -2,10 +2,10 @@
 async function refreshAccessToken() {
   try {
     const params = new URLSearchParams();
-    params.append("client_id", process.env.TEST_CLIENT_ID);
-    params.append("client_secret", process.env.TEST_CLIENT_SECRET);
+    params.append("client_id", process.env.CLIENT_ID);
+    params.append("client_secret", process.env.CLIENT_SECRET);
     params.append("grant_type", "refresh_token");
-    params.append("refresh_token", process.env.TEST_REFRESH_TOKEN);
+    params.append("refresh_token", process.env.REFRESH_TOKEN);
 
     const response = await fetch("https://accounts.zoho.com/oauth/v2/token", {
       method: "POST",
