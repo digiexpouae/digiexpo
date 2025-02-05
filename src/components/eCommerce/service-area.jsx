@@ -5,7 +5,14 @@ import React from 'react';
 
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-
+import bigcommerce from '../../../public/animation/bigcommerce.json'
+import woocommerce from '../../../public/animation/woocommerce.json'
+import shopifyplus from '../../../public/animation/shopifyplus.json'
+import shopifyecom from '../../../public/animation/shopifyecom.json'
+import dynamic from 'next/dynamic';
+import mirakalecom from '../../../public/animation/mirakalecom.json'
+import megneto from '../../../public/animation/megneto.json'
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -60,12 +67,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="100px">
+                           {/* <video autoPlay muted loop width="100px">
                       <source
                         src="/assets/img/service/woocommerce.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: woocommerce,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>WooCommerce Development </span>
@@ -79,12 +97,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="125px">
+                           {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/mirakl.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: mirakalecom,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Mirakl Development</span>
@@ -98,12 +127,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="125px">
+                           {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/magento.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: megneto,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Magento Ecommerce Development</span>
@@ -117,12 +157,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="125px">
+                           {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/bigcommerce.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: bigcommerce,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>BigCommerce Development</span>
@@ -136,12 +187,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="125px">
+                           {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/shopify.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: shopifyecom,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Shopify Ecommerce Development </span>
@@ -155,12 +217,23 @@ const ServiceArea = () => {
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between mb-sm-0">
                            <div className="tp-service-sm-icon">
-                           <video autoPlay muted loop width="125px">
+                           {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/shopify-plus.webm"
                         type="video/webm"
                       />
-                    </video>
+                    </video> */}
+                     <Lootie 
+                                          options={{
+                                            loop: true,
+                                            autoplay: true,
+                                            animationData: shopifyplus,  // Animation for Digital Marketing
+                                            rendererSettings: {
+                                              preserveAspectRatio: "xMidYMid slice"
+                                            }
+                                          }}
+                                      style={{width:'122px',height:'100%'}}
+                                        />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Shopify Plus Ecommerce Development</span>

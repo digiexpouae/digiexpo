@@ -2,10 +2,17 @@ import service_data from '@/data/service-data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
+import dynamic from "next/dynamic";
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
+import web from '../../../public/animation/php.json'
+import target from '../../../public/animation/performance.json'
+import todo from '../../../public/animation/checklist-board.json'
+import graphic from '../../../public/animation/graphicdesign.json'
+import landing from '../../../public/animation/landingpage.json'
+import image from '../../../public/animation/image.json'
 
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -64,9 +71,18 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="125px">
-                                 <source src="/assets/img/service/laravel.webm" type="video/webm" /> 
-                              </video>
+                               <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: image,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
+                        
                            </div>
                            <div className="tp-service-sm-content">
                               <span>PSD to Responsive HTML</span>
@@ -81,9 +97,20 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="150px">
+                              {/* <video autoPlay muted loop width="150px">
                                  <source src="/assets/img/service/app.webm" type="video/webm" /> 
-                              </video>
+                              </video> */}
+                              <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: web,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'162px',height:'100%'}}
+                    />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Responsive Web Design</span>
@@ -98,9 +125,20 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="150px">
+                              {/* <video autoPlay muted loop width="150px">
                                  <source src="/assets/img/service/performance.webm" type="video/webm" /> 
-                              </video>
+                              </video> */}
+                                              <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: target,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'142px',height:'100%'}}
+                    />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>UX Design</span>
@@ -115,13 +153,21 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="150px">
-                                 <source src="/assets/img/service/shopify.webm" type="video/webm" /> 
-                              </video>
+                               <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: landing,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'132px',height:'100%'}}
+                    />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Landing Page Design</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Drive sales with expertly crafted landing pages designed to engage, inform, and convert visitors with precision and style.</Link></h3>
+                              <h3 className="tp-service-sm-title"><Link href="/service-details">Drive sales with expertly crafted landing pages designed  to engage, inform, and convert visitors with precision and style.</Link></h3>
                               <div className="tp-service-sm-link">
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
@@ -132,9 +178,20 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="125px">
+                              {/* <video autoPlay muted loop width="125px">
                                  <source src="/assets/img/service/writing.webm" type="video/webm" /> 
-                              </video>
+                              </video> */}
+                                              <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: todo,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
                            </div>
                            <div className="tp-service-sm-content">
                               <span>UX Audit</span>
@@ -149,9 +206,21 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                              <video autoPlay muted loop width="125px">
+                              {/* <video autoPlay muted loop width="125px">
                                  <source src="/assets/img/service/influence.webm" type="video/webm" /> 
-                              </video>
+                              </video> */}
+                               <Lootie 
+                      options={{
+                        loop: true,
+                        autoplay: true,
+                        animationData: graphic,  // Animation for Digital Marketing
+                        rendererSettings: {
+                          preserveAspectRatio: "xMidYMid slice"
+                        }
+                      }}
+                  style={{width:'122px',height:'100%'}}
+                    />  
+                              
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Graphic Design</span>
