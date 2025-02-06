@@ -1,4 +1,4 @@
-// import nodemailer from "nodemailer";
+
 async function refreshAccessToken() {
   try {
     const params = new URLSearchParams();
@@ -15,16 +15,17 @@ async function refreshAccessToken() {
       body: params.toString(),
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`HTTP error ${response.status}: ${errorText}`);
-    }
+    // if (!response.ok) {
+    //   const errorText = await response.text();
+    //   throw new Error(`HTTP error ${response.status}: ${errorText}`);
+    // }
 
     const data = await response.json();
-
+console.log(JSON.stringify(data))
     const accessToken = data.access_token;
 
     return accessToken;
+    
   } catch (error) {
     console.error(
       "Error refreshing access token:",
@@ -46,8 +47,7 @@ export default async function sendDataToZoho(req, res) {
     const accessToken = await refreshAccessToken();
     // in this formData variable, you will get data from frontend. Jsut map it with payload below and remove dummy data
     const formData = req.body;
-    
-    const info = JSON.parse(formData);
+    const info=JSON.parse(formData)
     const { name, email, inquiry, phone, message } = info;
     
     const fullName=splitName(name);
@@ -77,14 +77,14 @@ export default async function sendDataToZoho(req, res) {
       body: JSON.stringify(zohoLeadData),
     });
     
-    // if (!response.ok) {
-    //   // const errorText = await response.text();
-    //   // throw new Error(`Error sending data : ${errorText}`);
-    // }
+    if (!response.ok) {
+     const errorText = await response.text();
+     throw new Error(`Error sending data : ${errorText}`);
+    }
 
     const data = await response.json();
-    
-    if(data.data[0].code=="SUCCESS"){
+    console.log(JSON.stringify(data))
+    if(data.data && Array.isArray(data.data) && data.data.length > 0 && data.data[0].code === "SUCCESS"){
       const nodemailer = require("nodemailer"); 
         const testConfig = {
       host: "sandbox.smtp.mailtrap.io",
@@ -106,6 +106,7 @@ export default async function sendDataToZoho(req, res) {
 
 
     const config = process.env.NODE_ENV === 'test' ? prodConfig : testConfig
+    console.log(process.env.NODE_ENV)
     const transporter = nodemailer.createTransport(config );
     
     await transporter.sendMail({

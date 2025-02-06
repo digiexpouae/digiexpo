@@ -8,20 +8,20 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 const ContactUsForm = () => {
   
-    const [recaptchaValue, setRecaptchaValue] = useState(null);
-    const [formSubmitted, setFormSubmitted] = useState(false);
-    const [submissionError, setSubmissionError] = useState(null);
-    const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
-    const [recaptchaError, setRecaptchaError] = useState(null); 
-  const router = useRouter();
-  const [recaptchaToken, setRecaptchaToken] = useState('');
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    inquiry: "Your Inquiry about",
-    message: "",
-  });
+   const [recaptchaValue, setRecaptchaValue] = useState(null);
+   const [formSubmitted, setformSubmitted] = useState(false);
+   const [isSubmitted, setisSubmitted] = useState(false)
+   const [submissionError, setSubmissionError] = useState(null);
+   const [isSubmitDisabled, setisSubmitDisabled] = useState(true);
+   const [recaptchaError, setRecaptchaError] = useState(null); 
+   const router = useRouter();
+   const [formData, setFormData] = useState({
+     name: "",
+     email: "",
+     phone: "",
+     inquiry: "Your Inquiry about",
+     message: "",
+   })
 
   const handleChange = (e) => {
     setFormData({
@@ -35,35 +35,43 @@ const ContactUsForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send form data to the PHP backend
-    if(isSubmitDisabled){
-      setSubmissionError('Please complete the reCAPTCHA first')
-      return;
-    }
-    try {
-      const res = await fetch("/api/auth", {
-        method:"POST", 
-      body: JSON.stringify(formData)
-    })
-    // const res= await sendDataToZoho(formData)
-    console.log(res)
-     // Check if the response indicates success
-     if (res && res.data && res.data.success) {
-      // Redirect to thank you page if successful
-      router.push('/thank-you');
-      setFormSubmitted(true);
-      setIsSubmitDisabled(true); 
-    } else {
-      // Show error message if something went wrong
-      alert("Failed to send message.");
-      const errorData = await response.json();
-      setSubmissionError(errorData.message || "Form submission failed.")
-    }
-  }
+    setisSubmitted(true); 
+
+   // Send form data to the PHP backend
+   if(isSubmitDisabled){
+     setSubmissionError('Please complete the reCAPTCHA first')
+
+     
+   }
+   try {
+     const res = await fetch("/api/auth", {
+       method:"POST", 
+     body: JSON.stringify(formData)
+   })
+   // const res= await sendDataToZoho(formData)
+   console.log(res)
+    // Check if the response indicates success
+    if (res &&  res.ok){
+     // Redirect to thank you page if successful
+     console.log('sucess')
+     router.push('/thank-you');
+     setformSubmitted(true);
+     setisSubmitDisabled(true); 
+   } else {
+     // Show error message if something went wrong
+     alert("Failed to send message."); 
+   }
+ }
 catch(error){
-  console.log('Error')
+ setSubmissionError(error.message || "Form submission failed.")
+ alert("Failed to send message.");
+ console.log('Error')
 }
-  };
+finally {
+ setisSubmitted(false); // Reset loading state after request completion
+}
+ };
+
   const selectHandler = (selectedOption) => {
     setFormData({
       ...formData,
@@ -74,7 +82,7 @@ catch(error){
     setRecaptchaValue(value)
   setRecaptchaError(null)
   if(!value){
-    setIsSubmitDisabled(true)
+    setisSubmitDisabled(true)
     return;
   }
   try{
@@ -85,17 +93,17 @@ catch(error){
       },
       body: JSON.stringify({recapchatoken:value})
   })
-  const data =await response.json
+  const data =await response.json()
   if(data.success){
-  setIsSubmitDisabled(false)
+  setisSubmitDisabled(false)
   }
   else{
-    setIsSubmitDisabled(true)
+    setisSubmitDisabled(true)
     setRecaptchaValue(null)
     setRecaptchaError('Recapcha verification failed.Try again')
   }
   }catch (error){
-    setIsSubmitDisabled(true)
+    setisSubmitDisabled(true)
     setRecaptchaValue(null)
     setRecaptchaError('Recapcha verification failed.Try again')
   }
