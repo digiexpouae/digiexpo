@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   const query = `*[_type == "post"]{ "path": "/blog/" + slug.current,  "createdAt": publishedAt 
  }`;
   const blogPosts = await client.fetch(query);
-console.log(JSON.stringify(blogPosts));
+
 
   // 🔹 Combine static pages with blog posts
   const allUrls = [...staticSitemap, ...blogPosts];
