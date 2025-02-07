@@ -20,8 +20,7 @@ export default async function handler(req, res) {
  }`;
   const blogPosts = await client.fetch(query);
 
-
-  // 🔹 Combine static pages with blog posts
+    // 🔹 Combine static pages with blog posts
   const allUrls = [...staticSitemap, ...blogPosts];
 
   // 🔹 Generate XML sitemap
