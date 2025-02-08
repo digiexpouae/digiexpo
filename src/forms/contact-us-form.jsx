@@ -35,7 +35,6 @@ const ContactUsForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(isSubmitDisabled){
-      alert('Please complete the reCAPTCHA first')
     return  setSubmissionError('Please complete the reCAPTCHA first')}
 const { name }=formData
 const nameParts=name.trim().split(" ")
@@ -198,7 +197,13 @@ finally {
 
         <div className='col-xxl-12'>
           <div className='postbox__btn-box'>
-            <button className='submit-btn w-100' type='submit'>
+            <button className='submit-btn w-100' type='submit'
+             disabled={isSubmitted}
+
+             style={{
+              cursor: isSubmitted ? "not-allowed" : "pointer", // Remove pointer when disabled
+              opacity: isSubmitted ? 0.6 : 1, // Optional: Reduce opacity when disabled
+            }}>
 
             {!isSubmitted ? (
    'Send your Request'

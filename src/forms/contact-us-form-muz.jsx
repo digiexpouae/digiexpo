@@ -37,7 +37,6 @@ const ContactUsFormMuz = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if(isSubmitDisabled){
-      alert('Please complete the reCAPTCHA first')
     return  setSubmissionError('Please complete the reCAPTCHA first')}
 const { name }=formData
 const nameParts=name.trim().split(" ")
@@ -195,9 +194,12 @@ console.log(data)
    
            <button
  className="tp-btn-yellow-lg w-100 flex items-center justify-center"
- type="submit"
+ type="submit" disabled={isSubmitted}
 
-
+ style={{
+  cursor: isSubmitted ? "not-allowed" : "pointer", // Remove pointer when disabled
+  opacity: isSubmitted ? 0.6 : 1, // Optional: Reduce opacity when disabled
+}}
   // Disable the button when submitting
 >
  {/* Button text */}
