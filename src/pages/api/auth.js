@@ -96,8 +96,8 @@ export default async function sendDataToZoho(req, res) {
       port: 587, // For secure connection
       secure: true, // Use true for 465, false for other ports
       auth: {
-        user: "your-zoho-email@yourdomain.com", // Your Zoho email address
-        pass: "your-zoho-password", // Your Zoho email password
+        user: "digiexpo123@gmail.com", // Your Zoho email address
+        pass: "Digiexpo123", // Your Zoho email password
       },
     };
 
@@ -106,8 +106,8 @@ export default async function sendDataToZoho(req, res) {
     const transporter = nodemailer.createTransport(config );
     
     await transporter.sendMail({
-      from:`user@gmail.com`,
-      to:email,
+      from:`digiexpo123@gmail.com`,
+      to:email, 
       subject: `New Contact Form Submission: ${inquiry}`,
       html: `
         <h2>New Contact Form Submission</h2>

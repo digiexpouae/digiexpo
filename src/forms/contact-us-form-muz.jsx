@@ -36,15 +36,16 @@ const ContactUsFormMuz = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setisSubmitted(true); 
-
-   // Send form data to the PHP backend
-   if(isSubmitDisabled){
-     setSubmissionError('Please complete the reCAPTCHA first')
-
-     
-   }
-   try {
+    if(isSubmitDisabled){
+      alert('Please complete the reCAPTCHA first')
+    return  setSubmissionError('Please complete the reCAPTCHA first')}
+const { name }=formData
+const nameParts=name.trim().split(" ")
+if(nameParts.length<2 || !nameParts[1].trim()){
+  return alert('Please enter your full name ')
+}
+setisSubmitted(true)
+try {
      const res = await fetch("/api/auth", {
        method:"POST", 
      body: JSON.stringify(formData)
@@ -54,13 +55,15 @@ const ContactUsFormMuz = () => {
     // Check if the response indicates success
     if (res &&  res.ok){
      // Redirect to thank you page if successful
+     
      console.log('sucess')
      router.push('/thank-you');
      setformSubmitted(true);
      setisSubmitDisabled(true); 
    } else {
      // Show error message if something went wrong
-     alert("Failed to send message."); 
+     setisSubmitted(false)
+     return alert("Failed to send message."); 
    }
  }
 catch(error){
@@ -212,6 +215,6 @@ console.log(data)
      </div>
    </form>
  );
-};
 
+}
 export default ContactUsFormMuz;
