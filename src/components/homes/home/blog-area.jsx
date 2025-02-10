@@ -1,8 +1,8 @@
 import blog_data from "@/data/blog-data";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
+import React, { useState ,useEffect, useRef} from "react";
+import dynamic from "next/dynamic";
 const blog_content = {
   sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
   title: "Our Digital Marketing Digest",
@@ -10,6 +10,31 @@ const blog_content = {
 const { sub_title, title } = blog_content;
 
 const BlogArea = () => {
+const [Videoload, setVideoload] = useState(false)
+
+
+    const triggerRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            
+            setVideoload(true);
+            {console.log(entry)}
+            observer.disconnect(); // Stop observing once the video loads
+          }
+        }
+        ,{ threshold: 0.01 } // Trigger when 10% of the video area is in view
+      );
+  
+      if (triggerRef.current) observer.observe(triggerRef.current);
+  
+      return () => observer.disconnect(); // Cleanup on unmount
+    }, []);
+
+
+
   return (
     <>
       <div className='tp-blog-area pb-90 pb-sm-50'>
@@ -46,18 +71,28 @@ const BlogArea = () => {
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix'>
+                <div className='tp-blog-four-img fix' ref={triggerRef}>
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
-                    <video autoPlay muted loop playsInline width='570px'>
-                      <source
-                  src='/assets/img/hero/herosection.mp4'                        
-                  type='video/mp4'
-                      />
+                  {!Videoload ? (
+                    // Show Placeholder Until Scroll
+                    <div>
+                      <p>Scroll to load video</p>
+                    </div>
+                  ) : (
+                    // Load Video Only After Scroll
+                    <video autoPlay muted loop playsInline width="570px">
+                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+                    </video>)}
+                  {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
+                  //     <source
+                  // src='/assets/img/hero/herosection.mp4'                        
+                  // type='video/mp4'
+                  //     /> */}
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
                         type='video/quicktime'
                       /> */}
-                    </video>
+                    {/* </video>} */}
                     {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
@@ -103,18 +138,28 @@ const BlogArea = () => {
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix'>
+                <div className='tp-blog-four-img fix' ref={triggerRef}>
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
-                    <video autoPlay muted loop playsInline width='570px'>
+                  {!Videoload ? (
+                    // Show Placeholder Until Scroll
+                    <div>
+                      <p>Scroll to load video</p>
+                    </div>
+                  ) : (
+                    // Load Video Only After Scroll
+                    <video autoPlay muted loop playsInline width="570px">
+                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+                    </video>)}
+                    {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                       <source
                   src='/assets/img/hero/herosection.mp4'                        
                   type='video/mp4'
-                      />
+                      /> </video>} */}
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
                         type='video/quicktime'
                       /> */}
-                    </video>
+                   
                     {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
