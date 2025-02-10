@@ -7,7 +7,7 @@ import Image from "next/image";
 // images import
 
 import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
-import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.png";
+import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.3146.png";
 import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
 
 
