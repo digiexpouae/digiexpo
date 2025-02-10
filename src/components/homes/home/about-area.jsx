@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import img_1 from "../../../../public/assets/img/about/about-4-3.png";
 import img_2 from "../../../../public/assets/img/about/about-4-1.png";
 import img_3 from "../../../../public/assets/img/about/about-4-2.png";
-
 // about content here
 const about_content = {
    //  sub_title: "Who we are",
@@ -20,6 +19,30 @@ const {sub_title, title, des, feature_1, feature_2, btn_text }  = about_content
 
 
 const AboutArea = () => {
+
+ const [Videoload, setVideoload] = useState(false)
+
+
+    const triggerRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            
+            setVideoload(true);
+            {console.log(entry)}
+            observer.disconnect(); // Stop observing once the video loads
+          }
+        }
+        ,{ threshold: 0.01 } // Trigger when 10% of the video area is in view
+      );
+  
+      if (triggerRef.current) observer.observe(triggerRef.current);
+  
+      return () => observer.disconnect(); // Cleanup on unmount
+    }, []);
+
     return (
         <>
             <div className="tp-about-area pb-135 pt-100 purple-bg p-relative pb-sm-50 pt-sm-50">
@@ -29,14 +52,17 @@ const AboutArea = () => {
                <div className="container">
                   <div className="row align-items-center">
                      <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div className="tp-about-left-img text-md-center p-relative text-start z-index ">
+                        <div className="tp-about-left-img text-md-center p-relative text-start z-index " ref={triggerRef}>
                            {/* <Image src={img_2} alt="theme-pure" /> */}
-
-                           <video  autoPlay muted loop playsInline className="tp-about-left-video">
+                           {!Videoload ? (
+                    // Show Placeholder Until Scroll
+                    <div >
+                      <p>Scroll to load video</p>
+                    </div>):
+                           (<video  autoPlay muted loop playsInline className="tp-about-left-video">
    <source src="/assets/img/about/Outputvideo2.mp4" type="video/mp4" />
    {/* <source src="/assets/img/about/colorful.mov" type="video/quicktime" /> */}
-   Your browser does not support the video tag.
-</video>
+</video>)}
        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
 
