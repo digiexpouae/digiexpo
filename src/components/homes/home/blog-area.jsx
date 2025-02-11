@@ -110,7 +110,6 @@ const BlogArea = () => {
                 <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
                  
-                    // Load Video Only After Scroll
                     <video autoPlay muted loop playsInline width="570px">
                       <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
                     </video>
