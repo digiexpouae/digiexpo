@@ -3,7 +3,6 @@ import LocationTwo from '@/svg/location-2';
 import PhoneThree from '@/svg/phone-3';
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useEffect ,useRef,useState} from 'react';
 
 import contact_img from "../../../../public/assets/img/hero/hero-4-3.png"
 import shape_1 from "../../../../public/assets/img/contact/shape-4-1.png"
@@ -22,28 +21,9 @@ const {sub_title, title , phone, email, location}  = contact_content
 
 const ContactArea2 = () => {
     const selectHandler = (e) => {};
-    const [Videoload, setVideoload] = useState(false)
 
 
-    const triggerRef = useRef(null);
 
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            
-            setVideoload(true);
-            {console.log(entry)}
-            observer.disconnect(); // Stop observing once the video loads
-          }
-        }
-        ,{ threshold: 0.01 } // Trigger when 10% of the video area is in view
-      );
-  
-      if (triggerRef.current) observer.observe(triggerRef.current);
-  
-      return () => observer.disconnect(); // Cleanup on unmount
-    }, []);
     return (
       <>
         <div className='tp-contact-area pt-120 pb-120 pb-sm-50 pt-sm-50 purple-bg z-index p-relative fix'>
@@ -60,22 +40,17 @@ const ContactArea2 = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.3s'
               >
-                <div className='tp-contact-section-box pb-25' ref={triggerRef}  >
+                <div className='tp-contact-section-box pb-25'  >
                   {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                  {/* video removed */}
-                 {!Videoload ? (
-                    // Show Placeholder Until Scroll
-                    <div >
-                      <p>Scroll to load video</p>
-                    </div>
-                  ) : (<video autoPlay muted loop playsInline width='500px'>
+                <video autoPlay muted loop playsInline width='500px'>
                      <source
                       src='/assets/img/contact/Contactp.mp4'
                       type='video/mp4'
                     />    
 
        
-                   </video> )}
+                   </video> 
                       {/* <source
  
  src='/assets/img/contact/contact.mov'

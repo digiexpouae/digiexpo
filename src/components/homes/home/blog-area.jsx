@@ -1,7 +1,6 @@
 import blog_data from "@/data/blog-data";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState ,useEffect, useRef} from "react";
 import dynamic from "next/dynamic";
 const blog_content = {
   sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
@@ -10,30 +9,6 @@ const blog_content = {
 const { sub_title, title } = blog_content;
 
 const BlogArea = () => {
-const [Videoload, setVideoload] = useState(false)
-
-
-    const triggerRef = useRef(null);
-
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            
-            setVideoload(true);
-            {console.log(entry)}
-            observer.disconnect(); // Stop observing once the video loads
-          }
-        }
-        ,{ threshold: 0.01 } // Trigger when 10% of the video area is in view
-      );
-  
-      if (triggerRef.current) observer.observe(triggerRef.current);
-  
-      return () => observer.disconnect(); // Cleanup on unmount
-    }, []);
-
-
 
   return (
     <>
@@ -71,18 +46,12 @@ const [Videoload, setVideoload] = useState(false)
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix' ref={triggerRef}>
+                <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
-                  {!Videoload ? (
-                    // Show Placeholder Until Scroll
-                    <div>
-                      <p>Scroll to load video</p>
-                    </div>
-                  ) : (
-                    // Load Video Only After Scroll
+                
                     <video autoPlay muted loop playsInline width="570px">
                       <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-                    </video>)}
+                    </video>
                   {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                   //     <source
                   // src='/assets/img/hero/herosection.mp4'                        
@@ -138,18 +107,13 @@ const [Videoload, setVideoload] = useState(false)
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix' ref={triggerRef}>
+                <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
-                  {!Videoload ? (
-                    // Show Placeholder Until Scroll
-                    <div>
-                      <p>Scroll to load video</p>
-                    </div>
-                  ) : (
+                 
                     // Load Video Only After Scroll
                     <video autoPlay muted loop playsInline width="570px">
                       <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-                    </video>)}
+                    </video>
                     {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                       <source
                   src='/assets/img/hero/herosection.mp4'                        
