@@ -10,7 +10,6 @@ const ContactUsFormMuz = () => {
   const [loadReCAPTCHA, setLoadReCAPTCHA] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setTimeout(() => setLoadReCAPTCHA(true), 200); // 500ms
       setLoadReCAPTCHA(true);
       window.removeEventListener("scroll", handleScroll); // Remove listener inside function
     };
