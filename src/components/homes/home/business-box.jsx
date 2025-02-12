@@ -6,7 +6,7 @@ import shape_1 from "../../../../public/assets/img/cta/cta-shape-5-1.png";
 import shape_2 from "../../../../public/assets/img/cta/cta-shape-5-2.png";
 
 const business_content = {
-  bg_img: "/assets/img/cta/cta-bg-5-1.png",
+  bg_img: "/assets/img/cta/cta-bg-5-1.webp",
   sub_title: "Ready to Hit Your Goals?",
   title: (
     <>

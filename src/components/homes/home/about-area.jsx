@@ -31,7 +31,7 @@ const AboutArea = () => {
                         <div className="tp-about-left-img text-md-center p-relative text-start z-index " >
                            {/* <Image src={img_2} alt="theme-pure" /> */}
                
-                           <video  autoPlay muted loop playsInline className="tp-about-left-video">
+                           <video  autoPlay muted loop playsInline  preload="none" className="tp-about-left-video">
    <source src="/assets/img/about/Outputvideo2.mp4" type="video/mp4" />
    {/* <source src="/assets/img/about/colorful.mov" type="video/quicktime" /> */}
 </video>
