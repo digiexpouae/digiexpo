@@ -43,7 +43,7 @@ const ContactArea2 = () => {
                 <div className='tp-contact-section-box pb-25'  >
                   {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                  {/* video removed */}
-                <video autoPlay muted loop playsInline width='500px'>
+                <video autoPlay muted loop playsInline preload="none"  width='500px'>
                      <source
                       src='/assets/img/contact/Contactp.mp4'
                       type='video/mp4'
