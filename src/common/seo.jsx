@@ -33,6 +33,7 @@ const SEO = ({ pageTitle, pageDesc, canonicalUrl ,ogImage, ogDescription,ogTitle
         <meta name="og:Image" content={ogImage} />
         <meta name="og:Description" content={ogDescription} />
         <meta name="og:Title" content={ogTitle} />
+        <meta name="google-site-verification" content="4OIjRBBSzprqzeFICro6NWDNkOGlWTIWvV_ixDoYCFM" />
         {Array.isArray(metaTags) && metaTags?.length> 0 && metaTags.map((item,index)=>{
           return <meta name="metaTags" content={item} key={index} />
 
