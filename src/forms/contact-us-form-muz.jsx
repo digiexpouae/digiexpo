@@ -35,13 +35,7 @@ const ContactUsFormMuz = () => {
     message: "",
   });
 
-  const submitForm = () => {
-    if (isSubmitted) {
-      setpoint({ cursor: 'disabled' });
-    } else {
-      setpoint(null);
-    }
-  };
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -57,7 +51,7 @@ const ContactUsFormMuz = () => {
     if(isSubmitDisabled){
       setSubmissionError('Please complete the reCAPTCHA first')
       setisSubmitted(false); // Set loading state
-
+      
       return;
     }
     try {
@@ -207,7 +201,8 @@ console.log(data)
             
     
             <button
-  className="tp-btn-yellow-lg w-100 flex items-center justify-center"
+
+className={`tp-btn-yellow-lg w-100 flex items-center justify-center ${isSubmitted ? 'disable' : ''}`}
   type="submit"
 
 
