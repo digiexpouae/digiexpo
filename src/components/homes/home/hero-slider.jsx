@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import featureflag from "../../../../utils/featureflag";
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
@@ -214,20 +213,14 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
-{featureflag.enableNewvideo?
-( <video poster="/assets/img/hero/heroposter.webp" autoPlay muted loop playsInline preload="none">
-                          <source
-                  src='/assets/img/hero/herosection.mp4'                        
-                 type='video/mp4'
-                    />
-                        </video>):(
+
                         <video autoPlay muted loop playsInline preload="none">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
                     />
-                        </video>)
-                    }
+                        </video>
+                    
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'
