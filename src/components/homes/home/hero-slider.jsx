@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from "react";
-//use gsap
+import featureflag from "../../../../utils/featureflag";
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
-
-// images import
-
 import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
 import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.3146.webp";
 import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
@@ -217,16 +214,25 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
+{featureflag.enableNewvideo?
+( <video poster="/assets/img/hero/hero poster.webp" autoPlay muted loop playsInline preload="none">
+                          <source
+                  src='/assets/img/hero/herosection.mp4'                        
+                 type='video/mp4'
+                    />
+                        </video>):(
                         <video autoPlay muted loop playsInline preload="none">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
                     />
+                        </video>)
+                    }
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'
                           /> */}
-                        </video>
+                    
 {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
