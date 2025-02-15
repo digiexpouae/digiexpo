@@ -84,32 +84,32 @@ export default async function sendDataToZoho(req, res) {
 
     const data = await response.json();
     
-    if(data.data[0].code=="SUCCESS"){
+    if(data.status=200){
       const nodemailer = require("nodemailer"); 
         const testConfig = {
       host: "sandbox.smtp.mailtrap.io",
       auth: {
-        user: "918c11ae60fba8", // Your Gmail address
-        pass: "9d0b0d9d2dc6f3", // Your Gmail app password (use App Password, not your regular password)
+        user: "918c11ae60fba8", 
+        pass: "9d0b0d9d2dc6f3",
       },
     };
 
     const prodConfig = {
       host: "smtp.zoho.com",
-      port: 587, // For secure connection
-      secure: true, // Use true for 465, false for other ports
+      port: 465, 
+      secure: true, 
       auth: {
-        user: "your-zoho-email@yourdomain.com", // Your Zoho email address
-        pass: "your-zoho-password", // Your Zoho email password
+        user: "sales@digiexpo.ae", 
+        pass: "Futurewave12@45", 
       },
     };
 
 
-    const config = process.env.NODE_ENV === 'test' ? prodConfig : testConfig
+    const config = process.env.NODE_ENV === 'development' ? prodConfig : testConfig
     const transporter = nodemailer.createTransport(config );
     
     await transporter.sendMail({
-      from:`user@gmail.com`,
+      from:`sales@digiexpo.ae`,
       to:email,
       subject: `New Contact Form Submission: ${inquiry}`,
       html: `
