@@ -85,45 +85,45 @@ export default async function sendDataToZoho(req, res) {
     const data = await response.json();
     
     if(data.status=200){
-    //   const nodemailer = require("nodemailer"); 
-    //     const testConfig = {
-    //   host: "sandbox.smtp.mailtrap.io",
-    //   auth: {
-    //     user: "918c11ae60fba8", // Your Gmail address
-    //     pass: "9d0b0d9d2dc6f3", // Your Gmail app password (use App Password, not your regular password)
-    //   },
-    // };
+      const nodemailer = require("nodemailer"); 
+        const testConfig = {
+      host: "sandbox.smtp.mailtrap.io",
+      auth: {
+        user: "918c11ae60fba8", 
+        pass: "9d0b0d9d2dc6f3",
+      },
+    };
 
-    // const prodConfig = {
-    //   host: "smtp.zoho.com",
-    //   port: 465, // For secure connection
-    //   secure: true, // Use true for 465, false for other ports
-    //   auth: {
-    //     user: "sales@digiexpo.ae", // Your Zoho email address
-    //     pass: "Futurewave12@45", // Your Zoho email password
-    //   },
-    // };
+    const prodConfig = {
+      host: "smtp.zoho.com",
+      port: 465, 
+      secure: true, 
+      auth: {
+        user: "sales@digiexpo.ae", 
+        pass: "Futurewave12@45", 
+      },
+    };
 
 
-    // const config = process.env.NODE_ENV === 'development' ? prodConfig : testConfig
-    // const transporter = nodemailer.createTransport(config );
+    const config = process.env.NODE_ENV === 'development' ? prodConfig : testConfig
+    const transporter = nodemailer.createTransport(config );
     
-    // await transporter.sendMail({
-    //   from:`sales@digiexpo.ae`,
-    //   to:email,
-    //   subject: `New Contact Form Submission: ${inquiry}`,
-    //   html: `
-    //     <h2>New Contact Form Submission</h2>
-    //     <p><strong>Name:</strong> ${firstName}</p>
-    //     <p><strong>Email:</strong> ${email}</p>
-    //     <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
-    //     <p><strong>Inquiry Type:</strong> ${inquiry}</p>
-    //     <p><strong>Message:</strong></p>
-    //     <blockquote>Thankyou for connecting with us.</blockquote>
-    //     <p><em>Received on: ${new Date().toLocaleString()}</em></p>
-    //   `,
-    //   replyTo: email
-    // });
+    await transporter.sendMail({
+      from:`sales@digiexpo.ae`,
+      to:email,
+      subject: `New Contact Form Submission: ${inquiry}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${firstName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <p><strong>Inquiry Type:</strong> ${inquiry}</p>
+        <p><strong>Message:</strong></p>
+        <blockquote>Thankyou for connecting with us.</blockquote>
+        <p><em>Received on: ${new Date().toLocaleString()}</em></p>
+      `,
+      replyTo: email
+    });
     return res.status(200).json({ message: "Data sent successfully ",success:true });
   }else{
     return res.status(500).json({ message: "Data not sent successfully ",error:true});
