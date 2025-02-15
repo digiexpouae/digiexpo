@@ -302,7 +302,10 @@ video{
         }
     }
 }
-
+.btndisable{
+    opacity: 0.4 ;
+    pointer-events: none;
+}
 .contact-info{
     &-item{
         border: 1px solid #E5E5E5;

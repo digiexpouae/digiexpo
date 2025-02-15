@@ -444,7 +444,11 @@
 	}
 	
 }
-
+.disable{
+	color:white;
+	pointer-events: none;
+	background-color: black;
+	}
   
 .tp-btn-yellow-border{
 	height: 60px;
