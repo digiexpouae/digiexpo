@@ -86,7 +86,8 @@ export default async function sendDataToZoho(req, res) {
     
     if(data.status=200){
       const nodemailer = require("nodemailer"); 
-        const testConfig = {
+    
+      const testConfig = {
       host: "sandbox.smtp.mailtrap.io",
       auth: {
         user: "918c11ae60fba8", 
@@ -105,8 +106,8 @@ export default async function sendDataToZoho(req, res) {
     };
 
 
-    const config = process.env.NODE_ENV === 'development' ? prodConfig : testConfig
-    const transporter = nodemailer.createTransport(config );
+    const config = process.env.NODE_ENV === 'production' ? prodConfig : testConfig
+    const transporter = nodemailer.createTransport(config);
     
     await transporter.sendMail({
       from:`sales@digiexpo.ae`,
