@@ -215,7 +215,7 @@ const HeroSlider = () => {
 													</div>
 												</div> */}
 {featureflag.enableNewvideo?
-( <video poster="/assets/img/hero/hero poster.webp" autoPlay muted loop playsInline preload="none">
+( <video poster="/assets/img/hero/heroposter.webp" autoPlay muted loop playsInline preload="none">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
