@@ -108,6 +108,7 @@ const HeroSlider = () => {
               src={hero_frame}
               alt='theme-pure'
               priority
+              layout="fill"
             />
           </div>
           <div className='tp-hero-shape'>
@@ -214,7 +215,7 @@ const HeroSlider = () => {
 													</div>
 												</div> */}
 
-                        <video autoPlay muted loop playsInline preload="none">
+                        <video autoPlay muted loop playsInline preload="auto">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
