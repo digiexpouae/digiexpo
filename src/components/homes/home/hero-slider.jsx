@@ -81,20 +81,20 @@ const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
 	hero_content;
 
 const HeroSlider = () => {
-	let hero_bg = useRef(null);
+	// let hero_bg = useRef(null);
 
-	useEffect(() => {
-		gsap.from(hero_bg.current, {
-			opacity: 0,
-			scale: 1.2,
-			duration: 1.5,
-		});
-		gsap.to(hero_bg.current, {
-			opacity: 1,
-			scale: 1,
-			duration: 1.5,
-		});
-	}, []);
+	// useEffect(() => {
+	// 	gsap.from(hero_bg.current, {
+	// 		opacity: 0,
+	// 		scale: 1.2,
+	// 		duration: 1.5,
+	// 	});
+	// 	gsap.to(hero_bg.current, {
+	// 		opacity: 1,
+	// 		scale: 1,
+	// 		duration: 1.5,
+	// 	});
+	// }, []);
 
 	useCharAnimation(".tp-hero__hero-title span.child");
 
@@ -102,7 +102,7 @@ const HeroSlider = () => {
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
-          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
+          <div className='tp-hero-bg tp-hero-bg-single'>
             <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
