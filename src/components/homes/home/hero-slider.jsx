@@ -102,7 +102,7 @@ const HeroSlider = () => {
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
-          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
+          <div className='tp-hero-bg tp-hero-bg-single'>
             <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
