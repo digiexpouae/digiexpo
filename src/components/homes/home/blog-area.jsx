@@ -1,8 +1,7 @@
 import blog_data from "@/data/blog-data";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
+import dynamic from "next/dynamic";
 const blog_content = {
   sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
   title: "Our Digital Marketing Digest",
@@ -10,6 +9,7 @@ const blog_content = {
 const { sub_title, title } = blog_content;
 
 const BlogArea = () => {
+
   return (
     <>
       <div className='tp-blog-area pb-90 pb-sm-50'>
@@ -46,18 +46,22 @@ const BlogArea = () => {
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix'>
+                <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
-                    <video autoPlay muted loop playsInline width='570px'>
-                      <source
-                  src='/assets/img/hero/herosection.mp4'                        
-                  type='video/mp4'
-                      />
+                
+                    <video autoPlay muted loop playsInline preload="none" width="570px">
+                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+                    </video>
+                  {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
+                  //     <source
+                  // src='/assets/img/hero/herosection.mp4'                        
+                  // type='video/mp4'
+                  //     /> */}
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
                         type='video/quicktime'
                       /> */}
-                    </video>
+                    {/* </video>} */}
                     {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
@@ -103,18 +107,22 @@ const BlogArea = () => {
               data-wow-delay='.7s'
             >
               <div className='tp-blog-four-item p-relative fix'>
-                <div className='tp-blog-four-img fix'>
+                <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
-                    <video autoPlay muted loop playsInline width='570px'>
+                 
+                    <video autoPlay muted loop playsInline preload="none" width="570px">
+                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+                    </video>
+                    {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                       <source
                   src='/assets/img/hero/herosection.mp4'                        
                   type='video/mp4'
-                      />
+                      /> </video>} */}
                       {/* <source
                         src='/assets/img/hero/hero-video.mov'
                         type='video/quicktime'
                       /> */}
-                    </video>
+                   
                     {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 

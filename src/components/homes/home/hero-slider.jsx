@@ -1,13 +1,9 @@
 import React, { useEffect, useRef } from "react";
-//use gsap
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
-
-// images import
-
 import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
-import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.png";
+import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.3146.webp";
 import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
 
 
@@ -112,6 +108,7 @@ const HeroSlider = () => {
               src={hero_frame}
               alt='theme-pure'
               priority
+              layout="fill"
             />
           </div>
           <div className='tp-hero-shape'>
@@ -123,6 +120,7 @@ const HeroSlider = () => {
                 src={item.img}
                 alt='theme-pure'
                 layout="intrinsic"
+
               />
             ))}
           </div>
@@ -216,16 +214,19 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
-                        <video autoPlay muted loop playsInline>
+
+                        <video autoPlay muted loop playsInline preload="auto">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
                     />
+                        </video>
+                    
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'
                           /> */}
-                        </video>
+                    
 {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 

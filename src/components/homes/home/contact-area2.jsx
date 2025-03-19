@@ -3,12 +3,12 @@ import LocationTwo from '@/svg/location-2';
 import PhoneThree from '@/svg/phone-3';
 import Link from 'next/link';
 import Image from 'next/image';
-import React from 'react';
 
 import contact_img from "../../../../public/assets/img/hero/hero-4-3.png"
 import shape_1 from "../../../../public/assets/img/contact/shape-4-1.png"
 import NiceSelect from '@/ui/nice-select';
 import ContactUsFormMuz from '@/forms/contact-us-form-muz';
+
 
 const contact_content = {
     sub_title: "CONTACT US",
@@ -21,6 +21,9 @@ const {sub_title, title , phone, email, location}  = contact_content
 
 const ContactArea2 = () => {
     const selectHandler = (e) => {};
+
+
+
     return (
       <>
         <div className='tp-contact-area pt-120 pb-120 pb-sm-50 pt-sm-50 purple-bg z-index p-relative fix'>
@@ -37,20 +40,23 @@ const ContactArea2 = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.3s'
               >
-                <div className='tp-contact-section-box pb-25'>
+                <div className='tp-contact-section-box pb-25'  >
                   {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                  {/* video removed */}
-                  <video autoPlay muted loop playsInline width='500px'>
-                    <source
+                <video autoPlay muted loop playsInline preload="none"  width='500px'>
+                     <source
                       src='/assets/img/contact/Contactp.mp4'
                       type='video/mp4'
-                    /> 
+                    />    
+
+       
+                   </video> 
                       {/* <source
-                      src='/assets/img/contact/contact.mov'
+ 
+ src='/assets/img/contact/contact.mov'
                       type='video/quicktime'
                     /> */}
-                   </video> 
-                  {/* <iframe
+       {/* <iframe
   src="https://player.vimeo.com/video/246115326?autoplay=1&muted=1&loop=1&background=1"
   // width="100%"
   // height="100%"

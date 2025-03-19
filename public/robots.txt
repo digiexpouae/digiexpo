@@ -5,4 +5,4 @@ Disallow: /ads.txt/
 Disallow: /?
 Disallow: /*?
 
-Sitemap: https://www.digiexpo.ae/api/sitemap 
+Sitemap:https://www.digiexpo.ae/api/sitemap

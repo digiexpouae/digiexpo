@@ -1,12 +1,23 @@
 'use client'
-
-import React, { useState } from "react";
+import dynamic from "next/dynamic";
+import React, { useEffect, useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
-import ReCAPTCHA from "react-google-recaptcha";
 import { sendDataToZoho } from "../pages/api/auth";
 import { Value } from "sass";
+const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), { ssr: false });
 const ContactUsFormMuz = () => {
+  const [loadReCAPTCHA, setLoadReCAPTCHA] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setLoadReCAPTCHA(true);
+      window.removeEventListener("scroll", handleScroll); // Remove listener inside function
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll); // Cleanup on unmount
+  }, []);
 
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [formSubmitted, setformSubmitted] = useState(false);
@@ -24,13 +35,7 @@ const ContactUsFormMuz = () => {
     message: "",
   });
 
-  const submitForm = () => {
-    if (isSubmitted) {
-      setpoint({ cursor: 'disabled' });
-    } else {
-      setpoint(null);
-    }
-  };
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -46,7 +51,7 @@ const ContactUsFormMuz = () => {
     if(isSubmitDisabled){
       setSubmissionError('Please complete the reCAPTCHA first')
       setisSubmitted(false); // Set loading state
-
+      
       return;
     }
     try {
@@ -186,17 +191,18 @@ console.log(data)
           </div>
         </div>
         <div>
-            <ReCAPTCHA
+            {loadReCAPTCHA && <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
          onChange={capchahandlechange}
-         /> 
+         /> }
         </div>
         <div className='col-xl-12'>
           <div className='tp-contact-btn'>
             
     
             <button
-  className="tp-btn-yellow-lg w-100 flex items-center justify-center"
+
+className={`tp-btn-yellow-lg w-100 flex items-center justify-center ${isSubmitted ? 'disable' : ''}`}
   type="submit"
 
 
