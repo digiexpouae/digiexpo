@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 let priority = item.path === "/" ? 1.0 : item.path.startsWith("/blog") ? 0.64 : 0.80; 
     xml += `<url>
     <loc>${baseUrl}${item.path}</loc>
-    ${`<lastmod>${item.createdAt}</lastmod>`}
+    // ${`<lastmod>${item.createdAt}</lastmod>`}
     <changefreq>daily</changefreq>
     <priority>${priority}</priority>
   </url>\n`;
