@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   const query = `*[_type == "post"]{ "path": "/blog/" + slug.current,  "createdAt": publishedAt 
  }`;
   const blogPosts = await client.fetch(query);
-
+{console.log(blogPosts)}
     // 🔹 Combine static pages with blog posts
   const allUrls = [...staticSitemap, ...blogPosts];
 
@@ -27,16 +27,16 @@ export default async function handler(req, res) {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   
   allUrls.forEach((item) => {
-let priority = item.path === "/" ? 1.0 : item.path.startsWith("/blog") ? 0.8 : 0.5; 
+let priority = item.path === "/" ? 1.0 : item.path.startsWith("/blog") ? 0.64 : 0.80; 
     xml += `<url>
     <loc>${baseUrl}${item.path}</loc>
     ${`<lastmod>${item.createdAt}</lastmod>`}
+    <changefreq>daily</changefreq>
     <priority>${priority}</priority>
   </url>\n`;
   });
 
   xml += `</urlset>`;
-
   res.setHeader("Content-Type", "text/xml");
   res.status(200).send(xml);
 }
