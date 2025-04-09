@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   const baseUrl = "https://www.digiexpo.ae"; // Change to your domain
 
   // 🔹 Fetch blog slugs from Sanity
-  const query = `*[_type == "post"]{ "path": "/blog/" + slug.current,  "createdAt": publishedAt 
+  const query = `*[_type == "post"]{ "path": "/blogs/" + slug.current,  "createdAt": publishedAt 
  }`;
   const blogPosts = await client.fetch(query);
 {console.log(blogPosts)}
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
   
   allUrls.forEach((item) => {
-let priority = item.path === "/" ? 1.0 : item.path.startsWith("/blog") ? 0.64 : 0.80; 
+let priority = item.path === "/" ? 1.0 : item.path.startsWith("/blogs") ? 0.64 : 0.80; 
     xml += `<url>
     <loc>${baseUrl}${item.path}</loc>
     <changefreq>daily</changefreq>
