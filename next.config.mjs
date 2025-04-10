@@ -40,6 +40,14 @@ const nextConfig = {
     BUSINESS_EMAIL: process.env.BUSINESS_EMAIL,
     SITE_NAME: process.env.SITE_NAME,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap',
+        destination: '/api/sitemap',
+      },
+    ]
+  }
 };
 
 export default nextConfig;
