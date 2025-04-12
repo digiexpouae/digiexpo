@@ -16,7 +16,7 @@ import footer_logo from "../../../public/assets/img/logo/logo-footer.png";
 const footer_content = {
    sub_title: "Reach out to our team and we'll get back to you within a day.",
    policy_text: <>By subscribing, you accepted the our <a href="#">Policy</a></>,
-   phone: "+971 501 435 647",
+   phone: "+971 552 626 943",
    email: "Info@digiexpo.ae",
    location: <>Ontario Tower - Office no 1801<br />18th Floor - Business Bay <br/> Dubai - United Arab Emirates</>,
 

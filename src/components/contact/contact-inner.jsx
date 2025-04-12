@@ -22,8 +22,8 @@ const inner_content = {
     {
       id: 2,
       icon: icon_2,
-      title: "+971-501-435-647",
-      link: "tel:+971501435647",
+      title: "+971-552-626-943",
+      link: "tel:+971552626943",
     },
     {
       id: 3,

@@ -4,7 +4,7 @@ import ContactUsFormMuz from "@/forms/contact-us-form-muz";
 
 const social_links = [
   {
-    link: "https://api.whatsapp.com/send?phone=971501435647&text=Hello%20DigiExpo!%20%F0%9F%91%8B",
+    link: "https://api.whatsapp.com/send?phone=971552626943&text=Hello%20DigiExpo!%20%F0%9F%91%8B",
     target: "_blank",
     icon: (
       <svg
@@ -25,7 +25,7 @@ const social_links = [
     ),
   },
   {
-    link: "tel:+971501435647",
+    link: "tel:+971552626943",
     target: "_blank",
     icon: (
       <svg

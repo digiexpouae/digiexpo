@@ -61,7 +61,7 @@ const Header = () => {
                 <div className='header-top__support text-end'>
                   <span>
                     Speak to an Expert:{" "}
-                    <Link href='tel:+971501435647'>+971 501 435 647</Link>
+                    <Link href='tel:+971552626943'>+971 552 626 943</Link>
                   </span>
                 </div>
               </div>
@@ -100,13 +100,13 @@ const Header = () => {
                                  </a> */}
                     <Link
                       className='d-none d-lg-inline-block'
-                      href='tel:+971501435647'
+                      href='tel:+971552626943'
                     >
                       <PhoneFour />
                     </Link>
                     <Link
                       className='d-none d-lg-inline-block last-child'
-                      href='https://api.whatsapp.com/send?phone=971501435647&text=Hello%20DigiExpo!%20%F0%9F%91%8B'
+                      href='https://api.whatsapp.com/send?phone=971552626943&text=Hello%20DigiExpo!%20%F0%9F%91%8B'
                     >
                       <WhatsappIcon />
                     </Link>
