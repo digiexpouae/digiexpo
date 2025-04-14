@@ -33,11 +33,11 @@ const hero_content = {
   hero_title: (
     <>
       <span className='tp_title'>
-        <span className='child'>DigiExpo Helps Brand With</span>
+        <span>DigiExpo Helps Brand With</span>
       </span>{" "}
       <br />
       <span>
-        <span className='child'>Business Growth</span>
+        <span>Business Growth</span>
       </span>{" "}
     </>
   ),
