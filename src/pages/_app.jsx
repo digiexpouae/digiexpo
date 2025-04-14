@@ -2,7 +2,12 @@ import "../styles/index.scss";
 import "../styles/business-box.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import { Plus_Jakarta_Sans } from 'next/font/google';
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  display: 'swap',
+});
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
@@ -52,5 +57,9 @@ export default function App({ Component, pageProps }) {
   //   }
   // }, [router.pathname, allowedPaths]);
 
-  return <Component {...pageProps} />;
+  return (
+    <main className={jakarta.className}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
