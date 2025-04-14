@@ -10,10 +10,6 @@ const jakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
-
-
-
-
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
