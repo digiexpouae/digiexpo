@@ -205,11 +205,7 @@
             border-radius: 50%;
             box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
             border-radius: 100px;
-        @media #{$xs}{
-            height: 100px;
-             width: 100px;}    
         }
-
     }
     &__title-box{
         @media #{$md}{
@@ -332,9 +328,7 @@
 
         & span{
             transform: translateY(-50%) rotate(14deg);
-             
-      }
- 
+        } 
 
         @media #{$xl}{
             width: 510px;
