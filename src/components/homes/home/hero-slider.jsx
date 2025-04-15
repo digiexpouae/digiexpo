@@ -214,14 +214,13 @@ const HeroSlider = () => {
 														</div>
 													</div>
 												</div> */}
-                        {/* this should be uncomment */}
 
-                        {/* <video autoPlay muted loop playsInline preload="auto">
+                        <video autoPlay muted loop playsInline preload="auto">
                           <source
                   src='/assets/img/hero/herosection.mp4'                        
                  type='video/mp4'
                     />
-                        </video> */}
+                        </video>
                     
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
