@@ -2,17 +2,6 @@ import "../styles/index.scss";
 import "../styles/business-box.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Plus_Jakarta_Sans } from 'next/font/google'
-
-// Load the font
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  weight: ['200','300','400', '500', '600', '700','800'], // Choose only the weights you use
-  display: 'swap', // Prevents FOIT (Flash of Invisible Text)
-})
-
-
-
 
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
@@ -63,6 +52,5 @@ export default function App({ Component, pageProps }) {
   //   }
   // }, [router.pathname, allowedPaths]);
 
-  return  (<main className={jakarta.className}><Component {...pageProps} /></main>);
-
+  return <Component {...pageProps} />;
 }
