@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
-// import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
+import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
 import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.3146.webp";
 import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
 
@@ -102,7 +102,7 @@ const HeroSlider = () => {
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
-          {/* <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
+          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
             <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
@@ -110,7 +110,7 @@ const HeroSlider = () => {
               priority
               layout="fill"
             />
-          </div> */}
+          </div>
           <div className='tp-hero-shape'>
             {hero_shape.map((item, i) => (
               <Image
