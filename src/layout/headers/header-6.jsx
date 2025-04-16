@@ -61,7 +61,7 @@ const HeaderSix = ({ style_2 = false }) => {
               </div>
               <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-6'>
                 <div className='header-bottom__right d-flex align-items-center justify-content-end'>
-                  <div className='header-bottom__action'>
+                  <div className='header-bottom__action' style={{display:'flex'}}>
                     <Link
                       className='d-none d-lg-inline-block'
                       href='tel:+971552626943'
