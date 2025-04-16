@@ -14,7 +14,7 @@ import ContactUsFormMuz from '@/forms/contact-us-form-muz';
 const contact_content = {
     sub_title: "CONTACT US",
     title: "Request Free Consultancy",
-    phone: "(+971) 501 435 647",
+    phone: "(+971) 552 626 943",
     email: "Info@digiexpo.ae",
     location: <>Ontario Tower - Office no 1801 - 18th Floor <br/> Business Bay - Dubai - United Arab Emirates</>,
 }
