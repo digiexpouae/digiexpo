@@ -12,7 +12,7 @@ import NiceSelect from '@/ui/nice-select';
 const contact_content = {
     sub_title: "CONTACT US",
     title: "Request Free Consultancy",
-    phone: "(+971) 502230715",
+    phone:  "(+971) 552626943",
     email: "Info@digiexpo.ae",
     location: <>Ontario Tower - Office no 1801 - 18th Floor <br/> Business Bay - Dubai - United Arab Emirates</>,
 }
