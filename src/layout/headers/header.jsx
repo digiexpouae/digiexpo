@@ -84,16 +84,16 @@ const Header = () => {
                   </Link>
                 </div>
               </div>
-              <div className='col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block'>
+              <div className='col-xxl-6 col-xl-5 col-lg-6 d-none d-lg-block'>
                 <div className='header-bottom__main-menu'>
                   <nav id='mobile-menu'>
                     <NavMenu />
                   </nav>
                 </div>
               </div>
-              <div className='col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6'>
+              <div className='col-xxl-4 col-xl-5 col-lg-3 col-md-8 col-6'>
                 <div className='header-bottom__right d-flex align-items-center justify-content-end'>
-                  <div className='header-bottom__action'>
+                  <div className='header-bottom__action' style={{display:'flex'}}>
                     {/* <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} >
                                     <SearchIconTwo />
