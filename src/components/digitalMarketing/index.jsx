@@ -16,7 +16,7 @@ import FooterFour from "@/layout/footers/footer-4";
 import FaqArea from "./faq-area";
 import StickyIcons from "@/common/sticky-icons";
 import StickyButtons from "@/common/sticky-buttons";
-
+import ScrollToTop from "../../../hooks/scroll-to-top";
 
 const DigitalMarketing = () => {
   return (
@@ -42,6 +42,7 @@ const DigitalMarketing = () => {
             <ContactArea />
           </main>
           <FooterFour />
+          <ScrollToTop />
         </div>
       </div>
     </>

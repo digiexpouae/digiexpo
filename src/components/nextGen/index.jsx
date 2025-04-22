@@ -17,6 +17,7 @@ import ContactArea from "../homes/home/contact-area";
 import AboutArea2 from "../homes/home/about-area";
 import StickyIcons from "@/common/sticky-icons";
 import StickyButtons from "@/common/sticky-buttons";
+import ScrollToTop from "../../../hooks/scroll-to-top";
 const NextGen = () => {
   return (
     <>
@@ -42,6 +43,7 @@ const NextGen = () => {
           <ContactArea />
           </main>
           <FooterFour/>
+          <ScrollToTop />
         </div>
       </div>
     </>

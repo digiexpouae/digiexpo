@@ -16,6 +16,7 @@ import BlogArea from "../homes/home/blog-area";
 import ContactArea from "../homes/home/contact-area";
 import StickyIcons from "@/common/sticky-icons";
 import StickyButtons from "@/common/sticky-buttons";
+import ScrollToTop from "../../../hooks/scroll-to-top";
 
 const WebDevelopment = () => {
   return (
@@ -37,6 +38,7 @@ const WebDevelopment = () => {
       <BlogArea />
       <ContactArea />
       <FooterFour />
+      <ScrollToTop />
     </>
   );
 };

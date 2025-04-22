@@ -16,7 +16,7 @@ import AboutArea from "../homes/home/about-area";
 import HeaderTwo from "@/layout/headers/header-2";
 import StickyIcons from "@/common/sticky-icons";
 import StickyButtons from "@/common/sticky-buttons";
-
+import ScrollToTop from "../../../hooks/scroll-to-top";
 const MobileApp = () => {
   return (
     <>
@@ -41,6 +41,7 @@ const MobileApp = () => {
             <ContactArea />
           </main>
           <FooterFour />
+          <ScrollToTop />
         </div>
       </div>
     </>

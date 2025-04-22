@@ -10,7 +10,7 @@ import CtaArea from "../contact/cta-area";
 import FaqArea from "../homes/home-2/faq-area";
 import ServiceArea from "../digitalMarketing/service-area";
 import FooterFour from "@/layout/footers/footer-4";
-
+import ScrollToTop from "../../../hooks/scroll-to-top";
 const Service = () => {
   return (
     <>
@@ -28,6 +28,7 @@ const Service = () => {
             <CtaArea />
           </main>
           <FooterFour />
+          <ScrollToTop />
         </div>
       </div>
     </>
