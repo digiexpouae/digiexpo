@@ -196,6 +196,9 @@ video{
             flex-wrap: wrap;
             padding: 30px 20px;
         }
+        @media #{$lg}{
+            padding: 45px 32px;
+        }
     }
     &-img{ 
         margin-right: 20px;
