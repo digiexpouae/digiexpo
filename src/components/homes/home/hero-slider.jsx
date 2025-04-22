@@ -108,9 +108,7 @@ const HeroSlider = () => {
               src={hero_frame}
               alt='theme-pure'
               priority
-              layout="fill"    
-                    placeholder="blur"
-
+              layout="fill"
             />
           </div>
           <div className='tp-hero-shape'>
@@ -122,8 +120,6 @@ const HeroSlider = () => {
                 src={item.img}
                 alt='theme-pure'
                 layout="intrinsic"
-                placeholder="blur"
-
 
               />
             ))}
