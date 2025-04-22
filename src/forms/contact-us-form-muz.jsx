@@ -194,7 +194,7 @@ console.log(data)
             {loadReCAPTCHA && <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
          onChange={capchahandlechange}
-         /> }
+          className="recap"/> }
         </div>
         <div className='col-xl-12'>
           <div className='tp-contact-btn'>
