@@ -14,7 +14,7 @@ const CtaArea = () => {
         <>
             <div className="tp-cta-area p-relative">
                <div className="tp-cta-grey-bg grey-bg-2"></div>
-               <div className="container">
+               <div className="container mb-20">
                   <div className="row">
                      <div className="col-12">
                         <div className="tp-cta-bg" style={{backgroundImage: `url(${bg_img})`}}>

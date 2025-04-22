@@ -68,7 +68,7 @@ const ServiceArea = () => {
                      </div>
 
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
+                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between mt-xl-4">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
                                <Lootie 

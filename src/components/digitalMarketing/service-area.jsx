@@ -106,7 +106,7 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
+                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between d-xl-block mt-xl-140'>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
                  {/* <video autoPlay muted loop width='125px'>
