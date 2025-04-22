@@ -15,6 +15,7 @@ import ServiceArea2 from "./service-area2";
 import HeaderSix from "@/layout/headers/header-6";
 import StickyIcons from "@/common/sticky-icons";
 import StickyButtons from "@/common/sticky-buttons";
+import ScrollToTop from "../../../hooks/scroll-to-top";
 
 const Ecommerce = () => {
   return (
@@ -39,6 +40,7 @@ const Ecommerce = () => {
             <ContactArea />
           </main>
           <FooterFour />
+          <ScrollToTop />
         </div>
       </div>
     </>

@@ -134,7 +134,11 @@
     bottom: -1%;
     right: -8%;
 }
-
+.tp-contact-section-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .tp-contact-section-box video{
     border-radius: 25px;
     box-shadow: 0 12px 15px 8px rgba(0, 0, 0, .129);
@@ -216,7 +220,7 @@ video{
     &-link{
         & a{
             font-weight: 400;
-            font-size: 20px;
+            font-size: 17px;
             line-height: 16px;
             color: #5F6168;
             @media #{$lg,$xs}{
