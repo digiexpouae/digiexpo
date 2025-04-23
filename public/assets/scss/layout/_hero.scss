@@ -1242,3 +1242,11 @@
   overflow: hidden;
   opacity: 0;
 }
+ .hero-font span{
+  font-family:var(--tp-ff-heading_two);
+  font-weight: 700;
+}
+.hero-font{
+  font-family:var(--tp-ff-heading_two)!important;
+
+}

@@ -52,9 +52,9 @@ const HeroArea = () => {
                <div className="row justify-content-center z-index-3">
                   <div className="col-xl-11">
                      <div className="tp-hero-title-box text-center">
-                        <h2 className="tp-hero-title-3 hero-text-anim pb-5">
-                           <i><i className="child-1">{title_1}</i></i>
-                           <i><i className="child-1">{title_2}</i></i>
+                        <h2 className="tp-hero-title-3 hero-text-anim pb-5 hero-font">
+                           <i><i className="child-1 hero-font">{title_1}</i></i>
+                           <i><i className="child-1 hero-font">{title_2}</i></i>
                         </h2>
                         <p className="tp-char-animation-2 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">{info}</p>
                      </div>
