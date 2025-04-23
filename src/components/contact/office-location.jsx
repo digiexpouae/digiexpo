@@ -4,7 +4,9 @@ import React from 'react';
 import img_1 from "../../../public/assets/img/contact/contact-icon-sm-5.png";
 import img_2 from "../../../public/assets/img/contact/contact-icon-sm-6.png";
 import img_3 from "../../../public/assets/img/contact/contact-icon-sm-7.png";
-import img_4 from "../../../public/assets/img/contact/dubai-icon-sm.png";
+// import img_4 from "../../../public/assets/img/contact/dubai-icon-sm.png";
+import img_4 from "../../../public/assets/img/contact/dubai2.webp";
+
 import Image from 'next/image';
 import Link from 'next/link';
 
