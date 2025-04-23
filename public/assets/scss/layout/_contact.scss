@@ -324,6 +324,7 @@ video{
         padding: 55px 30px;
         overflow: hidden;
     }
+    
     &-img{
         margin-bottom: 35px;
         display: inline-block;
@@ -739,4 +740,11 @@ video{
 }
 .contact-info-img img{
     border-radius: 22px;
+   
+    @media #{$md}{
+        width: 400px;
+    }
+    @media #{$xs}{
+        width: 250px;
+    }
 }
