@@ -123,9 +123,12 @@
 .contact-info-title-box{
     & p{
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 24px;
         color: #848587;
+    }
+    @media #{$xs}{
+        font-size: 16px;
     }
 }
 
@@ -316,7 +319,7 @@ video{
 .contact-info{
     &-item{
         border: 1px solid #E5E5E5;
-        border-radius: 12px;
+        border-radius: 42px;
         text-align: center; 
         padding: 55px 30px;
         overflow: hidden;
@@ -327,10 +330,14 @@ video{
     }
     &-title-sm{
         font-weight: 600;
-        font-size: 20px;
+        font-size: 27px;
         line-height: 16px;
         color: var(--tp-common-black);
         padding-bottom: 6px;
+        @media #{$xs}{
+            font-size: 20px;
+
+        }
     }
     &-title-box{
         & p{
@@ -729,4 +736,7 @@ video{
     }
  
 
+}
+.contact-info-img img{
+    border-radius: 22px;
 }

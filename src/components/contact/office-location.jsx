@@ -4,7 +4,9 @@ import React from 'react';
 import img_1 from "../../../public/assets/img/contact/contact-icon-sm-5.png";
 import img_2 from "../../../public/assets/img/contact/contact-icon-sm-6.png";
 import img_3 from "../../../public/assets/img/contact/contact-icon-sm-7.png";
-import img_4 from "../../../public/assets/img/contact/dubai-icon-sm.png";
+// import img_4 from "../../../public/assets/img/contact/dubai-icon-sm.png";
+import img_4 from "../../../public/assets/img/contact/dubai2.jpeg";
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -50,7 +52,7 @@ const OfficeLocation = () => {
                       </div>
                     )}
                     <div className="contact-info-img">
-                      <Image src={item.img} alt="theme-pure" />
+                      <Image src={item.img} alt="theme-pure"  />
                     </div>
                     <div className="contact-info-title-box">
                       <h5 className="contact-info-title-sm">
