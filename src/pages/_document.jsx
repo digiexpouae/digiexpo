@@ -15,12 +15,12 @@ export default function Document() {
         <NextScript />
 
         {/* Google Analytics */}
-        {/* <Script
+        <Script
           strategy='afterInteractive'
           src='https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB'
           async
-        /> */}
-        {/* <Script
+        />
+        <Script
           strategy='afterInteractive'
           dangerouslySetInnerHTML={{
             __html: `
@@ -30,10 +30,10 @@ export default function Document() {
               gtag('config', 'G-KTZJ1X0WSB');
             `,
           }}
-        /> */}
+        />
 
         {/* Tawk.to Live Chat */}
-        {/* <Script
+        <Script
           strategy='afterInteractive'
           dangerouslySetInnerHTML={{
             __html: `
@@ -48,54 +48,7 @@ export default function Document() {
               })();
             `,
           }}
-        /> */}
-<Script
-  strategy="lazyOnload"  // Lazy-load Google Analytics
-  src="https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB"
-  async
-/>
-<Script
-  strategy="lazyOnload"  // Lazy-load GA initialization
-  dangerouslySetInnerHTML={{
-    __html: `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-KTZJ1X0WSB');
-    `,
-  }}
-/>
-
-{/* Tawk.to Live Chat - Lazy load */}
-<Script
-  strategy="lazyOnload"
-  dangerouslySetInnerHTML={{
-    __html: `
-      const loadTawk = () => {
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function(){
-          var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-          s1.async = true;
-          s1.src = 'https://embed.tawk.to/66bdc0460cca4f8a7a76520a/1i5aje5ns';
-          s1.charset = 'UTF-8';
-          s1.setAttribute('crossorigin', '*');
-          s0.parentNode.insertBefore(s1, s0);
-        })();
-      };
-
-      // Trigger Tawk.to load on user interaction
-      ['scroll', 'mousemove', 'touchstart'].forEach(event => {
-        window.addEventListener(event, loadTawk, { once: true });
-      });
-    `,
-  }}
-/>
-
-
-
-
-
-
+        />
       </body>
     </Html>
   );
