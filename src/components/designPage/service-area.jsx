@@ -12,7 +12,7 @@ import graphic from '../../../public/animation/graphicdesign.json'
 import landing from '../../../public/animation/landingpage.json'
 import image from '../../../public/animation/image.json'
 
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+// const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -71,7 +71,7 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between mt-xl-4">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                               <Lootie 
+                               {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -81,7 +81,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />   */}
                         
                            </div>
                            <div className="tp-service-sm-content">
@@ -100,7 +100,7 @@ const ServiceArea = () => {
                               {/* <video autoPlay muted loop width="150px">
                                  <source src="/assets/img/service/app.webm" type="video/webm" /> 
                               </video> */}
-                              <Lootie 
+                              {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -110,7 +110,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'162px',height:'100%'}}
-                    />  
+                    />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Responsive Web Design</span>
@@ -128,7 +128,7 @@ const ServiceArea = () => {
                               {/* <video autoPlay muted loop width="150px">
                                  <source src="/assets/img/service/performance.webm" type="video/webm" /> 
                               </video> */}
-                                              <Lootie 
+                                              {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -138,7 +138,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'142px',height:'100%'}}
-                    />  
+                    />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span>UX Design</span>
@@ -153,7 +153,7 @@ const ServiceArea = () => {
                         <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
                            <div className="tp-service-sm-icon">
                                {/* {item.icon} */}
-                               <Lootie 
+                               {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -163,7 +163,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'132px',height:'100%'}}
-                    />  
+                    />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Landing Page Design</span>
@@ -181,7 +181,7 @@ const ServiceArea = () => {
                               {/* <video autoPlay muted loop width="125px">
                                  <source src="/assets/img/service/writing.webm" type="video/webm" /> 
                               </video> */}
-                                              <Lootie 
+                                              {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -191,7 +191,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />  
+                    />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span>UX Audit</span>
@@ -209,7 +209,7 @@ const ServiceArea = () => {
                               {/* <video autoPlay muted loop width="125px">
                                  <source src="/assets/img/service/influence.webm" type="video/webm" /> 
                               </video> */}
-                               <Lootie 
+                               {/* <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -220,7 +220,7 @@ const ServiceArea = () => {
                       }}
                   style={{width:'122px',height:'100%'}}
                     />  
-                              
+                               */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span>Graphic Design</span>
@@ -236,6 +236,6 @@ const ServiceArea = () => {
             </div>
         </>
     );
-};
+}
 
 export default ServiceArea;
