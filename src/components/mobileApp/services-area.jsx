@@ -13,7 +13,7 @@ import flutter from "../../../public/animation/flutter.json"
 import hybrid from "../../../public/animation/hybrid.json"
 import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
-// const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
   title: "Create. Connect.  Our Mobile App Development Services Fuel Your Business.",
@@ -72,7 +72,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-{/* <Lootie
+<Lootie
                       options={{
                         loop: true,
                         autoplay: true,
@@ -82,7 +82,7 @@ const ServicesArea = () => {
                         }
                       }}
                   style={{width:'166px',height:'100%'}}
-                    /> */}
+                    />
 
 
 
@@ -116,7 +116,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  {/* <Lootie
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -126,7 +126,7 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'80%'}}
-                                      /> */}
+                                      />
 
                 </div>
                 <div className="tp-service__content">
@@ -158,7 +158,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  {/* <Lootie
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -168,7 +168,7 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'80%'}}
-                                      /> */}
+                                      />
 
                 </div>
                 <div className="tp-service__content">
@@ -198,7 +198,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  {/* <Lootie
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -208,7 +208,7 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'186px',height:'100%'}}
-                                      /> */}
+                                      />
 
                 </div>
                 <div className="tp-service__content">
@@ -240,7 +240,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  {/* <Lootie
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -250,7 +250,7 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'122px',height:'70%'}}
-                                      /> */}
+                                      />
 
                 </div>
                 <div className="tp-service__content">
@@ -284,7 +284,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                  {/* <Lootie
+                  <Lootie
                                         options={{
                                           loop: true,
                                           autoplay: true,
@@ -294,7 +294,7 @@ const ServicesArea = () => {
                                           }
                                         }}
                                     style={{width:'186px',height:'100%'}}
-                                      /> */}
+                                      />
 
                 </div>
                 <div className="tp-service__content">

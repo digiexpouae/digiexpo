@@ -17,7 +17,7 @@ import content from "../../../public/animation/content.json"
 import SMM from "../../../public/animation/SMM.json"
 import emailmarketing from "../../../public/animation/emailmarketing.json"
 import influencer from '../../../public/animation/influencer.json'
-// const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
   title: (
@@ -116,7 +116,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
  
- {/* <Lootie 
+ <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -126,7 +126,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'132px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Social Media Marketing (SMM)</span>
@@ -158,7 +158,7 @@ const ServiceArea = () => {
                         type='video/webm'
                       />
                     </video> */}
-                           {/* <Lootie 
+                           <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -168,7 +168,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Search Engine Optimization(SEO)</span>
@@ -200,7 +200,7 @@ const ServiceArea = () => {
                         type='video/webm'
                       />
                     </video> */}
-                         {/* <Lootie 
+                         <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -210,7 +210,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'152px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Performance Marketing</span>
@@ -237,7 +237,7 @@ const ServiceArea = () => {
                     {/* {item.icon} */}
                  
                     
-  {/* <Lootie 
+  <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -247,7 +247,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Email Marketing</span>
@@ -279,7 +279,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
                                                
-                  {/* <Lootie 
+                  <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -289,7 +289,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'142px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>App Store Optimization(ASO)</span>
@@ -320,7 +320,7 @@ const ServiceArea = () => {
                         type='video/webm'
                       />
                     </video> */}
-                      {/* <Lootie 
+                      <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -330,7 +330,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Writing</span>
@@ -361,7 +361,7 @@ const ServiceArea = () => {
                         type='video/webm'
                       />
                     </video> */}
-                        {/* <Lootie 
+                        <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -371,7 +371,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'122px',height:'100%'}}
-                    />   */}
+                    />  
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Influencer Marketing</span>
@@ -402,7 +402,7 @@ const ServiceArea = () => {
                         type='video/webm'
                       />
                     </video> */}
-                        {/* <Lootie 
+                        <Lootie 
                       options={{
                         loop: true,
                         autoplay: true,
@@ -412,7 +412,7 @@ const ServiceArea = () => {
                         }
                       }}
                   style={{width:'132px',height:'100%'}}
-                    />   */}
+                    />  
 
                   </div>
                   <div className='tp-service-sm-content' style={{height:'162px'}}>
