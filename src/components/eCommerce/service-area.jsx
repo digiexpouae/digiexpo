@@ -12,7 +12,7 @@ import shopifyecom from '../../../public/animation/shopifyecom.json'
 import dynamic from 'next/dynamic';
 import mirakalecom from '../../../public/animation/mirakalecom.json'
 import megneto from '../../../public/animation/megneto.json'
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+// const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -73,7 +73,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -83,7 +83,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>WooCommerce Development </span>
@@ -103,7 +103,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -113,7 +113,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Mirakl Development</span>
@@ -133,7 +133,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -143,7 +143,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Magento Ecommerce Development</span>
@@ -163,7 +163,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -173,7 +173,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>BigCommerce Development</span>
@@ -193,7 +193,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -203,7 +203,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Shopify Ecommerce Development </span>
@@ -223,7 +223,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                           options={{
                                             loop: true,
                                             autoplay: true,
@@ -233,7 +233,7 @@ const ServiceArea = () => {
                                             }
                                           }}
                                       style={{width:'122px',height:'100%'}}
-                                        />  
+                                        />   */}
                            </div>
                            <div className="tp-service-sm-content">
                               <span className='ecomm'>Shopify Plus Ecommerce Development</span>

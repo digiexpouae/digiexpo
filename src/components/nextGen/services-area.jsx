@@ -12,7 +12,7 @@ import threeD from '../../../public/animation/3D.json'
 import gesture from '../../../public/animation/gesture.json'
 import iotdevelopment from '../../../public/animation/lotdevelopment.json'
 import dynamic from "next/dynamic";
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+// const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 
 
@@ -78,7 +78,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
    
-   <Lootie 
+   {/* <Lootie 
                          options={{
                            loop: true,
                            autoplay: true,
@@ -88,7 +88,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
    
    
                 </div>
@@ -122,7 +122,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
                      
-   <Lootie 
+   {/* <Lootie 
                          options={{
                            loop: true,
                            autoplay: true,
@@ -132,7 +132,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -164,7 +164,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
                      
-   <Lootie 
+   {/* <Lootie 
                          options={{
                            loop: true,
                            autoplay: true,
@@ -174,7 +174,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -204,7 +204,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
                      
-   <Lootie 
+   {/* <Lootie 
                          options={{
                            loop: true,
                            autoplay: true,
@@ -214,7 +214,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -245,7 +245,7 @@ const ServicesArea = () => {
                       type="video/webm"
                     />
                   </video> */}
-                     
+{/*                      
    <Lootie 
                          options={{
                            loop: true,
@@ -256,7 +256,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
@@ -290,7 +290,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
                      
-   <Lootie 
+   {/* <Lootie 
                          options={{
                            loop: true,
                            autoplay: true,
@@ -300,7 +300,7 @@ const ServicesArea = () => {
                            }
                          }}
                      style={{width:'122px',height:'100%'}}
-                       /> 
+                       />  */}
                 </div>
                 <div className="tp-service__content">
                   <h3 className="tp-service__title-sm tp-yellow-color">
