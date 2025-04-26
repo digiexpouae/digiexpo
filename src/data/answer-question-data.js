@@ -47,9 +47,7 @@ const answer_question_data = [
   {
     id: 5,
     question: "How does DigiExpo ensure business growth?",
-    answer: <>We are your one-stop solution for generating your online presence from idea to sale. We will assist you in sustaining and attaining your organization's objectives by translating clicks into sales and offering you extensive services as well as valuable information.
-    
-    </> ,
+    answer: <>We are your one-stop solution for generating your online presence from idea to sale. We will assist you in sustaining and attaining your organization's objectives by translating clicks into sales and offering you extensive services as well as valuable information.</> ,
     accordion_id: "headingFive",
     collapsed: "collapsed",
     data_bs_target: "#collapseFive",
@@ -334,8 +332,9 @@ const answer_question_data = [
   }, 
   {
     id: 30,
-    question: "What types of emerging technologies does DigiExpo specialize in?",
-    answer: <>DigiExpo, the best Emerging Tech Development in Dubai focuses on a wide variety of exalting technologies, such as Artificial Intelligence, Augmented Reality, Metaverse creation, 3D projection, IoT creation, and Gesture-Based services.</> ,
+    question: "What makes your digital marketing services stand out in Dubai",
+    answer: <>At Digiexpo, we provide digital marketing services  Dubai. Our services are customized to drive relevant traffic, increase online visibility, and boost sales. We use top SEO methods, social media strategies, PPC, and content marketing to guarantee measurable growth. We help companies flourish in a cutthroat digital environment.
+</> ,
     accordion_id: "headingThreeZero",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeZero",
@@ -345,8 +344,8 @@ const answer_question_data = [
   }, 
   {
     id: 31,
-    question: "How does DigiExpo ensure the quality of its technological solutions?",
-    answer: <>DigiExpo, leading Emerging Technologies Development Company in UAE methodology consists of efficiently planning, designing, researching, testing, and evaluating all proposed solutions to increase their quality, security, and reliability.</> ,
+    question: "How can your website development service help a company grow? ",
+    answer: <>We are a top website development agency Dubai. We provide a visually appealing, fast, and mobile-first website that meets your expectations and represents your company identity. We make sure your website works great on any device. We focus on usability, SEO, and mobile optimization.</> ,
     accordion_id: "headingThreeOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeOne",
@@ -356,8 +355,8 @@ const answer_question_data = [
   }, 
   {
     id: 32,
-    question: "Can DigiExpo help with integrating AI into my business operations?",
-    answer: <>Yes, DigiExpo is proficient with AI development, and the firm can support you in incorporating AI solutions into your organizational procedures to improve working progress, projections, and digital transformation.</> ,
+    question: "Why is DigiExpo the top UI UX design agency in Dubai?",
+    answer: <>We create aesthetically pleasing and easily navigable user interfaces that improve usability. As the best UI UX design company in Dubai, our design process consists of user research, wireframing, prototyping, and testing. From the first click, we ensure your users remain interested and content.</> ,
     accordion_id: "headingThreeTwo",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeTwo",
@@ -367,8 +366,8 @@ const answer_question_data = [
   }, 
   {
     id: 33,
-    question: "What is the process for developing a custom Metaverse project with DigiExpo?",
-    answer: <>DigiExpo's Metaverse development process involves close collaboration with clients to understand their vision, followed by strategic planning, innovative prototyping, and meticulous development to create a metaverse that bridges the gap between imagination and reality.</> ,
+    question: "Which mobile app development services do you provide?",
+    answer: <>We offer complete mobile app development services in Dubai. They include UI/UX design, native and cross-platform development, testing, and post-launch support. We create the best mobile applications Dubai. Our performance-focused apps align with your business goals. We also ensure a smooth user experience on both Android and iOS platforms.</> ,
     accordion_id: "headingThreeThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeThree",
@@ -378,8 +377,8 @@ const answer_question_data = [
   }, 
   {
     id: 34,
-    question: "Does DigiExpo offer ongoing support after the launch of a project?",
-    answer: <>Yes, DigiExpo, leading Emerging tech company Dubai, UAE, provides ongoing monitoring, performance evaluation, and support after the launch of a project to ensure its continued success and to make any necessary adjustments or updates.</> ,
+    question: "Why would you choose DigiExpo as your eCommerce partner?",
+    answer: <>Choosing DigiExpo as your eCommerce agency in Dubai means working with professionals. We are aware of online company success.  Our scalable eCommerce systems include mobile optimization, Soptimisationion, and digital marketing.  We aim to enable your online store to increase visits and raise conversions. </> ,
     accordion_id: "headingThreeFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeFour",
