@@ -26,7 +26,7 @@ const AnswerQuestion7 = ({style}) => {
               </h2>
               <div
                 id={item.aria_controls}
-                className={`accordion-collapse collapse ${item.show ? "show" : ""}`}
+                className={`accordion-collapse collapse `}
                 aria-labelledby={item.accordion_id}
                 data-bs-parent="#accordionExample"
               >
