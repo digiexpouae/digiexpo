@@ -1,4 +1,4 @@
-import AnswerQuestion from '@/common/answer-question';
+import AnswerQuestion from '@/common/answer-question7.jsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
