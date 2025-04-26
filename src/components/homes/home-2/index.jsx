@@ -7,7 +7,10 @@ import HeroArea from "./hero-area";
 import OpenAccountArea from "./open-account-area";
 import PaymentArea from "./payment-area";
 import PaymentMethodArea from "./payment-method-area";
-import ServiceArea from "./service-area";
+// import ServiceArea from "./service-area";
+import dynamic from "next/dynamic";
+const ServiceArea = dynamic(() => import("./service-area"), { suspense: true });
+
 import TestimonialArea from "./testimonial-area";
 
 const HomeTwo = () => {

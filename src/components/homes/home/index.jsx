@@ -5,8 +5,11 @@ import HeroSlider from "./hero-slider";
 import ProjectArea from "./project-area";
 import TestimonialArea from "./testimonial-area";
 import PaymentMethodArea from "./payment-method-area";
-import ServiceArea from "./service-area";
+// import ServiceArea from "./service-area";
+import dynamic from "next/dynamic";
+const ServiceArea = dynamic(() => import("./service-area"), { ssr: false });
 import BusinessBox from "./business-box";
+import { Suspense } from "react";
 import AboutArea from "./about-area";
 import FunFactArea from "./fun-fact-area";
 import FaqArea from "./faq-area";
@@ -30,7 +33,11 @@ const HomeOne = () => {
 						<HeroSlider />
 						<Brand />
 						<ServiceArea />
-						<ContactArea2 />
+						<Suspense>	
+					<ContactArea2 />
+
+						</Suspense>
+					
 						<PaymentMethodArea/>
 						<BusinessBox />
 						<ProjectArea />

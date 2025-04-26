@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import withBundleAnalyzer from '@next/bundle-analyzer';
 const nextConfig = {
   async redirects() {
     return [
@@ -42,5 +43,8 @@ const nextConfig = {
   },
 
 };
-
-export default nextConfig;
+// Importing the bundle analyzer plugin
+// Use the bundle analyzer with the next config
+export default withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})(nextConfig);

@@ -9,7 +9,7 @@ import FunFactArea from "./fun-fact-area";
 import HeroArea from "./hero-area";
 import IntegrationArea from "./integration-area";
 import PlanArea from "./plan-area";
-import ServiceArea from "./service-area";
+// import ServiceArea from "./service-area";
 import TestimonialArea from "../../../common/testimonial-area";
 import VideoArea from "./video-area";
 import AnimateMouse from "./AnimateMouse";
@@ -25,7 +25,7 @@ const HomeFive = () => {
             <HeroArea />
             <VideoArea />
             <FunFactArea />
-            <ServiceArea />
+            {/* <ServiceArea /> */}
             <CtaArea />
             <PlanArea />
             <TestimonialArea />

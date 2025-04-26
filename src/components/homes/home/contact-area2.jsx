@@ -1,3 +1,5 @@
+"use client";
+
 import EmailThree from '@/svg/email-3';
 import LocationTwo from '@/svg/location-2';
 import PhoneThree from '@/svg/phone-3';
