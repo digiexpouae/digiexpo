@@ -1,8 +1,8 @@
 const answer_question_data = [
   {
     id: 1,
-    question: "What makes your digital marketing services stand out in Dubai?",
-    answer: <>At Digiexpo, we provide digital marketing services  Dubai. Our services are customized to drive relevant traffic, increase online visibility, and boost sales. We use top SEO methods, social media strategies, PPC, and content marketing to guarantee measurable growth. We help companies flourish in a cutthroat digital environment.  </> ,
+    question: "How can DigiExpo help with digital marketing?",
+    answer: <>We are the top digital marketing agency in Dubai, offering services meant to attract more traffic, improve conversion probability, and thus profit your business more. They employ a range of trends and concepts supported by the data to make outstanding changes to your brand. </> ,
     accordion_id: "headingOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseOne",
@@ -11,8 +11,8 @@ const answer_question_data = [
   },
   {
     id: 2,
-    question: "How can your website development service help a company grow? ",
-    answer: <>We are a top website development agency Dubai. We provide a visually appealing, fast, and mobile-first website that meets your expectations and represents your company identity. We make sure your website works great on any device. We focus on usability, SEO, and mobile optimization.</> ,
+    question: "What makes DigiExpo's website development unique? ",
+    answer: <>At DigiExpo, we have qualified Web Developers who will ensure that your business gets the website you envisioned for your brand: effective and easy-to-use websites. As we are the best Digital marketing agency UAE, Our essential concentration is on the aesthetic design of the websites, as well as usability and user-friendly designs.</> ,
     accordion_id: "headingTwo",
     collapsed: "",
     data_bs_target: "#collapseTwo",
@@ -24,8 +24,8 @@ const answer_question_data = [
   },
   {
     id: 3,
-    question: "Why is DigiExpo the top UI UX design agency in Dubai?",
-    answer: <>We create aesthetically pleasing and easily navigable user interfaces that improve usability. As the best UI UX design company in Dubai, our design process consists of user research, wireframing, prototyping, and testing. From the first click, we ensure your users remain interested and content.</> ,
+    question: "How does DigiExpo approach social media marketing?",
+    answer: <>As the best digital marketing agency in UAE, we have a professional SMM who will enhance your brand’s exposure, interaction, and profitability. At DigiExpo, we devise an actualized market strategy to ensure your brand reaches the right people on the most active social sites.</> ,
     accordion_id: "headingThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseThree",
@@ -35,8 +35,8 @@ const answer_question_data = [
   },
   {
     id: 4,
-    question: "Which mobile app development services do you provide?",
-    answer: <>We offer complete mobile app development services in Dubai. They include UI/UX design, native and cross-platform development, testing, and post-launch support. We create the best mobile applications Dubai. Our performance-focused apps align with your business goals. We also ensure a smooth user experience on both Android and iOS platforms.</> ,
+    question: "What are the benefits of DigiExpo's SEO services?",
+    answer: <>As for SEO and content creation services, DigiExpo offers all the necessary solutions for your business that will help to improve your business web visibility and attract targeted traffic. We apply professional methods that will enhance the position of your website in terms of search engine results.</> ,
     accordion_id: "headingFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseFour",
@@ -46,8 +46,8 @@ const answer_question_data = [
   },
   {
     id: 5,
-    question: "Why would you choose DigiExpo as your eCommerce partner?",
-    answer: <>Choosing DigiExpo as your eCommerce agency in Dubai means working with professionals. We are aware of online company success.  Our scalable eCommerce systems include mobile optimization, Soptimisationion, and digital marketing.  We aim to enable your online store to increase visits and raise conversions.
+    question: "How does DigiExpo ensure business growth?",
+    answer: <>We are your one-stop solution for generating your online presence from idea to sale. We will assist you in sustaining and attaining your organization's objectives by translating clicks into sales and offering you extensive services as well as valuable information.
     
     </> ,
     accordion_id: "headingFive",
