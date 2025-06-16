@@ -34,7 +34,7 @@ export default async function handler(req, res) {
         <p><strong>Inquiry Type:</strong> ${inquiry || "Not specified"}</p>
         <p><strong>Message:</strong></p>
         <blockquote>${message}</blockquote>
-        <p><em>Received on: ${new Date().toLocaleString()}</em></p>
+        <p><em>Received on: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dubai' })}</em></p>
       `,
       replyTo: email,
     });
