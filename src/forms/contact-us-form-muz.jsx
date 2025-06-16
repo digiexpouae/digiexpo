@@ -9,7 +9,7 @@ const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), { ssr: false }
 const ContactUsFormMuz = () => {
   const [loadReCAPTCHA, setLoadReCAPTCHA] = useState(false);
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () =>  {
       setLoadReCAPTCHA(true);
       window.removeEventListener("scroll", handleScroll); // Remove listener inside function
     };
