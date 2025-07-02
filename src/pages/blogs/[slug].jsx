@@ -10,12 +10,18 @@ import Wrapper from "../../layout/wrapper";
 export async function getServerSideProps(context) {
   const { slug } = context.params; // Get the slug from the URL
 
+  
   const query = `*[_type == "post" && slug.current == $slug][0]{
     title,
     "currentSlug": slug.current,
     body,
-    mainImage,ogImage,ogDescription,
-    ogTitle,metaTags,description
+    mainImage,
+    ogImage,
+    ogDescription,
+    ogTitle,
+    metaTags,
+    description,
+
   }`;
 
   try {
@@ -42,7 +48,7 @@ export async function getServerSideProps(context) {
     };
   }
 }
-
+import components from '../../common/table'
 const BlogPost = ({ blog }) => {
   const { title, currentSlug, mainImage, body,ogImage,ogDescription,ogTitle ,metaTags,description} = blog;
   
@@ -82,8 +88,14 @@ description={description}
                       className='prose prose-blue prose-xl prose-headings:underline text-justify'
                       style={{ textAlign: "justify" }}
                     >
-           
-                      <PortableText value={body} />
+                      {console.log(blog.body)}
+
+           <PortableText
+  value={body}
+components={components}
+   
+/>
+
                     </div>
                   </div>
                 </div>
