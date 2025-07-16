@@ -22,6 +22,11 @@ const nextConfig = {
         destination: "/blogs", 
         permanent: true,
       },
+        {
+        source: '/mobile-app-development-company-dubai',
+        destination: '/application-development-dubai',
+        permanent: true, // 301 redirect
+      },
       
     ];
   },

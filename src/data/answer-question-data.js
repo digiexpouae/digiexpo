@@ -388,6 +388,51 @@ A UX audit is a comprehensive review of your website or application that aims to
     aria_controls: "collapseThreeFour", 
     actice: "",
 
-  }, 
+  },
+  // mobile app 
+    {
+    id: 35,
+    question: "Which kind of mobile apps do you develop?",
+    answer: <>Our expertise spans building hybrid solutions, native apps for iOS and Android, and cross-platform apps. We also create other mobile applications. Every project our team customizes depends on your business and user needs. We ensure that all service-based software and eCommerce platforms are scalable and responsive and deliver a great user experience.</> ,
+   accordion_id: "headingThreeFive",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseThreeFive",
+    aria_controls: "collapseThreeFive", 
+    actice: "",
+  },  {
+    id: 36,
+    question: "How can you guarantee your mobile apps satisfy customer expectations?",
+    answer: <>We focus on providing user-centric mobile apps with strong functionality combined with easy UI/UX. Being the top mobile application development company in Dubai, our staff uses a research-based approach. We make sure your app fits customer behavior and business objectives. Our services on app development ensure performance, interaction, and long-term success.</> ,
+    accordion_id: "headingThreeSix",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseThreeSix",
+    aria_controls: "collapseThreeSix", 
+    actice: "",}
+    ,  {
+    id: 37,
+    question: "Why should one rely on you as a mobile application development company",
+    answer: <>Digiexpo is among the top ‎application development Dubai companies. We offer complete services ranging from idea to implementation and post-launch support. Our expert developers create apps that perform well, navigate easily, and look great. Our first focus is your vision and turn it into a strong, marketable tool.</> ,
+    accordion_id: "headingThreeSeven",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseThreeSeven",
+    aria_controls: "collapseThreeSeven", 
+    actice: "",},  {
+    id: 38,
+    question: "How does DigiExpo handle mobile app development?",
+    answer: <>Our mobile apps development is agile, collaborative, and catered to your needs. We begin with requirement analysis then go through UI/UX design, coding, testing, and deployment. Every stage is designed to ensure smooth operation on all devices and systems. This boosts performance and keeps users happy.</> ,
+    accordion_id: "headingThreeEight",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseThreeEight",
+    aria_controls: "collapseThreeEight", 
+    actice: "",}
+    ,  {
+    id: 39,
+    question: "What application development services do you provide?",
+    answer: <>Our application development services include UI/UX design, front-end and back-end development, API integration, testing, and maintenance. Every app we build, we make sure it offers a smooth user experience and satisfies your company goals. From MVPs to corporate solutions, we help your app all through its lifetime, from idea to impact.</> ,
+    accordion_id: "headingThreeNine",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseThreeNine",
+    aria_controls: "collapseThreeNine", 
+    actice: "",}
 ];
 export default answer_question_data;

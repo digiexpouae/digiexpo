@@ -91,8 +91,8 @@ const HeroArea = () => {
               <div className='tp-hero-2__title-box'>
                 <div className='tp-hero-2__title tp-char-animation'>{title}</div>
                 <p style={{ color: "white" }}>
-                  <b> Mobile app development company Dubai </b>services are
-                  important in order to attract modern population
+                  <b>In today's fast-paced world, application development Dubai is a key. It helps to meet the expectations of the modern public. </b>
+                   Businesses need mobile apps that not only work well but also provide a smooth user experience.
                 </p>
               </div>
               <div className='tp-hero-2__btn'>
