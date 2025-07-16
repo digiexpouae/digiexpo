@@ -16,11 +16,9 @@ import img from "../../../public/assets/img/service/sv-dashbord.png";
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
-  title: "Create. Connect.  Our Mobile App Development Services Fuel Your Business.",
+  title: "Create. Connect. Our Mobile Applications Development Services Fuel Your Business.",
   sub_title: (
-    <>
-      Our mobile app development Dubai team of experts create apps tailored to your unique business needs.
-    </>
+    <>Our mob app development Dubai team of experts creates apps tailored to your unique business needs.</>
   ),
 
   bg_img: "/assets/img/service/sv-bg.jpg",
