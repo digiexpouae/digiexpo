@@ -411,7 +411,7 @@ A UX audit is a comprehensive review of your website or application that aims to
     ,  {
     id: 37,
     question: "Why should one rely on you as a mobile application development company",
-    answer: <>Digiexpo is among the top ‎application development Dubai companies. We offer complete services ranging from idea to implementation and post-launch support. Our expert developers create apps that perform well, navigate easily, and look great. Our first focus is your vision and turn it into a strong, marketable tool.</> ,
+    answer: <>Digiexpo is among the top application development Dubai companies. We offer complete services ranging from idea to implementation and post-launch support. Our expert developers create apps that perform well, navigate easily, and look great. Our first focus is your vision and turn it into a strong, marketable tool.</> ,
     accordion_id: "headingThreeSeven",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeSeven",

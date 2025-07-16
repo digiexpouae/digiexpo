@@ -93,7 +93,7 @@ const FeatureArea = ({style_integraton}) => {
                                         </div>
                                         <div className="tp-feature-five-content">
                                             <h4 className="tp-feature-five-title-sm">Wireframing &<br/> Prototyping</h4>
-                                            <p>At our company, we understand the importance of wireframing and always take advantage of this crucial step. We consider prototyping an essential aspect of app development. Our team ensures to provide clients with prototypes of their ideas which gives them a clear idea of what the final product will look like.</p>
+                                            <p>At our company, we understand the importance of wireframing and always take advantage of this crucial step. We assure you that the prototype we will provide will give you a clear vision of what a complete mobile application Dubai looks like. This will help you to be confident in your project’s path.</p>
                                         </div>
                                         <div class="tp-service-sm-link-2">
                                             <Link href="/service-details">STEP TWO<i class="far fa-arrow-right"></i></Link>
