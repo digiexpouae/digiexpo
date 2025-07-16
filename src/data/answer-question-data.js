@@ -1,8 +1,8 @@
 const answer_question_data = [
   {
     id: 1,
-    question: "How can DigiExpo help with digital marketing?",
-    answer: <>We are the top digital marketing agency in Dubai, offering services meant to attract more traffic, improve conversion probability, and thus profit your business more. They employ a range of trends and concepts supported by the data to make outstanding changes to your brand. </> ,
+    question: "What makes your digital marketing services stand out in Dubai?",
+    answer: <>At Digiexpo, we provide digital marketing services  Dubai. Our services are customized to drive relevant traffic, increase online visibility, and boost sales. We use top SEO methods, social media strategies, PPC, and content marketing to guarantee measurable growth. We help companies flourish in a cutthroat digital environment.  </> ,
     accordion_id: "headingOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseOne",
@@ -11,8 +11,8 @@ const answer_question_data = [
   },
   {
     id: 2,
-    question: "What makes DigiExpo's website development unique? ",
-    answer: <>At DigiExpo, we have qualified Web Developers who will ensure that your business gets the website you envisioned for your brand: effective and easy-to-use websites. As we are the best Digital marketing agency UAE, Our essential concentration is on the aesthetic design of the websites, as well as usability and user-friendly designs.</> ,
+    question: "How can your website development service help a company grow? ",
+    answer: <>We are a top website development agency Dubai. We provide a visually appealing, fast, and mobile-first website that meets your expectations and represents your company identity. We make sure your website works great on any device. We focus on usability, SEO, and mobile optimization.</> ,
     accordion_id: "headingTwo",
     collapsed: "",
     data_bs_target: "#collapseTwo",
@@ -24,8 +24,8 @@ const answer_question_data = [
   },
   {
     id: 3,
-    question: "How does DigiExpo approach social media marketing?",
-    answer: <>As the best digital marketing agency in UAE, we have a professional SMM who will enhance your brand’s exposure, interaction, and profitability. At DigiExpo, we devise an actualized market strategy to ensure your brand reaches the right people on the most active social sites.</> ,
+    question: "Why is DigiExpo the top UI UX design agency in Dubai?",
+    answer: <>We create aesthetically pleasing and easily navigable user interfaces that improve usability. As the best UI UX design company in Dubai, our design process consists of user research, wireframing, prototyping, and testing. From the first click, we ensure your users remain interested and content.</> ,
     accordion_id: "headingThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseThree",
@@ -35,8 +35,8 @@ const answer_question_data = [
   },
   {
     id: 4,
-    question: "What are the benefits of DigiExpo's SEO services?",
-    answer: <>As for SEO and content creation services, DigiExpo offers all the necessary solutions for your business that will help to improve your business web visibility and attract targeted traffic. We apply professional methods that will enhance the position of your website in terms of search engine results.</> ,
+    question: "Which mobile app development services do you provide?",
+    answer: <>We offer complete mobile app development services in Dubai. They include UI/UX design, native and cross-platform development, testing, and post-launch support. We create the best mobile applications Dubai. Our performance-focused apps align with your business goals. We also ensure a smooth user experience on both Android and iOS platforms.</> ,
     accordion_id: "headingFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseFour",
@@ -46,8 +46,10 @@ const answer_question_data = [
   },
   {
     id: 5,
-    question: "How does DigiExpo ensure business growth?",
-    answer: <>We are your one-stop solution for generating your online presence from idea to sale. We will assist you in sustaining and attaining your organization's objectives by translating clicks into sales and offering you extensive services as well as valuable information.</> ,
+    question: "Why would you choose DigiExpo as your eCommerce partner?",
+    answer: <>Choosing DigiExpo as your eCommerce agency in Dubai means working with professionals. We are aware of online company success.  Our scalable eCommerce systems include mobile optimization, Soptimisationion, and digital marketing.  We aim to enable your online store to increase visits and raise conversions.
+    
+    </> ,
     accordion_id: "headingFive",
     collapsed: "collapsed",
     data_bs_target: "#collapseFive",
@@ -268,10 +270,10 @@ const answer_question_data = [
     actice: "",
 
   }, 
-  {
+ {
     id: 25,
-    question: "Which kind of mobile apps do you develop?",
-    answer: <>Our expertise spans building hybrid solutions, native apps for iOS and Android, and cross-platform apps. We also create other mobile applications. Every project our team customizes depends on your business and user needs. We ensure that all service-based software and eCommerce platforms are scalable and responsive and deliver a great user experience.
+    question: "What is the process for converting my PSD design to responsive HTML?",
+    answer: <>At DigiExpo, the best UI/UX Design Agency in Dubai, our approach entails converting your design created in PSD format to HTML for optimum or responsive design. This is done in a meticulous and precise style using genuine code that guarantees the right appearance and functionality regardless of the device. Our team’s goal is to have the best SEO, efficient loading times, great looks, and usability on the site.
    </> ,
     accordion_id: "headingTwoFive",
     collapsed: "collapsed",
@@ -282,8 +284,10 @@ const answer_question_data = [
   }, 
   {
     id: 26,
-    question: "How can you guarantee your mobile apps satisfy customer expectations?",
-    answer: <>We focus on providing user-centric mobile apps with strong functionality combined with easy UI/UX. Being the best mobile app development company in Dubai, our staff uses a research-based approach. We make sure your app fits customer behavior and business objectives. Our services on app development ensure performance, interaction, and long-term success.
+    question: "How does DigiExpo ensure a seamless user experience across all devices?",
+    answer: <>The leading UI/UX Design Agency in UAE, DigiExpo also mostly uses the features of responsive web design, such as the resources that include flexibility of images, media queries, and fluidity of the grids. We enable the website or app to be properly displayed on desktop computers, portable smartphones, and tablets with equal ease, which makes the application easier to use.
+
+
     
     </> ,
     accordion_id: "headingTwoSix",
@@ -295,8 +299,9 @@ const answer_question_data = [
   }, 
   {
     id: 27,
-    question: "Why should one rely on you as a mobile app development company",
-    answer: <>Digiexpo is among the top mobile app development Dubai companies. We offer complete services ranging from idea to implementation and post-launch support. Our expert developers create apps that perform well, navigate easily, and look great. Our first focus is your vision and turn it into a strong, marketable tool.</> ,
+    question: "What does your UX design service include?",
+    answer: <>Our offered UX design services in Dubai implies analyzing the target audience preferences and usage scenarios. We produce interactive designs that enable users to interact with the website, making it easier and more satisfying. From the concept stage to the designing stage, which involves wireframing, prototyping, and design, we produce interactive designs that enable the user to interact with the website.
+</> ,
     accordion_id: "headingTwoSeven",
     collapsed: "collapsed",
     data_bs_target: "#collapseTwoSeven",
@@ -306,8 +311,8 @@ const answer_question_data = [
   }, 
   {
     id: 28,
-    question: "How does DigiExpo handle mobile app development?",
-    answer: <>Our mobile applications development is agile, collaborative, and catered to your needs. We begin with requirement analysis then go through UI/UX design, coding, testing, and deployment. Every stage is designed to ensure smooth operation on all devices and systems. This boosts performance and keeps users happy.
+    question: "How can an expertly crafted landing page improve my business?",
+    answer: <>Landing pages are usually optimized for visitors to help them become interested in the terms provided and persuade them to purchase. We also assist in raising the conversion rate and sales for your business with relevant call-to-action buttons and compelling content.
     
     </> ,
     accordion_id: "headingTwoEight",
@@ -319,22 +324,20 @@ const answer_question_data = [
   }, 
   {
     id: 29,
-    question: " What app development services do you provide?",
+    question: " What does a UX audit involve and how can it benefit my digital presence?",
     answer: <>
-    Our app development services include:UI/UX design, front-end and back-end development, API integration, testing, and maintenance.Every app we build, we make sure it offers a smooth user experience and satisfies your company goals. From MVPs to corporate solutions, we help your app all through its lifetime, from idea to impact.
-    </> ,
+A UX audit is a comprehensive review of your website or application that aims to discover strengths and weaknesses related to usability, accessibility, and UX. The audit reports provide recommendations to increase satisfaction, decrease resistance, and improve engagement and conversions.    </> ,
     accordion_id: "headingTwoNine",
     collapsed: "collapsed",
     data_bs_target: "#collapseTwoNine",
     aria_controls: "collapseTwoNine", 
     actice: "",
 
-  }, 
+  },
   {
     id: 30,
-    question: "What makes your digital marketing services stand out in Dubai",
-    answer: <>At Digiexpo, we provide digital marketing services  Dubai. Our services are customized to drive relevant traffic, increase online visibility, and boost sales. We use top SEO methods, social media strategies, PPC, and content marketing to guarantee measurable growth. We help companies flourish in a cutthroat digital environment.
-</> ,
+    question: "What types of emerging technologies does DigiExpo specialize in?",
+    answer: <>DigiExpo, the best Emerging Tech Development in Dubai focuses on a wide variety of exalting technologies, such as Artificial Intelligence, Augmented Reality, Metaverse creation, 3D projection, IoT creation, and Gesture-Based services.</> ,
     accordion_id: "headingThreeZero",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeZero",
@@ -344,8 +347,8 @@ const answer_question_data = [
   }, 
   {
     id: 31,
-    question: "How can your website development service help a company grow? ",
-    answer: <>We are a top website development agency Dubai. We provide a visually appealing, fast, and mobile-first website that meets your expectations and represents your company identity. We make sure your website works great on any device. We focus on usability, SEO, and mobile optimization.</> ,
+    question: "How does DigiExpo ensure the quality of its technological solutions?",
+    answer: <>DigiExpo, leading Emerging Technologies Development Company in UAE methodology consists of efficiently planning, designing, researching, testing, and evaluating all proposed solutions to increase their quality, security, and reliability.</> ,
     accordion_id: "headingThreeOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeOne",
@@ -355,8 +358,8 @@ const answer_question_data = [
   }, 
   {
     id: 32,
-    question: "Why is DigiExpo the top UI UX design agency in Dubai?",
-    answer: <>We create aesthetically pleasing and easily navigable user interfaces that improve usability. As the best UI UX design company in Dubai, our design process consists of user research, wireframing, prototyping, and testing. From the first click, we ensure your users remain interested and content.</> ,
+    question: "Can DigiExpo help with integrating AI into my business operations?",
+    answer: <>Yes, DigiExpo is proficient with AI development, and the firm can support you in incorporating AI solutions into your organizational procedures to improve working progress, projections, and digital transformation.</> ,
     accordion_id: "headingThreeTwo",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeTwo",
@@ -366,8 +369,8 @@ const answer_question_data = [
   }, 
   {
     id: 33,
-    question: "Which mobile app development services do you provide?",
-    answer: <>We offer complete mobile app development services in Dubai. They include UI/UX design, native and cross-platform development, testing, and post-launch support. We create the best mobile applications Dubai. Our performance-focused apps align with your business goals. We also ensure a smooth user experience on both Android and iOS platforms.</> ,
+    question: "What is the process for developing a custom Metaverse project with DigiExpo?",
+    answer: <>DigiExpo's Metaverse development process involves close collaboration with clients to understand their vision, followed by strategic planning, innovative prototyping, and meticulous development to create a metaverse that bridges the gap between imagination and reality.</> ,
     accordion_id: "headingThreeThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeThree",
@@ -377,8 +380,8 @@ const answer_question_data = [
   }, 
   {
     id: 34,
-    question: "Why would you choose DigiExpo as your eCommerce partner?",
-    answer: <>Choosing DigiExpo as your eCommerce agency in Dubai means working with professionals. We are aware of online company success.  Our scalable eCommerce systems include mobile optimization, Soptimisationion, and digital marketing.  We aim to enable your online store to increase visits and raise conversions. </> ,
+    question: "Does DigiExpo offer ongoing support after the launch of a project?",
+    answer: <>Yes, DigiExpo, leading Emerging tech company Dubai, UAE, provides ongoing monitoring, performance evaluation, and support after the launch of a project to ensure its continued success and to make any necessary adjustments or updates.</> ,
     accordion_id: "headingThreeFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeFour",
