@@ -107,8 +107,8 @@ const HeroSlider = () => {
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
               alt='theme-pure'
-              priority
-              layout="fill"
+                priority
+              fill
             />
           </div>
           <div className='tp-hero-shape'>
