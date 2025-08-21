@@ -1,22 +1,28 @@
+
+
+import React from "react";
 import ScrollToTop from "@/hooks/scroll-to-top";
 import Header from "@/layout/headers/header";
-import React from "react";
 import HeroSlider from "./hero-slider";
-import ProjectArea from "./project-area";
-import TestimonialArea from "./testimonial-area";
-import PaymentMethodArea from "./payment-method-area";
-import ServiceArea from "./service-area";
-import BusinessBox from "./business-box";
-import AboutArea from "./about-area";
-import FunFactArea from "./fun-fact-area";
-import FaqArea from "./faq-area";
-import ContactArea from "./contact-area";
-import BlogArea from "./blog-area";
 import Brand from "../../about/brand";
-import FooterFour from "@/layout/footers/footer-4";
-import ContactArea2 from "./contact-area2";
-import StickyIcons from "@/common/sticky-icons";
-import StickyButtons from "@/common/sticky-buttons";
+
+import dynamic from "next/dynamic";
+
+// Non-critical sections (lazy loaded)
+const ProjectArea = dynamic(() => import("./project-area"));
+const TestimonialArea = dynamic(() => import("./testimonial-area"));
+const PaymentMethodArea = dynamic(() => import("./payment-method-area"));
+const ServiceArea = dynamic(() => import("./service-area"));
+const BusinessBox = dynamic(() => import("./business-box"));
+const AboutArea = dynamic(() => import("./about-area"));
+const FunFactArea = dynamic(() => import("./fun-fact-area"));
+const FaqArea = dynamic(() => import("./faq-area"));
+const ContactArea = dynamic(() => import("./contact-area"));
+const BlogArea = dynamic(() => import("./blog-area"));
+const ContactArea2 = dynamic(() => import("./contact-area2"));
+const FooterFour = dynamic(() => import("@/layout/footers/footer-4"));
+const StickyIcons = dynamic(() => import("@/common/sticky-icons"), { ssr: false });
+const StickyButtons = dynamic(() => import("@/common/sticky-buttons"), { ssr: false });
 
 const HomeOne = () => {
 	return (
@@ -25,13 +31,13 @@ const HomeOne = () => {
 			<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main className="fix">
-						<StickyIcons/>
-						<StickyButtons/>
+						<StickyIcons />
+						<StickyButtons />
 						<HeroSlider />
 						<Brand />
 						<ServiceArea />
 						<ContactArea2 />
-						<PaymentMethodArea/>
+						<PaymentMethodArea />
 						<BusinessBox />
 						<ProjectArea />
 						{/* <TestimonialArea /> */}
