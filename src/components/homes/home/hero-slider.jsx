@@ -108,6 +108,7 @@ const HeroSlider = () => {
               src={hero_frame}
               alt='theme-pure'
                 priority
+                    sizes="100vw"
               fill
             />
           </div>
@@ -119,9 +120,7 @@ const HeroSlider = () => {
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
-              
-                layout="intrinsic"
-
+                layout="instrinsic"
               />
             ))}
           </div>
