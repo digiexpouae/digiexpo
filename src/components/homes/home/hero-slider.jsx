@@ -124,10 +124,7 @@ const HeroSlider = () => {
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
-                // layout="instrinsic"
-                      sizes="100vw"
-              
-                  fill
+                layout="instrinsic"
               />
              
               
@@ -181,48 +178,7 @@ const HeroSlider = () => {
                   <div>
                     <div className='tp-hero__thumb-wrapper p-relative'>
                       <div className='row'>
-                        {/* <div className="col-8">
-													<div className="tp-hero__thumb-box">
-														<div className="row">
-															<div className="col-md-12">
-																<div className="tp-hero__thumb mb-20">
-																	<Image
-																		style={{ width: "auto", height: "auto" }}
-																		className="w-100"
-																		src={hero_thumb_1}
-																		alt="theme-pure"
-																	/>
-																</div>
-															</div>
-														</div>
-
-														<div className="row">
-															{hero_thumbs.map((item, i) => (
-																<div key={i} className={`col-md-${item.col}`}>
-																	<div className={`tp-hero__thumb ${item.cls}`}>
-																		<Image
-																			className="w-100"
-																			src={item.img}
-																			alt="theme-pure"
-																		/>
-																	</div>
-																</div>
-															))}
-														</div>
-													</div>
-												</div>
-												<div className="col-md-4">
-													<div className="tp-hero__thumb-box">
-														<div className="tp-hero__thumb">
-															<Image
-																style={{ width: "auto", height: "auto" }}
-																className="w-100"
-																src={hero_thumb_2}
-																alt="theme-pure"
-															/>
-														</div>
-													</div>
-												</div> */}
+                    
 
                     <video
   autoPlay
@@ -236,7 +192,6 @@ const HeroSlider = () => {
 >
   <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
   <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
 </video>
 
                     
