@@ -83,19 +83,24 @@ const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
 const HeroSlider = () => {
 	let hero_bg = useRef(null);
 
-	useEffect(() => {
-		gsap.from(hero_bg.current, {
-			opacity: 0,
-			scale: 1.2,
-		});
-		gsap.to(hero_bg.current, {
-			opacity: 1,
-			scale: 1,
-			duration: 1,
-		},'-=1');
-	}, []);
 
-	useCharAnimation(".tp-hero__hero-title span.child");
+	useEffect(() => {
+    const title=document.querySelectorAll(".tp-hero__hero-title span.child");
+    const mainTl = gsap.timeline();
+    mainTl.fromTo(
+      hero_bg.current,
+      { opacity: 0, scale: 1.2 },
+      { opacity: 1, scale: 1, duration:0.8 }
+    );
+
+    mainTl.to(title,{
+      opacity:1,
+      y:0,
+      duration:0.5,
+      stagger:0.1,
+      ease:'power4.out'
+    })
+	}, []);
 
 	return (
     <>
