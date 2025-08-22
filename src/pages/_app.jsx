@@ -2,7 +2,40 @@ import "../styles/index.scss";
 import "../styles/business-box.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { DM_Serif_Display, Montserrat_Alternates, Plus_Jakarta_Sans, Urbanist, Roboto } from "next/font/google";
 
+// Pick the weights/styles you need
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: ["400"], // normal weight only
+  style: ["normal", "italic"], // include italic
+  variable: "--font-dm-serif", // optional custom CSS variable
+});
+
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-montserrat-alt",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+});
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-urbanist",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-roboto",
+});
 if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
@@ -52,5 +85,9 @@ export default function App({ Component, pageProps }) {
   //   }
   // }, [router.pathname, allowedPaths]);
 
-  return <Component {...pageProps} />;
+  return     <main
+  className={`${dmSerif.variable} ${montserratAlternates.variable} ${plusJakarta.variable} ${urbanist.variable} ${roboto.variable}`}
+>
+  <Component {...pageProps} />
+</main>
 }
