@@ -1,40 +1,21 @@
-/** @type {import('next').NextConfig} */
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
   async redirects() {
     return [
-      {
-        source: "/blog", // The path you want to redirect from
-        destination: "/blogs", // The path you want to redirect to
-        permanent: true, // Use true for a 308 permanent redirect, or false for a 307 temporary redirect
-      },
-      {
-        source: "/service-details", 
-        destination: "/services", 
-        permanent: true,
-      },
-      {
-        source: "/about", 
-        destination: "/contact", 
-        permanent: true,
-      },
-      {
-        source: "/blog-details", 
-        destination: "/blogs", 
-        permanent: true,
-      },
-        {
-        source: '/mobile-app-development-company-dubai',
-        destination: '/application-development-dubai',
-        permanent: true, // 301 redirect
-      },
-      
+      { source: "/blog", destination: "/blogs", permanent: true },
+      { source: "/service-details", destination: "/services", permanent: true },
+      { source: "/about", destination: "/contact", permanent: true },
+      { source: "/blog-details", destination: "/blogs", permanent: true },
+      { source: "/mobile-app-development-company-dubai", destination: "/application-development-dubai", permanent: true },
     ];
   },
   reactStrictMode: true,
-  images: {
-    // Unoptimized images setting for static export (if using a CDN, consider optimized images)
-    unoptimized: true,
-  },
+  images: { unoptimized: true },
   productionBrowserSourceMaps: true,
   compress: true,
   swcMinify: true,
@@ -45,7 +26,6 @@ const nextConfig = {
     BUSINESS_EMAIL: process.env.BUSINESS_EMAIL,
     SITE_NAME: process.env.SITE_NAME,
   },
-
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

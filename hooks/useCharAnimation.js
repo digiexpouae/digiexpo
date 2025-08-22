@@ -1,4 +1,4 @@
-import gsap  from "gsap";
+import * as gsap from 'gsap';
 import { useRef } from "react";
 import { useIsomorphicLayoutEffect } from "./useIsomorphicEffect";
 
