@@ -124,8 +124,13 @@ const HeroSlider = () => {
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
-                layout="instrinsic"
+                // layout="instrinsic"
+                      sizes="100vw"
+              
+                  fill
               />
+             
+              
             ))}
           </div>
           <div className='container'>
@@ -225,7 +230,7 @@ const HeroSlider = () => {
   loop
   playsInline
   preload="metadata"
-  poster="/assets/img/hero/poster.JPG"
+  poster="/assets/img/hero/poster.webp"
   className="w-full h-[600px] object-cover"
   aria-hidden="true"
 >
