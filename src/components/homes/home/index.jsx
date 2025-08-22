@@ -1,58 +1,91 @@
-
-
 import React from "react";
 import ScrollToTop from "@/hooks/scroll-to-top";
 import Header from "@/layout/headers/header";
 import HeroSlider from "./hero-slider";
 import Brand from "../../about/brand";
-
+import FooterFour from "@/layout/footers/footer-4";
 import dynamic from "next/dynamic";
 
-// Non-critical sections (lazy loaded)
-const ProjectArea = dynamic(() => import("./project-area"));
-const TestimonialArea = dynamic(() => import("./testimonial-area"));
-const PaymentMethodArea = dynamic(() => import("./payment-method-area"));
-const ServiceArea = dynamic(() => import("./service-area"));
-const BusinessBox = dynamic(() => import("./business-box"));
-const AboutArea = dynamic(() => import("./about-area"));
-const FunFactArea = dynamic(() => import("./fun-fact-area"));
-const FaqArea = dynamic(() => import("./faq-area"));
-const ContactArea = dynamic(() => import("./contact-area"));
-const BlogArea = dynamic(() => import("./blog-area"));
-const ContactArea2 = dynamic(() => import("./contact-area2"));
-const FooterFour = dynamic(() => import("@/layout/footers/footer-4"));
+// Placeholder Component
+const Placeholder = () => (
+  <div className="min-h-[250px] bg-gray-100 animate-pulse rounded-md" />
+);
+
+// Non-critical sections (lazy loaded with placeholder)
+const ProjectArea = dynamic(() => import("./project-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+
+const PaymentMethodArea = dynamic(() => import("./payment-method-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const ServiceArea = dynamic(() => import("./service-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const BusinessBox = dynamic(() => import("./business-box"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const AboutArea = dynamic(() => import("./about-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const FunFactArea = dynamic(() => import("./fun-fact-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const FaqArea = dynamic(() => import("./faq-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const ContactArea = dynamic(() => import("./contact-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const BlogArea = dynamic(() => import("./blog-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const ContactArea2 = dynamic(() => import("./contact-area2"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+
 const StickyIcons = dynamic(() => import("@/common/sticky-icons"), { ssr: false });
 const StickyButtons = dynamic(() => import("@/common/sticky-buttons"), { ssr: false });
 
 const HomeOne = () => {
-	return (
-		<>
-			<Header />
-			<div id="smooth-wrapper">
-				<div id="smooth-content">
-					<main className="fix">
-						<StickyIcons />
-						<StickyButtons />
-						<HeroSlider />
-						<Brand />
-						<ServiceArea />
-						<ContactArea2 />
-						<PaymentMethodArea />
-						<BusinessBox />
-						<ProjectArea />
-						{/* <TestimonialArea /> */}
-						<AboutArea />
-						<FunFactArea />
-						<FaqArea />
-						<BlogArea />
-						<ContactArea />
-					</main>
-					<FooterFour />
-					<ScrollToTop />
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <main className="fix">
+            <StickyIcons />
+            <StickyButtons />
+            <HeroSlider />
+            <Brand />
+            <ServiceArea />
+            <ContactArea2 />
+            <PaymentMethodArea />
+            <BusinessBox />
+            <ProjectArea />
+     
+            <AboutArea />
+            <FunFactArea />
+            <FaqArea />
+            <BlogArea />
+            <ContactArea />
+          </main>
+          <FooterFour />
+          <ScrollToTop />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default HomeOne;

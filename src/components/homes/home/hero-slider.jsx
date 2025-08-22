@@ -87,13 +87,12 @@ const HeroSlider = () => {
 		gsap.from(hero_bg.current, {
 			opacity: 0,
 			scale: 1.2,
-			duration: 1.5,
 		});
 		gsap.to(hero_bg.current, {
 			opacity: 1,
 			scale: 1,
-			duration: 1.5,
-		});
+			duration: 1,
+		},'-=1');
 	}, []);
 
 	useCharAnimation(".tp-hero__hero-title span.child");
@@ -166,7 +165,7 @@ const HeroSlider = () => {
                       key={i}
                       className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
                     >
-                      <Image src={item.img} alt='theme-pure' />
+                      <Image src={item.img} alt='theme-pure' width={120} height={150}/>
                     </div>
                   ))}
                   <div>
@@ -215,12 +214,21 @@ const HeroSlider = () => {
 													</div>
 												</div> */}
 
-                        <video autoPlay muted loop playsInline preload="auto">
-                          <source
-                  src='/assets/img/hero/herosection.mp4'                        
-                 type='video/mp4'
-                    />
-                        </video>
+                    <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/assets/img/hero/poster.JPG"
+  className="w-full h-[600px] object-cover"
+  aria-hidden="true"
+>
+  <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
+  <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
                     
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'
