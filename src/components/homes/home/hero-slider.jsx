@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
@@ -83,7 +83,14 @@ const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
 
 const HeroSlider = () => {
 	let hero_bg = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
 	useEffect(() => {
     const title=document.querySelectorAll(".tp-hero__hero-title span.child");
@@ -109,9 +116,10 @@ const HeroSlider = () => {
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
          {/* bg-image */}
-          <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
-
-            <Image
+         {isMobile?
+         ( <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
+         )
+          : ( <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
               alt='theme-pure'
@@ -119,12 +127,12 @@ const HeroSlider = () => {
                     sizes="100vw"
                 className="image-1"
               fill
-            />
+            />)}
            </div>
        
-    
+           {!isMobile &&   
           <div className='tp-hero-shape'>
-            {hero_shape.map((item, i) => (
+     {hero_shape.map((item, i) => (
               <Image
                 // style={{width: "auto", height: "auto"}}
                 key={i}
@@ -134,9 +142,8 @@ const HeroSlider = () => {
                 layout="instrinsic"
               />
              
-              
             ))}
-          </div>
+          </div>}
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-xl-10'>
