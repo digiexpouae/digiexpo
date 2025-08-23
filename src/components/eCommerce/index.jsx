@@ -1,21 +1,28 @@
 import React from "react";
-import HeroArea from "./hero-area";
-import Brand from "../about/brand";
-import PaymentMethodArea from "../homes/home/payment-method-area";
-import ProjectArea from "../homes/home/project-area";
-import TestimonialArea from "../homes/home/testimonial-area";
-import AboutArea from "../homes/home/about-area";
-import BlogArea from "../homes/home/blog-area";
-import ContactArea from "../homes/home/contact-area";
-import FooterFour from "@/layout/footers/footer-4";
-import FaqArea from "./faq-area";
-import ContactArea2 from "../homes/home/contact-area2";
-import ServiceArea from "./service-area";
-import ServiceArea2 from "./service-area2";
+import dynamic from "next/dynamic";
+
+// Critical / above-the-fold components
 import HeaderSix from "@/layout/headers/header-6";
-import StickyIcons from "@/common/sticky-icons";
-import StickyButtons from "@/common/sticky-buttons";
-import ScrollToTop from "../../../hooks/scroll-to-top";
+import HeroArea from "./hero-area";
+
+// Dynamically imported components (below-the-fold / non-critical)
+const Brand = dynamic(() => import("../about/brand"));
+const ServiceArea = dynamic(() => import("./service-area"));
+const ServiceArea2 = dynamic(() => import("./service-area2"));
+const ContactArea2 = dynamic(() => import("../homes/home/contact-area2"));
+const PaymentMethodArea = dynamic(() => import("../homes/home/payment-method-area"));
+const ProjectArea = dynamic(() => import("../homes/home/project-area"));
+const TestimonialArea = dynamic(() => import("../homes/home/testimonial-area"));
+const AboutArea = dynamic(() => import("../homes/home/about-area"));
+const FaqArea = dynamic(() => import("./faq-area"));
+const BlogArea = dynamic(() => import("../homes/home/blog-area"));
+const ContactArea = dynamic(() => import("../homes/home/contact-area"));
+const FooterFour = dynamic(() => import("@/layout/footers/footer-4"));
+
+// Client-only components (rely on window / DOM)
+const StickyIcons = dynamic(() => import("@/common/sticky-icons"), { ssr: false });
+const StickyButtons = dynamic(() => import("@/common/sticky-buttons"), { ssr: false });
+const ScrollToTop = dynamic(() => import("../../../hooks/scroll-to-top"), { ssr: false });
 
 const Ecommerce = () => {
   return (
@@ -24,8 +31,8 @@ const Ecommerce = () => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
-            <StickyIcons/>
-            <StickyButtons/>
+            <StickyIcons />
+            <StickyButtons />
             <HeroArea />
             <Brand />
             <ServiceArea />
