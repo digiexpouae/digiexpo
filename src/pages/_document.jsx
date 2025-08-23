@@ -31,7 +31,7 @@ export default function Document() {
 
         {/* Tawk.to Live Chat */}
         <Script
-          strategy='afterInteractive'
+       strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
