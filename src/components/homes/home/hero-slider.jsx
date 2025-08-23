@@ -15,6 +15,7 @@ import thumb_2 from "../../../../public/assets/img/hero/hero-sm-4.jpg";
 import hero_thumb_2 from "../../../../public/assets/img/hero/hero-sm-2.jpg";
 import HeroForm from "@/forms/hero-form";
 import LineShape from "@/svg/line-shape";
+import Herobg from '../../../../public/assets/img/hero/Hero BG Image.webp'
 
 // hero content data
 const hero_content = {
@@ -106,16 +107,22 @@ const HeroSlider = () => {
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
-          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
+          <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
+         {/* bg-image */}
+          <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
+
             <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
               alt='theme-pure'
                 priority
                     sizes="100vw"
+                className="image-1"
               fill
             />
-          </div>
+           </div>
+       
+    
           <div className='tp-hero-shape'>
             {hero_shape.map((item, i) => (
               <Image
