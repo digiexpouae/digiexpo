@@ -1,7 +1,6 @@
-import blog_data from "@/data/blog-data";
-import Image from "next/image";
+
 import Link from "next/link";
-import dynamic from "next/dynamic";
+
 const blog_content = {
   sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
   title: "Our Digital Marketing Digest",

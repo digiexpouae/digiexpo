@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
 import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
@@ -92,23 +92,36 @@ const HeroSlider = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-	useEffect(() => {
-    const title=document.querySelectorAll(".tp-hero__hero-title span.child");
-    const mainTl = gsap.timeline();
-    mainTl.fromTo(
-      hero_bg.current,
-      { opacity: 0, scale: 1.2 },
-      { opacity: 1, scale: 1, duration:0.8 }
-    );
 
-    mainTl.to(title,{
-      opacity:1,
-      y:0,
-      duration:0.5,
-      stagger:0.1,
-      ease:'power4.out'
-    })
-	}, []);
+  useEffect(() => {
+    let ctx;
+
+    const loadGsap = async () => {
+      const { gsap } = await import("gsap"); // dynamic import ✅
+
+      const title = document.querySelectorAll(".tp-hero__hero-title span.child");
+
+      const mainTl = gsap.timeline();
+
+      mainTl.fromTo(
+        hero_bg.current,
+        { opacity: 0, scale: 1.2 },
+        { opacity: 1, scale: 1, duration: 0.8 }
+      );
+
+      mainTl.to(title, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power4.out",
+      });
+    };
+
+    loadGsap();
+
+    return () => ctx && ctx.revert?.(); // cleanup if needed
+  }, []);
 
 	return (
     <>
