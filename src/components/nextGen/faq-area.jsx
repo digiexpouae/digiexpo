@@ -1,15 +1,9 @@
-import dynamic from "next/dynamic";
-
-// ✅ dynamically import AnswerQuestion
-const AnswerQuestion = dynamic(() => import("@/common/answer-question"), {
-  ssr: false, // optional: disables server-side rendering
-});
-
+import AnswerQuestion from '@/common/answer-question-two';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import img from "../../../../public/assets/img/faq/faq-1.png" 
+import img from "../../../public/assets/img/faq/faq-1.png"
 
 const faq_content = {
     sub_title: "Support",

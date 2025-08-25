@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import React, { useEffect, useRef, useState } from "react";
+
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
 import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
@@ -15,6 +15,7 @@ import thumb_2 from "../../../../public/assets/img/hero/hero-sm-4.jpg";
 import hero_thumb_2 from "../../../../public/assets/img/hero/hero-sm-2.jpg";
 import HeroForm from "@/forms/hero-form";
 import LineShape from "@/svg/line-shape";
+import Herobg from '../../../../public/assets/img/hero/Hero BG Image.webp'
 
 // hero content data
 const hero_content = {
@@ -82,49 +83,80 @@ const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
 
 const HeroSlider = () => {
 	let hero_bg = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-	useEffect(() => {
-		gsap.from(hero_bg.current, {
-			opacity: 0,
-			scale: 1.2,
-			duration: 1.5,
-		});
-		gsap.to(hero_bg.current, {
-			opacity: 1,
-			scale: 1,
-			duration: 1.5,
-		});
-	}, []);
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
-	useCharAnimation(".tp-hero__hero-title span.child");
+
+  useEffect(() => {
+    let ctx;
+
+    const loadGsap = async () => {
+      const { gsap } = await import("gsap"); // dynamic import ✅
+
+      const title = document.querySelectorAll(".tp-hero__hero-title span.child");
+
+      const mainTl = gsap.timeline();
+
+      mainTl.fromTo(
+        hero_bg.current,
+        { opacity: 0, scale: 1.2 },
+        { opacity: 1, scale: 1, duration: 0.8 }
+      );
+
+      mainTl.to(title, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power4.out",
+      });
+    };
+
+    loadGsap();
+
+    return () => ctx && ctx.revert?.(); // cleanup if needed
+  }, []);
 
 	return (
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
-          <div className='tp-hero-bg tp-hero-bg-single' ref={hero_bg}>
-            <Image
+          <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
+         {/* bg-image */}
+         {isMobile?
+         ( <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
+         )
+          : ( <Image
               // style={{width: "auto", height: "auto"}}
               src={hero_frame}
               alt='theme-pure'
-              priority
-              layout="fill"
-            />
-          </div>
+                priority
+                    sizes="100vw"
+                className="image-1"
+              fill
+            />)}
+           </div>
+       
+           {!isMobile &&   
           <div className='tp-hero-shape'>
-            {hero_shape.map((item, i) => (
+     {hero_shape.map((item, i) => (
               <Image
                 // style={{width: "auto", height: "auto"}}
                 key={i}
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
-                priority
-                layout="intrinsic"
-
+                layout="instrinsic"
               />
+             
             ))}
-          </div>
+          </div>}
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-xl-10'>
@@ -167,61 +199,28 @@ const HeroSlider = () => {
                       key={i}
                       className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
                     >
-                      <Image src={item.img} alt='theme-pure' />
+                      <Image src={item.img} alt='theme-pure' width={120} height={150}/>
                     </div>
                   ))}
                   <div>
                     <div className='tp-hero__thumb-wrapper p-relative'>
                       <div className='row'>
-                        {/* <div className="col-8">
-													<div className="tp-hero__thumb-box">
-														<div className="row">
-															<div className="col-md-12">
-																<div className="tp-hero__thumb mb-20">
-																	<Image
-																		style={{ width: "auto", height: "auto" }}
-																		className="w-100"
-																		src={hero_thumb_1}
-																		alt="theme-pure"
-																	/>
-																</div>
-															</div>
-														</div>
+                    
 
-														<div className="row">
-															{hero_thumbs.map((item, i) => (
-																<div key={i} className={`col-md-${item.col}`}>
-																	<div className={`tp-hero__thumb ${item.cls}`}>
-																		<Image
-																			className="w-100"
-																			src={item.img}
-																			alt="theme-pure"
-																		/>
-																	</div>
-																</div>
-															))}
-														</div>
-													</div>
-												</div>
-												<div className="col-md-4">
-													<div className="tp-hero__thumb-box">
-														<div className="tp-hero__thumb">
-															<Image
-																style={{ width: "auto", height: "auto" }}
-																className="w-100"
-																src={hero_thumb_2}
-																alt="theme-pure"
-															/>
-														</div>
-													</div>
-												</div> */}
+                    <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/assets/img/hero/poster.webp"
+  className="w-full h-[600px] object-cover"
+  aria-hidden="true"
+>
+  <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
+  <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+</video>
 
-                        <video autoPlay muted loop playsInline preload="auto">
-                          <source
-                  src='/assets/img/hero/herosection.mp4'                        
-                 type='video/mp4'
-                    />
-                        </video>
                     
                           {/* <source
                             src='/assets/img/hero/hero-video.mov'

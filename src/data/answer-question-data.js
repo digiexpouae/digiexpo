@@ -1,8 +1,8 @@
 const answer_question_data = [
   {
     id: 1,
-    question: "What makes your digital marketing services stand out in Dubai?",
-    answer: <>At Digiexpo, we provide digital marketing services  Dubai. Our services are customized to drive relevant traffic, increase online visibility, and boost sales. We use top SEO methods, social media strategies, PPC, and content marketing to guarantee measurable growth. We help companies flourish in a cutthroat digital environment.  </> ,
+    question: "What are the most in-demand digital marketing services for UAE businesses in 2025?",
+    answer: <>SEO, PPC, and social marketing are the most in-demand digital marketing services in the UAE in 2025. Businesses are also interested in content marketing and influencer marketing. These services help businesses catch the audience's eye and stand out in a busy market. AI automation and data analysis are also essential for a personalized customer experience. They help in tracking campaign performance. This ensures that every dirham invested gets the best potential return. </> ,
     accordion_id: "headingOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseOne",
@@ -11,8 +11,8 @@ const answer_question_data = [
   },
   {
     id: 2,
-    question: "How can your website development service help a company grow? ",
-    answer: <>We are a top website development agency Dubai. We provide a visually appealing, fast, and mobile-first website that meets your expectations and represents your company identity. We make sure your website works great on any device. We focus on usability, SEO, and mobile optimization.</> ,
+    question: " How does DigiExpo create high-converting websites for the modern Dubai business? ",
+    answer: <>Digiexpo creates websites that look good but also work well. We focus on our clients' requirements, which helps them turn visitors into customers. We put a lot of effort into making websites that load quickly, are easy to use, and work well on all devices. We prioritize mobile-friendly websites because many people use their phones all the time. Our expert team helps businesses reach their target audiences. Our continuing support keeps websites up to date and competitive as industry trends change.</> ,
     accordion_id: "headingTwo",
     collapsed: "",
     data_bs_target: "#collapseTwo",
@@ -24,8 +24,8 @@ const answer_question_data = [
   },
   {
     id: 3,
-    question: "Why is DigiExpo the top UI UX design agency in Dubai?",
-    answer: <>We create aesthetically pleasing and easily navigable user interfaces that improve usability. As the best UI UX design company in Dubai, our design process consists of user research, wireframing, prototyping, and testing. From the first click, we ensure your users remain interested and content.</> ,
+    question: "Why is UI/UX design a game-changer for customer experience in 2025?",
+    answer: <>UI/UX design changes the game by changing how people see and interact with a business online. Users in 2025 want websites and apps to be easy to use and look good. Businesses need to make sure that navigation is simple, responses are quick, and layouts are interesting. A good user experience increases trust and makes people want to spend more time exploring your website. It also ensures that they will become loyal customers. UI/UX can be the thing that makes one business stand out from another in a world full of options.</> ,
     accordion_id: "headingThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseThree",
@@ -35,8 +35,8 @@ const answer_question_data = [
   },
   {
     id: 4,
-    question: "Which mobile app development services do you provide?",
-    answer: <>We offer complete mobile app development services in Dubai. They include UI/UX design, native and cross-platform development, testing, and post-launch support. We create the best mobile applications Dubai. Our performance-focused apps align with your business goals. We also ensure a smooth user experience on both Android and iOS platforms.</> ,
+    question: "Can DigiExpo build scalable mobile apps for startups and enterprises?",
+    answer: <>DigiExpo uses modern development frameworks that encourage growth to make mobile apps that can expand with both small and large businesses. Our apps can manage more users or new features without crashing or slowing down.  Our team works hard and understands our clients' goals. We create apps tailored to their needs, easy to use, and dependable. This adaptability lets organisations stay on top of changing market needs and keep up their excellent performance as they grow.</> ,
     accordion_id: "headingFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseFour",
@@ -46,8 +46,8 @@ const answer_question_data = [
   },
   {
     id: 5,
-    question: "Why would you choose DigiExpo as your eCommerce partner?",
-    answer: <>Choosing DigiExpo as your eCommerce agency in Dubai means working with professionals. We are aware of online company success.  Our scalable eCommerce systems include mobile optimization, Soptimisationion, and digital marketing.  We aim to enable your online store to increase visits and raise conversions.
+    question: "How is DigiExpo using emerging tech to future-proof businesses in Dubai?",
+    answer: <>DigiExpo helps Dubai businesses stay competitive and ready for the future by using new technologies like artificial intelligence, machine learning, and blockchain. The whole point of DigiExpo is to keep ahead of the game.  We're already leveraging AI to make things more personal, AR to make purchasing more involved, and automation to make work go more smoothly.  That means that if you hire us, you'll get a website or app that looks good now, but it will still be useful in two or three years.
     
     </> ,
     accordion_id: "headingFive",
@@ -60,8 +60,8 @@ const answer_question_data = [
   //Digital Marketing
   {
     id: 6,
-    question: "What digital marketing services does DigiExpo offer?",
-    answer: <>DigiExpo, the digital marketing agency in UAE offers digital marketing solutions that include Social Media Marketing (SMM), Search Engine Optimization (SEO), Performance Marketing, Email Marketing, App Store Optimization (ASO), Content writing and influencer Marketing, and Content creation. We strive to devise the most suitable and efficient plans for you to achieve the best results in all your online operations.</> ,
+    question: "What’s the most effective digital marketing approach for businesses in Dubai right now?",
+    answer: <>Dubai businesses combine SEO, PPC, and social media ads. It is the most effective marketing strategy. This mix lets businesses target many customers through a variety of channels. Personalization is important, and data analytics may help you provide the right message at the right moment. Working with influencers and doing content marketing can help people trust your business and learn more about it. These strategies combine to create a strong online presence. This presence helps your business thrive.</> ,
     accordion_id: "headingSix",
     collapsed: "collapsed",
     data_bs_target: "#collapseSix",
@@ -70,8 +70,9 @@ const answer_question_data = [
   },
   {
     id: 7,
-    question: "How can Social Media Marketing (SMM) help my business?",
-    answer: <>Our SMM services ensure visitors' casual clicks while browsing through your business's Facebook, Instagram, or linked-in accounts are changed into loyal customers. At the reliable best digital marketing agency, we make the content and the approach as interactive as can be and that steady fan and customer base you need from your targeted audience.</> ,
+    question: "How does SEO help local businesses rank higher on Google in 2025?",
+    answer: <>SEO enables local companies to appear higher in Google search results by optimizing their website content and profiles for keywords specific to their area. This means keeping Google My Business listings up to date and asking for good ratings. Better local SEO implies that people in the region can rapidly find the business when they search for services that are related to it. SEO not only helps your website rank higher, but it also makes it easier to use and more trustworthy.
+</> ,
     accordion_id: "headingSeven",
     collapsed: "",
     data_bs_target: "#collapseSeven",
@@ -83,8 +84,8 @@ const answer_question_data = [
   },
   {
     id: 8,
-    question: "What benefits can I expect from your Search Engine Optimization (SEO) services?",
-    answer: <>Most of the SEO services we offer aim to ensure that your site ranks high in search engine results and gets traffic. At our digital marketing agency we use effective and efficient techniques to enhance your Internet business's standing and increase your chances of attaining a higher rank in search engine listings and, subsequently, more bona fide Internet clientele.
+    question: "What are the benefits of using PPC advertising for lead generation?",
+    answer: <>PPC advertising helps generate leads by targeting those who are actively looking for goods or services. This means that ads get to those who are very interested, which makes it more likely that clicks will turn into leads. Businesses can control their spending and try out different ad styles with PPC campaigns to see what performs best. Companies can get the most out of their money with PPC because the outcomes can be measured. This makes it a sensible way to get good leads quickly.
 </> ,
     accordion_id: "headingEight",
     collapsed: "collapsed",
@@ -95,8 +96,8 @@ const answer_question_data = [
   },
   {
     id: 9,
-    question: "How does Performance Marketing contribute to my ROI?",
-    answer: <>Performance marketing is based on fine-tuning one or multiple types of advertisements to provide measurable conversion. Our best digital marketing agency specialists apply various scientific approaches to improve your advertising campaign, increasing your ROI. This means that you will be assured of an equivalent return on investment for every penny you spend on marketing.</> ,
+    question: "Which social media platforms should UAE businesses focus on in 2025?",
+    answer: <>In 2025, UAE businesses should focus on Instagram, LinkedIn, TikTok, and Facebook because they have a lot of active users. Instagram works well for picture-based campaigns and influencer collaborations. LinkedIn is great for B2B marketing. TikTok is growing quickly, which gives you a chance to reach younger people with creative content. Facebook is still a good way to contact a lot of different types of people. Pick the right platforms based on where your ideal clients hang out online.</> ,
     accordion_id: "headingNine",
     collapsed: "collapsed",
     data_bs_target: "#collapseNine",
@@ -106,8 +107,8 @@ const answer_question_data = [
   },
   {
     id: 10,
-    question: "What is included in your Content Creation service?",
-    answer: <>Our Content Creation service entails writing and designing eye-catching online stories that your audience will relate to. We create appealing and convincing content to strengthen your online brand reputation. From blog posts to social media content, our team creates stories that captivate and inspire.</> ,
+    question: "How can email marketing automation increase customer retention?",
+    answer: <>Email marketing automation sends personalized communications depending on what users do and like. It helps in keeping customers. Automated emails, for instance, can suggest things based on what a consumer has bought in the past or remind them about carts they left behind. This constant, personalized communication keeps the brand in people's minds. It also motivates them to buy from you again without you having to do anything. Automation also gives businesses information on how customers behave, which helps them improve their strategy and provide customers with even more useful content.</> ,
     accordion_id: "headingTen",
     collapsed: "collapsed",
     data_bs_target: "#collapseTen",
@@ -117,8 +118,8 @@ const answer_question_data = [
   }, 
   {
     id: 11,
-    question: "What makes DigiExpo the best choice for web development in Dubai?",
-    answer: <>At DigiExpo, we remain the most suitable web development company in Dubai. We deeply understand your vision, value proposition, target market, and objectives as a business entity.<br/> We design and develop simple yet remarkable and highly effective websites that fit your business dreams perfectly and pave the way for the future. Our services include WordPress, Laravel, PHP, CMS development, website and application maintenance, and WhatsApp integration, thus offering holistic service delivery based on your requirements.</> ,
+    question: " What modern website technologies are businesses in Dubai focusing on in 2025?",
+    answer: <>Progressive Web Apps (PWAs) are one of the newest website technologies that Dubai firms are focusing on in 2025. AI chatbots improve customer service by providing help right away. Cloud hosting ensures that websites can develop and stay safe, so they can handle more traffic. Accelerated Mobile Pages (AMP) are used to make content load faster, especially on mobile phones. Headless content management solutions let you show content in various ways across different channels.</> ,
     accordion_id: "headingTenOne",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenOne",
@@ -128,8 +129,8 @@ const answer_question_data = [
   }, 
   {
     id: 12,
-    question: "Will my Website be Mobile-Friendly?",
-    answer: <>Yes, business owners must have a mobile-friendly website these days! We make sure that your website appears fantastic on a range of gadgets. In mobile search results, Google gives mobile-friendly websites priority over those that are not.<br/>Credibility with your customers, clients, and industry influencers is increased via mobile-friendly websites. Anyone trying to access your website on a mobile device will have a suitable experience if it is mobile-friendly, and this will encourage visitors to view you as a reliable source of information, goods, and services.</> ,
+    question: " How does a mobile-first development approach benefit users and SEO?",
+    answer: <>A mobile-first development method ensures that websites are made for smartphones and tablets first, so they work well on smaller displays. This method lowers bounce rates and increases user engagement because most internet users are on mobile devices. Google prefers sites that are optimized for mobile. This helps businesses rank higher in search results. In the end, designing with mobile in mind makes websites easy to use, accessible, and competitive in today's digital world.</> ,
     accordion_id: "headingTenTwo",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenTwo",
@@ -139,8 +140,8 @@ const answer_question_data = [
   }, 
   {
     id: 13,
-    question: "What is included in your Content Creation service?",
-    answer: <>Redesigning the current website occasionally is a good idea. As a top web development company in Dubai claims that a clever yet unique website makeover would improve user experience and assist clients with occasionally new perspectives.<br/>The process comprises goal-setting, competitor analysis, redesigning approaches, search engine functionality, digital marketing practices, etc. The team of designers at DigiExpo is highly skilled and knowledgeable, and they can revamp your website so that it performs two times better than it does now.</> ,
+    question: "Why is accessibility and data privacy crucial for websites in Dubai today?",
+    answer: <> Websites in Dubai need to think about accessibility and data privacy because they ensure everyone can use them and follow the rules. Making websites accessible implies that people with disabilities can easily find their way around and use them. This opens up the site to a wider audience. Data privacy keeps consumers' personal information safe and builds trust. Accessibility and data privacy are very important in Dubai because the UAE has severe rules about data protection. These factors show that a corporation follows the law online and helps keep it out of trouble.</> ,
     accordion_id: "headingTenThree",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenThree",
@@ -150,8 +151,8 @@ const answer_question_data = [
   }, 
   {
     id: 14,
-    question: "Can DigiExpo help with updating and maintaining my existing website?",
-    answer: <>Absolutely! DigiExpo provides complete website management services to ensure your website is fast, protected against hacks and has no bugs. It means that you can safely delegate all website-related activities, such as updating the security or creating backups, to us and optimize the website to improve its performance while you can concentrate on developing your business. The intended goal is to ensure that your website is always working effectively.</> ,
+    question: " What are the steps involved in building a high-performing website?",
+    answer: <>A clear plan is essential for creating an effective website. It should outline the business's goals and target audience. Designers make interfaces that are easy to use and focus on the user experience. Developers make sure that pages load quickly and work well on mobile devices. Content is made to keep visitors interested and is optimized for search engines to make it easier to find. After launch, ongoing monitoring helps find places that need to be improved. Regular upgrades maintain the website's safety and keep it up to date with changing user needs and technologies.</> ,
     accordion_id: "headingTenFour",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenFour",
@@ -161,8 +162,8 @@ const answer_question_data = [
   }, 
   {
     id: 15,
-    question: "What specific web development services does DigiExpo offer?",
-    answer: <>DigiExpo website development company provides clients professional web development solutions that fit their needs. Our WordPress development services enable us to assist you in making your idea a WordPress reality that, in return, will depict your business and encourage growth. Our company's Laravel development services are derived from the principles of delivering robust, reliable, and highly secure web applications in the least time, assuring higher ROI and competitive advantage. We also build custom PHP-based enterprise web portals, advanced e-commerce, and business solutions. We create powerful, customer-oriented, complex, and feature-incorporated web solutions. Furthermore, CMS development services enable our clients to have efficient solutions for their content management needs. Our WhatsApp integration services help our clients increase their sales through better customer interaction since WhatsApp is frequently used by business people worldwide.</> ,
+    question: "How do interactive and futuristic design trends elevate user engagement?",
+    answer: <>Users are drawn to websites with interactive and futuristic design trends. These trends make websites more interesting and memorable. Micro-animations, 3D images, and fluid scrolling are some of the features that make visitors want to interact with content instead of just looking at it. These designs also show that a business is creative and innovative, which helps it stand out. These kinds of trends make the site better for users, which leads to more time spent on the site and more conversions.</> ,
     accordion_id: "headingTenFive",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenFive",
@@ -172,8 +173,9 @@ const answer_question_data = [
   }, 
   {
     id: 16,
-    question: "What eCommerce platforms does DigiExpo specialize in?",
-    answer: <>DigiExpo is a premier eCommerce website development company in UAE that works on different platforms: WooCommerce, Mirakl, Magento, BigCommerce, Shopify, and Shopify Plus. We developed both platforms to cater to the diverse needs of businesses, ensuring a smooth and efficient online shopping experience.</> ,
+    question: " What are the top eCommerce trends shaping Dubai in 2025?",
+    answer: <>The e-commerce scene in Dubai in 2025 is full of new and intriguing developments. AI-powered personalization is a big deal. It makes purchasing online feel like it's built specifically for you. Retailers are working on making checkout on phones faster and easier because mobile purchasing is still growing. Short videos and collaborations with influencers on social media are two key ways that social media affects what people buy. Sustainability influences choices. More firms now use eco-friendly packaging and source materials fairly. These trends make shopping in Dubai exciting. They match the city's fast pace and appeal to eco-conscious shoppers.
+</> ,
     accordion_id: "headingTenSix",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenSix",
@@ -183,8 +185,8 @@ const answer_question_data = [
   }, 
   {
     id: 17,
-    question: "How does DigiExpo ensure a seamless customer experience on my eCommerce website?",
-    answer: <>DigiExpo aims to develop customer-specific and generic solutions that enhance the client's experience on any device. Its unique design, easy-to-use frontends, both safe methods of payment, and powerful administration provide a solid foundation for the smooth work of your eCommerce site.</> ,
+    question: "How can AI-powered personalization boost online sales for Dubai retailers?",
+    answer: <>AI helps Dubai stores sell more online by figuring out what customers like and then presenting them with things or bargains that they want. It also has chatbots that answer inquiries right away, which makes shopping easier. AI helps businesses keep track of their inventory and establish pricing that is competitive. This smart personalization pleases clients and makes them want to buy more.</> ,
     accordion_id: "headingTenSeven",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenSeven",
@@ -194,8 +196,8 @@ const answer_question_data = [
   }, 
   {
     id: 18,
-    question: "What is the process for developing an eCommerce website at DigiExpo?",
-    answer: <>While developing any feature or tool, our developers go through the phases of detailed requirement assessment, design and build, third-party tool integration and configuration, and exhaustive testing before going live. Therefore, we guarantee a comprehensive approach to enhancing eCommerce websites, ensuring optimal performance and safe user engagement.</> ,
+    question: "Why is offering diverse payment options essential for UAE shoppers?",
+    answer: <>In the UAE, it's important to offer several ways to pay because people here want to pay in many ways. People like to use credit cards, digital wallets like Apple Pay and Samsung Pay, "Buy Now, Pay Later" plans, and local payment portals. People are more likely to finish a transaction if they see their favorite payment method. This variety makes people less likely to leave their carts and promotes trust. Businesses in Dubai that offer flexible, safe payment options are more likely to meet the needs of their customers. It helps them make more sales and keep their customers happy.</> ,
     accordion_id: "headingTenEight",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenEight",
@@ -205,8 +207,9 @@ const answer_question_data = [
   }, 
   {
     id: 19,
-    question: "Can DigiExpo help me create a marketplace using Mirakl?",
-    answer: <>Yes, with Mirakl's advanced tool set, DigiExpo can help you establish a profitable online marketplace. We assist in reaching out to a vast pool of sellers and equally ensure rapid order processing, as well as offering a first-rate marketplace service that mostly appeals to the potential target market.</> ,
+    question: "How is sustainability influencing eCommerce in Dubai today?",
+    answer: <>In Dubai's eCommerce industry, sustainability is becoming a big deal. Companies are utilizing packaging that is good for the environment and cooperating with delivery firms that try to cut down on carbon footprints. More and more, customers want to buy from firms that care about the environment. Retailers also get their goods in a way that is good for the environment and talk about their attempts to be green to gain customers' trust. This focus on sustainability helps firms connect with eco-conscious customers and fits with Dubai's larger goal of a greener future.
+</> ,
     accordion_id: "headingTenNine",
     collapsed: "collapsed",
     data_bs_target: "#collapseTenNine",
@@ -216,8 +219,9 @@ const answer_question_data = [
   }, 
   {
     id: 20,
-    question: "What are the benefits of using Shopify Plus with DigiExpo's development services? ",
-    answer: <>DigiExpo deals with Shopify Plus and provides services to customize and enhance its functionality, making it suitable for small businesses and high-volume merchants. We guarantee unbeatable efficiency, capacity, and protection, making your business advance wiser with a store that draws and persuades more clients.</> ,
+    question: "What role do AR and immersive tech play in enhancing the online shopping journey?",
+    answer: <>Immersive tech and augmented reality (AR) are making shopping online in Dubai a lot more entertaining and useful. With AR, clients can digitally try on clothes, accessories, or even see how furniture looks in their homes. This cuts down on guesswork and lowers the number of returns. Customers feel more sure about buying when they can see things in 3D and interact with them. These technologies create experiences that are fun and keep customers coming back. Using AR makes Dubai stores stand out and gives customers a modern, interactive shopping experience.
+</> ,
     accordion_id: "headingTwoZero",
     collapsed: "collapsed",
     data_bs_target: "#collapseTwoZero",
@@ -272,8 +276,8 @@ const answer_question_data = [
   }, 
  {
     id: 25,
-    question: "What is the process for converting my PSD design to responsive HTML?",
-    answer: <>At DigiExpo, the best UI/UX Design Agency in Dubai, our approach entails converting your design created in PSD format to HTML for optimum or responsive design. This is done in a meticulous and precise style using genuine code that guarantees the right appearance and functionality regardless of the device. Our team’s goal is to have the best SEO, efficient loading times, great looks, and usability on the site.
+    question: "What modern web design trends are dominating Dubai in 2025?",
+    answer: <> In 2025, Dubai's web design will focus on simplicity and boldness. Expect huge fonts, clear layouts, and standout colors. Design that works well on phones is a necessity because most people use them to browse. To keep things interesting, websites are incorporating small animations and even 3D elements. Some companies use augmented reality to let you "try on" things before you buy them. AI also changes what you see based on what you like. All this makes sites quick, nice to look at, and easy to use, which is something that Dubai businesses adore.
    </> ,
     accordion_id: "headingTwoFive",
     collapsed: "collapsed",
@@ -284,8 +288,8 @@ const answer_question_data = [
   }, 
   {
     id: 26,
-    question: "How does DigiExpo ensure a seamless user experience across all devices?",
-    answer: <>The leading UI/UX Design Agency in UAE, DigiExpo also mostly uses the features of responsive web design, such as the resources that include flexibility of images, media queries, and fluidity of the grids. We enable the website or app to be properly displayed on desktop computers, portable smartphones, and tablets with equal ease, which makes the application easier to use.
+    question: "Why is mobile-first design essential for UAE businesses?",
+    answer: <> A lot of people here use their phones to access the web first. Therefore, mobile-first design is quite important. When you design websites with phones in mind, they load quickly and are easy to use on small displays. It also helps the site get a better ranking on Google. Dubai businesses want to make sure that clients have a good experience no matter where they are. This keeps users on the site longer and increases revenue. In a market that moves quickly, mobile-first is no longer a choice; it's the standard.
 
 
     
@@ -299,8 +303,8 @@ const answer_question_data = [
   }, 
   {
     id: 27,
-    question: "What does your UX design service include?",
-    answer: <>Our offered UX design services in Dubai implies analyzing the target audience preferences and usage scenarios. We produce interactive designs that enable users to interact with the website, making it easier and more satisfying. From the concept stage to the designing stage, which involves wireframing, prototyping, and design, we produce interactive designs that enable the user to interact with the website.
+    question: " How does AI personalization enhance web conversions for Dubai brands?",
+    answer: <>AI personalization helps Dubai websites display things that are important to clients. AI learns what you like by watching what you click on or buy, not by giving you random product lists. Then it suggests goods that are comparable or go well with what you already have, which makes shopping faster and more fun. Customers are more inclined to come back since they have a personalized experience. For brands, this means more sales and happier customers in Dubai's very competitive online market.
 </> ,
     accordion_id: "headingTwoSeven",
     collapsed: "collapsed",
@@ -311,8 +315,8 @@ const answer_question_data = [
   }, 
   {
     id: 28,
-    question: "How can an expertly crafted landing page improve my business?",
-    answer: <>Landing pages are usually optimized for visitors to help them become interested in the terms provided and persuade them to purchase. We also assist in raising the conversion rate and sales for your business with relevant call-to-action buttons and compelling content.
+    question: " What role do immersive technologies like 3D, AR, and AI chatbots play in website design?",
+    answer: <>Websites in Dubai are getting a lot cooler because of 3D visuals, augmented reality, and AI chatbots. 3D makes things look real. AR allows you to try things out in a virtual world, and chatbots are always there to answer your queries. This technology makes shopping easier and more fun, which makes people feel good about what they buy. Dubai brands may stand out by using these technologies to create new, easy-to-use websites that customers want to visit again and again.
     
     </> ,
     accordion_id: "headingTwoEight",
@@ -324,9 +328,9 @@ const answer_question_data = [
   }, 
   {
     id: 29,
-    question: " What does a UX audit involve and how can it benefit my digital presence?",
+    question: "How important is accessible and sustainable web design for UAE enterprises?",
     answer: <>
-A UX audit is a comprehensive review of your website or application that aims to discover strengths and weaknesses related to usability, accessibility, and UX. The audit reports provide recommendations to increase satisfaction, decrease resistance, and improve engagement and conversions.    </> ,
+Accessible web design makes it easy for everyone; even people with disabilities can use a website. Sustainable design makes sure that sites load quickly and don't waste energy. Companies in Dubai that do each of these things show that they care about both people and the earth. It helps them stay legal, get more consumers, and improve their brand image. Also, it matches Dubai's green aspirations. So, websites that are easy to use and last a long time are good for both businesses and customers.   </> ,
     accordion_id: "headingTwoNine",
     collapsed: "collapsed",
     data_bs_target: "#collapseTwoNine",
@@ -392,8 +396,8 @@ A UX audit is a comprehensive review of your website or application that aims to
   // mobile app 
     {
     id: 35,
-    question: "Which kind of mobile apps do you develop?",
-    answer: <>Our expertise spans building hybrid solutions, native apps for iOS and Android, and cross-platform apps. We also create other mobile applications. Every project our team customizes depends on your business and user needs. We ensure that all service-based software and eCommerce platforms are scalable and responsive and deliver a great user experience.</> ,
+    question: "Which emerging technologies are transforming mobile app development in Dubai in 2025?",
+    answer: <>Dubai's mobile apps use AI to make them smarter and more personal. 5G keeps everything moving quickly. Blockchain makes things safer, especially for apps that deal with money. Apps can also link to things like wearables and home appliances through the IoT. These emerging technologies work together to make apps faster and safer. They are useful for the computer-savvy people of Dubai. To meet high consumer expectations, developers here put a lot of emphasis on quality and security.</> ,
    accordion_id: "headingThreeFive",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeFive",
@@ -401,8 +405,8 @@ A UX audit is a comprehensive review of your website or application that aims to
     actice: "",
   },  {
     id: 36,
-    question: "How can you guarantee your mobile apps satisfy customer expectations?",
-    answer: <>We focus on providing user-centric mobile apps with strong functionality combined with easy UI/UX. Being the top mobile application development company in Dubai, our staff uses a research-based approach. We make sure your app fits customer behavior and business objectives. Our services on app development ensure performance, interaction, and long-term success.</> ,
+    question: "How do super apps offer a competitive edge for businesses in Dubai?",
+    answer: <>In Dubai, super applications are a huge deal. They have a lot of different services in one app, such as shopping, paying bills, and chatting. This makes life easier by keeping users from having to switch between programs. For businesses, super apps imply that customers stay longer, and they may make offers that are more relevant to them. In a saturated digital market like Dubai's, this is a smart approach to keep clients coming back.</> ,
     accordion_id: "headingThreeSix",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeSix",
@@ -410,16 +414,18 @@ A UX audit is a comprehensive review of your website or application that aims to
     actice: "",}
     ,  {
     id: 37,
-    question: "Why should one rely on you as a mobile application development company",
-    answer: <>Digiexpo is among the top application development Dubai companies. We offer complete services ranging from idea to implementation and post-launch support. Our expert developers create apps that perform well, navigate easily, and look great. Our first focus is your vision and turn it into a strong, marketable tool.</> ,
+    question: "What benefits does cross-platform app development bring to Dubai enterprises?",
+    answer: <>Dubai businesses adore cross-platform development because it runs on both Android and iOS. This saves them time and money. It also ensures that everything works well on all devices. Apps reach the market faster, and it is easier to update them. Dubai has a lot of different kinds of users, so this method helps marketers reach more individuals without having to separate their efforts.</> ,
     accordion_id: "headingThreeSeven",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeSeven",
     aria_controls: "collapseThreeSeven", 
     actice: "",},  {
     id: 38,
-    question: "How does DigiExpo handle mobile app development?",
-    answer: <>Our mobile apps development is agile, collaborative, and catered to your needs. We begin with requirement analysis then go through UI/UX design, coding, testing, and deployment. Every stage is designed to ensure smooth operation on all devices and systems. This boosts performance and keeps users happy.</> ,
+    question: "Why is app security becoming a top priority for mobile development in the UAE?",
+    answer: <>
+App security is very important in the UAE because the regulations about data are strong, and cyber threats are real. To keep user data safe, developers use encryption, secure logins, and regular testing. Companies stay out of legal issues and develop confidence by having strong security. Dubai businesses must invest in app security to protect their consumers and their reputation. App security is not an option anymore for businesses in Dubai.
+</> ,
     accordion_id: "headingThreeEight",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeEight",
@@ -427,12 +433,58 @@ A UX audit is a comprehensive review of your website or application that aims to
     actice: "",}
     ,  {
     id: 39,
-    question: "What application development services do you provide?",
-    answer: <>Our application development services include UI/UX design, front-end and back-end development, API integration, testing, and maintenance. Every app we build, we make sure it offers a smooth user experience and satisfies your company goals. From MVPs to corporate solutions, we help your app all through its lifetime, from idea to impact.</> ,
+    question: "How are sustainable and green mobile apps shaping the future of app development in Dubai?",
+    answer: <>Sustainable mobile apps work by using less energy through optimized coding and reducing background work. This fits with Dubai's aim for more environmentally friendly technology. It will also appeal to people who care about the environment. Developers also like to host apps on servers that run on renewable energy. Dubai is a leader in responsible tech innovation by making apps that are both useful and eco-friendly.</> ,
     accordion_id: "headingThreeNine",
     collapsed: "collapsed",
     data_bs_target: "#collapseThreeNine",
     aria_controls: "collapseThreeNine", 
-    actice: "",}
+    actice: "",},{
+  id: 40,
+  question: "What emerging tech trends are shaping Dubai’s businesses in 2025?",
+  answer: <>To stay competitive and come up with new ideas, firms in Dubai are using new technologies like AI, the Internet of Things (IoT), blockchain, and 5G. AI helps make customer service and marketing more personal. IoT connects devices so they can work together better. Blockchain protects transactions and increases trust, and 5G gives all these technologies fast and dependable internet. These technologies work together to make businesses more efficient. They also improve the customer experience and make the business more flexible.</>,
+  accordion_id: "headingThreeForty",
+  collapsed: "collapsed",
+  data_bs_target: "#collapseThreeForty",
+  aria_controls: "collapseThreeForty", 
+  actice: "",
+}, {
+  id: 41,
+  question: "How is AI transforming customer experiences and operations across the UAE?",
+  answer: <>AI is transforming how people in the UAE connect with businesses. Chatbots provide personalized assistance. They analyze data to better understand customer needs. It also helps make supply chains better, which means better inventory management and faster delivery times. These changes make services quicker, more effective, and easier for customers to use. AI isn't just a term for businesses in Dubai; it's a useful tool that makes customers happier and helps companies stay competitive in a market that changes quickly and where customers expect more every day.</>,
+  accordion_id: "headingThreeFortyOne",
+  collapsed: "collapsed",
+  data_bs_target: "#collapseThreeFortyOne",
+  aria_controls: "collapseThreeFortyOne", 
+  actice: "",
+}, {
+  id: 42,
+  question: "Why are 5G and edge computing crucial for smart cities in Dubai?",
+  answer: <>5G and edge computing will change the game for Dubai's smart city aspirations. 5G gives you fast and dependable internet connections. It gives edge computing processes data close to where it was created, which cuts down on delays. This combination makes it possible for real-time apps like smart traffic lights, energy management systems, and public safety networks to work. These technologies make city services work better and respond more quickly, which makes life better for people who live there. Dubai needs to invest in 5G and edge computing if it wants to construct a smart city that is truly connected and works well.</>,
+  accordion_id: "headingThreeFortyTwo",
+  collapsed: "collapsed",
+  data_bs_target: "#collapseThreeFortyTwo",
+  aria_controls: "collapseThreeFortyTwo", 
+  actice: "",
+}, {
+  id: 43,
+  question: "What role does blockchain play in enhancing transparency and security in the UAE?",
+  answer: <>Blockchain is making the UAE more open and secure by making records that can't be changed and procedures for verifying them that aren't in one place. It helps keep money safe, keeps track of supply networks, and checks digital identities. This cuts down on fraud and makes customers and businesses trust each other more. Dubai is actively using blockchain in both the public and private sectors to make things easier and more accountable. Dubai's digital infrastructure is getting stronger because of blockchain technology. It also encourages new ideas that help the economy and society.</>,
+  accordion_id: "headingThreeFortyThree",
+  collapsed: "collapsed",
+  data_bs_target: "#collapseThreeFortyThree",
+  aria_controls: "collapseThreeFortyThree", 
+  actice: "",
+}, {
+  id: 44,
+  question: "How are sustainability and green tech innovations influencing Dubai’s digital transformation?",
+  answer: <>Dubai's digital revolution includes using green technologies like energy-efficient data centers and eco-friendly ways to make software. These projects save money on operations while also lowering carbon emissions and power use. Dubai is showing corporate social responsibility and working towards its sustainability goals by making green IT a priority. This method is good for the environment and also makes Dubai a leader in the digital economy of the future. It encourages resilience, innovation, and long-term competitiveness in the global market.</>,
+  accordion_id: "headingThreeFortyFour",
+  collapsed: "collapsed",
+  data_bs_target: "#collapseThreeFortyFour",
+  aria_controls: "collapseThreeFortyFour", 
+  actice: "",
+}
+
 ];
 export default answer_question_data;

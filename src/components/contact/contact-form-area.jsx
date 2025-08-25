@@ -1,4 +1,9 @@
-import ContactUsForm from '@/forms/contact-us-form';
+import dynamic from "next/dynamic";
+
+// Dynamically import the ContactUsForm
+const ContactUsForm = dynamic(() => import("@/forms/contact-us-form"), {
+  ssr: false, // optional: disables server-side rendering
+});
 import SendIcon from '@/svg/send-icon';
 import Link from 'next/link';
 import React from 'react';

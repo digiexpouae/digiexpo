@@ -80,7 +80,7 @@ const Header = () => {
               <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6'>
                 <div className='header-bottom__logo'>
                   <Link href='/'>
-                    <Image src={mainLogo} alt='theme-pure' />
+                    <Image src={mainLogo} priority alt='theme-pure' />
                   </Link>
                 </div>
               </div>

@@ -11,7 +11,7 @@ import AboutArea from "../../common/about-area";
 import PaymentMethodArea from "../homes/home/payment-method-area";
 import ProjectArea from "../homes/home/project-area";
 import TestimonialArea from "../homes/home/testimonial-area";
-import FaqArea from "../homes/home/faq-area";
+import FaqArea from "./faq-area";
 import BlogArea from "../homes/home/blog-area";
 import ContactArea from "../homes/home/contact-area";
 import AboutArea2 from "../homes/home/about-area";

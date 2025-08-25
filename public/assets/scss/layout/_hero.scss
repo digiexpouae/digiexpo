@@ -1152,16 +1152,16 @@
   width: 100%;
   height: 100%;
   @media #{$lg,$xl,$md} {
-    & img {
+    & .image-1 img {
+ 
       height: 700px;
     }
   }
-  @media #{$xs} {
-    top: 15px;
-    & img {
-      height: 500px;
-
-    }
+  @media (max-width:768px) {
+    & .image-1 {
+    display:none;
+        }    
+     
   }
 }
 
@@ -1201,6 +1201,7 @@
     width: 120%;
     left: -40px;
     top: 20px;
+    background: none!important;
   }
   & img {
     position: absolute;
@@ -1228,12 +1229,19 @@
     transform: translate(-50%, -50%);
     opacity: 0.6;
   }
+
   &-2 {
     position: absolute;
     right: 0;
     top: 0;
     mix-blend-mode: soft-light;
     opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
   }
 }
 

@@ -1,10 +1,6 @@
-import project_data from '@/data/project-data';
-import RightArrow from '@/svg/right-arrow';
-import Image from 'next/image';
-import Link from 'next/link';
+
 import React, { useState } from 'react';
-import { Navigation, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 const setting = {
    loop: true,
