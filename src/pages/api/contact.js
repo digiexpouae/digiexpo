@@ -22,6 +22,9 @@ export default async function handler(req, res) {
       },
     });
 
+    // Format date/time in Dubai timezone
+    const submissionDate = new Date().toLocaleString("en-US", { timeZone: "Asia/Dubai" });
+
     await transporter.sendMail({
       from: `"${process.env.SITE_NAME} Contact Form" <${process.env.INTERNAL_EMAIL_USERNAME}>`,
       to: process.env.CONTACT_FORM_RECEIVER_EMAIL,
@@ -34,10 +37,32 @@ export default async function handler(req, res) {
         <p><strong>Inquiry Type:</strong> ${inquiry || "Not specified"}</p>
         <p><strong>Message:</strong></p>
         <blockquote>${message}</blockquote>
-        <p><em>Received on: ${new Date().toLocaleString('en-US', { timeZone: 'Asia/Dubai' })}</em></p>
+        <p><em>Received on: ${submissionDate}</em></p>
       `,
       replyTo: email,
     });
+
+    // Send data to n8n webhook
+    await fetch(
+      "https://digi-expo.app.n8n.cloud/webhook/cc504a5d-4563-48b5-b48f-dc4202a859fa",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          inquiry,
+          message,
+          salesType: inquiry
+            ? inquiry.trim().toLowerCase().replace(/\s+/g, "")
+            : "",
+          submissionDate // 👈 send to n8n
+        }),
+      }
+    );
 
     return res.status(200).json({
       success: true,
