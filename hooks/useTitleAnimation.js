@@ -1,4 +1,4 @@
-import gsap  from "gsap";
+import {gsap}  from "gsap";
 import { useIsomorphicLayoutEffect } from "./useIsomorphicEffect";
 
 const useTitleAnimation = (animeRef) => {

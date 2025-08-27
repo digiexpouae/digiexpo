@@ -2,7 +2,7 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicEffect';
 import useTitleAnimation from '@/hooks/useTitleAnimation';
 import Brwoser from '@/common/brwoser';
 import BounceLine from '@/svg/bounce-line';
-import gsap from 'gsap';
+import {gsap} from 'gsap';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
