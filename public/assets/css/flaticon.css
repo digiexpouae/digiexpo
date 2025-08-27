@@ -4,6 +4,9 @@
 url("../fonts/fa-brands-400.woff") format("woff"),
 url("../fonts/fa-duotone-900.woff2") format("woff2"),
 url("../fonts/fa-regular-400.eot") format("embedded-opentype"),
+;
+  font-display: swap;
+
 /* url("../fonts/fa-light-300.svg") format("svg"); */
 }
 
