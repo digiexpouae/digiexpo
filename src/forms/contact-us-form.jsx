@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-const ReCAPTCHA = dynamic(() => import("react-google-recaptcha"), { ssr: false });
+import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
 
 const ContactUsForm = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
@@ -173,8 +173,7 @@ const ContactUsForm = () => {
             </div>
           </div>
           <div className='col-xxl-12 mb-30'>
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            <RecaptchaComponent
               onChange={capchahandlechange}
             />
             {recaptchaError && (
