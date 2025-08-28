@@ -1,8 +1,13 @@
 @import "node_modules/react-modal-video/scss/modal-video.scss";
 @import "slick-carousel/slick/slick.css";
 @import "~bootstrap/scss/bootstrap";
-@import "swiper/css/bundle";
+// Import only the specific Swiper modules you're using
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/scrollbar";
+@import "swiper/css/effect-fade";
 @import "/public/assets/scss/main.scss";
+// @import "swiper/css/bundle";
 
 h4{
     margin-top: 40px;
