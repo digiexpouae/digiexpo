@@ -145,16 +145,16 @@ const HeroSlider = () => {
        
            {!isMobile &&   
           <div className='tp-hero-shape'>
-     {hero_shape.map((item, i) => (
+            {hero_shape.map((item, i) => (
               <Image
-                // style={{width: "auto", height: "auto"}}
                 key={i}
                 className={item.cls}
                 src={item.img}
                 alt='theme-pure'
-                layout="instrinsic"
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
-             
             ))}
           </div>}
           <div className='container'>
