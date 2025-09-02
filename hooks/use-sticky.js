@@ -2,17 +2,26 @@ import { useEffect, useState } from "react";
 
 const useSticky = () => {
   const [sticky, setSticky] = useState(false);
+  const [isTicking, setIsTicking] = useState(false);
 
-  const stickyHeader = () => {
-    if (window.scrollY > 200) {
-      setSticky(true);
-    } else {
-      setSticky(false);
+  const updateStickyState = () => {
+    setSticky(window.scrollY > 200);
+    setIsTicking(false);
+  };
+
+  const handleScroll = () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateStickyState);
+      setIsTicking(true);
     }
   };
+
   useEffect(() => {
-    window.addEventListener("scroll", stickyHeader);
-  }, []);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll, { passive: true });
+    };
+  }, [isTicking]);
 
   return {
     sticky,

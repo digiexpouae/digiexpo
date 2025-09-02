@@ -1,27 +1,41 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import useSticky from "./use-sticky";
 
 const ScrollToTop = () => {
   const { sticky } = useSticky();
-
   const [showScroll, setShowScroll] = useState(false);
+  const [isTicking, setIsTicking] = useState(false);
 
-  const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 400) {
-      setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 400) {
-      setShowScroll(false);
+  const updateScrollState = useCallback(() => {
+    const shouldShow = window.pageYOffset > 400;
+    setShowScroll(prevShow => {
+      if (prevShow !== shouldShow) {
+        return shouldShow;
+      }
+      return prevShow;
+    });
+    setIsTicking(false);
+  }, []);
+
+  const checkScrollTop = useCallback(() => {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateScrollState);
+      setIsTicking(true);
     }
-  };
+  }, [isTicking, updateScrollState]);
 
-  const scrollTop = () => {
+  const scrollTop = useCallback((e) => {
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
-    return () => window.removeEventListener("scroll", checkScrollTop);
-  }, []);
+    const options = { passive: true };
+    window.addEventListener('scroll', checkScrollTop, options);
+    return () => {
+      window.removeEventListener('scroll', checkScrollTop, options);
+    };
+  }, [checkScrollTop]);
 
   return (
     <>
