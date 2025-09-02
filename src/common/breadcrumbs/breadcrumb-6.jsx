@@ -5,7 +5,7 @@ import SocialLinks from '../social-links';
 import img_1 from "../../../public/assets/img/breadcrumb/breadcrumb-shape-1.png";
 import img_2 from "../../../public/assets/img/breadcrumb/breadcrumb-shape-2.png";
 import img_3 from "../../../public/assets/img/blog/blog-avata-1.png";
-
+import styles from '../../components/blog/blogCard.module.scss'
 
 // const breadcrumb_content = {
 //     sub_title: "Digital Marketing",
@@ -29,10 +29,10 @@ const BreadcrumbSix = ({sub_title , title}) => {
             <div className="container">
                <div className="row align-items-end">
                   <div className="col-xl-9 col-lg-9 col-md-9">
-                     <div className="blog-details-banner z-index-2">
-                        <div className="blog-details-title-box">
+                     <div className={`${styles["blog-details-banner"]} z-index-2`}>
+                        <div className={`${styles["blog-details-title-box"]}`}>
                            <span>{sub_title}</span>
-                           <h1 className="blog-details-banner-title">{title}</h1>
+                           <h1 className={`${styles["blog-details-banner-title"]}`}>{title}</h1>
                         </div>
                         {/* <div className="tp-blog-author-info-box d-flex align-items-center">
                            <div className="tp-blog-avata">
@@ -46,7 +46,7 @@ const BreadcrumbSix = ({sub_title , title}) => {
                      </div>
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-3">
-                     <div className="blog-details-social-box z-index-3 text-md-end text-start">
+                     <div className={`${styles["blog-details-social-box"]} z-index-3 text-md-end text-start`}>
                         <SocialLinks />  
                      </div>
                   </div>

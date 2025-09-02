@@ -9,7 +9,7 @@ import RecentPost from "../../blog-list/recent-post";
 import Search from "../../blog-list/search";
 import Tags from "../../blog-list/tags";
 import Comments from "./comments";
-
+// 
 import blog_details_img_1 from "../../../../public/assets/img/blog/blog-details-1.jpg";
 import blog_details_img_2 from "../../../../public/assets/img/blog/blog-details-2.jpg";
 import blog_details_img_3 from "../../../../public/assets/img/blog/blog-details-3.jpg";
