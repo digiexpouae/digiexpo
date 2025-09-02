@@ -1,19 +1,21 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <link
+        <link
           rel="preload"
           as="image"
           href="/assets/img/hero/Hero BG Image.webp"
           imagesrcset="/assets/img/hero/Hero BG Image.webp?w=640 640w,
                        /assets/img/hero/Hero BG Image.webp?w=960 960w,
                        /assets/img/hero/Hero BG Image.webp?w=1280 1280w"
-          imagesizes="100vw"
+
         />
+
 
       </Head>
       <body>
@@ -40,7 +42,7 @@ export default function Document() {
 
         {/* Tawk.to Live Chat */}
         <Script
-       strategy="lazyOnload"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

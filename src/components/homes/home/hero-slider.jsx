@@ -130,48 +130,32 @@ const HeroSlider = () => {
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
             {isMobile ? (
-              <>
-                {/* Preload the LCP image */}
-                <link 
-                  
-                  as="image" 
-                  href={Herobg.src} 
-                  imageSrcSet={`${Herobg.src}?w=640 640w, ${Herobg.src}?w=960 960w, ${Herobg.src}?w=1280 1280w`}
-                  imageSizes="100vw"
-                />
-                <Image
-                  className="block md:hidden object-cover"
-                  src={Herobg}
-                  alt='hero background'
-                  priority
-                  fetchPriority="high"
-                  quality={85}
-                  sizes="100vw"
-                  placeholder="blur"
-                  fill
-                />
-              </>
+              <Image
+                className="block md:hidden object-cover"
+                src={Herobg}
+                alt='hero background'
+                priority
+                fetchPriority="high"
+                quality={85}
+                sizes="100vw"
+                placeholder="blur"
+                fill
+                loading="eager"
+                decoding="async"
+              />
             ) : (
-              <>
-                {/* Preload the desktop hero frame */}
-                <link 
-                  rel="preload" 
-                  as="image" 
-                  href={hero_frame.src}
-                  imageSrcSet={`${hero_frame.src}?w=1200 1200w, ${hero_frame.src}?w=1920 1920w`}
-                  imageSizes="100vw"
-                />
-                <Image
-                  src={hero_frame}
-                  alt='hero frame'
-                  priority
-                  fetchPriority="high"
-                  quality={85}
-                  sizes="100vw"
-                  className="image-1"
-                  fill
-                />
-              </>
+              <Image
+                src={hero_frame}
+                alt='hero frame'
+                priority
+                fetchPriority="high"
+                quality={85}
+                sizes="100vw"
+                className="image-1"
+                fill
+                loading="eager"
+                decoding="async"
+              />
             )}
           </div>
 
@@ -182,10 +166,12 @@ const HeroSlider = () => {
                   key={i}
                   className={item.cls}
                   src={item.img}
-                  alt='theme-pure'
-                  priority
-                  fetchPriority="high"
+                  alt='decorative shape'
+                  priority={i === 0} // Only prioritize first shape image
+                  fetchPriority={i === 0 ? 'high' : 'auto'}
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
                 />
               ))}
             </div>}
