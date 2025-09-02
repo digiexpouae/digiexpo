@@ -5,7 +5,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-    
+      <link
+          rel="preload"
+          as="image"
+          href="/assets/img/hero/Hero BG Image.webp"
+          imagesrcset="/assets/img/hero/Hero BG Image.webp?w=640 640w,
+                       /assets/img/hero/Hero BG Image.webp?w=960 960w,
+                       /assets/img/hero/Hero BG Image.webp?w=1280 1280w"
+          imagesizes="100vw"
+        />
+
       </Head>
       <body>
         <Main />

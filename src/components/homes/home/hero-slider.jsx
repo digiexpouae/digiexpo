@@ -133,7 +133,7 @@ const HeroSlider = () => {
               <>
                 {/* Preload the LCP image */}
                 <link 
-                  rel="preload" 
+                  
                   as="image" 
                   href={Herobg.src} 
                   imageSrcSet={`${Herobg.src}?w=640 640w, ${Herobg.src}?w=960 960w, ${Herobg.src}?w=1280 1280w`}
