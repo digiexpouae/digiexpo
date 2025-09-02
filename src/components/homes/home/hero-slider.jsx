@@ -130,27 +130,48 @@ const HeroSlider = () => {
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
             {isMobile ? (
-              <Image
-                className="block md:hidden object-cover"
-                src={Herobg}
-                fetchPriority="high"
-                alt='hero background'
-                priority
-                quality={85}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                placeholder="blur"
-                fill
-              />
+              <>
+                {/* Preload the LCP image */}
+                <link 
+                  rel="preload" 
+                  as="image" 
+                  href={Herobg.src} 
+                  imageSrcSet={`${Herobg.src}?w=640 640w, ${Herobg.src}?w=960 960w, ${Herobg.src}?w=1280 1280w`}
+                  imageSizes="100vw"
+                />
+                <Image
+                  className="block md:hidden object-cover"
+                  src={Herobg}
+                  alt='hero background'
+                  priority
+                  fetchPriority="high"
+                  quality={85}
+                  sizes="100vw"
+                  placeholder="blur"
+                  fill
+                />
+              </>
             ) : (
-              <Image
-                src={hero_frame}
-                alt='hero frame'
-                priority
-                quality={85}
-                sizes="(max-width: 1200px) 100vw, 1200px"
-                className="image-1"
-                fill
-              />
+              <>
+                {/* Preload the desktop hero frame */}
+                <link 
+                  rel="preload" 
+                  as="image" 
+                  href={hero_frame.src}
+                  imageSrcSet={`${hero_frame.src}?w=1200 1200w, ${hero_frame.src}?w=1920 1920w`}
+                  imageSizes="100vw"
+                />
+                <Image
+                  src={hero_frame}
+                  alt='hero frame'
+                  priority
+                  fetchPriority="high"
+                  quality={85}
+                  sizes="100vw"
+                  className="image-1"
+                  fill
+                />
+              </>
             )}
           </div>
 
