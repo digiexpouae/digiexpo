@@ -15,6 +15,10 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
+    experimental: {
+    legacyBrowsers: false,
+    browsersListForSwc: true,
+  },
   images: { unoptimized: true },
   productionBrowserSourceMaps: true,
   compress: true,
