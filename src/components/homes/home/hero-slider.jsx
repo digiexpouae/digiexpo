@@ -79,10 +79,10 @@ const hero_content = {
   ],
 };
 const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
-	hero_content;
+  hero_content;
 
 const HeroSlider = () => {
-	let hero_bg = useRef(null);
+  let hero_bg = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -123,51 +123,58 @@ const HeroSlider = () => {
     return () => ctx && ctx.revert?.(); // cleanup if needed
   }, []);
 
-	return (
+  return (
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
-               {/* bg-image */}
-         {/* {isMobile?
-         ( <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
-         )
-          : ( <Image
-              // style={{width: "auto", height: "auto"}}
-              src={hero_frame}
-              alt='theme-pure'
-                priority
-                    sizes="100vw"
-                className="image-1"
-              fill
-            />)} */}
-         {/* bg-image */}
-         {!isMobile &&
-          <Image
-              // style={{width: "auto", height: "auto"}}
-              src={hero_frame}
-              alt='theme-pure'
-                priority
-                    sizes="100vw"
-                className="image-1"
-              fill
-            />}
-           </div>
-       
-           {!isMobile &&   
-          <div className='tp-hero-shape'>
-     {hero_shape.map((item, i) => (
+            {/* bg-image */}
+            {!isMobile &
+              // <Image
+              //   className="block md:hidden object-cover"
+              //   src={Herobg}
+              //   alt='hero background'
+              //   priority
+              //   fetchPriority="high"
+              //   quality={85}
+              //   sizes="100vw"
+              //   placeholder="blur"
+              //   fill
+              //   loading="eager"
+              //   decoding="async"
+              // />
+           
               <Image
-                // style={{width: "auto", height: "auto"}}
-                key={i}
-                className={item.cls}
-                src={item.img}
-                alt='theme-pure'
-                layout="instrinsic"
+                src={hero_frame}
+                alt='hero frame'
+                priority
+                fetchPriority="high"
+                quality={85}
+                sizes="100vw"
+                className="image-1"
+                fill
+                loading="eager"
+                decoding="async"
               />
-             
-            ))}
-          </div>}
+            }
+          </div>
+
+          {!isMobile &&
+            <div className='tp-hero-shape'>
+              {hero_shape.map((item, i) => (
+                <Image
+                  key={i}
+                  className={item.cls}
+                  src={item.img}
+                  alt='decorative shape'
+                  priority={i === 0} // Only prioritize first shape image
+                  fetchPriority={i === 0 ? 'high' : 'auto'}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              ))}
+            </div>}
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-xl-10'>
@@ -210,40 +217,57 @@ const HeroSlider = () => {
                       key={i}
                       className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
                     >
-                      <Image src={item.img} alt='theme-pure' width={120} height={150}/>
+                      <Image 
+                        src={item.img} 
+                        alt='decorative shape' 
+                        width={120} 
+                        height={150}
+                        quality={85}
+                        loading="lazy"
+                        className="object-contain"
+                      />
                     </div>
                   ))}
                   <div>
                     <div className='tp-hero__thumb-wrapper p-relative'>
                       <div className='row'>
-                    
 
-                    <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  poster="/assets/img/hero/poster.webp"
-  className="w-full h-[600px] object-cover"
-  aria-hidden="true"
->
-  <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
-  <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-</video>
 
-                    
-                          {/* <source
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          preload="none"
+                          poster="/assets/img/hero/poster.webp"
+                          className="w-full h-[600px] object-cover"
+                          aria-hidden="true"
+                          disablePictureInPicture
+                          
+                        >
+                          <source 
+                            src="/assets/img/hero/hero-video.webm" 
+                            type="video/webm" 
+                          />
+                          <source 
+                            src="/assets/img/hero/herosection.mp4" 
+                            type="video/mp4" 
+                            media="(min-width: 768px)"
+                          />
+                        </video>
+
+
+                        {/* <source
                             src='/assets/img/hero/hero-video.mov'
                             type='video/quicktime'
                           /> */}
-                    
-{/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
+
+                        {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
         width="640" height="360" frameborder="0" 
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
         allowfullscreen title="hero-video compress">
 </iframe> */}
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
 
                       </div>
