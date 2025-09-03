@@ -128,8 +128,8 @@ const HeroSlider = () => {
       <div className='tp-hero__area tp-hero__pl-pr'>
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
-         {/* bg-image */}
-         {isMobile?
+               {/* bg-image */}
+         {/* {isMobile?
          ( <Image className="block md:hidden  object-cover" src={Herobg} alt='theme-pure' priority sizes="100vw" fill  />
          )
           : ( <Image
@@ -140,7 +140,18 @@ const HeroSlider = () => {
                     sizes="100vw"
                 className="image-1"
               fill
-            />)}
+            />)} */}
+         {/* bg-image */}
+         {!isMobile &&
+          <Image
+              // style={{width: "auto", height: "auto"}}
+              src={hero_frame}
+              alt='theme-pure'
+                priority
+                    sizes="100vw"
+                className="image-1"
+              fill
+            />}
            </div>
        
            {!isMobile &&   
