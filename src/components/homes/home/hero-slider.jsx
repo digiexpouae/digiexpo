@@ -129,7 +129,7 @@ const HeroSlider = () => {
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
-            {!isMobile &
+            {!isMobile &&
               // <Image
               //   className="block md:hidden object-cover"
               //   src={Herobg}
