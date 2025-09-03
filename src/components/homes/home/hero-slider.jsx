@@ -129,21 +129,21 @@ const HeroSlider = () => {
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
-            {isMobile ? (
-              <Image
-                className="block md:hidden object-cover"
-                src={Herobg}
-                alt='hero background'
-                priority
-                fetchPriority="high"
-                quality={85}
-                sizes="100vw"
-                placeholder="blur"
-                fill
-                loading="eager"
-                decoding="async"
-              />
-            ) : (
+            {!isMobile &&
+              // <Image
+              //   className="block md:hidden object-cover"
+              //   src={Herobg}
+              //   alt='hero background'
+              //   priority
+              //   fetchPriority="high"
+              //   quality={85}
+              //   sizes="100vw"
+              //   placeholder="blur"
+              //   fill
+              //   loading="eager"
+              //   decoding="async"
+              // />
+           
               <Image
                 src={hero_frame}
                 alt='hero frame'
@@ -156,7 +156,7 @@ const HeroSlider = () => {
                 loading="eager"
                 decoding="async"
               />
-            )}
+            }
           </div>
 
           {!isMobile &&
