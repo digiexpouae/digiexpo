@@ -129,7 +129,7 @@ const HeroSlider = () => {
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
-            {!isMobile &&
+            {isMobile ? (<div className="mobile-bg"></div>)
               // <Image
               //   className="block md:hidden object-cover"
               //   src={Herobg}
@@ -144,7 +144,7 @@ const HeroSlider = () => {
               //   decoding="async"
               // />
            
-              <Image
+             : (<Image
                 src={hero_frame}
                 alt='hero frame'
                 priority
@@ -155,7 +155,7 @@ const HeroSlider = () => {
                 fill
                 loading="eager"
                 decoding="async"
-              />
+              />)
             }
           </div>
 

@@ -22,6 +22,7 @@ export default function Document() {
           href="/assets/img/hero/poster.webp"
           imagesrcset="/assets/img/hero/poster.webp"
           imagesizes="100vw"
+            fetchpriority="high"
         />
 
 
