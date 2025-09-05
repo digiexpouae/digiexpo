@@ -106,13 +106,13 @@ const HeroSlider = () => {
       mainTl.fromTo(
         hero_bg.current,
         { opacity: 0, scale: 1.2 },
-        { opacity: 1, scale: 1, duration: 0.8 }
+        { opacity: 1, scale: 1, duration: 0.5 }
       );
 
       mainTl.to(title, {
         opacity: 1,
         y: 0,
-        duration: 0.5,
+        duration: 0.3,
         stagger: 0.1,
         ease: "power4.out",
       });
