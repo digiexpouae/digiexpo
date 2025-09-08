@@ -4,122 +4,122 @@
 /*  05. BLOG CSS START
 /*----------------------------------------*/
 
-.tp-blog{
-    &-thumb{
-        margin-bottom: 30px;
-        border-radius: 30px;
-        & img{
-            border-radius: 30px;
-            width: 100%;
-            transition: transform 1.5s ease;
-        }
-        &:hover{
-            & img{
-                transform: scale(1.2);
-            } 
-        }
-    }
-    &-meta{
-        margin-bottom: 12px;
-    }
-    &-category{
-        & span{
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 8px;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--tp-common-blue);
-            font-family: var(--tp-ff-urban);
-            border: 1px solid rgba(91, 108, 255, 0.1);
-            border-radius: 30px;
-            display: inline-block;
-            padding: 8px 12px;
-        }
-    }
-    &-date{
-        & span{
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 12px;            
-            color: #787B83;
-            padding-left: 12px;
-            margin-left: 12px;
-            position: relative;
-            &::after{
-                position: absolute;
-                content: '';
-                top: 8px;
-                left: 0;
-                height: 4px;
-                width: 4px;
-                border-radius: 50%;
-                background-color: #5F6168;;
-            }
-        }
-    }
-    &-title-box{
-        padding-bottom: 22px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #E9EBF1;
-    }
-    &-title-sm{
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
-        color: var(--tp-common-black);
-        font-family: var(--tp-ff-urban);
-        @media #{$lg}{
-            font-size: 20px;
-            line-height: 28px;
-            & br{
-                display: none;
-            }
-        }
-        @media #{$xs}{
-            font-size: 21px;
-            line-height: 29px;
-            & br{
-                display: none;
-            }
-        }
-        &:hover{
-            color: var(--tp-theme-1);
-        }
-    }
-    &-avata{
-        margin-right: 15px;
-    }
-    &-author-info{
-        & h5{
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 16px;
-            color: var(--tp-common-black);
-            font-family: var(--tp-ff-urban);
-            margin-bottom: 3px;
-        }
-        & span{
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;           
-            color: #787B83;
-            font-family: var(--tp-ff-urban);
-        }
-    }
-}
-.category-color-2{
-    & span{
-        border-color:rgba(255, 154, 0, 0.2);
-        color: #FF9A00;
-    }
-}
-.category-color-3{
-    & span{
-        border-color:rgba(33, 182, 65, 0.1);
-        color: var(--tp-common-green);
-    }
-}
+// .tp-blog{
+//     &-thumb{
+//         margin-bottom: 30px;
+//         border-radius: 30px;
+//         & img{
+//             border-radius: 30px;
+//             width: 100%;
+//             transition: transform 1.5s ease;
+//         }
+//         &:hover{
+//             & img{
+//                 transform: scale(1.2);
+//             } 
+//         }
+//     }
+//     &-meta{
+//         margin-bottom: 12px;
+//     }
+//     &-category{
+//         & span{
+//             font-weight: 700;
+//             font-size: 12px;
+//             line-height: 8px;
+//             letter-spacing: 0.04em;
+//             text-transform: uppercase;
+//             color: var(--tp-common-blue);
+//             font-family: var(--tp-ff-urban);
+//             border: 1px solid rgba(91, 108, 255, 0.1);
+//             border-radius: 30px;
+//             display: inline-block;
+//             padding: 8px 12px;
+//         }
+//     }
+//     &-date{
+//         & span{
+//             font-weight: 500;
+//             font-size: 14px;
+//             line-height: 12px;            
+//             color: #787B83;
+//             padding-left: 12px;
+//             margin-left: 12px;
+//             position: relative;
+//             &::after{
+//                 position: absolute;
+//                 content: '';
+//                 top: 8px;
+//                 left: 0;
+//                 height: 4px;
+//                 width: 4px;
+//                 border-radius: 50%;
+//                 background-color: #5F6168;;
+//             }
+//         }
+//     }
+//     &-title-box{
+//         padding-bottom: 22px;
+//         margin-bottom: 20px;
+//         border-bottom: 1px solid #E9EBF1;
+//     }
+//     &-title-sm{
+//         font-weight: 700;
+//         font-size: 24px;
+//         line-height: 32px;
+//         color: var(--tp-common-black);
+//         font-family: var(--tp-ff-urban);
+//         @media #{$lg}{
+//             font-size: 20px;
+//             line-height: 28px;
+//             & br{
+//                 display: none;
+//             }
+//         }
+//         @media #{$xs}{
+//             font-size: 21px;
+//             line-height: 29px;
+//             & br{
+//                 display: none;
+//             }
+//         }
+//         &:hover{
+//             color: var(--tp-theme-1);
+//         }
+//     }
+//     &-avata{
+//         margin-right: 15px;
+//     }
+//     &-author-info{
+//         & h5{
+//             font-weight: 600;
+//             font-size: 16px;
+//             line-height: 16px;
+//             color: var(--tp-common-black);
+//             font-family: var(--tp-ff-urban);
+//             margin-bottom: 3px;
+//         }
+//         & span{
+//             font-weight: 500;
+//             font-size: 14px;
+//             line-height: 16px;           
+//             color: #787B83;
+//             font-family: var(--tp-ff-urban);
+//         }
+//     }
+// }
+// .category-color-2{
+//     & span{
+//         border-color:rgba(255, 154, 0, 0.2);
+//         color: #FF9A00;
+//     }
+// }
+// .category-color-3{
+//     & span{
+//         border-color:rgba(33, 182, 65, 0.1);
+//         color: var(--tp-common-green);
+//     }
+// }
 .tp-blog-four{
     &-section-space{
         margin-bottom: 60px;
