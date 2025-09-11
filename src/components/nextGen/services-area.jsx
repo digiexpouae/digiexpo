@@ -11,6 +11,7 @@ import Metaverse  from '../../../public/animation/Metaverse.json'
 import threeD from '../../../public/animation/3D.json'
 import gesture from '../../../public/animation/gesture.json'
 import iotdevelopment from '../../../public/animation/lotdevelopment.json'
+import styles from '../mobileApp/services-area.module.scss'
 import dynamic from "next/dynamic";
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
@@ -49,13 +50,13 @@ const ServicesArea = () => {
   useTitleAnimation(titleRef);
   return (
     <>
-      <div className="tp-service__area p-relative fix pt-110 pb-110">
+      <div className={`${styles["tp-service__area"]} p-relative fix pt-110 pb-110`}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div
                 ref={titleRef}
-                className="tp-service__section-box tp__title_anime mb-50 text-center tp-title-anim"
+                className={`${styles["tp-service__section-box"]} ${styles["tp__title_anime"]} mb-50 text-center ${styles["tp-title-anim"]}`}
               >
                 <h2 className="tp-section-title">{title}</h2>
                 <p>{sub_title}</p>
@@ -68,8 +69,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".4s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="150px">
                     <source
@@ -92,15 +93,15 @@ const ServicesArea = () => {
    
    
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">Artificial Intelligence</Link>
                   </h3>
                   <p>
                   Achieve new heights with AI automation and prediction. Partner with DigiExpo for digital change.
                   </p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>
@@ -112,8 +113,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".6s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="150px">
                     <source
@@ -134,15 +135,15 @@ const ServicesArea = () => {
                      style={{width:'122px',height:'100%'}}
                        /> 
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">Augmented Reality</Link>
                   </h3>
                   <p>
                   Step beyond the screen with Augmented Reality—engage, interact, and captivate like never before.
                   </p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>
@@ -154,8 +155,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".7s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -176,13 +177,13 @@ const ServicesArea = () => {
                      style={{width:'122px',height:'100%'}}
                        /> 
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">Metaverse</Link>
                   </h3>
                   <p>With the help of DigiExpo experts build a metaverse that bridges the gap between imagination and reality.</p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>
@@ -194,8 +195,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".8s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -216,15 +217,15 @@ const ServicesArea = () => {
                      style={{width:'122px',height:'100%'}}
                        /> 
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">3D Dimension</Link>
                   </h3>
                   <p>
                   Take your visual storytelling to the next dimension with our innovative 3D projection solutions.
                   </p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>
@@ -236,8 +237,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".9s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -258,8 +259,8 @@ const ServicesArea = () => {
                      style={{width:'122px',height:'100%'}}
                        /> 
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">
                     IoT development
                     </Link>
@@ -268,7 +269,7 @@ const ServicesArea = () => {
                   Smart homes, smart cities, smart lives—brought to you by cutting-edge IoT development.
                   </p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>
@@ -280,8 +281,8 @@ const ServicesArea = () => {
               data-wow-duration=".9s"
               data-wow-delay=".10s"
             >
-              <div className="tp-service__item mb-30">
-                <div className="tp-service__icon">
+              <div className={`${styles["tp-service__item"]} mb-30`}>
+                <div className={styles["tp-service__icon"]}>
                   {/* <Image src={item.img} alt="theme-pure" /> */}
                   {/* <video autoPlay muted loop width="125px">
                     <source
@@ -302,13 +303,13 @@ const ServicesArea = () => {
                      style={{width:'122px',height:'100%'}}
                        /> 
                 </div>
-                <div className="tp-service__content">
-                  <h3 className="tp-service__title-sm tp-yellow-color">
+                <div className={styles["tp-service__content"]}>
+                  <h3 className={`${styles["tp-service__title-sm"]} tp-yellow-color`}>
                     <Link href="/service-details">Gesture Based</Link>
                   </h3>
                   <p>Leading the way in touchless innovation with gesture-based solutions for a touchless world.</p>
                 </div>
-                <div className="tp-service__link">
+                <div className={styles["tp-service__link"]}>
                   <Link href="/service-details">
                     <RightArrow />
                   </Link>

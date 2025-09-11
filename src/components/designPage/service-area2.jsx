@@ -9,7 +9,7 @@ import service_img_2 from "../../../public/assets/img/service/sv-icon-2-2.png";
 import service_img_3 from "../../../public/assets/img/service/sv-icon-2-3.png";
 import service_img_4 from "../../../public/assets/img/service/sv-icon-2-4.png";
 import bg_img from "../../../public/assets/img/service/sv-bg-2-1.jpg";
-
+import styles from '../eCommerce/service-area2.module.scss'
 const service_content = {
   title: <>Our Comprehensive Ecommerce Development Process</>,
   des: (
@@ -97,14 +97,14 @@ const { title, des, users_data, service_data, free_tools_title, free_tools } =
 const ServiceArea2 = () => {
   return (
     <>
-      <div className="tp-service-2__area p-relative pt-70 padding-bottom pb-sm-0 pt-sm-50">
-        <div className="tp-service-2__shape">
+      <div className={`${styles["tp-service-2__area"]} p-relative pt-70 padding-bottom pb-sm-0 pt-sm-50`}>
+        <div className={styles["tp-service-2__shape"]}>
           <Image src={bg_img} alt="theme-pure" />
         </div>
         <div className="container z-index-5">
           <div className="row align-items-center mb-50">
             <div className="col-xl-6 col-lg-6">
-              <div className="tp-service-2__section-box">
+              <div className={styles["tp-service-2__section-box"]}>
                 <h3 className="tp-section-title-lg pb-20">{title}</h3>
                 <p>{des}</p>
               </div>
@@ -114,12 +114,12 @@ const ServiceArea2 = () => {
               data-wow-duration=".9s"
               data-wow-delay=".3s"
             >
-              <div className="tp-service-2__user-box p-relative d-flex justify-content-lg-start justify-content-lg-end align-items-center">
-                <div className="tp-service-2__user-shape">
+              <div className={`${styles["tp-service-2__user-box"]} p-relative d-flex justify-content-lg-start justify-content-lg-end align-items-center`}>
+                <div className={styles["tp-service-2__user-shape"]}>
                   <LinearGradientLine />
                 </div>
                 {users_data.map((item, i) => (
-                  <div key={i} className="tp-service-2__user">
+                  <div key={i} className={styles["tp-service-2__user"]}>
                     <span>{item.users_count}</span>
                     <p>{item.users_status}</p>
                   </div>
@@ -133,9 +133,9 @@ const ServiceArea2 = () => {
               data-wow-duration=".9s"
               data-wow-delay=".8s"
             >
-              <div className="tp-service-2__item-wrapper p-relative">
-                <div className="tp-service-2__item d-flex justify-content-between flex-column">
-                  <div className="tp-service-2__icon">
+              <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+                <div className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}>
+                  <div className={styles["tp-service-2__icon"]}>
                     {/* <Image src={service_img_4} alt="theme-pure" /> */}
                     <video autoPlay muted loop width="100px">
                       <source
@@ -144,14 +144,14 @@ const ServiceArea2 = () => {
                       />
                     </video>
                   </div>
-                  <div className="tp-service-2__text">
-                    <h4 className="tp-service-2__title-sm ecomm">
+                  <div className={styles["tp-service-2__text"]}>
+                    <h4 className={`${styles["tp-service-2__title-sm"]} ecomm`}>
                       <Link href="/service-details">
                       Research
                       </Link>
                     </h4>
                     <Link
-                      className="tp-service-2__link"
+                      className={styles["tp-service-2__link"]}
                       href="/service-details"
                     >
                       Explore
@@ -159,7 +159,7 @@ const ServiceArea2 = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="tp-service-2__bg-shape tp-service-2__color-1"></div>
+                <div className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-1"]}`}></div>
               </div>
             </div>
             <div
@@ -167,9 +167,9 @@ const ServiceArea2 = () => {
               data-wow-duration=".9s"
               data-wow-delay=".8s"
             >
-              <div className="tp-service-2__item-wrapper p-relative">
-                <div className="tp-service-2__item d-flex justify-content-between flex-column">
-                  <div className="tp-service-2__icon">
+              <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+                <div className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}>
+                  <div className={styles["tp-service-2__icon"]}>
                     {/* <Image src={service_img_4} alt="theme-pure" /> */}
                     <video autoPlay muted loop width="100px">
                       <source
@@ -178,14 +178,14 @@ const ServiceArea2 = () => {
                       />
                     </video>
                   </div>
-                  <div className="tp-service-2__text">
-                    <h4 className="tp-service-2__title-sm ecomm">
+                  <div className={styles["tp-service-2__text"]}>
+                    <h4 className={`${styles["tp-service-2__title-sm"]} ecomm`}>
                       <Link href="/service-details">
                       Design Development
                       </Link>
                     </h4>
                     <Link
-                      className="tp-service-2__link"
+                      className={styles["tp-service-2__link"]}
                       href="/service-details"
                     >
                       Explore
@@ -193,7 +193,7 @@ const ServiceArea2 = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="tp-service-2__bg-shape tp-service-2__color-2"></div>
+                <div className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-2"]}`}></div>
               </div>
             </div>
             <div
@@ -201,8 +201,8 @@ const ServiceArea2 = () => {
               data-wow-duration=".9s"
               data-wow-delay=".8s"
             >
-              <div className="tp-service-2__item-wrapper p-relative">
-                <div className="tp-service-2__item d-flex justify-content-between flex-column">
+              <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+                <div className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}>
                   <div className="tp-service-2__icon">
                     {/* <Image src={service_img_4} alt="theme-pure" /> */}
                     <video autoPlay muted loop width="100px">
@@ -212,14 +212,14 @@ const ServiceArea2 = () => {
                       />
                     </video>
                   </div>
-                  <div className="tp-service-2__text">
-                    <h4 className="tp-service-2__title-sm ecomm">
+                  <div className={styles["tp-service-2__text"]}>
+                    <h4 className={`${styles["tp-service-2__title-sm"]} ecomm`}>
                       <Link href="/service-details">
                       Validation
                       </Link>
                     </h4>
                     <Link
-                      className="tp-service-2__link"
+                      className={styles["tp-service-2__link"]}
                       href="/service-details"
                     >
                       Explore
@@ -227,7 +227,7 @@ const ServiceArea2 = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="tp-service-2__bg-shape tp-service-2__color-3"></div>
+                <div className={`${styles["tp-service-2__bg-shape"]} ${styles['tp-service-2__color-3']}`}></div>
               </div>
             </div>
             <div
@@ -235,9 +235,9 @@ const ServiceArea2 = () => {
               data-wow-duration=".9s"
               data-wow-delay=".8s"
             >
-              <div className="tp-service-2__item-wrapper p-relative">
-                <div className="tp-service-2__item d-flex justify-content-between flex-column">
-                  <div className="tp-service-2__icon">
+              <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+                <div className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}>
+                  <div className={styles["tp-service-2__icon"]}>
                     {/* <Image src={service_img_4} alt="theme-pure" /> */}
                     <video autoPlay muted loop width="100px">
                       <source
@@ -246,14 +246,14 @@ const ServiceArea2 = () => {
                       />
                     </video>
                   </div>
-                  <div className="tp-service-2__text">
-                    <h4 className="tp-service-2__title-sm ecomm">
+                  <div className={styles["tp-service-2__text"]}>
+                    <h4 className={`${styles["tp-service-2__title-sm"]} ecomm`}>
                       <Link href="/service-details">
                       Deployment &<br />Optimization
                       </Link>
                     </h4>
                     <Link
-                      className="tp-service-2__link"
+                      className={styles["tp-service-2__link"]}
                       href="/service-details"
                     >
                       Explore
@@ -261,7 +261,7 @@ const ServiceArea2 = () => {
                     </Link>
                   </div>
                 </div>
-                <div className="tp-service-2__bg-shape tp-service-2__color-4"></div>
+                <div className={`${styles["tp-service-2__bg-shape"]} ${styles['tp-service-2__color-4']}`}></div>
               </div>
             </div>
           </div>

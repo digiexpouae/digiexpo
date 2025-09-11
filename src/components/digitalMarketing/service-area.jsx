@@ -17,7 +17,10 @@ import content from "../../../public/animation/content.json"
 import SMM from "../../../public/animation/SMM.json"
 import emailmarketing from "../../../public/animation/emailmarketing.json"
 import influencer from '../../../public/animation/influencer.json'
+import styles from '../service/service-area.module.scss'
+
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+
 
 const service_content = {
   title: (
@@ -51,7 +54,7 @@ const service_content = {
 const ServiceArea = () => {
     return (
       <>
-        <div className='tp-service-area pb-120 pt-120 z-index pb-sm-50 pt-sm-50'>
+        <div className={`${styles['tp-service-area']} pb-120 pt-120 z-index pb-sm-50 pt-sm-50`}>
           <div className='container'>
             {/* <div className="row">
                      <div className="col-xl-12">
@@ -74,28 +77,28 @@ const ServiceArea = () => {
                 data-wow-delay='.3s'
               >
                 <div
-                  className='tp-service-3-item mb-30 p-relative z-index'
+                  className={`${styles['tp-service-3-item']} mb-30 p-relative z-index`}
                   style={{ backgroundImage: `url(${bg_img})` }}
                 >
-                  <div className='tp-service-3-icon'>
+                  <div className={styles['tp-service-3-icon']}>
                     <Image src={service_icon_1} alt='theme-pure' />
                   </div>
-                  <div className='tp-service-3-content'>
+                  <div className={styles['tp-service-3-content']}>
                     <span>{service_title}</span>
-                    <h4 className='tp-service-3-title-sm'>
+                    <h4 className={styles['tp-service-3-title-sm']}>
                       <Link href='/service-details'>{service_info}</Link>
                     </h4>
                     <p  style={{color:'white'}}>{sub_text}</p>
                   </div>
-                  <div className='tp-service-3-btn'>
+                  <div className={styles['tp-service-3-btn']}>
                     <Link
-                      className='tp-btn-white-solid'
+                      className={styles['tp-btn-white-solid']}
                       href='/service-details'
                     >
                       Learn More
                     </Link>
                   </div>
-                  <div className='tp-service-3-shape'>
+                  <div className={styles['tp-service-3-shape']}>
                     <Image src={service_icon_2} alt='theme-pure' />
                   </div>
                 </div>
@@ -106,8 +109,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between d-xl-block mt-xl-140'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between d-xl-block mt-xl-140`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                  {/* <video autoPlay muted loop width='125px'>
                       <source
@@ -128,15 +131,15 @@ const ServiceArea = () => {
                   style={{width:'132px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Social Media Marketing (SMM)</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Transform casual clicks into loyal customers with our
                         expert SMM.
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -149,8 +152,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='150px'>
                       <source
@@ -170,15 +173,15 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Search Engine Optimization(SEO)</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Our SEO pros help you achieve top <br /> <div style={{whiteSpace:'nowrap'}}>search rankings and
                         outrank your rivals.</div>
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -191,8 +194,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='150px'>
                       <source
@@ -212,14 +215,14 @@ const ServiceArea = () => {
                   style={{width:'152px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Performance Marketing</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Boost Your ROI with our Performance Marketing Service
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -232,8 +235,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                  
                     
@@ -249,14 +252,14 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Email Marketing</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Reach more, convert more with our Email Marketing
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -269,8 +272,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
                       <source
@@ -291,14 +294,14 @@ const ServiceArea = () => {
                   style={{width:'142px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>App Store Optimization(ASO)</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Boost your app’s visibility with our ASO magic
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -311,8 +314,8 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
-                  <div className='tp-service-sm-icon'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
                       <source
@@ -332,14 +335,14 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Writing</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}> 
                       <Link href='/service-details'>
                         Connect with your audience through compelling content.
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -352,7 +355,7 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
+                <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
@@ -373,14 +376,14 @@ const ServiceArea = () => {
                   style={{width:'122px',height:'100%'}}
                     />  
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Influencer Marketing</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Connect with Your Target Audience Through Influencers.
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>
@@ -393,7 +396,7 @@ const ServiceArea = () => {
                 data-wow-duration='.9s'
                 data-wow-delay='.5s'
               >
-                <div className='tp-service-sm-item mb-30 d-flex flex-column justify-content-between'>
+                <div className= {`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
                   <div className='tp-service-sm-icon'>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
@@ -415,15 +418,15 @@ const ServiceArea = () => {
                     />  
 
                   </div>
-                  <div className='tp-service-sm-content' style={{height:'162px'}}>
+                  <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Content Creation</span>
-                    <h3 className='tp-service-sm-title'>
+                    <h3 className={styles['tp-service-sm-title']}>
                       <Link href='/service-details'>
                         Building Brand Connections Through Compelling Digital
                         Narratives
                       </Link>
                     </h3>
-                    <div className='tp-service-sm-link'>
+                    <div className={styles['tp-service-sm-link']}>
                       <Link href='/service-details'>
                         Learn More <i className='far fa-arrow-right'></i>
                       </Link>

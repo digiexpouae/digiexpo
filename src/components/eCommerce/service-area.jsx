@@ -12,6 +12,7 @@ import shopifyecom from '../../../public/animation/shopifyecom.json'
 import dynamic from 'next/dynamic';
 import mirakalecom from '../../../public/animation/mirakalecom.json'
 import megneto from '../../../public/animation/megneto.json'
+import styles from '../mobileApp/services-area.module.scss'
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
@@ -28,7 +29,7 @@ const service_content = {
 const ServiceArea = () => {
     return (
         <>
-            <div className="tp-service-area pb-120 pt-120 z-index pb-sm-50 pt-sm-50">
+            <div className={`${styles['tp-service-area']} pb-120 pt-120 z-index pb-sm-50 pt-sm-50`}>
                <div className="container">
                   {/* <div className="row">
                      <div className="col-xl-12">
@@ -47,26 +48,26 @@ const ServiceArea = () => {
                   <div className="row">
 
                      <div className="col-xl-8 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div className="tp-service-3-item mb-30 p-relative z-index" style={{backgroundImage: `url(${bg_img})`}}>
-                           <div className="tp-service-3-icon">
+                        <div className={`${styles['tp-service-3-item']} mb-30 p-relative z-index`} style={{backgroundImage: `url(${bg_img})`}}>
+                           <div className={styles["tp-service-3-icon"]}>
                               <Image src={service_icon_1} alt="theme-pure" />
                            </div>
-                           <div className="tp-service-3-content">
+                           <div className={styles["tp-service-3-content"]}>
                               <span>{service_title}</span>
-                              <h4 className="tp-service-3-title-sm">
+                              <h4 className={styles["tp-service-3-title-sm"]}>
                                  <Link href="/service-details">{service_info}</Link></h4>
                            </div>
-                           <div className="tp-service-3-btn">
+                           <div className={styles["tp-service-3-btn"]}>
                               <Link className="tp-btn-white-solid" href="/service-details">Learn More</Link>
                            </div>
-                           <div className="tp-service-3-shape">
+                           <div className={styles["tp-service-3-shape"]}>
                               <Image src={service_icon_2} alt="theme-pure" />
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="100px">
                       <source
                         src="/assets/img/service/woocommerce.webm"
@@ -85,18 +86,18 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>WooCommerce Development </span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Turn your WordPress into a shopping powerhouse with WooCommerce wizardry</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>WooCommerce Development </span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Turn your WordPress into a shopping powerhouse with WooCommerce wizardry</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/mirakl.webm"
@@ -115,18 +116,18 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>Mirakl Development</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Craft your dream marketplace with our Mirakl’s powerful platform</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>Mirakl Development</span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Craft your dream marketplace with our Mirakl’s powerful platform</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/magento.webm"
@@ -145,18 +146,18 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>Magento Ecommerce Development</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Fuel your eCommerce empire with Magento’s limitless power.</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>Magento Ecommerce Development</span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Fuel your eCommerce empire with Magento’s limitless power.</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/bigcommerce.webm"
@@ -175,18 +176,18 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>BigCommerce Development</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Ride the wave of growth—BigCommerce made brilliantly simple.</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>BigCommerce Development</span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Ride the wave of growth—BigCommerce made brilliantly simple.</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/shopify.webm"
@@ -205,18 +206,18 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>Shopify Ecommerce Development </span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Grow smarter, not harder—Shopify stores that captivate and convert.</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>Shopify Ecommerce Development </span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Grow smarter, not harder—Shopify stores that captivate and convert.</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
                         </div>
                      </div>
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                        <div className="tp-service-sm-item mb-30 d-flex flex-column justify-content-between mb-sm-0">
-                           <div className="tp-service-sm-icon">
+                        <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between mb-sm-0`}>
+                           <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
                       <source
                         src="/assets/img/service/shopify-plus.webm"
@@ -235,10 +236,10 @@ const ServiceArea = () => {
                                       style={{width:'122px',height:'100%'}}
                                         />  
                            </div>
-                           <div className="tp-service-sm-content">
-                              <span className='ecomm'>Shopify Plus Ecommerce Development</span>
-                              <h3 className="tp-service-sm-title"><Link href="/service-details">Go beyond the ordinary—Shopify Plus crafted for your eCommerce conquest.</Link></h3>
-                              <div className="tp-service-sm-link">
+                           <div className={styles["tp-service-sm-content"]}>
+                              <span className={styles['ecomm']}>Shopify Plus Ecommerce Development</span>
+                              <h3 className={styles["tp-service-sm-title"]}><Link href="/service-details">Go beyond the ordinary—Shopify Plus crafted for your eCommerce conquest.</Link></h3>
+                              <div className={styles["tp-service-sm-link"]}>
                                  <Link href="/service-details">Learn More <i className="far fa-arrow-right"></i></Link>
                               </div>
                            </div>
