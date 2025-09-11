@@ -139,13 +139,16 @@
       line-height: 16px;
       font-family: var(--tp-ff-mont);
       color: var(--tp-common-black);
-      padding-top: 5px;
+      padding-top: 8px;
       display: inline-block;
       opacity: 0;
       visibility: hidden;
       transition: 0.3s;
       @media #{$lg} {
         font-size: 15px;
+      }
+      @media #{xs}{
+        padding-top: 6px;
       }
       & i {
         margin-left: 10px;

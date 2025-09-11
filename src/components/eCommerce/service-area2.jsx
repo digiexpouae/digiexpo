@@ -98,174 +98,198 @@ const { title, des, users_data, service_data, free_tools_title, free_tools } =
 const ServiceArea2 = () => {
   return (
     <>
-     <div className={`tp-service-2__area p-relative pt-70 padding-bottom pt-sm-50 pb-sm-0`}>
-  <div className={styles['tp-service-2__shape']}>
-    <Image src={bg_img} alt="theme-pure" />
-  </div>
-  <div className="container z-index-5">
-    <div className="row align-items-center mb-50">
-      <div className="col-xl-6 col-lg-6">
-        <div className={styles['tp-service-2__section-box']}>
-          <h3 className={'tp-section-title-lg'}>{title}</h3>
-          <p>{des}</p>
-        </div>
+ 
+    <div
+      className={`${styles["tp-service-2__area"]} p-relative pt-70 padding-bottom pt-sm-50 pb-sm-0`}
+    >
+      <div className={styles["tp-service-2__shape"]}>
+        <Image src={bg_img} alt="theme-pure" />
       </div>
-      <div
-        className="col-xl-6 col-lg-6 wow tpfadeRight"
-        data-wow-duration=".9s"
-        data-wow-delay=".3s"
-      >
-        <div className={`${styles['tp-service-2__user-box']} p-relative d-flex justify-content-lg-start justify-content-lg-end align-items-center`}>
-          <div className={styles['tp-service-2__user-shape']}>
-            <LinearGradientLine />
-          </div>
-          {users_data.map((item, i) => (
-            <div key={i} className={styles['tp-service-2__user']}>
-              <span>{item.users_count}</span>
-              <p>{item.users_status}</p>
+
+      <div className="container z-index-5">
+        <div className="row align-items-center mb-50">
+          <div className="col-xl-6 col-lg-6">
+            <div className={styles["tp-service-2__section-box"]}>
+              <h3 className="tp-section-title-lg">{title}</h3>
+              <p className={styles["tp-service-2__description"]}>{des}</p>
             </div>
-          ))}
+          </div>
+
+          <div
+            className="col-xl-6 col-lg-6 wow tpfadeRight"
+            data-wow-duration=".9s"
+            data-wow-delay=".3s"
+          >
+            <div
+              className={`${styles["tp-service-2__user-box"]} p-relative d-flex justify-content-lg-start justify-content-lg-end align-items-center`}
+            >
+              <div className={styles["tp-service-2__user-shape"]}>
+                <LinearGradientLine />
+              </div>
+
+              {users_data.map((item, i) => (
+                <div key={i} className={styles["tp-service-2__user"]}>
+                  <span className={styles["tp-service-2__user-count"]}>
+                    {item.users_count}
+                  </span>
+                  <p className={styles["tp-service-2__user-status"]}>
+                    {item.users_status}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="row gx-60">
+          {/* Card 1 */}
+          <div
+            className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+            data-wow-duration=".9s"
+            data-wow-delay=".8s"
+          >
+            <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+              <div
+                className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}
+              >
+                <div className={styles["tp-service-2__icon"]}>
+                  <video autoPlay muted loop width="100px">
+                    <source
+                      src="/assets/img/service/discovery-planning.webm"
+                      type="video/webm"
+                    />
+                  </video>
+                </div>
+
+                <div className={styles["tp-service-2__text"]}>
+                  <h4 className={`${styles["tp-service-2__title-sm"]} ${styles.ecomm}`}>
+                    <Link href="/service-details">Requirement<br />Analysis</Link>
+                  </h4>
+
+                  <Link className={styles["tp-service-2__link"]} href="/service-details">
+                    Explore <i className="far fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+
+              <div
+                className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-1"]}`}
+              />
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div
+            className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+            data-wow-duration=".9s"
+            data-wow-delay=".8s"
+          >
+            <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+              <div
+                className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}
+              >
+                <div className={styles["tp-service-2__icon"]}>
+                  <video autoPlay muted loop width="100px">
+                    <source
+                      src="/assets/img/service/development-coding.webm"
+                      type="video/webm"
+                    />
+                  </video>
+                </div>
+
+                <div className={styles["tp-service-2__text"]}>
+                  <h4 className={`${styles["tp-service-2__title-sm"]} ${styles.ecomm}`}>
+                    <Link href="/service-details">Design &<br />Development</Link>
+                  </h4>
+
+                  <Link className={styles["tp-service-2__link"]} href="/service-details">
+                    Explore <i className="far fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+
+              <div
+                className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-2"]}`}
+              />
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div
+            className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+            data-wow-duration=".9s"
+            data-wow-delay=".8s"
+          >
+            <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+              <div
+                className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}
+              >
+                <div className={styles["tp-service-2__icon"]}>
+                  <video autoPlay muted loop width="100px">
+                    <source
+                      src="/assets/img/service/testing-assurance.webm"
+                      type="video/webm"
+                    />
+                  </video>
+                </div>
+
+                <div className={styles["tp-service-2__text"]}>
+                  <h4 className={`${styles["tp-service-2__title-sm"]} ${styles.ecomm}`}>
+                    <Link href="/service-details">Integration &<br />Setup</Link>
+                  </h4>
+
+                  <Link className={styles["tp-service-2__link"]} href="/service-details">
+                    Explore <i className="far fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+
+              <div
+                className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-3"]}`}
+              />
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div
+            className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+            data-wow-duration=".9s"
+            data-wow-delay=".8s"
+          >
+            <div className={`${styles["tp-service-2__item-wrapper"]} p-relative`}>
+              <div
+                className={`${styles["tp-service-2__item"]} d-flex justify-content-between flex-column`}
+              >
+                <div className={styles["tp-service-2__icon"]}>
+                  <video autoPlay muted loop width="100px">
+                    <source
+                      src="/assets/img/service/deployment-maintenance.webm"
+                      type="video/webm"
+                    />
+                  </video>
+                </div>
+
+                <div className={styles["tp-service-2__text"]}>
+                  <h4 className={`${styles["tp-service-2__title-sm"]} ${styles.ecomm}`}>
+                    <Link href="/service-details">Testing &<br />Launch</Link>
+                  </h4>
+
+                  <Link className={styles["tp-service-2__link"]} href="/service-details">
+                    Explore <i className="far fa-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+
+              <div
+                className={`${styles["tp-service-2__bg-shape"]} ${styles["tp-service-2__color-4"]}`}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div className="row gx-60">
-      <div
-        className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
-        data-wow-duration=".9s"
-        data-wow-delay=".8s"
-      >
-        <div className={styles['tp-service-2__item-wrapper']}>
-          <div className={`${styles['tp-service-2__item']} d-flex justify-content-between flex-column`}>
-            <div className={styles['tp-service-2__icon']}>
-              <video autoPlay muted loop width="100px">
-                <source
-                  src="/assets/img/service/discovery-planning.webm"
-                  type="video/webm"
-                />
-              </video>
-            </div>
-            <div className={styles['tp-service-2__text']}>
-              <h4 className={`${styles['tp-service-2__title-sm']} ecomm`}>
-                <Link href="/service-details">
-                  Requirement
-                  <br />
-                  Analysis
-                </Link>
-              </h4>
-              <Link
-                className={styles['tp-service-2__link']}
-                href="/service-details"
-              >
-                Explore
-                <i className="far fa-arrow-right"></i>
-              </Link>
-            </div>
-          </div>
-          <div className={`${styles['tp-service-2__bg-shape']} tp-service-2__color-1`}></div>
-        </div>
-      </div>
-      <div
-        className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
-        data-wow-duration=".9s"
-        data-wow-delay=".8s"
-      >
-        <div className={styles['tp-service-2__item-wrapper']}>
-          <div className={`${styles['tp-service-2__item']} d-flex justify-content-between flex-column`}>
-            <div className={styles['tp-service-2__icon']}>
-              <video autoPlay muted loop width="100px">
-                <source
-                  src="/assets/img/service/development-coding.webm"
-                  type="video/webm"
-                />
-              </video>
-            </div>
-            <div className={styles['tp-service-2__text']}>
-              <h4 className={`${styles['tp-service-2__title-sm']} ecomm`}>
-                <Link href="/service-details">
-                  Design &<br /> Development
-                </Link>
-              </h4>
-              <Link
-                className={styles['tp-service-2__link']}
-                href="/service-details"
-              >
-                Explore
-                <i className="far fa-arrow-right"></i>
-              </Link>
-            </div>
-          </div>
-          <div className={`${styles['tp-service-2__bg-shape']} ${styles['tp-service-2__color-2']}`}></div>
-        </div>
-      </div>
-      <div
-        className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
-        data-wow-duration=".9s"
-        data-wow-delay=".8s"
-      >
-        <div className={styles['tp-service-2__item-wrapper']}>
-          <div className={`${styles['tp-service-2__item']} d-flex justify-content-between flex-column`}>
-            <div className={styles['tp-service-2__icon']}>
-              <video autoPlay muted loop width="100px">
-                <source
-                  src="/assets/img/service/testing-assurance.webm"
-                  type="video/webm"
-                />
-              </video>
-            </div>
-            <div className={styles['tp-service-2__text']}>
-              <h4 className={`${styles['tp-service-2__title-sm']} ecomm`}>
-                <Link href="/service-details">
-                  Integration &<br /> Setup
-                </Link>
-              </h4>
-              <Link
-                className={styles['tp-service-2__link']}
-                href="/service-details"
-              >
-                Explore
-                <i className="far fa-arrow-right"></i>
-              </Link>
-            </div>
-          </div>
-          <div className={`${styles['tp-service-2__bg-shape']} ${styles['tp-service-2__color-3']}`}></div>
-        </div>
-      </div>
-      <div
-        className="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
-        data-wow-duration=".9s"
-        data-wow-delay=".8s"
-      >
-        <div className={styles['tp-service-2__item-wrapper']}>
-          <div className={`${styles['tp-service-2__item']} d-flex justify-content-between flex-column`}>
-            <div className={styles['tp-service-2__icon']}>
-              <video autoPlay muted loop width="100px">
-                <source
-                  src="/assets/img/service/deployment-maintenance.webm"
-                  type="video/webm"
-                />
-              </video>
-            </div>
-            <div className={styles['tp-service-2__text']}>
-              <h4 className={`${styles['tp-service-2__title-sm']} ${styles['ecomm']}`}>
-                <Link href="/service-details">
-                  Testing &<br /> Launch
-                </Link>
-              </h4>
-              <Link
-                className={styles['tp-service-2__link']}
-                href="/service-details"
-              >
-                Explore
-                <i className="far fa-arrow-right"></i>
-              </Link>
-            </div>
-          </div>
-          <div className={`${styles['tp-service-2__bg-shape']} ${styles['tp-service-2__color-4']}`}></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+ 
+
     </>
   );
 };
