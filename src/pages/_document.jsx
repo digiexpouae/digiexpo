@@ -36,6 +36,7 @@ export default function Document() {
           strategy='afterInteractive'
           src='https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB'
           async
+          defer
         />
         <Script
           strategy='afterInteractive'
