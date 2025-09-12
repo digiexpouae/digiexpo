@@ -3,7 +3,7 @@ import LocationTwo from '@/svg/location-2';
 import PhoneThree from '@/svg/phone-3';
 import Link from 'next/link';
 import Image from 'next/image';
-
+import LazyVideo from '@/components/lazyload/lazyloavideo';
 import contact_img from "../../../../public/assets/img/hero/hero-4-3.png"
 import shape_1 from "../../../../public/assets/img/contact/shape-4-1.png"
 import NiceSelect from '@/ui/nice-select';
@@ -21,6 +21,8 @@ const {sub_title, title , phone, email, location}  = contact_content
 
 const ContactArea2 = () => {
     const selectHandler = (e) => {};
+
+
 
 
 
@@ -43,14 +45,13 @@ const ContactArea2 = () => {
                 <div className='tp-contact-section-box pb-25'  >
                   {/* <h5 className="tp-section-subtitle-4 pb-10 ">{sub_title}</h5> */}
                  {/* video removed */}
-                <video autoPlay muted loop playsInline preload="none"  width='500px'>
-                     <source
-                      src='/assets/img/contact/Contactp.mp4'
-                      type='video/mp4'
-                    />    
-
+            
        
-                   </video> 
+                      <LazyVideo
+                      src='/assets/img/contact/Contactp.mp4'
+        width="500px"
+        poster="/assets/img/contact/contact-poster.jpg"
+      />
                       {/* <source
  
  src='/assets/img/contact/contact.mov'

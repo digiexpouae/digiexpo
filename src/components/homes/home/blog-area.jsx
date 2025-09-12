@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-
+import LazyVideo from "@/components/lazyload/lazyloavideo";
 const blog_content = {
   sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
   title: "Our Digital Marketing Digest",
@@ -47,10 +47,11 @@ const BlogArea = () => {
               <div className='tp-blog-four-item p-relative fix'>
                 <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
-                
-                    <video autoPlay muted loop playsInline preload="none" width="570px">
-                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-                    </video>
+                   <LazyVideo
+        src="/assets/img/hero/herosection.mp4"
+        width="570px"
+        poster="/assets/img/contact/contact-poster.jpg"
+      />
                   {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                   //     <source
                   // src='/assets/img/hero/herosection.mp4'                        
@@ -109,9 +110,11 @@ const BlogArea = () => {
                 <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
                  
-                    <video autoPlay muted loop playsInline preload="none" width="570px">
-                      <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-                    </video>
+                               <LazyVideo
+        src="/assets/img/hero/herosection.mp4"
+        width="570px"
+        poster="/assets/img/contact/contact-poster.jpg"
+      />
                     {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                       <source
                   src='/assets/img/hero/herosection.mp4'                        
