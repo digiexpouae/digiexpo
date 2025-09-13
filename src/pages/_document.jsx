@@ -16,6 +16,16 @@ export default function Document() {
 
         /> */}
 
+<link
+          rel="preload"
+          as="image"
+          href="/assets/img/hero/hero_frame.webp"
+          imagesrcset="/assets/img/hero/poster.webp"
+          imagesizes="100vw"
+            fetchpriority="high"
+        />
+
+
      <link
           rel="preload"
           as="image"
