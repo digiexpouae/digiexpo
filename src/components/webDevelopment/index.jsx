@@ -45,7 +45,7 @@ const WebDevelopment = () => {
       <BlogArea />
       <ContactArea />
       <FooterFour />
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
     </>
   );
 };

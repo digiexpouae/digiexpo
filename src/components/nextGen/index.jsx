@@ -43,7 +43,7 @@ const NextGen = () => {
           <ContactArea />
           </main>
           <FooterFour/>
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </div>
       </div>
     </>

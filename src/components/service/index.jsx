@@ -28,7 +28,7 @@ const Service = () => {
             <CtaArea />
           </main>
           <FooterFour />
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </div>
       </div>
     </>

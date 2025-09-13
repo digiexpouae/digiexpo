@@ -47,7 +47,7 @@ const Ecommerce = () => {
             <ContactArea />
           </main>
           <FooterFour />
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </div>
       </div>
     </>

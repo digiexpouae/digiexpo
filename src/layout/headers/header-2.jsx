@@ -1,4 +1,4 @@
-import useSticky from "@/hooks/use-sticky";
+// import useSticky from "@/hooks/use-sticky";
 import Offcanvus from "@/common/offcanvus";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,7 @@ const hero_content = {
 const { login_btn, sign_up_btn } = hero_content;
 
 const HeaderTwo = () => {
-  const { sticky } = useSticky();
+  // const { sticky } = useSticky();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
 

@@ -41,7 +41,7 @@ const MobileApp = () => {
             <ContactArea />
           </main>
           <FooterFour />
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </div>
       </div>
     </>
