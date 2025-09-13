@@ -4,8 +4,8 @@ import PhoneThree from '@/svg/phone-3';
 import Link from 'next/link';
 import Image from 'next/image';
 import LazyVideo from '@/components/lazyload/lazyloavideo';
-import contact_img from "../../../../public/assets/img/hero/hero-4-3.png"
-import shape_1 from "../../../../public/assets/img/contact/shape-4-1.png"
+import contact_img from "../../../../public/assets/img/hero/hero-4-3.a6a8b57c (1).webp"
+import shape_1 from "../../../../public/assets/img/contact/shape-4-1.fa71a606.webp"
 import NiceSelect from '@/ui/nice-select';
 import ContactUsFormMuz from '@/forms/contact-us-form-muz';
 

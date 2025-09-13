@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import shape_1 from "../../../../public/assets/img/cta/cta-shape-5-1.png";
+import shape_1 from "../../../../public/assets/img/cta/cta-shape-5-1.36521cea.webp";
 import shape_2 from "../../../../public/assets/img/cta/cta-shape-5-2.png";
 
 const business_content = {
