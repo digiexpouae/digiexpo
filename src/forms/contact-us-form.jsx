@@ -1,14 +1,15 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-// import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
+import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
 
 const ContactUsForm = () => {
+  const formref = useRef(null);
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
   const [submissionError, setSubmissionError] = useState(null);
@@ -173,8 +174,8 @@ const ContactUsForm = () => {
             </div>
           </div>
           <div className='col-xxl-12 mb-30'>
-            {/* <RecaptchaComponent
-              onChange={capchahandlechange}  /> */}
+            <RecaptchaComponent
+              onChange={capchahandlechange} formref={formref} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}

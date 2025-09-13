@@ -1,11 +1,11 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-// import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
+import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
 const ContactUsFormMuz = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
@@ -18,6 +18,7 @@ const ContactUsFormMuz = () => {
     inquiry: "Your Inquiry about",
     message: "",
   });
+  const formref = useRef(null);
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [recaptchaError, setRecaptchaError] = useState(null);
@@ -100,7 +101,7 @@ const ContactUsFormMuz = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='box'>
+      <form onSubmit={handleSubmit} className='box' ref={formref}>
         <div className='row'>
           <div className='col-xl-6'>
             <div className='tp-contact-input mb-20'>
@@ -173,7 +174,7 @@ const ContactUsFormMuz = () => {
             </div>
           </div>
           <div className='col-xl-12 mb-30'>
-            {/* <RecaptchaComponent onChange={capchahandlechange} /> */}
+            <RecaptchaComponent onChange={capchahandlechange} formref={formref} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
