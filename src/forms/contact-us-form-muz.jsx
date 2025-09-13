@@ -4,7 +4,7 @@ import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
-import RecaptchaComponent from '../components/shared/RecaptchaComponent'
+// import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 const ContactUsFormMuz = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
@@ -75,6 +75,7 @@ const ContactUsFormMuz = () => {
       setIsSubmitDisabled(true);
       return;
     }
+    
     try {
       const response = await fetch('/api/verifyRecapcha', {
         method: 'POST',
@@ -171,12 +172,12 @@ const ContactUsFormMuz = () => {
               ></textarea>
             </div>
           </div>
-          <div className='col-xl-12 mb-30'>
+          {/* <div className='col-xl-12 mb-30'>
             <RecaptchaComponent onChange={capchahandlechange} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
-          </div>
+          </div> */}
           <div className='col-xl-12'>
             <div className='tp-contact-btn'>
               <button
