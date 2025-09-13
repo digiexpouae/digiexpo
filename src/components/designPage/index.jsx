@@ -41,7 +41,7 @@ const DesignPage = () => {
             <ContactArea />
           </main>
           <FooterFour />
-          {/* <ScrollToTop /> */}
+          <ScrollToTop />
         </div>
       </div>
     </>

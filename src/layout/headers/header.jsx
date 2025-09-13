@@ -1,4 +1,4 @@
-// import useSticky from "@/hooks/use-sticky";
+import useSticky from "@/hooks/use-sticky";
 import Offcanvus from "@/common/offcanvus";
 import SearchPopup from "@/modals/search-popup";
 import SearchIconTwo from "@/svg/search-icon-2";
@@ -17,7 +17,7 @@ import WhatsappIcon from "@/svg/whatsapp-icon";
 import ContactUsFormMuz from "@/forms/contact-us-form-muz";
 
 const Header = () => {
-  // const { sticky } = useSticky();
+  const { sticky } = useSticky();
   const [searchOpen, setSearchOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -72,9 +72,8 @@ const Header = () => {
         <div
           id='header-sticky'
           className={`header-bottom__area header-mob-space header-bottom__area-2 header-bottom__transparent z-index-5 
-        
+         ${sticky && "header-sticky"}
 `}
-    // ${sticky && "header-sticky"}
         >
           <div className='container'>
             <div className='row align-items-center'>

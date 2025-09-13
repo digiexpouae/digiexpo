@@ -42,7 +42,7 @@ const DigitalMarketing = () => {
             <ContactArea />
           </main>
           <FooterFour />
-          {/* <ScrollToTop /> */}
+          <ScrollToTop />
         </div>
       </div>
     </>
