@@ -6,10 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-const RecaptchaComponent = dynamic(
-  () => import("@/components/shared/RecaptchaComponent"),
-  { ssr: false }
-);
+import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 
 const ContactUsForm = () => {
   const formref = useRef(null);

@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 
+import dynamic from "next/dynamic";
+
+const ReCAPTCHA  = dynamic(
+  () => import( "react-google-recaptcha"),
+  { ssr: false }
+);
 export default function RecaptchaComponent({ onChange,formref }) {
   const [visible, setVisible] = useState(false); // control when to mount ReCAPTCHA
   // const formRef = useRef(null);
