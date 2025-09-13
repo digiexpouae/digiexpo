@@ -17,7 +17,6 @@ const ContactUsFormMuz = () => {
     inquiry: "Your Inquiry about",
     message: "",
   });
-  const formref = useRef(null);
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [recaptchaError, setRecaptchaError] = useState(null);
@@ -100,7 +99,7 @@ const ContactUsFormMuz = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='box' ref={formref}>
+      <form onSubmit={handleSubmit} className='box' >
         <div className='row'>
           <div className='col-xl-6'>
             <div className='tp-contact-input mb-20'>
@@ -173,7 +172,7 @@ const ContactUsFormMuz = () => {
             </div>
           </div>
           <div className='col-xl-12 mb-30'>
-            <RecaptchaComponent onChange={capchahandlechange} formref={formref} />
+            <RecaptchaComponent onChange={capchahandlechange} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}

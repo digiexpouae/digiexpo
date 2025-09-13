@@ -6,12 +6,11 @@ const ReCAPTCHA  = dynamic(
   () => import( "react-google-recaptcha"),
   { ssr: false }
 );
-export default function RecaptchaComponent({ onChange,formref }) {
+export default function RecaptchaComponent({ onChange }) {
   const [visible, setVisible] = useState(false); // control when to mount ReCAPTCHA
-  // const formRef = useRef(null);
-
+  const formRef = useRef(null);
   useEffect(() => {
-    if (!formref) return;
+   
   
     const observer = new IntersectionObserver(
       (entries) => {
@@ -26,13 +25,13 @@ export default function RecaptchaComponent({ onChange,formref }) {
       }
     );
   
-    observer.observe(formref.current);
+    observer.observe(formRef.current);
   
     return () => observer.disconnect();
   }, []);
   
   return (
-    <div>
+    <div ref={formRef}>
       {visible &&(
         <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}

@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 
 const ContactUsForm = () => {
-  const formref = useRef(null);
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
   const [submissionError, setSubmissionError] = useState(null);
@@ -175,7 +174,7 @@ const ContactUsForm = () => {
           </div>
           <div className='col-xxl-12 mb-30'>
             <RecaptchaComponent
-              onChange={capchahandlechange} formref={formref} />
+              onChange={capchahandlechange} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
