@@ -6,6 +6,13 @@ import { Value } from "sass";
 import dynamic from "next/dynamic";
 import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 const ContactUsFormMuz = () => {
+  const [visible, setVisible] = useState(false);
+
+  const handleUserIntent = () => {
+    if (!visible) {
+      setVisible(true);
+    }
+  };
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
   const [submissionError, setSubmissionError] = useState(null);
@@ -108,6 +115,8 @@ const ContactUsFormMuz = () => {
                 type='text'
                 className=''
                 name='name'
+                onFocus={handleUserIntent}  // Trigger when input is focused
+
                 placeholder='Full name'
                 value={formData.name}
                 onChange={handleChange}
@@ -121,6 +130,8 @@ const ContactUsFormMuz = () => {
                 type='email'
                 className=''
                 name='email'
+                onFocus={handleUserIntent}  // Trigger when input is focused
+onClick={handleUserIntent}
                 placeholder='Email address'
                 value={formData.email}
                 onChange={handleChange}
@@ -173,10 +184,15 @@ const ContactUsFormMuz = () => {
             </div>
           </div>
           <div className='col-xl-12 mb-30'>
+          {visible ? (
             <RecaptchaComponent onChange={capchahandlechange} />
+          ) : (
+            <div style={{ height: '78px' }} />
+          )}
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
+        
           </div>
           <div className='col-xl-12'>
             <div className='tp-contact-btn'>
