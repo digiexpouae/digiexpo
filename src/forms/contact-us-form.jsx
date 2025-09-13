@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-// import RecaptchaComponent from '../components/shared/RecaptchaComponent'
+import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 
 const ContactUsForm = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
@@ -172,13 +172,13 @@ const ContactUsForm = () => {
               <span className='floating-label-2'>Message...</span>
             </div>
           </div>
-          {/* <div className='col-xxl-12 mb-30'>
+          <div className='col-xxl-12 mb-30'>
             <RecaptchaComponent
               onChange={capchahandlechange} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
-          </div> */}
+          </div>
           <div className='col-xxl-12'>
             <div className='postbox__btn-box'>
               <button className={`submit-btn w-100 ${isSubmitted ? 'btndisable' : ''}`} type='submit' disabled={isSubmitDisabled}>
