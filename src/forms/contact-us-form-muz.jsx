@@ -5,7 +5,10 @@ import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
 
-import RecaptchaComponent from "@/components/shared/RecaptchaComponent";
+const RecaptchaComponent = dynamic(
+  () => import("@/components/shared/RecaptchaComponent"),
+  { ssr: false }
+);
 const ContactUsFormMuz = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
