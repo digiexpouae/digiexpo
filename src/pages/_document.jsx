@@ -15,7 +15,7 @@ export default function Document() {
                        /assets/img/hero/Hero BG Image.webp?w=1280 1280w"
 
         /> */}
-
+{/* 
 <link
           rel="preload"
           as="image"
@@ -23,7 +23,7 @@ export default function Document() {
           imagesrcset="/assets/img/hero/poster.webp"
           imagesizes="100vw"
             fetchpriority="high"
-        />
+        /> */}
 
 
      <link
@@ -46,7 +46,6 @@ export default function Document() {
           strategy='afterInteractive'
           src='https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB'
           async
-          defer
         />
         <Script
           strategy='afterInteractive'
@@ -58,6 +57,7 @@ export default function Document() {
               gtag('config', 'G-KTZJ1X0WSB');
             `,
           }}
+      
         />
 
         {/* Tawk.to Live Chat */}
@@ -76,6 +76,8 @@ export default function Document() {
               })();
             `,
           }}
+          async
+          defer
         />
       </body>
     </Html>
