@@ -27,7 +27,9 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"${process.env.SITE_NAME} Contact Form" <${process.env.INTERNAL_EMAIL_USERNAME}>`,
-      to: process.env.CONTACT_FORM_RECEIVER_EMAIL,
+      // to:process.env.INTERNAL_EMAIL_USERNAME,
+            to: process.env.CONTACT_FORM_RECEIVER_EMAIL,
+
       subject: `New Contact Form Submission: ${inquiry || "General"}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -42,7 +44,7 @@ export default async function handler(req, res) {
       replyTo: email,
     });
 
-    // Send data to n8n webhook
+    // // Send data to n8n webhook
     await fetch(
       "https://digi-expo.app.n8n.cloud/webhook/cc504a5d-4563-48b5-b48f-dc4202a859fa",
       {

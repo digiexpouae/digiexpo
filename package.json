@@ -29,6 +29,7 @@
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
+    "react-google-recaptcha-v3": "^1.11.0",
     "react-hook-form": "^7.51.0",
     "react-intersection-observer": "^9.8.1",
     "react-lottie": "^1.2.10",
@@ -48,14 +49,14 @@
     "tailwindcss": "^3.4.16"
   },
   "browserslist": {
-  "production": [
-    "last 2 Chrome versions",
-    "last 2 Edge versions",
-    "last 2 Firefox versions",
-    "last 2 Safari versions"
-  ],
-  "development": [
-    "last 1 Chrome version"
-  ]
-}
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Edge versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions"
+    ],
+    "development": [
+      "last 1 Chrome version"
+    ]
+  }
 }

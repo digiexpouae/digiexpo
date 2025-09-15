@@ -4,10 +4,12 @@ import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+
 import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 const ContactUsFormMuz = () => {
   const [visible, setVisible] = useState(false);
-
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const handleUserIntent = () => {
     if (!visible) {
       setVisible(true);
@@ -25,7 +27,7 @@ const ContactUsFormMuz = () => {
     message: "",
   });
   const [recaptchaValue, setRecaptchaValue] = useState(null);
-  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState(null);
 
   const handleChange = (e) => {
@@ -35,38 +37,60 @@ const ContactUsFormMuz = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setisSubmitted(true);
-    if (isSubmitDisabled) {
-      setSubmissionError('Please complete the reCAPTCHA first');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setisSubmitted(true);
+  setSubmissionError("");
+
+  try {
+    if (!executeRecaptcha) {
+      console.log("reCAPTCHA not loaded yet!");
       setisSubmitted(false);
       return;
     }
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      })
-      console.log(res)
-      if (res && res.ok) {
-        console.log('sucess')
-        router.push('/thank-you');
-        setformSubmitted(true);
-      } else {
-        alert("Failed to send message.");
-      }
-    }
-    catch(error){
-      setSubmissionError(error.message || "Form submission failed.")
-      alert("Failed to send message.");
-      console.log('Error')
-    }
-    finally {
+
+    // 🔹 Get token from reCAPTCHA v3
+    const token = await executeRecaptcha("submit_form");
+console.log("recapcha"+token)
+    // 🔹 Verify token with your API
+    const verifyRes = await fetch("/api/verifyRecapcha", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({  recaptchaToken: token }),
+    });
+
+    const verifyData = await verifyRes.json();
+console.log(verifyRes+"response")
+    if (!verifyRes.ok ) {
+      setIsSubmitDisabled(true);
+      setSubmissionError("Recaptcha verification failed. Try again.");
       setisSubmitted(false);
+      return;
     }
-  };
+
+    // ✅ Recaptcha passed — allow submission
+    setIsSubmitDisabled(false);
+
+    // 🔹 Now send form data to contact API
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      router.push("/thank-you");
+      setformSubmitted(true);
+    } else {
+      setSubmissionError("Failed to send message.");
+    }
+  } catch (error) {
+    setSubmissionError(error.message || "Form submission failed.");
+  } finally {
+    setisSubmitted(false);
+  }
+};
+
 
   const selectHandler = (selectedOption) => {
     setFormData({
@@ -75,35 +99,35 @@ const ContactUsFormMuz = () => {
     });
   };
 
-  const capchahandlechange = async (value) => {
-    setRecaptchaValue(value);
-    setRecaptchaError(null);
-    if (!value) {
-      setIsSubmitDisabled(true);
-      return;
-    }
+  // const capchahandlechange = async (tk) => {
+  //   setRecaptchaValue(token);
+  //   setRecaptchaError(null);
+  //   if (!value) {
+  //     setIsSubmitDisabled(true);
+  //     return;
+  //   }
     
-    try {
-      const response = await fetch('/api/verifyRecapcha', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ recapchatoken: value })
-      });
-      const data = await response.json();
-      if (data.success) {
-        setIsSubmitDisabled(false);
-      } else {
-        setIsSubmitDisabled(true);
-        setRecaptchaError('Recaptcha verification failed. Try again');
-      }
-    } catch (error) {
-      setIsSubmitDisabled(true);
-      setRecaptchaValue(null);
-      setRecaptchaError('Recaptcha verification failed. Try again');
-    }
-  };
+  //   try {
+  //     const response = await fetch('/api/verifyRecapcha', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ recapchatoken: token })
+  //     });
+  //     const data = await response.json();
+  //     if (data.success) {
+  //       setIsSubmitDisabled(false);
+  //     } else {
+  //       setIsSubmitDisabled(true);
+  //       setRecaptchaError('Recaptcha verification failed. Try again');
+  //     }
+  //   } catch (error) {
+  //     setIsSubmitDisabled(true);
+  //     setRecaptchaValue(null);
+  //     setRecaptchaError('Recaptcha verification failed. Try again');
+  //   }
+  // };
 
   return (
     <>
@@ -184,7 +208,7 @@ onClick={handleUserIntent}
             </div>
           </div>
           <div className='col-xl-12 mb-30'>
-          {visible ? (
+          {/* {visible ? (
             <RecaptchaComponent onChange={capchahandlechange} />
           ) : (
             <div style={{ height: '78px' }} />
@@ -192,7 +216,7 @@ onClick={handleUserIntent}
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
-        
+         */}
           </div>
           <div className='col-xl-12'>
             <div className='tp-contact-btn'>

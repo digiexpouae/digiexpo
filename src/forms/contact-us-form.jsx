@@ -5,12 +5,14 @@ import NiceSelect from "../ui/nice-select";
 import { useRouter } from 'next/navigation';
 import { Value } from "sass";
 import dynamic from "next/dynamic";
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-import RecaptchaComponent from '../components/shared/RecaptchaComponent'
+// import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 
 const ContactUsForm = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
   const [isSubmitted, setisSubmitted] = useState(false)
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [submissionError, setSubmissionError] = useState(null);
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -31,38 +33,60 @@ const ContactUsForm = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setisSubmitted(true);
-    if (isSubmitDisabled) {
-      setSubmissionError('Please complete the reCAPTCHA first');
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setisSubmitted(true);
+  setSubmissionError("");
+
+  try {
+    if (!executeRecaptcha) {
+      console.log("reCAPTCHA not loaded yet!");
       setisSubmitted(false);
       return;
     }
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      })
-      console.log(res)
-      if (res && res.ok) {
-        console.log('sucess')
-        router.push('/thank-you');
-        setformSubmitted(true);
-      } else {
-        alert("Failed to send message.");
-      }
-    }
-    catch(error){
-      setSubmissionError(error.message || "Form submission failed.")
-      alert("Failed to send message.");
-      console.log('Error')
-    }
-    finally {
+
+    // 🔹 Get token from reCAPTCHA v3
+    const token = await executeRecaptcha("submit_form");
+console.log("recapcha"+token)
+    // 🔹 Verify token with your API
+    const verifyRes = await fetch("/api/verifyRecapcha", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({  recaptchaToken: token }),
+    });
+
+    const verifyData = await verifyRes.json();
+console.log(verifyRes+"response")
+    if (!verifyRes.ok ) {
+      setIsSubmitDisabled(true);
+      setSubmissionError("Recaptcha verification failed. Try again.");
       setisSubmitted(false);
+      return;
     }
-  };
+
+    // ✅ Recaptcha passed — allow submission
+    setIsSubmitDisabled(false);
+
+    // 🔹 Now send form data to contact API
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      router.push("/thank-you");
+      setformSubmitted(true);
+    } else {
+      setSubmissionError("Failed to send message.");
+    }
+  } catch (error) {
+    setSubmissionError(error.message || "Form submission failed.");
+  } finally {
+    setisSubmitted(false);
+  }
+};
 
   const selectHandler = (selectedOption) => {
     setFormData({
@@ -172,13 +196,13 @@ const ContactUsForm = () => {
               <span className='floating-label-2'>Message...</span>
             </div>
           </div>
-          <div className='col-xxl-12 mb-30'>
+          {/* <div className='col-xxl-12 mb-30'>
             <RecaptchaComponent
               onChange={capchahandlechange} />
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
-          </div>
+          </div> */}
           <div className='col-xxl-12'>
             <div className='postbox__btn-box'>
               <button className={`submit-btn w-100 ${isSubmitted ? 'btndisable' : ''}`} type='submit' disabled={isSubmitDisabled}>
