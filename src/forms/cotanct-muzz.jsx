@@ -1,10 +1,10 @@
 import ContactUsFormMuz from "./contact-us-form-muz";
-import Reactwrapper from '../components/Provider/googlerecaptchaprovider'
-const contactmuzz=()=>{
+import dynamic from "next/dynamic";
+const RecaptchaWrapper = dynamic(() => import("../components/Provider/googlerecaptchaprovider"), { ssr: false });const contactmuzz=()=>{
     return(
-<Reactwrapper>
+<RecaptchaWrapper>
     <ContactUsFormMuz/>
-</Reactwrapper>
+</RecaptchaWrapper>
     )
 }
 export default contactmuzz

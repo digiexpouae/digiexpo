@@ -10,7 +10,7 @@ import NavMenu from "./nav-menu";
 import Image from "next/image";
 
 import logo from "../../../public/assets/img/logo/logo-black.png";
-import mainLogo from "../../../public/assets/img/logo/mainlogo.png";
+import mainLogo from "../../../public/assets/img/logo/mainlogo.46431c48 (1).webp";
 import { SocialLinks, SocialLinksTwo } from "@/common/social-links";
 import PhoneFour from "@/svg/phone-4";
 import WhatsappIcon from "@/svg/whatsapp-icon";
