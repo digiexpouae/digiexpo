@@ -3,7 +3,6 @@ import "../styles/business-box.scss";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DM_Serif_Display, Montserrat_Alternates, Plus_Jakarta_Sans, Urbanist, Roboto } from "next/font/google";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 // Pick the weights/styles you need
 const dmSerif = DM_Serif_Display({
@@ -90,8 +89,6 @@ export default function App({ Component, pageProps }) {
   className={`${dmSerif.variable} ${montserratAlternates.variable} ${plusJakarta.variable} ${urbanist.variable} ${roboto.variable}`}
 >
      {/* 🔹 reCAPTCHA v3 wrapper */}
-      <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
         <Component {...pageProps} />
-      </GoogleReCaptchaProvider>
 </main>
 }

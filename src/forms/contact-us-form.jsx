@@ -23,7 +23,7 @@ const ContactUsForm = () => {
     message: "",
   });
   const [recaptchaValue, setRecaptchaValue] = useState(null);
-  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState(null);
 
   const handleChange = (e) => {

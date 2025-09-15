@@ -7,7 +7,7 @@ import LazyVideo from '@/components/lazyload/lazyloavideo';
 import contact_img from "../../../../public/assets/img/hero/hero-4-3.a6a8b57c (1).webp"
 import shape_1 from "../../../../public/assets/img/contact/shape-4-1.fa71a606.webp"
 import NiceSelect from '@/ui/nice-select';
-import ContactUsFormMuz from '@/forms/contact-us-form-muz';
+import ContactUsFormMuz from '@/forms/cotanct-muzz';
 
 
 const contact_content = {
