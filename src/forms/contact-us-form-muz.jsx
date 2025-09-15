@@ -207,8 +207,8 @@ onClick={handleUserIntent}
               ></textarea>
             </div>
           </div>
-          <div className='col-xl-12 mb-30'>
-          {/* {visible ? (
+          {/* <div className='col-xl-12 mb-30'>
+          {visible ? (
             <RecaptchaComponent onChange={capchahandlechange} />
           ) : (
             <div style={{ height: '78px' }} />
@@ -216,8 +216,8 @@ onClick={handleUserIntent}
             {recaptchaError && (
               <div className="form_error" style={{ color: 'red', marginTop: 10 }}>{recaptchaError}</div>
             )}
-         */}
-          </div>
+        
+          </div> */}
           <div className='col-xl-12'>
             <div className='tp-contact-btn'>
               <button

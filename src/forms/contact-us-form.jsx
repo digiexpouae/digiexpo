@@ -7,7 +7,7 @@ import { Value } from "sass";
 import dynamic from "next/dynamic";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-// import RecaptchaComponent from '../components/shared/RecaptchaComponent'
+import RecaptchaComponent from '../components/shared/RecaptchaComponent'
 
 const ContactUsForm = () => {
   const [formSubmitted, setformSubmitted] = useState(false);
@@ -95,34 +95,34 @@ console.log(verifyRes+"response")
     });
   };  
 
-  const capchahandlechange = async (value) => {
-    setRecaptchaValue(value);
-    setRecaptchaError(null);
-    if (!value) {
-      setIsSubmitDisabled(true);
-      return;
-    }
-    try {
-      const response = await fetch('/api/verifyRecapcha', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ recapchatoken: value })
-      });
-      const data = await response.json();
-      if (data.success) {
-        setIsSubmitDisabled(false);
-      } else {
-        setIsSubmitDisabled(true);
-        setRecaptchaError('Recaptcha verification failed. Try again');
-      }
-    } catch (error) {
-      setIsSubmitDisabled(true);
-      setRecaptchaValue(null);
-      setRecaptchaError('Recaptcha verification failed. Try again');
-    }
-  };
+  // const capchahandlechange = async (value) => {
+  //   setRecaptchaValue(value);
+  //   setRecaptchaError(null);
+  //   if (!value) {
+  //     setIsSubmitDisabled(true);
+  //     return;
+  //   }
+  //   try {
+  //     const response = await fetch('/api/verifyRecapcha', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ recapchatoken: value })
+  //     });
+  //     const data = await response.json();
+  //     if (data.success) {
+  //       setIsSubmitDisabled(false);
+  //     } else {
+  //       setIsSubmitDisabled(true);
+  //       setRecaptchaError('Recaptcha verification failed. Try again');
+  //     }
+  //   } catch (error) {
+  //     setIsSubmitDisabled(true);
+  //     setRecaptchaValue(null);
+  //     setRecaptchaError('Recaptcha verification failed. Try again');
+  //   }
+  // };
 
   return (
     <>

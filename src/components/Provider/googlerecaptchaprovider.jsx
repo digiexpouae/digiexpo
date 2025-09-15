@@ -1,9 +1,14 @@
 "use client";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import dynamic from 'next/dynamic';
 
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+const DynamicGoogleReCaptchaProvider = dynamic(
+  () => import("react-google-recaptcha-v3").then(mod => mod.GoogleReCaptchaProvider),
+  { ssr: false } // Only load on the client-side
+);
 export default function RecaptchaWrapper({ children }) {
   return (
-    <GoogleReCaptchaProvider
+    <DynamicGoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       scriptProps={{
         async: true,
@@ -12,6 +17,6 @@ export default function RecaptchaWrapper({ children }) {
       }}
     >
       {children}
-    </GoogleReCaptchaProvider>
+    </DynamicGoogleReCaptchaProvider>
   );
 }
