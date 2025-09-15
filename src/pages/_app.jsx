@@ -12,7 +12,7 @@ const dmSerif = DM_Serif_Display({
   style: ["normal", "italic"], // include italic
   variable: "--font-dm-serif", // optional custom CSS variable
 });
-
+// 
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
