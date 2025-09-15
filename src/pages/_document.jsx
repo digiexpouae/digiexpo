@@ -42,7 +42,7 @@ export default function Document() {
         <NextScript />
 
         {/* Google Analytics */}
-        <Script
+        {/* <Script
           strategy='afterInteractive'
           src='https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB'
           async
@@ -58,7 +58,7 @@ export default function Document() {
             `,
           }}
       
-        />
+        /> */}
 
         {/* Tawk.to Live Chat */}
         <Script
