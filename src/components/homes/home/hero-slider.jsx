@@ -246,11 +246,11 @@ const HeroSlider = () => {
                           
                         >
                           <source 
-                            src="/assets/img/herowebp/hero-video.webm" 
+                            src="/assets/img/hero/hero-video.webm" 
                             type="video/webm" 
                           />
                           <source 
-                            src="/assets/img/herowebp/herosection.mp4" 
+                            src="/assets/img/hero/herosection.mp4" 
                             type="video/mp4" 
                             media="(min-width: 768px)"
                           />
