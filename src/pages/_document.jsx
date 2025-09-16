@@ -1,41 +1,56 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
-
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* <link
-          rel="preload"
-          as="image"
-          href="/assets/img/hero/Hero BG Image.webp"
-          imagesrcset="/assets/img/hero/Hero BG Image.webp?w=640 640w,
-                       /assets/img/hero/Hero BG Image.webp?w=960 960w,
-                       /assets/img/hero/Hero BG Image.webp?w=1280 1280w"
-
-        /> */}
-{/* 
-<link
-          rel="preload"
-          as="image"
-          href="/assets/img/hero/hero_frame.webp"
-          imagesrcset="/assets/img/hero/poster.webp"
-          imagesizes="100vw"
-            fetchpriority="high"
-        /> */}
-
-
-     <link
+        {/* Critical resource hints for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://embed.tawk.to" />
+        
+        {/* Preload critical images */}
+        <link
           rel="preload"
           as="image"
           href="/assets/img/hero/poster.webp"
-          imagesrcset="/assets/img/hero/poster.webp"
-          imagesizes="100vw"
-            fetchpriority="high"
+          imageSrcSet="/assets/img/hero/poster.webp"
+          imageSizes="100vw"
+          fetchPriority="high"
         />
-
-
+        
+        {/* Preload critical CSS */}
+        <link
+          rel="preload"
+          href="/assets/css/bootstrap.min.css"
+          as="style"
+          onLoad="this.onload=null;this.rel='stylesheet'"
+        />
+        
+        {/* Critical CSS for preventing layout shifts */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Prevent layout shifts */
+            html { scroll-behavior: smooth; }
+            body { margin: 0; padding: 0; }
+            .preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; }
+            .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+            @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+            /* Font display fallbacks */
+            .font-dm-serif { font-family: var(--font-dm-serif), serif; }
+            .font-montserrat { font-family: var(--font-montserrat-alt), sans-serif; }
+            .font-jakarta { font-family: var(--font-plus-jakarta), sans-serif; }
+            .font-urbanist { font-family: var(--font-urbanist), sans-serif; }
+            .font-roboto { font-family: var(--font-roboto), sans-serif; }
+          `
+        }} />
+        
+        {/* Viewport and performance meta tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
       </Head>
       <body>
         <Main />

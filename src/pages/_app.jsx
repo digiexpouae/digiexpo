@@ -4,41 +4,48 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DM_Serif_Display, Montserrat_Alternates, Plus_Jakarta_Sans, Urbanist, Roboto } from "next/font/google";
 
-// Pick the weights/styles you need
+// Optimized font loading with display: swap and preload
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
-  weight: ["400"], // normal weight only
-  style: ["normal", "italic"], // include italic
-  variable: "--font-dm-serif", // optional custom CSS variable
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-dm-serif",
+  display: "swap",
+  preload: true,
 });
-// 
+
 const montserratAlternates = Montserrat_Alternates({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600"], // Reduced weights for better performance
   variable: "--font-montserrat-alt",
+  display: "swap",
+  preload: true,
 });
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600"], // Reduced weights for better performance
   variable: "--font-plus-jakarta",
+  display: "swap",
+  preload: true,
 });
 
 const urbanist = Urbanist({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600"], // Reduced weights for better performance
   variable: "--font-urbanist",
+  display: "swap",
+  preload: true,
 });
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "700"], // Reduced weights for better performance
+  style: ["normal"],
   variable: "--font-roboto",
+  display: "swap",
+  preload: true,
 }); 
-if (typeof window !== "undefined") {
-  require("bootstrap/dist/js/bootstrap");
-}
 
 import client from "@/sanityConfig";
 
@@ -64,6 +71,20 @@ export async function getAllowedPaths() {
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [allowedPaths, setAllowedPaths] = useState([]);
+
+  // Lazy load Bootstrap to prevent forced reflows
+  useEffect(() => {
+    const loadBootstrap = async () => {
+      if (typeof window !== "undefined") {
+        // Use dynamic import to defer Bootstrap loading
+        await import("bootstrap/dist/js/bootstrap");
+      }
+    };
+    
+    // Load Bootstrap after initial render to prevent blocking
+    const timer = setTimeout(loadBootstrap, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   // useEffect(() => {
   //   async function fetchPaths() {

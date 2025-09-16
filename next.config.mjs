@@ -15,14 +15,51 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
-    experimental: {
+  experimental: {
     legacyBrowsers: false,
     browsersListForSwc: true,
+    optimizePackageImports: ['react-icons', 'lodash', 'date-fns'],
   },
-  images: { unoptimized: true },
-  productionBrowserSourceMaps: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  images: { 
+    unoptimized: true,
+    formats: ['image/webp', 'image/avif'],
+  },
+  productionBrowserSourceMaps: false, // Disable in production for better performance
   compress: true,
   swcMinify: true,
+  poweredByHeader: false,
+  // Optimize bundle splitting
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          // Vendor chunk
+          vendor: {
+            name: 'vendor',
+            chunks: 'all',
+            test: /node_modules/,
+            priority: 20,
+          },
+          // Common chunk
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            priority: 10,
+            reuseExistingChunk: true,
+            enforce: true,
+          },
+        },
+      };
+    }
+    return config;
+  },
   env: {
     EMAIL_HOST: process.env.EMAIL_HOST,
     INTERNAL_EMAIL_USERNAME: process.env.INTERNAL_EMAIL_USERNAME,

@@ -49,10 +49,10 @@
   },
   "browserslist": {
     "production": [
-      "last 2 Chrome versions",
-      "last 2 Edge versions",
-      "last 2 Firefox versions",
-      "last 2 Safari versions"
+      "Chrome >= 91",
+      "Firefox >= 90",
+      "Safari >= 14",
+      "Edge >= 91"
     ],
     "development": [
       "last 1 Chrome version"
