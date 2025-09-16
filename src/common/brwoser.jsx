@@ -2,11 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import img_1 from "../../public/assets/img/hero/browser-icon-1.png";
-import img_2 from "../../public/assets/img/hero/browser-icon-2.png";
-import img_3 from "../../public/assets/img/hero/browser-icon-3.png";
-import img_4 from "../../public/assets/img/hero/browser-icon-4.png";
-import img_5 from "../../public/assets/img/hero/browser-icon-5.png";
+import img_1 from "../../public/assets/img/herowebp/browser-icon-1.webp";
+import img_2 from "../../public/assets/img/herowebp/browser-icon-2.webp";
+import img_3 from "../../public/assets/img/herowebp/browser-icon-3.webp";
+import img_4 from "../../public/assets/img/herowebp/browser-icon-4.webp";
+import img_5 from "../../public/assets/img/herowebp/browser-icon-5.webp";
 
 const brwoser_data = [
     {img:  img_1, title: "Windows", link: "https://www.microsoft.com"},

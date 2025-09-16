@@ -48,7 +48,7 @@ const BlogArea = () => {
                 <div className='tp-blog-four-img fix' >
                   <Link href='/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies'>
                    <LazyVideo
-        src="/assets/img/hero/herosection.mp4"
+        src="/assets/img/herowebp/herosection.mp4"
         width="570px"
         poster="/assets/img/contact/contact-poster.jpg"
       />
@@ -111,7 +111,7 @@ const BlogArea = () => {
                   <Link href='/blogs/boost-your-roi-proven-digital-marketing-tactics-for-uae-businesses'>
                  
                                <LazyVideo
-        src="/assets/img/hero/herosection.mp4"
+        src="/assets/img/herowebp/herosection.mp4"
         width="570px"
         poster="/assets/img/contact/contact-poster.jpg"
       />

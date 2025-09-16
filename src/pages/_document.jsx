@@ -15,8 +15,8 @@ export default function Document() {
         <link
           rel="preload"
           as="image"
-          href="/assets/img/hero/poster.webp"
-          imageSrcSet="/assets/img/hero/poster.webp"
+          href="/assets/img/herowebp/poster.webp"
+          imageSrcSet="/assets/img/herowebp/poster.webp"
           imageSizes="100vw"
           fetchPriority="high"
         />

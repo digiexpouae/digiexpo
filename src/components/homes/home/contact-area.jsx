@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import contact_img from "../../../../public/assets/img/hero/hero-4-3.png"
+import contact_img from "../../../../public/assets/img/herowebp/hero-4-3.webp"
 import shape_1 from "../../../../public/assets/img/contact/shape-4-1.png"
 import NiceSelect from '@/ui/nice-select';
 import ContactUsForm from '@/forms/contact-us-form';

@@ -2,20 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 
 import useCharAnimation from "@/hooks/useCharAnimation";
 import Image from "next/image";
-import hero_frame from "../../../../public/assets/img/hero/hero_frame.webp";
-import shape_1 from "../../../../public/assets/img/hero/hero-line-shape.3146.webp";
-import shape_2 from "../../../../public/assets/img/hero/hero-line-shape-2.webp";
+import hero_frame from "../../../../public/assets/img/herowebp/hero-frame.webp";
+import shape_1 from "../../../../public/assets/img/herowebp/hero-line-shape.3146.webp";
+import shape_2 from "../../../../public/assets/img/herowebp/hero-line-shape-2.webp";
 
 
-import shape_img_1 from "../../../../public/assets/img/hero/hero-shape-1.png";
-import shape_img_2 from "../../../../public/assets/img/hero/hero-shape-2.png";
-import hero_thumb_1 from "../../../../public/assets/img/hero/hero-sm-1.jpg";
-import thumb_1 from "../../../../public/assets/img/hero/hero-sm-3.png";
-import thumb_2 from "../../../../public/assets/img/hero/hero-sm-4.jpg";
-import hero_thumb_2 from "../../../../public/assets/img/hero/hero-sm-2.jpg";
+import shape_img_1 from "../../../../public/assets/img/herowebp/hero-shape-1.webp";
+import shape_img_2 from "../../../../public/assets/img/herowebp/hero-shape-2.webp";
+import hero_thumb_1 from "../../../../public/assets/img/herowebp/hero-sm-1.webp";
+import thumb_1 from "../../../../public/assets/img/herowebp/hero-sm-3.webp";
+import thumb_2 from "../../../../public/assets/img/herowebp/hero-sm-4.webp";
+import hero_thumb_2 from "../../../../public/assets/img/herowebp/hero-sm-2.webp";
 import HeroForm from "@/forms/hero-form";
 import LineShape from "@/svg/line-shape";
-import Herobg from '../../../../public/assets/img/hero/Hero BG Image.webp'
+import Herobg from '../../../../public/assets/img/herowebp/Hero BG Image.webp'
 
 // hero content data
 const hero_content = {
@@ -239,18 +239,18 @@ const HeroSlider = () => {
                           loop
                           playsInline
                           preload="none"
-                          poster="/assets/img/hero/poster.webp"
+                          poster="/assets/img/herowebp/poster.webp"
                           className="w-full h-[600px] object-cover"
                           aria-hidden="true"
                           disablePictureInPicture
                           
                         >
                           <source 
-                            src="/assets/img/hero/hero-video.webm" 
+                            src="/assets/img/herowebp/hero-video.webm" 
                             type="video/webm" 
                           />
                           <source 
-                            src="/assets/img/hero/herosection.mp4" 
+                            src="/assets/img/herowebp/herosection.mp4" 
                             type="video/mp4" 
                             media="(min-width: 768px)"
                           />

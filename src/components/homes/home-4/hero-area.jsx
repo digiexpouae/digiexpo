@@ -4,10 +4,10 @@ import Image from 'next/image';
 import useCharAnimation from '@/hooks/useCharAnimation';
 
 
-import hero_shape from "../../../../public/assets/img/hero/hero-shape-4-1.png";
-import hero_img  from "../../../../public/assets/img/hero/hero-4-3.png";
-import hero_4_img_1  from "../../../../public/assets/img/hero/hero-4-1.png";
-import hero_4_img_2  from "../../../../public/assets/img/hero/hero-4-2.png";
+import hero_shape from "../../../../public/assets/img/herowebp/hero-shape-4-1.webp";
+import hero_img  from "../../../../public/assets/img/herowebp/hero-4-3.webp";
+import hero_4_img_1  from "../../../../public/assets/img/herowebp/hero-4-1.webp";
+import hero_4_img_2  from "../../../../public/assets/img/herowebp/hero-4-2.webp";
 
 const hero_content = {
     sub_title: "Wellcome to Softec",

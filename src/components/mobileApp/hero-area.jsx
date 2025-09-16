@@ -6,19 +6,19 @@ import useCharAnimation from '@/hooks/useCharAnimation';
 import Image from 'next/image';
 
 // img import
-import scroll_bg from "../../../public/assets/img/hero/scroll-down.png";
-import users_img from "../../../public/assets/img/hero/hero-user.jpg";
-import hero_shape_1 from "../../../public/assets/img/hero/hero-img-2-1.png";
-import hero_shape_2 from "../../../public/assets/img/hero/image_02.png";
-import hero_shape_3 from "../../../public/assets/img/hero/hero-img-2-3.png";
-import hero_shape_4 from "../../../public/assets/img/hero/hero-img-2-4.png";
-import hero_shape_5 from "../../../public/assets/img/hero/hero-shape-2-2.png";
+import scroll_bg from "../../../public/assets/img/herowebp/scroll-down.webp";
+import users_img from "../../../public/assets/img/herowebp/hero-user.webp";
+import hero_shape_1 from "../../../public/assets/img/herowebp/hero-img-2-1.webp";
+import hero_shape_2 from "../../../public/assets/img/herowebp/image_02.webp";
+import hero_shape_3 from "../../../public/assets/img/herowebp/hero-img-2-3.webp";
+import hero_shape_4 from "../../../public/assets/img/herowebp/hero-img-2-4.webp";
+import hero_shape_5 from "../../../public/assets/img/herowebp/hero-shape-2-2.webp";
 
 
 
 // hero_content
 const hero_content = {
-  bg_img: "/assets/img/hero/hero-bg-2.png",
+  bg_img: "/assets/img/herowebp/hero-bg-2.webp",
   scroll_btn: "Scroll Down",
   title: (
     <>
