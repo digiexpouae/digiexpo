@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 import footer_logo from  "../../../public/assets/img/logo/logo-black.png";
 

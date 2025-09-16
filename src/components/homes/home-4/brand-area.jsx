@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 import brand_img_1 from "../../../../public/assets/img/herowebp/hero-slider-icon-2.webp";
 import brand_img_2 from "../../../../public/assets/img/herowebp/hero-slider-icon-3.webp";

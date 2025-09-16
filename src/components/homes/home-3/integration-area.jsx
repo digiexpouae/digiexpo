@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 // slider img import here
 import slider_img_1_1 from "../../../../public/assets/img/integration/integration-1.png";

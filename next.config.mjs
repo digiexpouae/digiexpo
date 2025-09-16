@@ -16,8 +16,6 @@ const nextConfig = {
   },
   reactStrictMode: true,
   experimental: {
-    legacyBrowsers: false,
-    browsersListForSwc: true,
     optimizePackageImports: ['react-icons', 'lodash', 'date-fns'],
   },
   compiler: {
@@ -29,7 +27,6 @@ const nextConfig = {
   },
   productionBrowserSourceMaps: false, // Disable in production for better performance
   compress: true,
-  swcMinify: true,
   poweredByHeader: false,
   // Optimize bundle splitting
   webpack: (config, { dev, isServer }) => {

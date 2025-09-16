@@ -1,5 +1,6 @@
 import React from "react";
 import ModalVideo from "react-modal-video";
+import 'react-modal-video/scss/modal-video.scss';
 
 const VideoPopup = ({
   isVideoOpen,

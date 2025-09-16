@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 import HyggeBikes from "../../../../public/assets/img/testimonial/hygge.png"
 import HomesPerception from "../../../../public/assets/img/testimonial/homes.png"

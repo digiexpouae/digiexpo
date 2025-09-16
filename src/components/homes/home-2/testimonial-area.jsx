@@ -1,7 +1,8 @@
 import StartIcon from '@/svg/start-icon';
 import React, {useRef} from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick'; 
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
 
 
 // slider img import 
