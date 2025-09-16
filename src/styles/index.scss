@@ -1,11 +1,11 @@
-@import "~bootstrap/scss/bootstrap";
+@use "~bootstrap/scss/bootstrap" as *;
 // Import only the specific Swiper modules you're using
 // (moved to per-component imports for better chunking)
 // @import "swiper/css";
 // @import "swiper/css/navigation";
 // @import "swiper/css/scrollbar";
 // @import "swiper/css/effect-fade";
-@import "/public/assets/scss/main.scss";
+@use "/public/assets/scss/main.scss" as *;
 // @import "swiper/css/bundle";
 
 h4{
