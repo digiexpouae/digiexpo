@@ -7,7 +7,8 @@ import RightArrow from '@/svg/right-arrow';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 import 'slick-carousel/slick/slick.css';
 
 import footer_logo from  "../../../public/assets/img/logo/logo-black.png";

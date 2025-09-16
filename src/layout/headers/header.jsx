@@ -3,7 +3,8 @@ import Offcanvus from "@/common/offcanvus";
 import SearchPopup from "@/modals/search-popup";
 import SearchIconTwo from "@/svg/search-icon-2";
 import UserIcon from "@/svg/user-icon";
-import { gsap } from "gsap";
+// Lazy-load gsap on client to reduce main-thread work
+// We'll import within effects where it's used
 import Link from "next/link";
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import NavMenu from "./nav-menu";
@@ -27,20 +28,22 @@ const Header = () => {
   };
 
   // gsa use
-  let g_timline = new gsap.timeline();
   let header_top_animation = useRef(null);
 
   useEffect(() => {
-    gsap.from(header_top_animation, {
-      opacity: 0,
-      y: "20px",
-      delay: 1.05,
-    });
-    gsap.to(header_top_animation, {
-      opacity: 1,
-      y: "0px",
-      delay: 1.05,
-    });
+    (async () => {
+      const { gsap } = await import('gsap');
+      gsap.from(header_top_animation, {
+        opacity: 0,
+        y: "20px",
+        delay: 1.05,
+      });
+      gsap.to(header_top_animation, {
+        opacity: 1,
+        y: "0px",
+        delay: 1.05,
+      });
+    })();
   }, []);
 
   return (

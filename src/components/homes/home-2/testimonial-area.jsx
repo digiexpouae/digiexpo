@@ -1,7 +1,8 @@
 import StartIcon from '@/svg/start-icon';
 import React, {useRef} from 'react';
 import Image from 'next/image';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 import 'slick-carousel/slick/slick.css';
 
 

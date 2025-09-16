@@ -2,7 +2,8 @@ import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicEffect';
 import useTitleAnimation from '@/hooks/useTitleAnimation';
 import Brwoser from '@/common/brwoser';
 import BounceLine from '@/svg/bounce-line';
-import {gsap} from 'gsap';
+import dynamic from 'next/dynamic';
+const gsap = dynamic(() => import('gsap'), { ssr: false });
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 

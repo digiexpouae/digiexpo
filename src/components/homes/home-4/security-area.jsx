@@ -2,7 +2,8 @@ import RightArrowTwo from '@/svg/right-arrow-2';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 import 'slick-carousel/slick/slick.css';
 
 import security_img_1 from "../../../../public/assets/img/security/security-1.png";

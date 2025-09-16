@@ -1,5 +1,6 @@
 import LineShapTwo from '@/svg/line-shap-2';
-import {gsap} from 'gsap';
+// gsap is heavy; load only on client when needed
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Image from 'next/image';
 import React, {useEffect} from 'react';
@@ -14,10 +15,13 @@ import shape_6 from "../../../public/assets/img/herowebp/home-shape-1-2.webp";
 
 
 const HeroArea = () => { 
-   useEffect(() => {
-      let tl = gsap.timeline({default:{ease:"SlowMo.easeOut"}});
-		tl.to(".hero-text-anim-2 i.child-2", {y: "0px", duration: .9, opacity:1, stagger:0.3, delay:.3});
-   })
+  useEffect(() => {
+    (async () => {
+      const { gsap } = await import('gsap');
+      let tl = gsap.timeline({ default: { ease: "SlowMo.easeOut" } });
+      tl.to(".hero-text-anim-2 i.child-2", { y: "0px", duration: .9, opacity: 1, stagger: 0.3, delay: .3 });
+    })();
+  }, [])
    
     return (
         <>

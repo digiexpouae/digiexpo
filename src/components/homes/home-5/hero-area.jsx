@@ -1,5 +1,6 @@
 import LineShapTwo from '@/svg/line-shap-2';
-import {gsap} from 'gsap';
+import dynamic from 'next/dynamic';
+const gsap = dynamic(() => import('gsap'), { ssr: false });
 import Link from 'next/link';
 import Image from 'next/image';
 import React, {useEffect} from 'react';

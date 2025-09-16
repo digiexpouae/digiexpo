@@ -1,5 +1,6 @@
 import React, {useRef} from 'react';
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
+const Slider = dynamic(() => import('react-slick'), { ssr: false });
 import 'slick-carousel/slick/slick.css';
 
 import HyggeBikes from "../../../../public/assets/img/testimonial/hygge.png"

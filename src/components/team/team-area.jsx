@@ -1,5 +1,5 @@
-import React from "react";
-import { gsap } from 'gsap';
+import React, { useEffect } from 'react';
+// gsap is loaded on demand to reduce initial JS
 import Link from "next/link";
 import useMultipleAnime from "@/hooks/useMultipleAnime";
 import { SocialLinksTwo } from "@/common/social-links";
@@ -8,6 +8,14 @@ import Image from "next/image";
 
 const TeamArea = () => {
 const {dataRef} = useMultipleAnime();
+
+  useEffect(() => {
+    (async () => {
+      const { gsap } = await import('gsap');
+      const tl = gsap.timeline();
+      // ... animations ...
+    })();
+  }, []);
 
   return (
     <>

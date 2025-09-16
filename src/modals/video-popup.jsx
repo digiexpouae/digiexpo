@@ -1,5 +1,6 @@
 import React from "react";
-import ModalVideo from "react-modal-video";
+import dynamic from 'next/dynamic';
+const ModalVideo = dynamic(() => import('react-modal-video'), { ssr: false });
 import 'react-modal-video/scss/modal-video.scss';
 
 const VideoPopup = ({

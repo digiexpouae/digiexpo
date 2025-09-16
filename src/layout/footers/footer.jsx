@@ -1,6 +1,6 @@
-import {gsap} from 'gsap';
+// Lazy import gsap only on client
 import Link from 'next/link';
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicEffect';
 import SocialLinks from '@/common/social-links';
 import ContactIcon from '@/svg/contact-icon';
@@ -67,14 +67,12 @@ const Footer = () => {
         setIsOppen(!isOppen)
     }
     // use Gsap 
-   //  useEffect(() => {
-      
-   //  })
-
-    useIsomorphicLayoutEffect(() => {
-      gsap.set(".tp-gsap-bg", {scaleX : 1} );
-       let mm = gsap.matchMedia();
-       mm.add("(min-width:1400px)", () => {
+   useEffect(() => {
+      (async () => {
+        const { gsap } = await import('gsap');
+        gsap.set(".tp-gsap-bg", {scaleX : 1} );
+        let mm = gsap.matchMedia();
+        mm.add("(min-width:1400px)", () => {
 			gsap.to(".tp-gsap-bg", {
 				scrollTrigger: {
 					trigger: ".tp-gsap-bg",
@@ -88,7 +86,8 @@ const Footer = () => {
 				ease: "none",
 			});
 		})
-    }, []);
+      })();
+   }, []);
     
 
     return (
