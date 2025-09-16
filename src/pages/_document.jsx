@@ -1,54 +1,61 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
+// ✅ Recommended: Use next/font for better font loading
+// Example:
+// import { DM_Serif_Display, Montserrat } from "next/font/google";
+// const dmSerif = DM_Serif_Display({ subsets: ["latin"], display: "swap" });
+// const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
+
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Critical resource hints for performance */}
+        {/* ✅ Preconnect for Google Fonts (only if not using next/font) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-         
-        <link rel="dns-prefetch" href="https://embed.tawk.to" />
-        
-        {/* Preload critical images */}
         <link
-          rel="preload"
-          as="image"
-          href="/assets/img/herowebp/poster.webp"
-          imageSrcSet="/assets/img/herowebp/poster.webp"
-          imageSizes="100vw"
-          fetchPriority="high"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
-        
-        {/* Preload critical CSS */}
+
+        {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
+        <link rel="dns-prefetch" href="https://embed.tawk.to" />
+
+        {/* ❌ Removed manual image preload - use next/image with `priority` instead */}
+
+        {/* ✅ Preload critical CSS (Bootstrap) */}
         <link
           rel="preload"
           href="/assets/css/bootstrap.min.css"
           as="style"
           onLoad="this.onload=null;this.rel='stylesheet'"
         />
-        
-        {/* Critical CSS for preventing layout shifts */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            /* Prevent layout shifts */
-            html { scroll-behavior: smooth; }
-            body { margin: 0; padding: 0; }
-            .preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; }
-            .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-            @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
-            /* Font display fallbacks */
-            .font-dm-serif { font-family: var(--font-dm-serif), serif; }
-            .font-montserrat { font-family: var(--font-montserrat-alt), sans-serif; }
-            .font-jakarta { font-family: var(--font-plus-jakarta), sans-serif; }
-            .font-urbanist { font-family: var(--font-urbanist), sans-serif; }
-            .font-roboto { font-family: var(--font-roboto), sans-serif; }
-          `
-        }} />
-        
-        {/* Viewport and performance meta tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+        {/* ✅ Inline critical CSS to prevent layout shifts */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              html { scroll-behavior: smooth; }
+              body { margin: 0; padding: 0; }
+              .preloader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; }
+              .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+              @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+              /* Font display fallbacks (can remove if using next/font) */
+              .font-dm-serif { font-family: var(--font-dm-serif), serif; }
+              .font-montserrat { font-family: var(--font-montserrat-alt), sans-serif; }
+              .font-jakarta { font-family: var(--font-plus-jakarta), sans-serif; }
+              .font-urbanist { font-family: var(--font-urbanist), sans-serif; }
+              .font-roboto { font-family: var(--font-roboto), sans-serif; }
+            `,
+          }}
+        />
+
+        {/* ✅ Viewport meta */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no" />
       </Head>
@@ -56,14 +63,13 @@ export default function Document() {
         <Main />
         <NextScript />
 
-        {/* Google Analytics */}
+        {/* ✅ Google Analytics (lazy load, doesn't block rendering) */}
         <Script
-          strategy='lazyOnload'
-          src='https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB'
-        
+          strategy="lazyOnload"
+          src="https://www.googletagmanager.com/gtag/js?id=G-KTZJ1X0WSB"
         />
         <Script
-          strategy='lazyOnload'
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -72,10 +78,9 @@ export default function Document() {
               gtag('config', 'G-KTZJ1X0WSB');
             `,
           }}
-      
         />
 
-        {/* Tawk.to Live Chat */}
+        {/* ✅ Tawk.to Live Chat - still lazy loaded to avoid blocking */}
         <Script
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
