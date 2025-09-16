@@ -24,13 +24,7 @@ export default function Document() {
 
         {/* ❌ Removed manual image preload - use next/image with `priority` instead */}
 
-        {/* ✅ Preload critical CSS (Bootstrap) */}
-        <link
-          rel="preload"
-          href="/assets/css/bootstrap.min.css"
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
-        />
+        {/* Removed Bootstrap preload: styles are bundled via SCSS */}
 
         {/* ✅ Inline critical CSS to prevent layout shifts */}
         <style
