@@ -2,8 +2,11 @@ import portfolio_blog from '@/data/portfolio-blog';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
+import dynamic from 'next/dynamic';
+const SwiperReact = dynamic(() => import('swiper/react'), { ssr: false });
+const SwiperCore = dynamic(() => import('swiper'), { ssr: false });
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 
 const setting = {
@@ -31,6 +34,8 @@ const setting = {
 
 
 const Portfolio = () => {
+
+    const { Swiper, SwiperSlide } = SwiperReact;
 
     return (
         <>

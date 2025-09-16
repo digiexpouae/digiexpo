@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React, {useState , useEffect} from 'react';
 import { EffectFade, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 // author img import here 
 import author_img_1 from "../../../public/assets/img/blog/blog-avata-3.png";

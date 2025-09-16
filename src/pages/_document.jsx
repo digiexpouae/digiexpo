@@ -11,13 +11,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* ✅ Preconnect for Google Fonts (only if not using next/font) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
+        {/* Using next/font in _app.jsx, so no Google Fonts preconnects */}
 
         {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
         <link rel="dns-prefetch" href="https://embed.tawk.to" />

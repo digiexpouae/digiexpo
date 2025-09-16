@@ -12,6 +12,7 @@ const OfficeLocation = dynamic(() => import("./office-location"));
 const FooterFour = dynamic(() => import("@/layout/footers/footer-4"));
 const StickyIcons = dynamic(() => import("@/common/sticky-icons"), { ssr: false });
 const StickyButtons = dynamic(() => import("@/common/sticky-buttons"), { ssr: false });
+const RecaptchaWrapper = dynamic(() => import("@/components/Provider/googlerecaptchaprovider"), { ssr: false });
 
 const Contact = () => {
   return (
@@ -19,16 +20,18 @@ const Contact = () => {
       <HeaderSix />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main>
-            <StickyIcons />
-            <StickyButtons />
-            <Breadcrumb title_top="Get In" title_bottom="Get In" />
-            <HeroBanner bg_img="/assets/img/contact/contact-banner.jpg" />
-            <OfficeLocation />
-            <ContactFormArea />
-            <ContactInner />
-            <CtaArea />
-          </main>
+          <RecaptchaWrapper>
+            <main>
+              <StickyIcons />
+              <StickyButtons />
+              <Breadcrumb title_top="Get In" title_bottom="Get In" />
+              <HeroBanner bg_img="/assets/img/contact/contact-banner.jpg" />
+              <OfficeLocation />
+              <ContactFormArea />
+              <ContactInner />
+              <CtaArea />
+            </main>
+          </RecaptchaWrapper>
           <FooterFour />
         </div>
       </div>

@@ -3,6 +3,9 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 const testimonial_content = {
    bg_img: "/assets/img/testimonial/testi-bg-5-1.jpg",
