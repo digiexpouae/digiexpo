@@ -90,7 +90,7 @@ const ServiceArea = () => {
 
             {/* STEP TWO */}
             <div
-              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right ${styles["service-border-trang-2"]}`}
+              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right service-border-trang-2`}
             >
               <div className={`${styles["tp-service-4-item"]} tp-service-four-item z-index`}>
                 <div className={"tp-service-4-icon"}>
@@ -119,7 +119,7 @@ const ServiceArea = () => {
 
             {/* STEP THREE */}
             <div
-              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right ${styles["service-border-trang-3"]}`}
+              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right service-border-trang-3`}
             >
               <div className={`${styles["tp-service-4-item"]}  tp-service-four-item z-index`}>
                 <div className="tp-service-4-icon">
@@ -148,7 +148,7 @@ const ServiceArea = () => {
 
             {/* STEP FOUR */}
             <div
-              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right ${styles["service-border-trang-4"]}`}
+              className={`col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right tp-service-4-right service-border-trang-4`}
             >
               <div className={`${styles["tp-service-4-item"]} z-index`}>
                 <div className="tp-service-4-icon">
