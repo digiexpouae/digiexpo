@@ -3,7 +3,8 @@ import useTitleAnimation from '@/hooks/useTitleAnimation';
 import Brwoser from '@/common/brwoser';
 import BounceLine from '@/svg/bounce-line';
 import dynamic from 'next/dynamic';
-const gsap = dynamic(() => import('gsap'), { ssr: false });
+
+import { gsap } from "gsap";
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
@@ -82,7 +83,7 @@ const HeroArea = () => {
                            {/* <Image src={img_1} alt="them-pure" /> */}
                            <video autoPlay muted loop width="">
                               <source
-                                 src="/assets/img/herowebp/web-banner.webm"
+                                 src="/assets/img/hero/web-banner.webm"
                                  type="video/webm"
                               />
                            </video>
