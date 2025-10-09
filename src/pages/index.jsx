@@ -8,8 +8,8 @@ import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 const Home = () => {
   const seoMetaData = {
-    pageTitle: "Digital marketing agency Dubai | Digital marketing agency UAE",
-    pageDesc:"Boost your business progress with a professional digital marketing agency UAE. DigiExpo, your professional digital marketing agency Dubai service provider."
+    pageTitle: "Web Design Dubai | Website Development Company – DigiExpo",
+    pageDesc:"DigiExpo is a trusted Web Design Dubai & website development company. We offer ecommerce, digital marketing, and SEO-optimized websites across UAE."
   }
   const faqSchema=
 {

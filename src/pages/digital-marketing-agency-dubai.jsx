@@ -6,8 +6,8 @@ import Head from "next/head";
 
 const Index = () => {
   const [pageTitle, pageDescription] = [
-    `Best Digital Marketing Agency In UAE | Digital Marketing Agency`,
-    `Increase your company's growth with the best Digital Marketing agency in UAE. DigiExpo is your top choice for digital marketing agency services in Dubai.`,
+    `Digital Marketing Agency Dubai | SEO, SMM & PPC | DigiExpo`,
+    `DigiExpo is a trusted Digital Marketing Agency Dubai providing SEO, PPC, social media, and online marketing services to help businesses grow across UAE.`,
   ];
 
   const faqSchema = {

@@ -5,8 +5,8 @@ import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
 const index = () => {
-  const title = `Mobile Application Dubai | App Development Company – DigiExpo`;
-  const desc = `We build custom mobile applications with expert application development Dubai services. Trusted for mobile application Dubai & mob app development Dubai.`;
+  const title = `App Development Dubai | Hybrid Mobile Apps – DigiExpo`;
+  const desc = `DigiExpo offers expert App Development Dubai with hybrid mobile apps, delivering custom, scalable, and user-friendly solutions to boost your business growth.`;
 
   const faqSchema = {
     "@context": "https://schema.org",

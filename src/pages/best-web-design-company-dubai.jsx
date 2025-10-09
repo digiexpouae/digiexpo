@@ -6,8 +6,8 @@ import Head from "next/head";
 
 const Index = () => {
   const [title, desc] = [
-    `Best Web Design Company In Dubai | UI UX Design Services Company`,
-    `The Best Web Design Company in Dubai helps you to grow your business. DigiExpo is the top destination that provides solutions from UI/UX design services Company.`,
+    `UI UX Design Services | Creative UI/UX Experts | DigiExpo`,
+    ` DigiExpo offers professional UI UX Design services with creative, user-friendly, and responsive solutions to enhance user experience and boost engagement.`,
   ];
 
   const faqSchema = {

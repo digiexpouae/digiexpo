@@ -5,8 +5,8 @@ import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
 const Index = () => {
-  const title = `Best E-commerce Websites Development Company | E-commerce Service`;
-  const desc = `Best E-commerce Website Development Company allows you to grow your business. DigiExpo provides great e-commerce services to boost growth and online visibility.`;
+  const title = `Ecommerce Website Development Dubai | DigiExpo Experts`;
+  const desc = `DigiExpo is a leading Ecommerce Website Development Dubai company delivering custom, scalable, and user-friendly online stores to grow your sales.`;
 
   const faqSchema = {
     "@context": "https://schema.org",

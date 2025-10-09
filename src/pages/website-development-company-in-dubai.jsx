@@ -6,8 +6,8 @@ import Head from "next/head";
 
 const Index = () => {
   const [title, desc] = [
-    `Web Design And Development Agency | Web Development Services`,
-    `Work with a great web design and development agency to grow your brand. To improve the visibility of your company, DigiExpo offers great web development services.`,
+    `Website Development Dubai | Web Development Expert | DigiExpo`,
+    `DigiExpo is a top Website Development Dubai expert offering custom web design, ecommerce sites, and SEO-ready solutions to boost your business online.`,
   ];
 
   // Schema as a JS object

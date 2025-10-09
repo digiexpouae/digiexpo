@@ -5,8 +5,8 @@ import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
 const Index = () => {
-  const title = `Emerging Technologies Development Agency Dubai | Emerging Technologies UAE`;
-  const desc = `DigiExpo, a emerging technologies development agency Dubai, can help you grow your company. We act as great partners of marketing and emerging technologies UAE.`;
+  const title = `Emerging Technologies | AI, AR & IoT Experts | DigiExpo`;
+  const desc = `DigiExpo offers innovative Emerging Technologies services in AI, AR, and IoT, delivering smart, scalable, and future-ready solutions for businesses.`;
 
   const faqSchema = {
     "@context": "https://schema.org",

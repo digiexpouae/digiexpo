@@ -6,8 +6,8 @@ const Services = () => {
     <>
       <Wrapper>
         <SEO
-          pageTitle={`Creative Web Design Services in UAE - DigiExpo`}
-          pageDesc={`Explore DigiExpo's wide range of digital marketing services, including SEO, web development, social media management, and PPC, designed to elevate your business success.`}
+          pageTitle={`Web Design Company Dubai | Web Design Services | DigiExpo`}
+          pageDesc={`DigiExpo is a trusted Web Design Company in Dubai offering professional web design services, website development, and SEO-friendly solutions in UAE.`}
           canonicalUrl={'https://www.digiexpo.ae/services'}
         />
         <Service />
