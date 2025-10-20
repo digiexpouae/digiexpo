@@ -1,5 +1,7 @@
+import '../styles/globals.css'
 import "../styles/index.scss";
 import "../styles/business-box.scss";
+
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { DM_Serif_Display, Montserrat_Alternates, Plus_Jakarta_Sans, Urbanist, Roboto } from "next/font/google";
