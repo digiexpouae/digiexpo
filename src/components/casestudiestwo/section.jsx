@@ -42,7 +42,7 @@ const HeroSection = () => {
           alt="Hero Visual"
         />
       </div>     */}
-<div className="tw-translate-y-24 tw-w-full tw-h-1/2">
+<div className="md:tw-translate-y-24 tw-w-full tw-h-1/2">
       <Section2 />
       </div>
     </div>
