@@ -83,7 +83,7 @@ const Section2 = () => {
       </div>
 
       {/* Mobile Carousel */}
-      <div className="tw-flex lg:tw-hidden  tw-translate-y-10 tw-w-full tw-h-full ">
+      <div className="tw-flex lg:tw-hidden  md:tw-translate-y-10 tw-w-full tw-h-full ">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={4}
