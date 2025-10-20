@@ -70,7 +70,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "Case Studies",
-    link: "#",
+    link: "/casestudies",
     active: "",
     sub_menus: [
       { link: "/hyggeBikes", title: "Hygge Bikes" },
