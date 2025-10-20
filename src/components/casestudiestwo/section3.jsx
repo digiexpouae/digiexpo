@@ -35,10 +35,10 @@ const Section3 = () => {
           </h2>
 
           <div className="tw-flex tw-gap-3">
-            <button className="tw-bg-white flex items-center gap-2 hover:tw-bg-zinc-300 tw-font-bold tw-rounded-full tw-text-black  tw-px-4 tw-py-2 tw-transition">
+            <button className="tw-bg-white tw-flex items-center gap-2 hover:tw-bg-zinc-300 tw-font-bold tw-rounded-full tw-text-black  tw-px-4 tw-py-2 tw-transition">
               <span className="tw-mr-2">Filter by Service </span> <Image src={'/assets/img/casestudies/Vector.svg'} width={10} height={10}/>
             </button>
-            <button className="tw-bg-white flex gap-2 hover:tw-bg-zinc-300 tw-font-bold tw-rounded-full tw-text-black tw-px-4 tw-py-2 tw-transition">
+            <button className="tw-bg-white  tw-flex  gap-2 hover:tw-bg-zinc-300 tw-font-bold tw-rounded-full tw-text-black tw-px-4 tw-py-2 tw-transition">
              <span className="tw-mr-2"> Filter by Industry </span> <Image src={'/assets/img/casestudies/Vector.svg'} width={10} height={10}/>
             </button>
           </div>
