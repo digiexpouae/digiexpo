@@ -13,8 +13,10 @@ export async function getServerSideProps(context) {
   
   const query = `*[_type == "post" && slug.current == $slug][0]{
     title,
+    
     "currentSlug": slug.current,
     body,
+    metaTitle,
     mainImage,
     ogImage,
     ogDescription,
@@ -50,7 +52,7 @@ export async function getServerSideProps(context) {
 }
 import components from '../../common/table'
 const BlogPost = ({ blog }) => {
-  const { title, currentSlug, mainImage, body,ogImage,ogDescription,ogTitle ,metaTags,description} = blog;
+  const { title, currentSlug, mainImage, metaTitle,body,ogImage,ogDescription,ogTitle ,metaTags,description} = blog;
   
   if (!blog) {
     
@@ -65,7 +67,8 @@ const BlogPost = ({ blog }) => {
     <Wrapper>
   
       <SEO
-        pageTitle={title}
+
+        pageTitle={metaTitle}
         canonicalUrl={`https://www.digiexpo.ae/blogs/${currentSlug}`}
         ogImage={ogImage}
 ogDescription={ogDescription}
