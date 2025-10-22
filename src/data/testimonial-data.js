@@ -24,7 +24,9 @@ import author_img_9 from "../../public/assets/img/testimonial/testi-icon-5-4.png
 import author_img_10 from "../../public/assets/img/testimonial/testi-icon-5-3.png"
 import author_img_11 from "../../public/assets/img/testimonial/testi-icon-5-4.png"
 import author_img_12 from "../../public/assets/img/testimonial/testi-icon-5-1.png"
-
+import author_img_13 from "../../public/assets/img/testimonial/1m1.jpg"
+import author_img_14 from "../../public/assets/img/testimonial/1m2.jpg"
+import author_img_15 from "../../public/assets/img/testimonial/1m6 (1).jpg"
 
 import brand_icon_1 from "../../public/assets/img/testimonial/testi-logo-5-2.png"
 import brand_icon_2 from "../../public/assets/img/testimonial/testi-logo-5-1.png"
@@ -166,49 +168,48 @@ const testimonial_data = [
         author_img: author_img_1,
         brand_icon: brand_icon_1,
         name: "Joann J.",
-        title: "Community Organiser",  
+        // title: "Community Organiser",  
         description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
         lovers are always looking this kind of feature on their own website. ”</>,
 
     },
     {
         id: 14, 
-        author_img: author_img_2,
+        author_img: author_img_13,
         brand_icon: brand_icon_2,
-        name: "Joann J.",
-        title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        name: "David W.",
+        // title: "Community Organiser",  
+        description: <>“ They go above and beyond to deliver real results. Our social media accounts look professional and engaging, and website traffic has grown exponentially. ”</>,
+
+// description: <>“ A wonderful experience working with them. Their deep understanding of digital platforms made a real difference in our brand’s performance.”</>,
+
 
     },
     {
         id: 15, 
-        author_img: author_img_3,
+        author_img: author_img_2,
         brand_icon: brand_icon_3,
         name: "Steven G.",
-        title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        // title: "Community Organiser",  
+        description: <>“ This is impressive. Many small business owners are getting real benefits from this platform, seeing better visibility and engagement. The users are always searching for this kind of meaningful experience that helps their business grow online. ”</>,
 
     },
     {
         id: 16, 
-        author_img: author_img_4,
+        author_img: author_img_14,
         brand_icon: brand_icon_4,
         name: "Gary M. Adams",
-        title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        // title: "Community Organiser",  
+        description: <>“ An exceptional digital marketing partner. Their data-driven approach and creative strategies transformed our online presence and boosted conversions significantly.”</>,
 
     },
     {
         id: 17, 
-        author_img: author_img_5,
+        author_img: author_img_15,
         brand_icon: brand_icon_5,
-        name: "Edward G. Hall",
-        title: "Community Organiser",  
-        description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
-        lovers are always looking this kind of feature on their own website. ”</>,
+        name: "Emily R.",
+        // title: "Community Organiser",  
+        description: <>“ Working with this agency has completely transformed our online presence. Their SEO and social media strategies helped us attract more clients in just a few months.”</>,
 
     },
     {
@@ -216,7 +217,7 @@ const testimonial_data = [
         author_img: author_img_6,
         brand_icon: brand_icon_6,
         name: "Erma P. Brown",
-        title: "Community Organiser",  
+        // title: "Community Organiser",  
         description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
         lovers are always looking this kind of feature on their own website. ”</>,
 

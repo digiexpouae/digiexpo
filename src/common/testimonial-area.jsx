@@ -94,7 +94,7 @@ const TestimonialArea = () => {
                            modules={[Navigation, Scrollbar]}
                            className={`swiper-container testimonial-five-slider-active ${isDragged ? "dragged" : ""
                               }`}>
-                           {testimonial_data.slice(12, 25).map((item, i) =>
+                           {testimonial_data.slice(12, 17).map((item, i) =>
                               <SwiperSlide key={i} className="tp-testimonial-five-item">
                                  <div className="tp-testimonial-five-wrapper d-flex justify-content-between align-items-center">
                                     <div className="tp-testimonial-five-top-info d-flex align-items-center">
@@ -111,7 +111,17 @@ const TestimonialArea = () => {
                                     </div>
                                  </div>
                                  <div className="tp-testimonial-five-content">
-                                    <p>{item.description}</p>
+
+
+
+
+
+
+<p style={{
+  display: '-webkit-box',
+  WebkitLineClamp: 5,
+  WebkitBoxOrient: 'vertical',
+  overflow: 'hidden'}}>{item.description}</p>
                                  </div>
                               </SwiperSlide>
                            )
