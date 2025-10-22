@@ -13,11 +13,11 @@ Developments
 
   return (
     <div
-      className="tw-h-[100vh] md:tw-rounded-bl-[80px]  md:tw-rounded-br-[80px] tw-w-full tw-bg-cover tw-bg-center tw-flex tw-flex-col lg:tw-flex-row tw-items-center md:tw-pt-20 tw-justify-center  tw-relative"
+      className="tw-h-screen md:tw-h-[90vh] md:tw-rounded-bl-[80px]  md:tw-rounded-br-[80px] tw-w-full tw-bg-cover tw-bg-center tw-flex tw-flex-col lg:tw-flex-row tw-items-center md:tw-pt-20 tw-justify-center  tw-relative"
       style={{ backgroundImage: "url('/assets/img/about2/ab-2.png')" }}
     >
       {/* Inner content */}
-      <div className=" lg:tw-w-1/2   lg:tw-h-full tw-flex tw-flex-col lg:tw-pl-24 tw-justify-center tw-pt-1 md:tw-py-0 tw-px-12">
+      <div className=" lg:tw-w-1/2   lg:tw-h-full tw-flex tw-flex-col lg:tw-pl-24 tw-justify-center tw-pt-10 md:tw-py-0 tw-px-12">
         <h1 className="tw-text-black tw-text-3xl md:tw-text-5xl tw-font-bold ">
           {title}
         </h1>
