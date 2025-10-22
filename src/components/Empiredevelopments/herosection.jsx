@@ -13,11 +13,11 @@ Developments
 
   return (
     <div
-      className="tw-h-[100vh] md:tw-rounded-bl-[80px]  md:tw-rounded-br-[80px] tw-w-full tw-bg-cover tw-bg-center tw-flex tw-flex-col md:tw-flex-row tw-items-center md:tw-pt-20 tw-justify-center  tw-relative"
+      className="tw-h-[100vh] md:tw-rounded-bl-[80px]  md:tw-rounded-br-[80px] tw-w-full tw-bg-cover tw-bg-center tw-flex tw-flex-col lg:tw-flex-row tw-items-center md:tw-pt-20 tw-justify-center  tw-relative"
       style={{ backgroundImage: "url('/assets/img/about2/ab-2.png')" }}
     >
       {/* Inner content */}
-      <div className=" md:tw-w-1/2   md:tw-h-full tw-flex tw-flex-col  tw-justify-center tw-pt-12 md:tw-py-0 tw-px-12">
+      <div className=" lg:tw-w-1/2   lg:tw-h-full tw-flex tw-flex-col lg:tw-pl-24 tw-justify-center tw-pt-1 md:tw-py-0 tw-px-12">
         <h1 className="tw-text-black tw-text-3xl md:tw-text-5xl tw-font-bold ">
           {title}
         </h1>
@@ -43,15 +43,18 @@ Developments
       </div>
 
       {/* Hero image */}
-      <div className="tw-flex tw-h-[35%]  md:tw-h-full tw-items-end md:tw-items-center tw-justify-end md:tw-justify-center md:tw-w-1/2 tw-translate-x-[10%]">
+      <div className="tw-flex tw-h-[35%] tw-w-full  lg:tw-h-full tw-items-end  tw-justify-end lg:tw-w-1/2 tw-translate-x-[10%]">
       
-      <div> <Image
+      <div className="  tw-h-[80%] tw-relative tw-w-full" > <Image
           src={"/assets/img/casestudies/cs-7.png"}
-          height={500}
-          width={850}
+         fill
           className="tw-object-cover tw-rounded-2xl "
           alt="Hero Visual"
-        /></div> 
+        />
+        <div className="tw-absolute tw-h-full tw-right-0 tw-w-[60%] tw-blur-xl tw-bg-[linear-gradient(180deg,rgba(255,255,255,0)_65.78%,#FFFFFF_100%),linear-gradient(90deg,rgba(255,255,255,0)_62.72%,#FFFFFF_84.98%)]  tw-z-20" ></div>
+        <div className="tw-absolute tw-h-[30%] tw-bottom-0 tw-right-0 tw-w-full tw-blur-xl tw-bg-[linear-gradient(180deg,rgba(255,255,255,0)_65.78%,#FFFFFF_100%),linear-gradient(90deg,rgba(255,255,255,0)_62.72%,#FFFFFF_84.98%)]  tw-z-20" ></div>
+
+        </div> 
       </div>
     </div>
   );
