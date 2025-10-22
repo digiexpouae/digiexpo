@@ -1,29 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
-const HowWeMakeItHappen = () => {
-  const steps = [
-    {
-      title: "Discovery",
-      text: "Understanding your goals and needs.",
-    },
-    {
-      title: "Strategy",
-      text: "Planning a roadmap for success.",
-    },
-    {
-      title: "Design & Development",
-      text: "Creating impactful solutions.",
-    },
-    {
-      title: "Testing",
-      text: "Ensuring quality and performance.",
-    },
-    {
-      title: "Launch & Support",
-      text: "Delivering growth and long-term success.",
-    },
-  ];
+const HowWeMakeItHappen = ({maintitle,steps,className,text,desc,classhead}) => {
+
 
   return (
     <section className="tw-w-full tw-flex tw-justify-center tw-py-20 tw-px-6">
@@ -33,11 +12,12 @@ const HowWeMakeItHappen = () => {
           className="tw-rounded-2xl tw-p-8 lg:tw-p-14 xl:tw-p-20 tw-text-white tw-bg-cover tw-bg-center"
           style={{ backgroundImage: 'url(/assets/img/about2/ab-7.png)' }}
         >
-          <h2 className="tw-text-3xl md:tw-text-4xl tw-text-white tw-font-semibold tw-mb-10">
-            How We Make It Happen
-          </h2>
-
-          <div className="tw-grid tw-grid-cols-1 tw-relative tw-flex tw-flex-wrap md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-14">
+          <h2 className={`tw-text-3xl md:tw-text-4xl tw-text-white tw-font-semibold tw-mb-10 ${classhead}`}>
+{maintitle}          </h2>
+{text &&
+<p className="tw-text-white tw-mb-10 tw-text-sm">{desc}</p>
+}
+          <div className={` tw-grid-cols-1 tw-relative tw-flex tw-flex-wrap md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-14 ${className}`}>
             {steps.map((item, index) => (
               <div key={index} className="tw-flex tw-flex-col tw-justify-center tw-relative">
                 <div className="tw-absolute tw-left-0 tw-h-20 tw-w-20">

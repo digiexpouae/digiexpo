@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function AboutSection() {
+export default function AboutSection({className}) {
   return (
     <section className="tw-w-full tw-bg-white tw-text-gray-800">
       {/* Intro Text */}
@@ -87,7 +87,7 @@ export default function AboutSection() {
       </div>
 
       {/* Mission / Vision */}
-      <div className="tw-grid md:tw-grid-cols-2">
+      <div className={`tw-grid md:tw-grid-cols-2 ${className}`}>
         {/* Mission */}
         <div className="tw-bg-[#F7F9FB] tw-p-10">
           <div className="tw-flex tw-flex-col tw-items-start tw-justify-center tw-gap-3 lg:tw-px-32">

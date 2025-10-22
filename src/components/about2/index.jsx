@@ -11,6 +11,28 @@ import Section8 from "./section8"
  import Brand from '../../components/about/brand'
  import ContactArea from '../../components/homes/home/contact-area'
 const index=()=>{
+      const steps = [
+        {
+          title: "Discovery",
+          text: "Understanding your goals and needs.",
+        },
+        {
+          title: "Strategy",
+          text: "Planning a roadmap for success.",
+        },
+        {
+          title: "Design & Development",
+          text: "Creating impactful solutions.",
+        },
+        {
+          title: "Testing",
+          text: "Ensuring quality and performance.",
+        },
+        {
+          title: "Launch & Support",
+          text: "Delivering growth and long-term success.",
+        },
+      ];
     return (
     <> 
     <Header />
@@ -20,7 +42,7 @@ const index=()=>{
     <Section4 />
     <Section5 />
     <Section6 />
-    <Section7 />
+    <Section7 steps={steps} maintitle={'How We Make It Happen'} />
     <Section8 />
     <Brand />
     <ContactArea />
