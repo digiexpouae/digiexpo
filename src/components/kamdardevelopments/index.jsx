@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Herosection from '../Empiredevelopments/herosection'
 import Header from "@/layout/headers/header-3"
 import Footer from "@/layout/footers/footer-4"
@@ -9,12 +9,13 @@ import Section2 from '../Empiredevelopments/section2'
 import Section3 from '../Empiredevelopments/section3'
 import Section4 from '../about2/section7'
 import Section5 from '../Empiredevelopments/section4'
+import Slider from './slider'
 const empire = () => {
   const desc='DigiExpo followed a strategic, four-phase approach to transform Empire Developments’ online presence:'
     const steps = [
-        {
+       {
           title: "Discovery & Strategy",
-        },
+     },
         {
           title: "UX/UI Design",
         },
@@ -29,12 +30,29 @@ const empire = () => {
       const title=<>Kamdar <br /> Developments</>
       const text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue enim, varius elementum nulla ut, accumsan tristique lacus. Donec quis dolor sed turpis finibus bibendum vel a nisl. Curabitur at diam justo. Quisque varius vestibulum quam, i'
 
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      console.log(window.scrollY + " scrolly");
+    };
+
+    // Listen for scroll
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
   <Header />
   <Herosection image={"/assets/img/casestudies/kamdar.png"} text1={title} text2={text}/>
   <Section2 text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}/>
   <Section3 />
+  <Slider />
   <Section className={'!tw-hidden'} />
   <Section4 maintitle={'Process'} classhead={'!tw-mb-3'} text={true} desc={desc} steps={steps} className={'!tw-grid-cols-2  lg:!tw-grid-cols-2 md:!tw-w-[60%]'} />
   <Section5 />
