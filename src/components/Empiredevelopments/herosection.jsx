@@ -1,16 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
-const HeroSection = () => {
-  const title = (
-    <>
-  Empire <br />
-Developments
-    </>
-  );
+const HeroSection = ({text1,text2,image}) => {
+  const title=text1
 
-  const text =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue enim, varius elementum nulla ut, accumsan tristique lacus. Donec quis dolor sed turpis finibus bibendum vel a nisl. Curabitur at diam justo. Quisque varius vestibulum quam, i'
-
+  const text=text2
   return (
     <div
       className="tw-h-screen md:tw-h-[90vh] md:tw-rounded-bl-[80px]  md:tw-rounded-br-[80px] tw-w-full tw-bg-cover tw-bg-center tw-flex tw-flex-col lg:tw-flex-row tw-items-center md:tw-pt-20 tw-justify-center  tw-relative"
@@ -46,7 +39,7 @@ Developments
       <div className="tw-flex tw-h-[35%] tw-w-full  lg:tw-h-full tw-items-end  tw-justify-end lg:tw-w-1/2 tw-translate-x-[10%]">
       
       <div className="  tw-h-[80%] tw-relative tw-w-full" > <Image
-          src={"/assets/img/casestudies/cs-7.png"}
+          src={image}
          fill
           className="tw-object-cover tw-rounded-2xl "
           alt="Hero Visual"
