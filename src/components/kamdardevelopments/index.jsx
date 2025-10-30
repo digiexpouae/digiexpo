@@ -9,7 +9,6 @@ import Section2 from '../Empiredevelopments/section2'
 import Section3 from '../Empiredevelopments/section3'
 import Section4 from '../about2/section7'
 import Section5 from '../Empiredevelopments/section4'
-import Casestudy from '../Empiredevelopments/casestudy'
 const empire = () => {
   const desc='DigiExpo followed a strategic, four-phase approach to transform Empire Developments’ online presence:'
     const steps = [
@@ -33,10 +32,9 @@ const empire = () => {
   return (
     <div>
   <Header />
-  <Herosection image={"/assets/img/casestudies/kamdar.png"} text1={title} text2={text}/>
+  <Herosection image={"/assets/img/casestudies/Kamdar copy.png"} text1={title} text2={text}/>
   <Section2 text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}/>
   <Section3 />
-  <Casestudy img={"/assets/img/casestudies/Kamdar copy.png"} />
   <Section className={'!tw-hidden'} />
   <Section4 maintitle={'Process'} classhead={'!tw-mb-3'} text={true} desc={desc} steps={steps} className={'!tw-grid-cols-2  lg:!tw-grid-cols-2 md:!tw-w-[60%]'} />
   <Section5 />
