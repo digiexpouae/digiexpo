@@ -1098,7 +1098,43 @@ App security is very important in the UAE because the regulations about data are
   aria_controls: "collapseHundredFour",
   active: "",
 },
+  {
+    id: 105,
+    question: "Can experts fix my old website fast?",
+    answer: (
+      <>
+        Yes, at DigiExpo, we deal with the reprocessing of old websites and their replacement with the current levels. 
+        Our team identifies the problem areas of performance, remodels graphics, and increases the loading speed 
+        without interfering with your current content. We know that time is like money, and that is why we are 
+        efficient in providing a fully refreshed mobile-friendly site within record time and can assist your business 
+        to make a strong digital comeback in no time.
+      </>
+    ),
+    accordion_id: "headingHundredFive",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseHundredFive",
+    aria_controls: "collapseHundredFive",
+    active: "",
+  },
 
+  // Entity Intent
+  {
+    id: 106,
+    question: "What services do you offer in Dubai?",
+    answer: (
+      <>
+        DigiExpo provides a full spectrum of digital services in Dubai, which includes web design, web development, 
+        eCommerce, branding, SEO, and performance marketing. DigiExpo's goal is to make businesses thrive on the internet. 
+        Whether you are starting a business or growing an established one, we will offer you the full package to help 
+        your brand stand out in the competitive digital market of Dubai.
+      </>
+    ),
+    accordion_id: "headingHundredSix",
+    collapsed: "collapsed",
+    data_bs_target: "#collapseHundredSix",
+    aria_controls: "collapseHundredSix",
+    active: "",
+  },
 
 ];
 export default answer_question_data;
