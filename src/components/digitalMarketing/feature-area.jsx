@@ -20,10 +20,9 @@ const feature_content = {
   integraton_title: "Strategic Digital Marketing Roadmap",
   integraton_des: (
     <>
-      This is one of our specialties as the{" "}
-      <b>best digital marketing agency in UAE.</b>
-      <br /> To meet the specific goals of your company, a wide range of
-      services are provided by our staff.
+    This is one of our specialties as the {" "} <b>best digital marketing agency Dubai</b>.  <br />
+To meet the specific goals of your company, a wide range of services are provided by our staff.
+   
     </>
   ),
 };

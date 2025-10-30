@@ -7,25 +7,35 @@ import sales_img_2 from "../../public/assets/img/card/sale-2.png"
 import sales_img_3 from "../../public/assets/img/card/sale-3.png"
 
 const sales_content = {
-    title: <>Track and <span>Analyze Sales</span> in Real time</>,
-    dub_title: <>Track and Analyze Sales in Real time</>,
-    description: <>Centralize and simplify payments, and get comprehensive <br /> insights on your financials softuch.!</>,
+    title: <>Track and <span>Analyze </span> in Real time</>,
+    dub_title: <>Track and Analyze  in Real time</>,
+    description: <>As the best web design company Dubai, we help you centralize insights. Digiexpo makes your business run smoothly and grow with confidence.</>,
 
     sales_feature: [
         {
             id: 1,
             color: "yellow-1",
-            list: "No hidden fees."
+            list: "No extra costs."
         },
         {
             id: 2,
             color: "purple-2",
-            list: "100% security. Guaranteed."
+            list: "Guaranteed 100% safety.."
         },
         {
             id: 3,
             color: "green-3",
-            list: "No training or maintenance needed"
+            list: "Analytics in real-time"
+        },
+        {
+            id: 4,
+            color: "yellow-1",
+            list: "Tracking payments is easy."
+        },
+        {
+            id: 5,
+            color: "purple-2",
+            list: "No need for training."
         },
     ],
 

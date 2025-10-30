@@ -20,11 +20,12 @@ const hero_content = {
       Your <span>Vision</span> .Our <span>Code</span>.
     </>
   ),
-  title_2: "Websites That Convert, Guaranteed.",
+  title_2: "Website Development Dubai That Delivers Proven Results",
   info: (
     <>
-      At DigiExpo, Creative designs and modern <b> web development services </b>{" "}
-      <br /> are combined by a skilled team.
+    At DigiExpo, Our skilled <b> website development Dubai experts</b>{" "} <br /> combine Creative designs and modern web development.
+
+
     </>
   ),
   btn_1: "Live Demo",

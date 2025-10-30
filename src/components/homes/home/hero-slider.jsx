@@ -33,21 +33,20 @@ const hero_content = {
   ],
   hero_title: (
     <>
-      <span className='tp_title'>
-        <span className='child'>DigiExpo Helps Brand With</span>
+      <span className='tp_title' >
+        <span className='child' >Boost Business Growth  </span>
       </span>{" "}
       <br />
       <span>
-        <span className='child'>Business Growth</span>
+        <span className='child' > with Digiexpo Expert  </span>
       </span>{" "}
+      
     </>
   ),
   sub_title: (
     <>
       {" "}
-      Welcome to Dubai’s great digital marketing agency. We specialize in
-      offering digital marketing agency UAE services that help companies grow in
-      competitive industries.
+Welcome to Digiexpo – Dubai’s leading website development company, our expert web design Dubai helps businesses succeed in Dubai's competitive market.
     </>
   ),
   hero_shape_img: [
