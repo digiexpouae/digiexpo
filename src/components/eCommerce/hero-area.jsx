@@ -14,7 +14,7 @@ const hero_content = {
   title: (
     <>
     <div className='head'>
-        <h1 className='child'>Best E-commerce </h1></div>
+        <h1 className='child'>Leading Ecommerce </h1></div>
       {" "}
       
        <div className='head'> <h2 className='child'>Websites Development Company Dubai</h2></div>
@@ -29,8 +29,11 @@ const hero_content = {
   ),
   sub_title: (
     <>
-      High-performing and customized stores are offered by the{" "}
-      <b> best E-commerce website development company.</b>
+    
+
+
+     Elevate your E-commerce Success With Digiexpo {" "}
+      <b> Cutting Edge E-Commerce Development.</b>
     </>
   ),
   //  title: "E-commerce web development Dubai turns visitors into loyal customers",

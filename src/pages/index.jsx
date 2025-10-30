@@ -6,7 +6,6 @@ import SEO from "../common/seo";
 import HomeOne from "../components/homes/home";
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
-import Script from 'next/script'
 const Home = () => {
   const seoMetaData = {
     pageTitle: "Web Design Dubai | Website Development Company – DigiExpo",
@@ -67,19 +66,7 @@ const Home = () => {
 <script type="application/ld+json"  dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
        </Head>
-        <Script id="crisp-chat" strategy="afterInteractive">
-        {`
-          window.$crisp = [];
-          window.CRISP_WEBSITE_ID = "51aaf20a-6a00-46fa-8a7b-918ce1c4cbd1";
-          (function() {
-            var d = document;
-            var s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
-          })();
-        `}
-      </Script>  
+    
     <Wrapper>
       <SEO
         pageTitle={seoMetaData.pageTitle}
