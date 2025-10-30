@@ -76,6 +76,8 @@ export default function App({ Component, pageProps }) {
 
   // Lazy load Bootstrap to prevent forced reflows
   useEffect(() => {
+
+    
     const loadBootstrap = async () => {
       if (typeof window !== "undefined") {
         // Use dynamic import to defer Bootstrap loading
@@ -87,6 +89,18 @@ export default function App({ Component, pageProps }) {
     const timer = setTimeout(loadBootstrap, 100);
     return () => clearTimeout(timer);
   }, []);
+   useEffect(() => {
+    // ✅ Crisp Chat
+    if (typeof window !== "undefined" && !window.$crisp) {
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "51aaf20a-6a00-46fa-8a7b-918ce1c4cbd1";
+
+      const s = document.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  },[])
 
   // useEffect(() => {
   //   async function fetchPaths() {
