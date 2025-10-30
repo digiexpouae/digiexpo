@@ -23,9 +23,8 @@ const service_content = {
   title: "Our Emerging Technology Development Services",
   sub_title: (
     <>
-      By using <b> emerging technologies development agency Dubai </b> services
-      help in revolutionizing businesses. It offers modern strategies like IOT,
-      AI, block chain, and machine learning.
+    Digiexpo <b> emerging technologies development services  </b>help businesses transform. Our emerging technology development services include modern strategies like IOT, AI, block chain, and machine learning.
+      
     </>
   ),
 

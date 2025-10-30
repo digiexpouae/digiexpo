@@ -7,15 +7,15 @@ import shape_2 from "../../../../public/assets/img/cta/cta-shape-5-2.png";
 
 const business_content = {
   bg_img: "/assets/img/cta/cta-bg-5-1.webp",
-  sub_title: "Ready to Hit Your Goals?",
+  sub_title: "",
   title: (
     <>
-      Drive Growth With Best
+     Empower Your Vision with a
     </>
   ),
-  maintitle:"Digital Marketing Agency UAE",
+  maintitle:" Website Development Company",
   sub_text:
-    "The experts provided by our digital marketing agency Dubai offer great services. These include social media marketing, performance marketing, SEO, and content production.",
+    "Digiexpo offers custom web design services. We also offer SEO, performance marketing, and content marketing. These services aim to help you reach your goals and increase your site's visibility.",
   btn_text: "Get in Touch",
 };
 const {bg_img, sub_title, title, btn_text,maintitle, sub_text}  = business_content

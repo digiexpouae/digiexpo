@@ -31,20 +31,25 @@ const service_content = {
   btn_text: <>See All Features</>,
 
   bg_img: "/assets/img/service/service-3-bg.png",
-  service_title: "Turn data into results.",
+  service_title: "Build a strong online presence.",
   service_info: (
     < >
-      Achieve Measurable Results With
+Achieve Measurable Results With
       <br />
-      <h1 style={{fontSize:'24px',color:'white'}}>Our Best Digital Marketing Agency In UAE</h1>
+      <h1 style={{fontSize:'24px',color:'white'}}>the Best Digital Marketing Agency Dubai
+</h1>
     </>
   ),
+
   sub_text: (
     <>
-      Services of a <b> digital marketing agency </b> include PPC, SEO, <br />{" "}
-      content production, and social media marketing. <br /> Our goal helps in
-      connecting with your audience, <br /> producing quality leads, and
-      building brand awareness.
+    Our <b>Digital Marketing Services</b> include PPC, SEO,<br />
+content production, and social media marketing.<br /> 
+We aim to help you in connect with your audience,<br />  
+generate quality leads, and boost brand awareness.
+    
+     {/* DigiExpo is a <b>trusted web design company Dubai</b>. We build high-performing  {" "} and engaging websites <br />  to help brands grow.We specialize in web design and <br />development, UI/UX design,  e-commerce development,<br /> SEO, PPC, and content creation.  */}
+
     </>
   ),
 };

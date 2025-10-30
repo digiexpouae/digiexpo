@@ -11,7 +11,7 @@ const service_content = {
   title: "Emphasizing the Outcome",
   description: (
     <>
-      Our Emerging Tech Development<br /> Service Work Process
+    Our Emerging Technologies Development<br /> Work Process
     </>
   ),
 };

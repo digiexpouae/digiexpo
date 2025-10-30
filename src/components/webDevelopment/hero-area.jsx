@@ -20,11 +20,12 @@ const hero_content = {
       Your <span>Vision</span> .Our <span>Code</span>.
     </>
   ),
-  title_2: "Websites That Convert, Guaranteed.",
+  title_2: "Website Development Dubai That Delivers Proven Results",
   info: (
     <>
-      At DigiExpo, Creative designs and modern <b> web development services </b>{" "}
-      <br /> are combined by a skilled team.
+    At DigiExpo, Our skilled <b> website development Dubai experts</b>{" "} <br /> combine Creative designs and modern web development.
+
+
     </>
   ),
   btn_1: "Live Demo",
@@ -56,7 +57,7 @@ const HeroArea = () => {
                      <div className="tp-hero-title-box text-center">
                         <h2 className="tp-hero-title-3 hero-text-anim pb-5 hero-font">
                            <i><i className="child-1 hero-font">{title_1}</i></i>
-                           <i><i className="child-1 hero-font">{title_2}</i></i>
+                           <i><i className="child-1 hero-font " style={{lineHeight:'1'}}>{title_2}</i></i>
                         </h2>
                         <p className="tp-char-animation-2 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">{info}</p>
                      </div>

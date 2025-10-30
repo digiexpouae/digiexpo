@@ -65,7 +65,8 @@ const Home = () => {
     <Head>
 <script type="application/ld+json"  dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-    </Head>
+       </Head>
+    
     <Wrapper>
       <SEO
         pageTitle={seoMetaData.pageTitle}
