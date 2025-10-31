@@ -22,10 +22,10 @@ const {sub_title, title, description, btn_text }  = faq_content
 const FaqArea = ({style_service}) => {
     return (
         <>
-            <div className="tp-faq-area pt-140 pb-120 fix pb-sm-50 pt-sm-50">
+            <div className="tp-faq-area tw-h-screen tw-py-10 tw-mb-20  fix pb-sm-50 pt-sm-50">
                <div className="container">
                   <div className="row"> 
-                     <div className={`col-xl-6 col-lg-5 ${style_service && "wow tpfadeLeft"}`} 
+                     <div className={`col-xl-6 col-lg-6 ${style_service && "wow tpfadeLeft"}`} 
                         data-wow-duration={style_service && ".9s"} 
                         data-wow-delay={style_service && ".4s"}>
                         <div className="tp-faq-left-wrapper p-relative">
@@ -46,7 +46,7 @@ const FaqArea = ({style_service}) => {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-6 col-lg-7">
+                     <div className="col-xl-6 col-lg-6 ">
                         <AnswerQuestion /> 
                      </div>
                   </div>
