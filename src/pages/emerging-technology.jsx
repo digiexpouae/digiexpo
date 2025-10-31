@@ -9,51 +9,59 @@ const Index = () => {
   const desc = `DigiExpo offers innovative Emerging Technologies services in AI, AR, and IoT, delivering smart, scalable, and future-ready solutions for businesses.`;
 
   const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What emerging tech trends are shaping Dubai’s businesses in 2025?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To stay competitive and come up with new ideas, firms in Dubai are using new technologies like AI, the Internet of Things (IoT), blockchain, and 5G. AI helps make customer service and marketing more personal. IoT connects devices so they can work together better. Blockchain protects transactions and increases trust, and 5G gives all these technologies fast and dependable internet. These technologies work together to make businesses more efficient. They also improve the customer experience and make the business more flexible."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is AI transforming customer experiences and operations across the UAE?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI is transforming how people in the UAE connect with businesses. Chatbots provide personalized assistance. They analyze data to better understand customer needs. It also helps make supply chains better, which means better inventory management and faster delivery times. These changes make services quicker, more effective, and easier for customers to use. AI isn't just a term for businesses in Dubai; it's a useful tool that makes customers happier and helps companies stay competitive in a market that changes quickly and where customers expect more every day."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why are 5G and edge computing crucial for smart cities in Dubai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "5G and edge computing will change the game for Dubai's smart city aspirations. 5G gives you fast and dependable internet connections. It gives edge computing processes data close to where it was created, which cuts down on delays. This combination makes it possible for real-time apps like smart traffic lights, energy management systems, and public safety networks to work. These technologies make city services work better and respond more quickly, which makes life better for people who live there. Dubai needs to invest in 5G and edge computing if it wants to construct a smart city that is truly connected and works well."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What role does blockchain play in enhancing transparency and security in the UAE?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Blockchain is making the UAE more open and secure by making records that can't be changed and procedures for verifying them that aren't in one place. It helps keep money safe, keeps track of supply networks, and checks digital identities. This cuts down on fraud and makes customers and businesses trust each other more. Dubai is actively using blockchain in both the public and private sectors to make things easier and more accountable. Dubai's digital infrastructure is getting stronger because of blockchain technology. It also encourages new ideas that help the economy and society."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How are sustainability and green tech innovations influencing Dubai’s digital transformation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dubai's digital revolution includes using green technologies like energy-efficient data centers and eco-friendly ways to make software. These projects save money on operations while also lowering carbon emissions and power use. Dubai is showing corporate social responsibility and working towards its sustainability goals by making green IT a priority. This method is good for the environment and also makes Dubai a leader in the digital economy of the future. It encourages resilience, innovation, and long-term competitiveness in the global market."
-        }
-      }
-    ]
-  };
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What new technologies lead Dubai in 2025?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dubai is leading the way in 2025 with AI, blockchain, IoT, and cloud-based solutions taking center stage. At DigiExpo, we apply these innovations to future-proof our clients’ businesses. These technologies improve efficiency and user experience — from AI-driven analytics to IoT-powered automation. DigiExpo helps Dubai companies stay ahead by adopting and adapting to the latest technologies, turning innovation into measurable business growth."
+    }
+  },{
+    "@type": "Question",
+    "name": "How is AI changing Dubai businesses now?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AI is transforming Dubai businesses — from automated customer support to predictive analytics. At DigiExpo, we integrate AI to power smarter marketing campaigns, responsive websites, and data-driven decision-making. AI helps personalize user journeys, save time, and deliver better results. We help Dubai brands embrace AI to evolve from traditional models into intelligent, adaptive systems that drive performance and sustainable growth."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why does blockchain matter for UAE companies?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Blockchain provides UAE companies with transparency, security, and trust in digital transactions. DigiExpo integrates blockchain into business solutions to enhance efficiency and safeguard data. We help Dubai organizations leverage blockchain’s decentralized power to innovate, improve accountability, and strengthen online presence — ensuring safer and smarter operations in a rapidly evolving digital economy."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do 5G and IoT grow Dubai’s smart cities?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dubai’s smart city evolution is powered by 5G and IoT technologies. At DigiExpo, we implement these systems to build connected, intelligent infrastructures for businesses and government sectors. 5G enables real-time data transfer, while IoT automates operations and increases efficiency. Together, they create the foundation for a responsive, data-driven Dubai that leads the world in innovation and smart living."
+    }
+  },{
+    "@type": "Question",
+    "name": "What’s AR/VR’s role in Dubai’s tech future?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AR and VR are redefining how Dubai businesses engage customers. At DigiExpo, we integrate immersive technologies into apps, eCommerce, and web experiences. These tools make digital interactions more engaging, emotional, and memorable. We help brands harness AR and VR for storytelling, product visualization, and training — turning imagination into powerful user engagement across Dubai’s digital space."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why invest in emerging technologies in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Investing in emerging technologies future-proofs your business. At DigiExpo, we help companies use AI, blockchain, and IoT to improve efficiency, cut costs, and unlock new revenue streams. Dubai’s tech-driven ecosystem rewards early adopters, and DigiExpo ensures your business stays competitive by applying the right innovations at the right time to secure growth and sustainability."
+    }
+  },{
+    "@type": "Question",
+    "name": "What future tech will impact Dubai companies next?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AI-driven automation, digital twins, and sustainable smart systems represent Dubai’s next wave of innovation. DigiExpo tracks these emerging trends to prepare our clients for what’s coming. We help integrate forward-thinking solutions that enhance customer experience, logistics, and energy management. With our strategic guidance, Dubai companies stay ready for tomorrow’s technology — today."
+    }
+  }]
+}
 
   return (
     <>
