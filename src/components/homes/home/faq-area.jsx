@@ -22,7 +22,7 @@ const {sub_title, title, description, btn_text }  = faq_content
 const FaqArea = ({style_service}) => {
     return (
         <>
-            <div className="tp-faq-area tw-h-screen tw-py-10 tw-mb-20  fix pb-sm-50 pt-sm-50">
+            <div className="tp-faq-area  tw-py-10 tw-mb-6 fix pb-sm-50 pt-sm-50">
                <div className="container">
                   <div className="row"> 
                      <div className={`col-xl-6 col-lg-6 ${style_service && "wow tpfadeLeft"}`} 
@@ -46,7 +46,7 @@ const FaqArea = ({style_service}) => {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-6 col-lg-6 ">
+                     <div className="col-xl-6 col-lg-6 md:tw-py-24 ">
                         <AnswerQuestion /> 
                      </div>
                   </div>
