@@ -197,7 +197,7 @@ const HeroSlider = () => {
                     <HeroForm />
                   </div>
                   <p
-                    className='wow tpfadeUp'
+                    className='wow tpfadeUp '
                     data-wow-duration='.9s'
                     data-wow-delay='.7s'
                   >
