@@ -38,7 +38,7 @@ const hero_content = {
       </span>{" "}
       <br />
       <span>
-        <span className='child' >  Digiexpo Expert  </span>
+        <span className='child' >  DigiExpo Expert  </span>
       </span>{" "}
        <span>
         <span className='child' > Web Design Dubai </span>
