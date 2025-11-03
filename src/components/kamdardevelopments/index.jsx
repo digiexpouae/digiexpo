@@ -9,6 +9,11 @@ import Section2 from '../Empiredevelopments/section2'
 import Section3 from '../Empiredevelopments/section3'
 import Section4 from '../about2/section7'
 import Section5 from '../Empiredevelopments/section4'
+import Table from  '../Empiredevelopments/table'
+import Challenges from '../Empiredevelopments/challenges'
+import Counter from '../Empiredevelopments/maincounter'
+import Client from '../Empiredevelopments/aboutclient'
+import Delivered from '../Empiredevelopments/delivered'
 const empire = () => {
   const desc='DigiExpo followed a strategic, four-phase approach to transform Empire Developments’ online presence:'
     const steps = [
@@ -33,9 +38,27 @@ const empire = () => {
     <div>
   <Header />
   <Herosection image={"/assets/img/casestudies/Kamdar copy.png"} text1={title} text2={text}/>
-  <Section2 text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}/>
-  <Section3 />
-  <Section className={'!tw-hidden'} />
+ <Table title={'Kamdar Development'} text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}
+titleone={'Industry'}
+srclink={'/assets/kamdarcompressed.mp4'}
+textone={'Real Estate'}
+titletwo={'Technologies'}
+texttwo={'Web Development'}
+titlethree={'Launched'}
+textthree={'2025'}
+titlefour={'Country'}
+textfour={'UAE'}
+ 
+ />
+
+
+ <Challenges />
+<Client />
+ <Delivered />
+  <Counter />
+  {/* <Section2 text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}/> */}
+  {/* <Section3 /> */}
+  {/* <Section className={'!tw-hidden'} /> */}
   <Section4 maintitle={'Process'} classhead={'!tw-mb-3'} text={true} desc={desc} steps={steps} className={'!tw-grid-cols-2  lg:!tw-grid-cols-2 md:!tw-w-[60%]'} />
   <Section5 />
   <Section8 />

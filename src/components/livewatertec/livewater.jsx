@@ -9,6 +9,11 @@ import Section2 from '../Empiredevelopments/section2'
 import Section3 from '../Empiredevelopments/section3'
 import Section4 from '../about2/section7'
 import Section5 from '../Empiredevelopments/section4'
+import Table from '../Empiredevelopments/table'
+import Challenges from '../Empiredevelopments/challenges'
+import Client from '../Empiredevelopments/aboutclient'
+import Delivered from '../Empiredevelopments/delivered'
+import Counter from '../Empiredevelopments/maincounter'
 const empire = () => {
   const desc='DigiExpo followed a strategic, four-phase approach to transform Empire Developments’ online presence:'
     const steps = [
@@ -33,9 +38,26 @@ const empire = () => {
     <div>
   <Header />
   <Herosection image={"/assets/img/casestudies/livewatertec.png"} text1={title} text2={text}/>
-<Section2 text={'LiveWaterTec is a trusted leader in advanced water purification solutions, dedicated to providing clean, safe, and healthy drinking water for homes and businesses. With cutting-edge technology, eco-friendly systems, and a passion for innovation, the company delivers high-performance water purifiers designed to improve quality of life and promote sustainable living.'}/>
-  <Section3 />
-  <Section className={'!tw-hidden'} />
+<Table title={'Livewater tec'}   text={'LiveWaterTec is a trusted leader in advanced water purification solutions, dedicated to providing clean, safe, and healthy drinking water for homes and businesses. With cutting-edge technology, eco-friendly systems, and a passion for innovation, the company delivers high-performance water purifiers designed to improve quality of life and promote sustainable living.'}   
+  
+  titleone={'Industry'}
+  textone={'Logistics'}
+  titletwo={'Technologies'}
+  texttwo={'Web Development'}
+  titlethree={'Launched'}
+  textthree={'2025'}
+  titlefour={'Country'}
+  textfour={'UAE'}
+  
+ srclink={'/assets/live_compressed.mp4'}
+  />
+<Challenges />
+<Client />
+ <Delivered />
+  <Counter />
+{/* <Section2 text={'LiveWaterTec is a trusted leader in advanced water purification solutions, dedicated to providing clean, safe, and healthy drinking water for homes and businesses. With cutting-edge technology, eco-friendly systems, and a passion for innovation, the company delivers high-performance water purifiers designed to improve quality of life and promote sustainable living.'}/> */}
+  {/* <Section3 /> */}
+  {/* <Section className={'!tw-hidden'} /> */}
   <Section4 maintitle={'Process'} classhead={'!tw-mb-3'} text={true} desc={desc} steps={steps} className={'!tw-grid-cols-2  lg:!tw-grid-cols-2 md:!tw-w-[60%]'} />
   <Section5 />
   <Section8 />

@@ -39,7 +39,18 @@ const empire = () => {
     <div>
   <Header />
   <Herosection image={"/assets/img/casestudies/Empire copy.png"} text1={<>Empire <br />Developments</>} text2={text}/> 
-   <Table />
+   <Table
+   text={'Empire Developments is a premier real estate developer known for creating iconic, luxury residential and commercial properties. With a reputation for excellence and innovation, they sought a digital partner to build a website that reflected their premium brand and could effectively market high-value projects to an elite audience.'}
+   title={'Empire Developments'}
+srclink={'/assets/empire_small.mp4'}
+textone={'Real Estate'}
+titletwo={'Technologies'}
+texttwo={'Web Development'}
+titlethree={'Launched'}
+textthree={'2025'}
+titlefour={'Country'}
+textfour={'UAE'}
+    />
   {/* <Section2 text={'Empire Developments is a premier real estate developer known for creating iconic, luxury residential and commercial properties. With a reputation for excellence and innovation, they sought a digital partner to build a website that reflected their premium brand and could effectively market high-value projects to an elite audience.'}/> */}
  <Challenges />
 <Client />

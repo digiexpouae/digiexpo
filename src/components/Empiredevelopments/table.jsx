@@ -1,6 +1,17 @@
 import Image from "next/image";
 
-export default function TwoRowTable() {
+export default function TwoRowTable({
+    title,
+    text,
+    titleone,
+    textone,
+    titletwo,
+    texttwo,srclink,
+    titlethree,
+    textthree,
+    titlefour,
+    textfour,
+  }) {
   return (
     <section className="tw-w-full tw-text-white tw-rounded-2xl tw-my-20  tw-overflow-hidden">
       <div className="tw-h-full">
@@ -13,11 +24,9 @@ export default function TwoRowTable() {
                 <div className="tw-flex tw-flex-col tw-gap-4 tw-justify-center tw-items-start">
                   <p className="tw-text-white tw-leading-relaxed">
                     <span className="tw-text-white tw-font-semibold">
-                      Empire Developments
+                      {title}
                     </span>{" "}
-                    is a premier real estate developer known for creating iconic, luxury residential and commercial properties. 
-                    With a reputation for excellence and innovation, they sought a digital partner to build a website that reflected their premium brand and could effectively market high-value projects to an elite audience.
-                  </p>
+{text}                  </p>
                
                 </div>
               </td>
@@ -28,24 +37,24 @@ export default function TwoRowTable() {
                   {/* Column 1 */}
                   <div className="tw-flex tw-justify-between  md:tw-flex-col tw-gap-3">
                     <div>
-                      <p className="tw-font-semibold tw-text-white">Industry</p>
-                      <p className="tw-text-white">Real Estate</p>
+                      <p className="tw-font-semibold tw-text-white">{titleone}</p>
+                      <p className="tw-text-white">{textone}</p>
                     </div>
                     <div>
-                      <p className="tw-font-semibold tw-text-white">Launched</p>
-                      <p className="tw-text-white">2025</p>
+                      <p className="tw-font-semibold tw-text-white">{titletwo}</p>
+                      <p className="tw-text-white">{texttwo}</p>
                     </div>
                   </div>
 
                   {/* Column 2 */}
                   <div className="tw-flex tw-justify-between md:tw-flex-col tw-gap-3">
                     <div>
-                      <p className="tw-font-semibold tw-text-white">Technologies</p>
-                      <p className="tw-text-white">Website Development</p>
+                      <p className="tw-font-semibold tw-text-white">{titlethree}</p>
+                      <p className="tw-text-white">{textthree}</p>
                     </div>
                     <div>
-                      <p className="tw-font-semibold tw-text-white">Country</p>
-                      <p className="tw-text-white">UAE</p>
+                      <p className="tw-font-semibold tw-text-white">{titlefour}</p>
+                      <p className="tw-text-white">{textfour}</p>
                     </div>
                   </div>
                 </div>
@@ -64,7 +73,7 @@ export default function TwoRowTable() {
                     className="tw-object-cover tw-w-full tw-h-auto hover:tw-scale-[1.02] tw-transition-transform tw-duration-500"
                   /> */}
                  <video
-  src="/assets/empire.mp4"
+  src={srclink}
   autoPlay
   muted
   loop
