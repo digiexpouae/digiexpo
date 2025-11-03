@@ -24,7 +24,7 @@ export default function FeatureList() {
 
   return (
     <section className="tw-w-full tw-text-white tw-rounded-2xl tw-py-16 tw-flex  tw-flex-col tw-items-center tw-justify-center">
-      <h2 className="tw-text-4xl tw-text-left tw-mb-4">Challenges We Overcame</h2>
+      <h2 className="tw-text-4xl tw-text-left tw-mb-4 tw-px-4 md:tw-px-0">Challenges We Overcame</h2>
       <div className="tw-w-[90%] tw-bg-[#803dff] tw-border tw-border-[zinc]-800 tw-rounded-2xl tw-overflow-hidden tw-divide-y tw-divide-zinc-800">
         {features.map((feature, index) => (
           <div
