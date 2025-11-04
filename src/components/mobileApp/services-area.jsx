@@ -17,9 +17,11 @@ import styles from './services-area.module.scss'
 const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
 
 const service_content = {
-  title: "Create. Connect. Our Mobile Applications Development Services Fuel Your Business.",
+  title: "Create. Connect. App Development 	Dubai That Fuels Your Business",
   sub_title: (
-    <>Our mob app development Dubai team of experts creates apps tailored to your unique business needs.</>
+    <>
+Our  app development Dubai experts creates apps tailored to your unique business needs.
+</>
   ),
 
   bg_img: "/assets/img/service/sv-bg.jpg",

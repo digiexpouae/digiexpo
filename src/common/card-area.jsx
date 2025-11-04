@@ -49,11 +49,8 @@ const card_content = {
             img: card_img_6,
         },
     ],
-
-    title: <>Manage <span>All your Cards</span> in one Place</>,
-    description: <>Digital products are where it’s at! There are so many benefits
-    to selling digital products. It’s easy to get started and they <br />
-    can be extremely profitable</>,
+    title: <>Manage <span>everything seamlessly</span> online</>,
+    description: <>Our web design Dubai services help you manage website and digital platforms easily. Digiexpo help you in optimzing conversion, scaling, monitoring and growing your website smartly.</>,
     btn_text: "Get Started Free"
 }
 const {card_images, title, description, btn_text}  = card_content

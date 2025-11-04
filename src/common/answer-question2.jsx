@@ -8,7 +8,7 @@ const AnswerQuestion2 = ({style}) => {
     <>
       <div className="tp-custom-accordion">
         <div className={`accordion ${style && "tp-inner-font"}`} id="accordionExample">
-          {answer_question_data.slice(5, 10).map((item) => (
+          {answer_question_data.slice(51, 58).map((item) => (
             <div onClick={() => setShadow(item.id)} key={item.id} 
                  className={`accordion-items ${item.show} ${shadow === item.id && "tp-faq-active"}`}>
               <h2 className="accordion-header" id={item.accordion_id}>

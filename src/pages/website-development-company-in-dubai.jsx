@@ -11,52 +11,61 @@ const Index = () => {
   ];
 
   // Schema as a JS object
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What modern website technologies are businesses in Dubai focusing on in 2025?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Progressive Web Apps (PWAs) are one of the newest website technologies that Dubai firms are focusing on in 2025. AI chatbots improve customer service by providing help right away. Cloud hosting ensures that websites can develop and stay safe, so they can handle more traffic. Accelerated Mobile Pages (AMP) are used to make content load faster, especially on mobile phones. Headless content management solutions let you show content in various ways across different channels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does a mobile-first development approach benefit users and SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A mobile-first development method ensures that websites are made for smartphones and tablets first, so they work well on smaller displays. This method lowers bounce rates and increases user engagement because most internet users are on mobile devices. Google prefers sites that are optimized for mobile. This helps businesses rank higher in search results. In the end, designing with mobile in mind makes websites easy to use, accessible, and competitive in today's digital world."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is accessibility and data privacy crucial for websites in Dubai today?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Websites in Dubai need to think about accessibility and data privacy because they ensure everyone can use them and follow the rules. Making websites accessible implies that people with disabilities can easily find their way around and use them. This opens up the site to a wider audience. Data privacy keeps consumers' personal information safe and builds trust. Accessibility and data privacy are very important in Dubai because the UAE has severe rules about data protection. These factors show that a corporation follows the law online and helps keep it out of trouble."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the steps involved in building a high-performing website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A clear plan is essential for creating an effective website. It should outline the business's goals and target audience. Designers make interfaces that are easy to use and focus on the user experience. Developers make sure that pages load quickly and work well on mobile devices. Content is made to keep visitors interested and is optimized for search engines to make it easier to find. After launch, ongoing monitoring helps find places that need to be improved. Regular upgrades maintain the website's safety and keep it up to date with changing user needs and technologies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do interactive and futuristic design trends elevate user engagement?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Users are drawn to websites with interactive and futuristic design trends. These trends make websites more interesting and memorable. Micro-animations, 3D images, and fluid scrolling are some of the features that make visitors want to interact with content instead of just looking at it. These designs also show that a business is creative and innovative, which helps it stand out. These kinds of trends make the site better for users, which leads to more time spent on the site and more conversions."
-        }
-      }
-    ]
-  };
+  const faqSchema ={
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How to fix a slow website development Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo specializes in diagnosing and repairing slow websites. Our developers examine the backend performance, image optimization, and code efficiency to determine the bottlenecks. We then optimize your site to be loaded faster and more stably. User retention and SEO ranking in the Dubai market directly depend on speed; therefore, we help your site run well, leaving users with a pleasant experience of a high-performing and smooth website."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why is my Dubai site not getting traffic?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If your Dubai site is failing to draw traffic, it is probably because of the low level of SEO, slow loading, or insufficient content strategy. We do a full audit at DigiExpo in order to find the visibility barriers and rectify them within a short time. We streamline site composition, content, and backlinks to conform to updated Google algorithms. Our tested SEO marketing techniques will assist Dubai brands to expand on organic coverage and attract specific visitors to the site."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you rebuild old Dubai business websites?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, DigiExpo rebuilds old Dubai business websites with a new design, fast, and with functionality. We keep your brand vision and make the platform look new and future-oriented. Everything is updated, including layout and the code standard, to the present market expectations of Dubai. Through DigiExpo, your out-of-date site is transformed into an asset that will run fast and convey the sense of innovation and authority."
+    }
+  },{
+    "@type": "Question",
+    "name": "How to make Dubai site mobile-friendly fast?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo is fast to convert non-responsive sites into mobile-friendly ones. Our expert team optimizes designs, buttons, and content for each screen size without losing visual quality and also applies dynamic structures and testing systems to make sure that your Dubai site has a smooth operation on all devices. DigiExpo can help your business attract more customers and enhance engagement on mobile platforms."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why my site ranks low on Google UAE?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Low ranks occur when you do not optimize for SEO very well, perform poorly, or cannot align good content. DigiExpo tackles all these issues with thorough audits and data-driven improvements. We focus on the most powerful keywords for the UAE market, boost website speed, and increase its authority with high-quality backlinks. With the SEO strategy provided by DigiExpo, your website will get increased visibility, higher rankings, and more organic traffic."
+    }
+  },{
+    "@type": "Question",
+    "name": "How to reduce website bounce rate Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo aims to enhance user experience and content relevance to reduce the bounce rate. We examine the actions of visitors, optimize the route of navigation, and enhance the aspects of design so that the continuity of the users is maintained. The interaction process will be enhanced by increasing the loading time and creating clear CTAs. DigiExpo transforms sites into easy-to-use and conversion-driven types of websites that users would love browsing."
+    }
+  },{
+    "@type": "Question",
+    "name": "How to improve Dubai website user experience?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At DigiExpo, we enhance website user experience (UX) design by combining data-driven user behavior with creative design. We study the user’s behavior to find the point of friction and rebuild navigation, and make it simple and clear. We ensure that the images, content, and speed are all optimized to provide an uninterrupted surfing experience."
+    }
+  }]
+}
+
 
   return (
     <>

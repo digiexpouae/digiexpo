@@ -2,8 +2,8 @@
 import Link from "next/link";
 import LazyVideo from "@/components/lazyload/lazyloavideo";
 const blog_content = {
-  sub_title: "Get Tips, Trends, and Insights from Our Digital Marketing Blogs",
-  title: "Our Digital Marketing Digest",
+  sub_title: "Partner with the professional web design Dubai company to give your business the edge it needs to grow online. Get in touch with us today to get started.",
+  title: "Start your digital journey now.",
 };
 const { sub_title, title } = blog_content;
 

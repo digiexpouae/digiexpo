@@ -7,14 +7,18 @@ import img_3 from "../../../../public/assets/img/about/about-4-2.png";
 // about content here
 const about_content = {
    //  sub_title: "Who we are",
-    title: <>We Are Visionary Marketers</>,
-    des: <>With impressive clientele, enriching experience and impeccable track record, we are the most reliable digital marketing agency in Dubai. At DigiExpo, we blend strategic insights with unparalleled creativity and advanced technology to upgrade the visibility of your online brand and to deliver tangible outcomes.</>,
-    feature_1: <>High-Performance <br /> Solutions</>,
-    feature_2: <>Best Cyber Security <br /> Solutions.</>,
+    title: <>Reliable Web Design Dubai Company</>,
+    des: <>In this competitive market of Web Design Dubai, Digiexpo is the ideal choice with great experience, an impressive clientele, and a strong track record. We build impressive websites and digital identities and help businesses succeed in Dubai with emerging technologies and services.</>,
+    
+    feature_1: <>New and creative  <br /> designs</>,
+    feature_2: <>Responsive Layouts</>,
+    feature_3: <>High-Performance <br /> Solution</>,
+    feature_4: <>Proven Results.
+</>,
     btn_text: "About Us",
 }
 
-const {sub_title, title, des, feature_1, feature_2, btn_text }  = about_content
+const {sub_title, title, des, feature_1, feature_2, feature_3, feature_4, btn_text }  = about_content
 
 
 const AboutArea = () => {
@@ -54,6 +58,8 @@ const AboutArea = () => {
                               <ul>
                                  <li><i className="far fa-check"></i>{feature_1}</li>
                                  <li><i className="far fa-check"></i>{feature_2}</li>
+                                     <li><i className="far fa-check"></i>{feature_3}</li>
+                                 <li><i className="far fa-check"></i>{feature_4}</li>
                               </ul>
                            </div>
                            <div className="tp-security-btn">
