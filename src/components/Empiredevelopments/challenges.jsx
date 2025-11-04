@@ -1,26 +1,4 @@
-export default function FeatureList() {
-  const features = [
-    {
-      title: "Attractive Layout",
-      description:
-        "Our web designers built a customized layout design for Initiative Management Consultancy. They wanted their website to look unique and personalized so that they could stand out among their competitors.",
-    },
-    {
-      title: "Easy-to-Use Website",
-      description:
-        "Initiative Management required an easy-to-use website so that their visitors would have a seamless navigation experience and would easily find any page they are looking for on the website.",
-    },
-    {
-      title: "Adjustable Design",
-      description:
-        "These days, people mostly use their phones to access any site as it is convenient and simple to do. We developed a responsive website for IMC so that they could reach all of their target audience regardless of their devices.",
-    },
-    {
-      title: "Bilingual Site",
-      description:
-        "We developed a bilingual website for Initiative Management Consultancy which was available in both Arabic and English to cater to a wide range of audience. This helped in adding a personalized touch to their website.",
-    },
-  ];
+export default function FeatureList({features}) {
 
   return (
     <section className="tw-w-full tw-text-white tw-rounded-2xl tw-py-16 tw-flex  tw-flex-col tw-items-center tw-justify-center">

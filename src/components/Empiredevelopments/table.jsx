@@ -23,7 +23,7 @@ export default function TwoRowTable({
               <td className="tw-align-top md:tw-w-[60%] tw-p-6 tw-border-b md:tw-border-b-0 tw-border-zinc-800">
                 <div className="tw-flex tw-flex-col tw-gap-4 tw-justify-center tw-items-start">
                   <p className="tw-text-white tw-leading-relaxed">
-                    <span className="tw-text-white tw-font-semibold">
+                    <span className="tw-text-white tw-flex tw-flex-col tw-font-semibold">
                       {title}
                     </span>{" "}
 {text}                  </p>
