@@ -29,11 +29,19 @@ const BusinessBox = dynamic(() => import("./business-box"), {
   ssr: false,
   loading: () => <Placeholder />,
 });
+const Pricing = dynamic(() => import("./pricingplan"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
 const AboutArea = dynamic(() => import("./about-area"), {
   ssr: false,
   loading: () => <Placeholder />,
 });
 const FunFactArea = dynamic(() => import("./fun-fact-area"), {
+  ssr: false,
+  loading: () => <Placeholder />,
+});
+const Client = dynamic(() => import("./client"), {
   ssr: false,
   loading: () => <Placeholder />,
 });
@@ -68,7 +76,9 @@ const HomeOne = () => {
             <StickyButtons />
             <HeroSlider />
             <Brand />
+            {/* <Client /> */}
             <ServiceArea />
+            <Pricing />
             <ContactArea2 />
             <PaymentMethodArea />
             <BusinessBox />
