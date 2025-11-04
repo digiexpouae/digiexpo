@@ -53,7 +53,7 @@ textfour={'UAE'}
 
 
  <Challenges />
-<Client />
+<Client  srclink={"/assets/img/casestudies/Kamdar copy.png"} />
  <Delivered />
   <Counter />
   {/* <Section2 text={'Kamdar Development is a distinguished real estate developer recognized for crafting exceptional luxury residential and commercial spaces. With a strong commitment to quality, innovation, and timeless design, the company has built a reputation for delivering landmark projects that redefine modern living.'}/> */}

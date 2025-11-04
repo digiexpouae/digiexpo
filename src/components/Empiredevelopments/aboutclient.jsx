@@ -1,5 +1,5 @@
 import Image from "next/image";
-const aboutclient=()=>{
+const aboutclient=({srclink})=>{
     return(
         <div className="tw-w-full tw-py-20 tw-flex tw-items-center tw-justify-center">
 <div className="tw-max-w-6xl tw-mx-auto tw-px-4 tw-flex tw-flex-col tw-items-start tw-justify-start">
@@ -13,7 +13,7 @@ const aboutclient=()=>{
 <h1 className="tw-text-3xl">Our Services for The Galleria</h1>
 <p>Digital Gravity was given the task of developing a sleek and attractive website for The Galleria. They wanted a website that could represent them in a way that the user would instantly get drawn to them. Their team had asked for a visually appealing yet well-functional site to make a good impression on their visitors’ minds. Our web designers worked hard to create a layout and design that could match The Galleria’s brand image. We stumbled upon some bugs on the way but they were handled professionally. All of our team members enjoyed working on this interesting website.</p></div>
 <div className=" tw-rounded-2xl tw-flex tw-flex-col tw-relative tw-bg-gradient-to-r tw-from-[#0f0f1a] tw-to-[#1a0f2b]   w-full md:tw-w-1/2  tw-h-96 tw-p-6">
-<Image src={"/assets/img/casestudies/Empire copy.png"} fill className="tw-object-cover tw-rounded-bl-2xl tw-rounded-br-2xl" alt="theme-pure" />
+<Image src={srclink} fill className="tw-object-cover tw-rounded-2xl" alt="theme-pure" />
         
         </div>   </div>
            

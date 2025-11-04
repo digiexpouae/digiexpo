@@ -53,7 +53,7 @@ const empire = () => {
  srclink={'/assets/saami_compressed.mp4'}
   />
 <Challenges />
-<Client />
+<Client  srclink={'/assets/img/casestudies/Saami copy.png'} />
  <Delivered />
   <Counter />
 {/* <Section2 text={'Saami Tradestar is a leading global shipping and logistics company known for delivering reliable, efficient, and innovative transportation solutions. With a strong commitment to excellence, safety, and sustainability, the company has built a reputation for connecting businesses worldwide through seamless maritime and freight services.'}/> */}

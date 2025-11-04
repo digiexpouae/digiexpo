@@ -53,7 +53,7 @@ textfour={'UAE'}
     />
   {/* <Section2 text={'Empire Developments is a premier real estate developer known for creating iconic, luxury residential and commercial properties. With a reputation for excellence and innovation, they sought a digital partner to build a website that reflected their premium brand and could effectively market high-value projects to an elite audience.'}/> */}
  <Challenges />
-<Client />
+<Client srclink={"/assets/img/casestudies/Empire copy.png"} />
  <Delivered />
   <Counter />
   {/* <Section3 /> */}

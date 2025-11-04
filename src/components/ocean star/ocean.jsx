@@ -55,7 +55,7 @@ text={'Oceanstar Shipping is a leading global logistics and maritime company spe
  srclink={'/assets/ocean_compressed.mp4'}
   />
 <Challenges />
-<Client />
+<Client  srclink={"/assets/img/casestudies/oss.png"} />
  <Delivered />
   <Counter />
 {/* <Section2 text={'Oceanstar Shipping is a leading global logistics and maritime company specializing in efficient, reliable, and sustainable shipping solutions. With decades of industry expertise, they sought a digital partner to create a website that showcases their worldwide operations, strengthens client trust, and highlights their commitment to innovation and environmental responsibility.'}/> */}

@@ -52,7 +52,7 @@ const empire = () => {
  srclink={'/assets/live_compressed.mp4'}
   />
 <Challenges />
-<Client />
+<Client  srclink={"/assets/img/casestudies/livewatertec.png"} />
  <Delivered />
   <Counter />
 {/* <Section2 text={'LiveWaterTec is a trusted leader in advanced water purification solutions, dedicated to providing clean, safe, and healthy drinking water for homes and businesses. With cutting-edge technology, eco-friendly systems, and a passion for innovation, the company delivers high-performance water purifiers designed to improve quality of life and promote sustainable living.'}/> */}
