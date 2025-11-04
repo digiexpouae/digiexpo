@@ -9,6 +9,7 @@ const index = () => {
       <SEO pageTitle={"Softec - Data analytics"} />
       <HomeFive />
     </Wrapper>
+    // digiexpo
   );
 };
 
