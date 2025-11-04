@@ -14,8 +14,19 @@ const menu_data = [
       { link: "/home-5", title: "Saas" },
     ],
   },
-  {
+   {
     id: 2,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "About",
+    link: "/about",
+    active: "",
+  },
+  // {
+ 
+  // {
+  {
+    id: 3,
     mega_menu: false,
     has_dropdown: true,
     title: "Services",
@@ -66,7 +77,7 @@ const menu_data = [
   //   ],
   // },
   {
-    id: 3,
+    id: 4,
     mega_menu: false,
     has_dropdown: true,
     title: "Case Studies",
@@ -83,7 +94,7 @@ const menu_data = [
   },
 
   {
-    id: 4,
+    id: 5,
     mega_menu: false,
     has_dropdown: false,
     title: "Blog",
@@ -96,15 +107,16 @@ const menu_data = [
       { link: "/blog-details-2", title: "Blog Details 02" },
     ],
   },
-
-  {
-    id: 5,
+     {
+    id: 6,
     mega_menu: false,
     has_dropdown: false,
     title: "Contact",
     link: "/contact",
     active: "",
   },
+
+ 
 
 
 ];

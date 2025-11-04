@@ -39,14 +39,14 @@ const HeaderThree = () => {
                     </Link>
                   </div>
                 </div>
-                <div className='col-xxl-6 col-xl-6 col-lg-7 d-none d-lg-block'>
+                <div className='col-xxl-6 col-xl-7 col-lg-8 d-none d-lg-block'>
                   <div className='header-bottom__main-menu header-bottom__main-menu-3'>
                     <nav id='mobile-menu'>
                       <NavMenu />
                     </nav>
                   </div>
                 </div>
-                <div className='col-xxl-4 col-xl-4 col-lg-3 col-md-8 col-6'>
+                <div className='col-xxl-4 col-xl-3 col-lg-2 col-md-8 col-6'>
                   <div className='header-bottom__right d-flex align-items-center justify-content-end'>
                     <div className='header-bottom__action' style={{display:'flex'}}>
                       {/* <a className="d-none d-md-inline-block search-open-btn"

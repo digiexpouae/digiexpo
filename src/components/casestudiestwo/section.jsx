@@ -22,7 +22,7 @@ const HeroSection = () => {
         </h1>
         <p className="tw-text-center">{text}</p>
 
-        <div className="tw-flex tw-gap-4">
+        <div className="tw-flex tw-gap-4 tw-mb-4">
           <button className="tw-bg-[#FFFFFF] hover:tw-bg-zinc-400 tw-font-medium tw-rounded-full tw-text-black tw-px-4 tw-py-2">
             View Our Work
           </button>
