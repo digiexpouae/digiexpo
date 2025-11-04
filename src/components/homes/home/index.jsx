@@ -76,7 +76,7 @@ const HomeOne = () => {
             <StickyButtons />
             <HeroSlider />
             <Brand />
-            <Client />
+            {/* <Client /> */}
             <ServiceArea />
             <Pricing />
             <ContactArea2 />
