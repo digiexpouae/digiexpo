@@ -56,7 +56,7 @@ const kamdardevelopments = () => {
   }
 ];
 
-  const desc='DigiExpo followed the four-stage process of changing the online presence of Empire Developments.'
+  const desc='DigiExpo followed the four-stage process of changing the online presence of Kamdar Developments.'
   const features=[
   {
     "title": "Advanced Visual Identity",
