@@ -68,12 +68,16 @@ const menu_data = [
   {
     id: 3,
     mega_menu: false,
-    has_dropdown: false,
+    has_dropdown: true,
     title: "Case Studies",
     link: "/casestudies",
     active: "",
     sub_menus: [
-      { link: "/hyggeBikes", title: "Hygge Bikes" },
+        { link: "/kamdardevelopments", title: "Kamdardevelopments" },
+                    { link: "/Empiredevelopments", title: "Empiredevelopments" },
+      { link: "/saamitradestar", title: "Saamitraders" },
+          { link: "/oceanstar", title: "Oceanstar" },
+                  
       // { link: "/project-details", title: "Project Details" },
     ],
   },
