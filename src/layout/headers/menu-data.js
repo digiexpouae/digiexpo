@@ -84,10 +84,11 @@ const menu_data = [
     link: "/casestudies",
     active: "",
     sub_menus: [
-        { link: "/casestudies/kamdardevelopments", title: "Kamdardevelopments" },
-                    { link: "/casestudies/Empiredevelopments", title: "Empiredevelopments" },
-      { link: "/casestudies/saamitradestar", title: "Saamitraders" },
-          { link: "/casestudies/oceanstar", title: "Oceanstar" },
+                    { link: "/casestudies/Empiredevelopments", title: "Empire Developments" },
+                            { link: "/casestudies/kamdardevelopments", title: "Kamdar Developments" },
+
+      { link: "/casestudies/saamitradestar", title: "Saami Traderstar" },
+          { link: "/casestudies/oceanstar", title: "Oceanstar Shipping" },
                   
       // { link: "/project-details", title: "Project Details" },
     ],
