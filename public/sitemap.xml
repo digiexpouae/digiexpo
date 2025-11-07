@@ -1,6 +1,5 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://www.digiexpo.ae/</loc>
 <lastmod>2025-06-05T05:54:50+00:00</lastmod>
@@ -72,6 +71,30 @@
 <lastmod>2025-06-05T13:46:00+00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.50</priority>
+</url>
+<url>
+<loc>https://www.digiexpo.ae/casestudies/website/realestate/empire-developments</loc>
+<lastmod>2025-11-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.digiexpo.ae/casestudies/website/logistics-and-supply-chain/oceanstar</loc>
+<lastmod>2025-11-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.digiexpo.ae/casestudies/website/logistics-and-supply-chain/saami-tradstar</loc>
+<lastmod>2025-11-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.digiexpo.ae/casestudies/website/realestate/kamdar-developments</loc>
+<lastmod>2025-11-07</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>https://www.digiexpo.ae/blogs/how-to-dominate-the-uae-market-with-effective-social-media-strategies</loc>
