@@ -8,7 +8,7 @@ const Section3 = () => {
       category: "Real Estate / Website",
       img: "/assets/img/casestudies/cs-7.png", // Foreground image (project)
       bg: "/assets/img/casestudies/Rectangle 6900.png", // Background behind it
-      link:"/casestudies/Empiredevelopments"
+      link:"/casestudies/website/realestate/empire-developments"
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ const Section3 = () => {
       category: "Real Estate / Website",
       img: "/assets/img/casestudies/Kamdar copy.png",
       bg: "/assets/img/casestudies/Rectangle 6900.png",
-            link:"/casestudies/kamdardevelopments"
+            link:"/casestudies/website/realestate/kamdar-developments"
     },
     {
       id: 3,
@@ -24,14 +24,14 @@ const Section3 = () => {
       category: "Logistics & Supply Chain",
       img: "/assets/img/casestudies/Saami copy.png",
       bg: "/assets/img/casestudies/Rectangle 6900.png",
-            link:"/casestudies/saamitradestar"
+            link:"/casestudies/website/logistics-and-supply-chain/saami-tradstar"
     },{
       id: 4,
       title: "Ocean Star Shipping",
       category: "Logistics & Supply Chain",
       img: "/assets/img/casestudies/oss.png",
       bg: "/assets/img/casestudies/Rectangle 6900.png",
-            link:"/casestudies/oceanstar"
+            link:"/casestudies/website/logistics-and-supply-chain/oceanstar"
     },
   ];
 

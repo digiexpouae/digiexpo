@@ -1,5 +1,6 @@
-import Kamdar from '../../components/kamdardevelopments/index'
-import SEO from '../../common/seo'
+import Kamdar from '../../../../components/kamdardevelopments/index'
+import SEO from '../../../../common/seo'
+
 const kamdardevelopments = () => {
     const seoMetaData = {
         pageTitle: " Kamdar Developments Website Design & Development | DigiExpo Case Study",
@@ -9,7 +10,7 @@ const kamdardevelopments = () => {
         <div>
               <SEO pageTitle={seoMetaData.pageTitle} pageDesc={seoMetaData.pageDesc}
                   
-                  canonicalUrl=" https://www.digiexpo.ae/casestudies/website/realestate/kamdar-developments"
+                  canonicalUrl="https://www.digiexpo.ae/casestudies/website/realestate/kamdar-developments"
                   />
             <Kamdar />
         </div>

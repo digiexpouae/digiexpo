@@ -1,7 +1,7 @@
 import React from 'react'
-import Empire from '../../components/Empiredevelopments/empire'
+import Empire from '../../../../components/Empiredevelopments/empire'
 
-import SEO from '../../common/seo'
+import SEO from '../../../../common/seo'
 const Empiredevelopments = () => {
     const seoMetaData = {
     pageTitle: "Empire Developments Website Design & Development | DigiExpo Case Study",

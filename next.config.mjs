@@ -11,6 +11,7 @@ const nextConfig = {
       { source: "/service-details", destination: "/services", permanent: true },
       { source: "/blog-details", destination: "/blogs", permanent: true },
       { source: "/mobile-app-development-company-dubai", destination: "/application-development-dubai", permanent: true },
+    
     ];
   },
   reactStrictMode: true,

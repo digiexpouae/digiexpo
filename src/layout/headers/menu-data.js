@@ -84,11 +84,11 @@ const menu_data = [
     link: "/casestudies",
     active: "",
     sub_menus: [
-                    { link: "/casestudies/Empiredevelopments", title: "Empire Developments" },
-                            { link: "/casestudies/kamdardevelopments", title: "Kamdar Developments" },
+                    { link: "/casestudies/website/realestate/empire-developments", title: "Empire Developments" },
+                            { link: "/casestudies/website/realestate/kamdar-developments", title: "Kamdar Developments" },
 
-      { link: "/casestudies/saamitradestar", title: "Saami Traderstar" },
-          { link: "/casestudies/oceanstar", title: "Oceanstar Shipping" },
+      { link: "/casestudies/website/logistics-and-supply-chain/saami-tradstar", title: "Saami Traderstar" },
+          { link: "/casestudies/website/logistics-and-supply-chain/oceanstar", title: "Oceanstar Shipping" },
                   
       // { link: "/project-details", title: "Project Details" },
     ],

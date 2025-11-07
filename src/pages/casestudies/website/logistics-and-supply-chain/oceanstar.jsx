@@ -1,6 +1,6 @@
 
-import Ocean from '../../components/ocean star/ocean'
-import SEO from '../../common/seo'
+import Ocean from '../../../../components/ocean star/ocean'
+import SEO from '../../../../common/seo'
 
 const oceanstar=()=>{
     const seoMetaData = {

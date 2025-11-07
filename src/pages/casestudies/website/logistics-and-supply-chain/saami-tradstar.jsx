@@ -1,5 +1,5 @@
-import Saami from '../../components/saamitradestar/index'
-import SEO from '../../common/seo'
+import Saami from '../../../../components/saamitradestar/index'
+import SEO from '../../../../common/seo'
 const saamitradestar = () => {
     const seoMetaData = {
         pageTitle: "Saami Tradestar Website Design & Development | DigiExpo Case Study",
