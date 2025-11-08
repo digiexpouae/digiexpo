@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import answer_question_data from "../data/answer-question-data";
 
 const AnswerQuestion = ({style}) => {
   const [shadow , setShadow ] = useState(2) 

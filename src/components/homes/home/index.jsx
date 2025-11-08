@@ -5,7 +5,7 @@ import HeroSlider from "./hero-slider";
 import Brand from "../../about/brand";
 import FooterFour from "@/layout/footers/footer-4";
 import dynamic from "next/dynamic";
-
+import FaqArea from "./faq-area";
 // Placeholder Component
 const Placeholder = () => (
   <div className="min-h-[250px] bg-gray-100 animate-pulse rounded-md" />
@@ -45,10 +45,7 @@ const Client = dynamic(() => import("./client"), {
   ssr: false,
   loading: () => <Placeholder />,
 });
-const FaqArea = dynamic(() => import("./faq-area"), {
-  ssr: false,
-  loading: () => <Placeholder />,
-});
+
 const ContactArea = dynamic(() => import("./contact-area"), {
   ssr: false,
   loading: () => <Placeholder />,
