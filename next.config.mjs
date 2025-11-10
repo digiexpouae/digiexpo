@@ -22,7 +22,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   images: { 
-    unoptimized: true,
+    // unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
   productionBrowserSourceMaps: false, // Disable in production for better performance
