@@ -5,6 +5,10 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
+  // recently added
+    sassOptions: {
+    sourceMap: false, // explicitly disable
+  },
   async redirects() {
     return [
       { source: "/blog", destination: "/blogs", permanent: true },
