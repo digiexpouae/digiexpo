@@ -67,7 +67,7 @@ const nextConfig = {
       config.optimization.splitChunks = false;
 
       // Optional: keep runtime inlined for single bundle
-      config.optimization.runtimeChunk = single;
+      config.optimization.runtimeChunk = 'single';
     }
     return config;
   },
