@@ -11,22 +11,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-          <link
-            rel="preload"
-            href="/styles/header.css" // Path to the compiled CSS file
-            as="style"
-            type="text/css"
-            crossorigin="anonymous"
-          /> 
-          <link
-            rel="preload"
-            href="/styles/hero.css" // Path to the compiled CSS file
-            as="style"
-            type="text/css"
-            crossorigin="anonymous"
-          />
-            
-          
+        
         {/* Using next/font in _app.jsx, so no Google Fonts preconnects */}
 
         {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
