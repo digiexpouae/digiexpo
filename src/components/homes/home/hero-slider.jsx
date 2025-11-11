@@ -182,9 +182,9 @@ const HeroSlider = () => {
               <div className='col-xl-10'>
                 <div className='tp-hero__content-box text-center z-index-3'>
                   <div className='tp-hero__title-box p-relative'>
-                    <h2 className='tp-hero__hero-title tp-title-anim'>
+                    <h1 className='tp-hero__hero-title tp-title-anim tw-text-black'>
                       {hero_title}
-                    </h2>
+                    </h1>
                     <div className='tp-hero__title-shape d-none d-sm-block'>
                       <LineShape />
                     </div>
