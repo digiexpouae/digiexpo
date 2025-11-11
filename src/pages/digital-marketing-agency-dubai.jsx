@@ -1,6 +1,7 @@
 import React from "react";
 import SEO from "../common/seo";
-import DigitalMarketing from "../components/digitalMarketing";
+import dynamic from "next/dynamic";
+const DigitalMarketing = dynamic(() => import("../components/digitalMarketing"),{ssr:true});
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 

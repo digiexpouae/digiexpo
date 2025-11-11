@@ -1,6 +1,9 @@
 import React from "react";
 import SEO from "../common/seo";
-import MobileApp from "../components/mobileApp";
+import dynamic from "next/dynamic";  // Import dynamic for code splitting
+const MobileApp = dynamic(() => import("../components/mobileApp"), {
+  ssr: true,  // This ensures the component is server-side rendered
+});
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 

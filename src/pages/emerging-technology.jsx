@@ -1,6 +1,10 @@
 import React from "react";
 import SEO from "../common/seo";
-import NextGen from "../components/nextGen";
+const NextGen = dynamic(() => import('../components/nextGen'), {
+  ssr: true, // Enable SSR if needed, set to false if you want to disable SSR for this component
+});
+import dynamic from 'next/dynamic';
+
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 

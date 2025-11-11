@@ -1,7 +1,10 @@
 import React from "react";
 import SEO from "../common/seo";
-import DesignPage from "../components/designPage";
-import Wrapper from "../layout/wrapper";
+import dynamic from "next/dynamic";  // Import dynamic for code splitting
+// Dynamically import the DesignPage component
+const DesignPage = dynamic(() => import("../components/designPage"), {
+  ssr: true,  // This ensures the component is server-side rendered for SEO purposes
+});import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
 const Index = () => {

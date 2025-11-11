@@ -1,6 +1,9 @@
 import React from "react";
 import SEO from "../common/seo";
-import ECommerce from "../components/eCommerce";
+import dynamic from "next/dynamic";
+const ECommerce = dynamic(() => import("../components/eCommerce"), {
+  ssr: true,  // This ensures the component is server-side rendered
+});
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
