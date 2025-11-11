@@ -1,5 +1,8 @@
 
-import About from '../components/about2/index'
+import dynamic from "next/dynamic";
+const About = dynamic(() => import('../components/about2/index'), {
+  ssr: true, // Enable SSR if needed, set to false if you want to disable SSR for this component
+});
 import SEO from '@/common/seo'
 const about=()=>{
     return(

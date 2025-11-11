@@ -1,6 +1,9 @@
 import React from "react";
 import SEO from "../common/seo";
-import WebDevelopment from "../components/webDevelopment";
+import dynamic from "next/dynamic";
+const WebDevelopment = dynamic(() => import('../components/webDevelopment'), {
+  ssr: true, // Enable SSR if needed, set to false if you want to disable SSR for this component
+});
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
