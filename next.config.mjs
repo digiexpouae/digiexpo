@@ -34,6 +34,15 @@ const nextConfig = {
   poweredByHeader: false,
   // Optimize bundle splitting
   webpack: (config, { dev, isServer }) => {
+       // preventing the large 'sass.dart.js' dependency from being bundled.
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'sass': false,
+        'node-sass': false,
+      };
+    }
+
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
