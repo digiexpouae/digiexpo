@@ -26,7 +26,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   images: { 
-    // unoptimized: true,
+ domains: ['cdn.sanity.io'], // Add Sanity’s CDN domain here
     formats: ['image/webp', 'image/avif'],
   },
   productionBrowserSourceMaps: false, // Disable in production for better performance
