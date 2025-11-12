@@ -19,7 +19,8 @@ import emailmarketing from "../../../public/animation/emailmarketing.json"
 import influencer from '../../../public/animation/influencer.json'
 import styles from '../service/service-area.module.scss'
 
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+import Lootie from '../../components/lottie';  // Import your Lottie component
+
 
 
 const service_content = {
@@ -125,15 +126,10 @@ const ServiceArea = () => {
                     </video> */}
  
  <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: SMM,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'132px',height:'100%'}}
+            
+                        animationData={SMM}  // Animation for Digital Marketing
+                                 width='132px'
+  
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -167,15 +163,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                            <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: SEO,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'122px',height:'100%'}}
+                 
+                        animationData={SEO}  // Animation for Digital Marketing
+                  width='122px'
+  
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -209,15 +200,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                          <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData:target,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'152px',height:'100%'}}
+                     
+                        animationData={target}  // Animation for Digital Marketing
+                                    width='152px'
+
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -246,15 +232,9 @@ const ServiceArea = () => {
                  
                     
   <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: emailmarketing,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'122px',height:'100%'}}
+                        animationData={emailmarketing}  // Animation for Digital Marketing
+                                     width='122px'
+
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -288,15 +268,10 @@ const ServiceArea = () => {
                     </video> */}
                                                
                   <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: appstore,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'142px',height:'100%'}}
+                        animationData={appstore}  // Animation for Digital Marketing
+                        
+                                       width='142px'
+
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -329,15 +304,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                       <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: content,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'122px',height:'100%'}}
+                     
+                        animationData={ content}  // Animation for Digital Marketing
+                                  width='122px'
+      
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -361,7 +331,7 @@ const ServiceArea = () => {
                 data-wow-delay='.5s'
               >
                 <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
-                  <div className='tp-service-sm-icon'>
+                  <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
                       <source
@@ -370,15 +340,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                         <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData:contentcreation,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'122px',height:'100%'}}
+                     
+                        animationData={contentcreation}  // Animation for Digital Marketing
+                                    width='122px'
+
                     />  
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
@@ -402,7 +367,7 @@ const ServiceArea = () => {
                 data-wow-delay='.5s'
               >
                 <div className= {`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
-                  <div className='tp-service-sm-icon'>
+                 <div className={styles['tp-service-sm-icon']}>
                     {/* {item.icon} */}
                     {/* <video autoPlay muted loop width='125px'>
                       <source
@@ -411,15 +376,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                         <Lootie 
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData:presentation,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'132px',height:'100%'}}
+                  
+                        animationData={presentation}  // Animation for Digital Marketing
+                                  width='132px'
+
                     />  
 
                   </div>

@@ -11,8 +11,7 @@ import cms from '../../../public/animation/CMS.json'
 import laravel from '../../../public/animation/laravel.json'
 
 import styles from '../mobileApp/services-area.module.scss'
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
-
+import Lootie from '../../components/lottie'
 const service_content = {
   title:(
   <>Stand Out. Get Results. Our Dubai <div style={{display:'flex'}}><h1 style={{color:'#7B42F7',fontSize:'40px'
@@ -68,15 +67,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: wordpress,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'295px',height:'100%'}}
+                 
+                    animationData={wordpress}
+                     width='295px'
                 />
               </div>
               <div className={styles['tp-service__content']}>
@@ -103,15 +96,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: laravel,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'295px',height:'100%'}}
+                 
+                    animationData={laravel}
+                                width='295px'
                 />
               </div>
               <div className={styles['tp-service__content']}>
@@ -138,15 +125,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: php,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'122px',height:'100%'}}
+              
+                    animationData={php}
+                               width='122px'
                 />
               </div>
               <div className={styles['tp-service__content']}>
@@ -170,16 +151,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: cms,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'122px',height:'100%'}}
-                />
+              
+                    animationData={cms}
+                                          width='122px'               />
               </div>
               <div className={styles['tp-service__content']}>
                 <h3 className={`${styles['tp-service__title-sm']} ${styles['tp-yellow-color']}`}>
@@ -204,15 +178,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: webmaintain,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'122px',height:'100%'}}
+             
+                    animationData={webmaintain}
+                                   width='122px'
                 />
               </div>
               <div className={styles['tp-service__content']}>
@@ -241,15 +209,9 @@ const ServicesArea = () => {
             <div className={`${styles['tp-service__item']} mb-30`}>
               <div className={styles['tp-service__icon']}>
                 <Lootie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: whatsapp,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice"
-                    }
-                  }}
-                  style={{width:'122px',height:'100%'}}
+               
+                    animationData={whatsapp}
+                                  width='122px'
                 />
               </div>
               <div className={styles['tp-service__content']}>

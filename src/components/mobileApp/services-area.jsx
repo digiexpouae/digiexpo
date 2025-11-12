@@ -14,7 +14,7 @@ import hybrid from "../../../public/animation/hybrid.json"
 import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 import styles from './services-area.module.scss'
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+import  Lootie from '../../components/lottie'
 
 const service_content = {
   title: "Create. Connect. App Development 	Dubai That Fuels Your Business",
@@ -74,15 +74,9 @@ const ServicesArea = () => {
                     />
                   </video> */}
 <Lootie
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: hybrid,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'166px',height:'100%'}}
+                        animationData={hybrid}  // Animation for Digital Marketing
+                                    width='166px'
+   
                     />
 
 
@@ -118,15 +112,9 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: android,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'80%'}}
+                                       
+                                          animationData={android}  // Animation for Digital Marketing
+                                       width='122px'
                                       />
 
                 </div>
@@ -160,15 +148,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: ios,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'80%'}}
+                                   
+                                          animationData={ios}  // Animation for Digital Marketing
+                                                                         width='122px'
+
                                       />
 
                 </div>
@@ -200,15 +183,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: native,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'186px',height:'100%'}}
+                                      
+                                          animationData={native}  // Animation for Digital Marketing
+                                                                  width='186px'
+        
                                       />
 
                 </div>
@@ -242,15 +220,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: flutter,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'70%'}}
+                                       
+                                          animationData={flutter}  // Animation for Digital Marketing
+                                                                          width='122px'
+
                                       />
 
                 </div>
@@ -286,15 +259,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: progressive,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'186px',height:'100%'}}
+                                        
+                                          animationData={progressive}// Animation for Digital Marketing
+                                                                             width='186px'
+
                                       />
 
                 </div>

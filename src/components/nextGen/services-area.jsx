@@ -13,7 +13,7 @@ import gesture from '../../../public/animation/gesture.json'
 import iotdevelopment from '../../../public/animation/lotdevelopment.json'
 import styles from '../mobileApp/services-area.module.scss'
 import dynamic from "next/dynamic";
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+import Lootie from '../../components/lottie'
 
 
 
@@ -79,15 +79,9 @@ const ServicesArea = () => {
                   </video> */}
    
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: artificialintelligence,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                       
+                           animationData={artificialintelligence}  // Animation for Digital Marketing
+                                              width='122px'
                        /> 
    
    
@@ -123,15 +117,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: augmentedrealtiy,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                    
+                           animationData={augmentedrealtiy} // Animation for Digital Marketing
+                                              width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -165,15 +154,9 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: Metaverse,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                           animationData={Metaverse} // Animation for Digital Marketing
+                                           width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -205,15 +188,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: threeD,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                        
+                           animationData={threeD}  // Animation for Digital Marketing
+                                            width='122px'
+  
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -247,15 +225,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: iotdevelopment,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                        
+                           animationData={iotdevelopment} // Animation for Digital Marketing
+                                               width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -291,15 +264,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: gesture,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                       
+                           animationData={gesture}  // Animation for Digital Marketing
+                                           width='122px'
+    
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
