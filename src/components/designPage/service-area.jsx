@@ -6,13 +6,13 @@ import dynamic from "next/dynamic";
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
 import web from '../../../public/animation/php.json'
-import target from '../../../public/animation/performance.json'
+import target from '../../../public/animation/target-2.json'
 import todo from '../../../public/animation/checklist-board.json'
 import graphic from '../../../public/animation/graphicdesign.json'
 import landing from '../../../public/animation/landingpage.json'
 import image from '../../../public/animation/image.json'
 import styles from'../mobileApp/services-area.module.scss'
-import Lootie from '../../components/lottie';  // Import your Lottie component
+const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -122,7 +122,8 @@ const ServiceArea = () => {
                         animationData={target}  // Animation for Digital Marketing
                               width='142px'
 
-                    />  
+                    />   
+
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
                               <span>UX Design</span>

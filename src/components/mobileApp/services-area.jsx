@@ -14,7 +14,7 @@ import hybrid from "../../../public/animation/hybrid.json"
 import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 import styles from './services-area.module.scss'
-import  Lootie from '../../components/lottie'
+const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
 
 const service_content = {
   title: "Create. Connect. App Development 	Dubai That Fuels Your Business",

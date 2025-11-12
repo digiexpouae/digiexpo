@@ -13,7 +13,8 @@ import gesture from '../../../public/animation/gesture.json'
 import iotdevelopment from '../../../public/animation/lotdevelopment.json'
 import styles from '../mobileApp/services-area.module.scss'
 import dynamic from "next/dynamic";
-import Lootie from '../../components/lottie'
+const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
+
 
 
 

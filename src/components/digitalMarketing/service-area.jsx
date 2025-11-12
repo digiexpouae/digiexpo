@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 // import emailmarketing from '../../../public/animation/emailnews.json'
 import dynamic from 'next/dynamic';
-import target from '../../../public/animation/performance.json'
+import target from '../../../public/animation/target-2.json'
 import contentcreation from '../../../public/animation/contentcreation.json'
 import appstore from '../../../public/animation/appstore.json'
 import SEO from '../../../public/animation/seo.json'
@@ -204,7 +204,8 @@ const ServiceArea = () => {
                         animationData={target}  // Animation for Digital Marketing
                                     width='152px'
 
-                    />  
+                    />   
+                    
                   </div>
                   <div className={styles['tp-service-sm-content']} style={{height:'162px'}}>
                     <span style={{fontSize:'14px',whiteSpace:'nowrap'}}>Performance Marketing</span>
