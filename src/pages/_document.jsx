@@ -11,7 +11,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
         {/* Using next/font in _app.jsx, so no Google Fonts preconnects */}
 
         {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
