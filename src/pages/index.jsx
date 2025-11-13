@@ -1,11 +1,12 @@
 
 
-
+'use client'
 import React from "react";
 import SEO from "../common/seo";
 import HomeOne from "../components/homes/home";
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
+import client from "@/sanityConfig";
 const Home = () => {
   const seoMetaData = {
     pageTitle: "Web Design Dubai | Website Development Company – DigiExpo",
