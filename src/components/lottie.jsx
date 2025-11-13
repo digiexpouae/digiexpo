@@ -1,16 +1,16 @@
 // Import only the `loadAnimation` method from `lottie-web`
-import { loadAnimation } from 'lottie-web/build/player/lottie_light';
+import lottie from 'lottie-web/build/player/lottie_svg.min.js';
 import { useEffect, useRef } from 'react';
 
 const LottieComponent = ({ animationData, width , height = '130px' }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const animation =loadAnimation({
+    const animation =lottie.loadAnimation({
       container: containerRef.current,
       animationData,
       loop: true,
-      autoplay: true,
+      autoplay: true, 
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice',
       },
