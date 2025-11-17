@@ -43,6 +43,19 @@ const nextConfig = {
       };
     }
 
+  config.module.rules.push({
+      test: /\.lottie$/,
+      use: [
+        {
+          loader: 'file-loader', // Use file-loader to handle the .lottie files
+          options: {
+            name: '[name].[hash:8].[ext]', // Customize output file name
+            publicPath: '/_next/static/lottie/', // Set the public path for the files
+            outputPath: 'static/lottie/', // Set the output path for the files
+          },
+        },
+      ],
+    });
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',

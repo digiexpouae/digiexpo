@@ -6,12 +6,12 @@ import React from 'react';
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
 import bigcommerce from '../../../public/animation/bigcommerce.json'
-import woocommerce from '../../../public/animation/woocommerce.json'
-import shopifyplus from '../../../public/animation/shopifyplus.json'
-import shopifyecom from '../../../public/animation/shopifyecom.json'
+import woocommerce from '../../../public/animation/woocommerce.lottie'
+import shopifyplus from '../../../public/animation/shopifyplus.lottie'
+// import shopifyecom from '../../../public/animation/shopifyecom.json'
 import dynamic from 'next/dynamic';
-import mirakalecom from '../../../public/animation/mirakalecom.json'
-import megneto from '../../../public/animation/megneto.json'
+import mirakalecom from '../../../public/animation/mirakalecom.lottie'
+// import megneto from '../../../public/animation/megneto.json'
 import styles from '../mobileApp/services-area.module.scss'
 import Lootie from '../../components/lottie'
 
@@ -75,8 +75,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                            animationData={woocommerce}  // Animation for Digital Marketing
-                                                                               width='122px'
+                                        
 
                                         />  
                            </div>
@@ -115,7 +114,7 @@ const ServiceArea = () => {
                            </div>
                         </div>
                      </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        {/* <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
                            <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
@@ -124,7 +123,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                             animationData={megneto}  // Animation for Digital Marketing
                                                                 width='122px'
 
@@ -138,7 +137,7 @@ const ServiceArea = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div>  */}
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
                            <div className={styles["tp-service-sm-icon"]}>
@@ -164,7 +163,7 @@ const ServiceArea = () => {
                            </div>
                         </div>
                      </div>
-                        <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        {/* <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between`}>
                            <div className={styles["tp-service-sm-icon"]}>
                            {/* <video autoPlay muted loop width="125px">
@@ -173,7 +172,7 @@ const ServiceArea = () => {
                         type="video/webm"
                       />
                     </video> */}
-                     <Lootie 
+                     {/* <Lootie 
                                          
                                             animationData={shopifyecom}  // Animation for Digital Marketing
                                                                               width='122px'
@@ -188,7 +187,7 @@ const ServiceArea = () => {
                               </div>
                            </div>
                         </div>
-                     </div>
+                     </div>  */}
                         <div className="col-xl-4 col-lg-6 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                         <div className={`${styles['tp-service-sm-item']} mb-30 d-flex flex-column justify-content-between mb-sm-0`}>
                            <div className={styles["tp-service-sm-icon"]}>

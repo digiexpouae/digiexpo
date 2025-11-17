@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
 import web from '../../../public/animation/php.json'
-import target from '../../../public/animation/target-2.json'
+import target from '../../../public/animation/target-2.lottie'
 import todo from '../../../public/animation/checklist-board.json'
 import graphic from '../../../public/animation/graphicdesign.json'
 import landing from '../../../public/animation/landingpage.json'

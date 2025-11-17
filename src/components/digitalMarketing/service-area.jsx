@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 // import emailmarketing from '../../../public/animation/emailnews.json'
 import dynamic from 'next/dynamic';
-import target from '../../../public/animation/target-2.json'
+import target from '../../../public/animation/target-2.lottie'
 import contentcreation from '../../../public/animation/contentcreation.json'
 import appstore from '../../../public/animation/appstore.json'
 import SEO from '../../../public/animation/seo.json'
