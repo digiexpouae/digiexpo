@@ -357,9 +357,10 @@ const tabPlans = {
                   </li>
                 ))}
               </ul>
- <button className="tw-bg-[#803DFF] tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-w-full tw-rounded-full hover:tw-bg-purple-800 tw-transition">
-                             <Link href='/contact'>{plan.button}</Link>
-              </button>
+                <Link href='/contact' className="tw-bg-[#803DFF] tw-text-white tw-font-semibold tw-px-6 tw-py-2 tw-w-full tw-rounded-full hover:tw-bg-purple-800 hover:tw-text-white tw-transition">
+ <button >
+                           {plan.button}
+              </button></Link>
             </div>
           ))}
         </div>
