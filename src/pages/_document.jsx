@@ -40,19 +40,9 @@ export default function Document() {
           }}
         />
            <style>{`
-          .mobile-bg {
-            background-color: #fff9f9; /* fallback for immediate paint */
-            background-image:
-              linear-gradient(180.21deg, #fff9f9 -64.58%, hsla(0,0%,100%,0.1) 115.31%),
-              linear-gradient(90deg, #6c35de, #a364ff 50%, #ffc7ff);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.9;
-          }
-        `}</style>
+         
+           .mobile-bg {
+ background-color: #fff9f9;}`}</style>
 
         {/* ✅ Viewport meta */}
         <meta
