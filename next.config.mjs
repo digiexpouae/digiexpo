@@ -4,7 +4,9 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   async redirects() {
     return [
       { source: "/blog", destination: "/blogs", permanent: true },
@@ -13,13 +15,14 @@ const nextConfig = {
       { source: "/mobile-app-development-company-dubai", destination: "/application-development-dubai", permanent: true },
     ];
   },
+  
   reactStrictMode: true,
   experimental: {
     optimizePackageImports: ['react-icons', 'lodash', 'date-fns'],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
+  },  
   images: { 
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
@@ -64,5 +67,6 @@ const nextConfig = {
     SITE_NAME: process.env.SITE_NAME,
   },
 };
+
 
 export default withBundleAnalyzer(nextConfig);
