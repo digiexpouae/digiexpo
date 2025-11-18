@@ -1,9 +1,9 @@
 import React from 'react';
 import LottieComponent from '../../../components/lottie';  // Import your Lottie component
-import digitalmarketingAnimation from '../../../../public/animation/digitalmarketing.json';
-import webdevAnimation from '../../../../public/animation/webdev.json';
-import seoAnimation from '../../../../public/animation/seo.json';
-import socialAnimation from '../../../../public/animation/social.json';
+// import digitalmarketingAnimation from '../../../../public/animation/digitalmarketing.json';
+// import webdevAnimation from '../../../../public/animation/webdev.json';
+// import seoAnimation from '../../../../public/animation/seo.json';
+// import socialAnimation from '../../../../public/animation/social.json';
 import Link from 'next/link';
 
 const service_content = {
@@ -41,7 +41,7 @@ const ServiceArea = () => {
                                         </div>
                                         <div className="tp-service-five-wrapper">
                                             <div className="tp-service-five-icon">
-                                                <LottieComponent animationData={digitalmarketingAnimation} />
+                                                <LottieComponent path='/animation/digitalmarketing.json' />
                                             </div>
                                             <div className="tp-service-five-content">
                                                 <h3 className="tp-service-five-title-sm">
@@ -64,7 +64,7 @@ const ServiceArea = () => {
                                         </div>
                                         <div className="tp-service-five-wrapper">
                                             <div className="tp-service-five-icon">
-                                                <LottieComponent animationData={webdevAnimation} />
+                                                <LottieComponent path='/animation/webdev.json' />
                                             </div>
                                             <div className="tp-service-five-content">
                                                 <h3 className="tp-service-five-title-sm">
@@ -87,7 +87,7 @@ const ServiceArea = () => {
                                         </div>
                                         <div className="tp-service-five-wrapper">
                                             <div className="tp-service-five-icon">
-                                                <LottieComponent animationData={seoAnimation} />
+                                                <LottieComponent path='/animation/seo.json' />
                                             </div>
                                             <div className="tp-service-five-content">
                                                 <h3 className="tp-service-five-title-sm">
@@ -110,7 +110,7 @@ const ServiceArea = () => {
                                         </div>
                                         <div className="tp-service-five-wrapper">
                                             <div className="tp-service-five-icon">
-                                                <LottieComponent animationData={socialAnimation} />
+                                                <LottieComponent path='/animation/social.json' />
                                             </div>
                                             <div className="tp-service-five-content">
                                                 <h3 className="tp-service-five-title-sm">
