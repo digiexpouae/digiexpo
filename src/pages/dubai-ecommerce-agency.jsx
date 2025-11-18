@@ -1,6 +1,9 @@
 import React from "react";
 import SEO from "../common/seo";
-import ECommerce from "../components/eCommerce";
+import dynamic from "next/dynamic";
+const ECommerce = dynamic(() => import("../components/eCommerce"), {
+  ssr: true,  // This ensures the component is server-side rendered
+});
 import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
@@ -9,51 +12,59 @@ const Index = () => {
   const desc = `DigiExpo is a leading Ecommerce Website Development Dubai company delivering custom, scalable, and user-friendly online stores to grow your sales.`;
 
   const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What are the top eCommerce trends shaping Dubai in 2025?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The e-commerce scene in Dubai in 2025 is full of new and intriguing developments. AI-powered personalization is a big deal, making online shopping feel personalized. Retailers are focusing on faster mobile checkout. Social media, through short videos and influencer collaborations, is driving buying behavior. Sustainability is also key, with eco-friendly packaging and ethical sourcing becoming standard. These trends align with Dubai's fast pace and appeal to eco-conscious shoppers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can AI-powered personalization boost online sales for Dubai retailers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI helps Dubai retailers boost sales by analyzing customer preferences and recommending personalized products or offers. It also powers chatbots for instant assistance, improves inventory management, and sets competitive pricing. This smart personalization increases customer satisfaction and encourages repeat purchases."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is offering diverse payment options essential for UAE shoppers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Offering diverse payment options is essential in the UAE because shoppers prefer flexibility. Popular methods include credit cards, digital wallets like Apple Pay and Samsung Pay, 'Buy Now, Pay Later' plans, and local payment gateways. Providing multiple options reduces cart abandonment, builds trust, and helps businesses increase sales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is sustainability influencing eCommerce in Dubai today?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sustainability is a growing focus in Dubai's eCommerce industry. Businesses are adopting eco-friendly packaging, partnering with green delivery firms, and sourcing products responsibly. Customers increasingly prefer brands with environmental values. Retailers highlight sustainability efforts to build trust and align with Dubai's vision for a greener future."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What role do AR and immersive tech play in enhancing the online shopping journey?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Augmented reality (AR) and immersive technologies are transforming Dubai's online shopping experience. Shoppers can virtually try on clothes, accessories, or preview furniture at home, reducing uncertainty and product returns. Interactive 3D experiences boost buyer confidence and engagement. Retailers using AR stand out by offering a modern, interactive shopping journey."
-        }
-      }
-    ]
-  };
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Who builds the best eCommerce sites in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo is the best eCommerce development company in Dubai, building eCommerce stores that are fast, efficient, and visually appealing. We deliver a seamless shopping experience across devices by combining design intelligence, performance, and strategic functionality. Our solutions include local payment integrations and UAE-specific SEO. DigiExpo is your ideal partner if you want to scale your eCommerce business with a sustainable, long-term approach."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why hire a Dubai agency for eCommerce sites?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "When you hire a Dubai-based agency, you work with experts who understand the region’s online shopping culture, local payment systems, and consumer behavior. DigiExpo designs conversion-driven eCommerce websites that connect emotionally and commercially with UAE shoppers. From development to maintenance, we ensure that your store runs smoothly, ranks well, and provides an exceptional buying experience for your customers."
+    }
+  },{
+    "@type": "Question",
+    "name": "Do you make fast eCommerce stores in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, DigiExpo develops high-speed eCommerce stores tailored to Dubai’s fast-paced market. Our developers focus on performance and aesthetics to ensure seamless browsing and faster load times. In a city where every second counts, we build eCommerce stores optimized for speed—keeping customers engaged, reducing bounce rates, and driving higher conversions."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you add UAE payment gateways?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo integrates secure UAE payment gateways such as PayTabs, Telr, and Checkout.com to ensure smooth and trustworthy transactions. We enable multiple currencies and local banking options to enhance accessibility. With secure payment processing, your Dubai customers can shop confidently—boosting trust, purchase completion rates, and overall satisfaction."
+    }
+  },{
+    "@type": "Question",
+    "name": "Do you create mobile-friendly eCommerce sites in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, DigiExpo designs fully mobile-responsive eCommerce websites optimized for Dubai’s smartphone-driven market. We ensure flawless performance on every device, with thumb-friendly layouts, quick product loading, and secure transactions. Our mobile-first approach guarantees that your customers enjoy a convenient, beautiful shopping experience anytime, anywhere—driving more conversions on Android and iOS alike."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do you secure Dubai eCommerce websites?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At DigiExpo, eCommerce security is a top priority. We implement SSL encryption, firewalls, and malware protection to safeguard customer data and transactions. Dubai shoppers value trust and reliability, so we ensure your online store meets the highest security standards—offering a safe, worry-free experience that builds loyalty and confidence in your brand."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can you redesign old eCommerce stores in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, DigiExpo can completely revamp outdated eCommerce websites in Dubai into modern, conversion-optimized platforms. We redesign layouts, improve speed, and streamline checkout processes to maximize sales. Your new store will align with your brand identity and customer needs. DigiExpo helps transform your eCommerce site into a high-performing, trustworthy, and visually appealing sales engine."
+    }
+  }]
+}
 
   return (
     <>

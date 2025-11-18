@@ -5,21 +5,23 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
-import progressive from '../../../public/animation/Progressive.json'
-import ios from "../../../public/animation/ios.json"
-import appstore from "../../../public/animation/appstore.json"
-import android from "../../../public/animation/android.json"
-import flutter from "../../../public/animation/flutter.json"
-import hybrid from "../../../public/animation/hybrid.json"
-import native from "../../../public/animation/native.json"
+// import progressive from '../../../public/animation/Progressive.json'
+// import ios from "../../../public/animation/ios.json"
+// import appstore from "../../../public/animation/appstore.json"
+// import android from "../../../public/animation/android.json"
+// import flutter from "../../../public/animation/flutter.json"
+// import hybrid from "../../../public/animation/hybrid.json"
+// import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 import styles from './services-area.module.scss'
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
 
 const service_content = {
-  title: "Create. Connect. Our Mobile Applications Development Services Fuel Your Business.",
+  title: "Create. Connect. App Development 	Dubai That Fuels Your Business",
   sub_title: (
-    <>Our mob app development Dubai team of experts creates apps tailored to your unique business needs.</>
+    <>
+Our  app development Dubai experts creates apps tailored to your unique business needs.
+</>
   ),
 
   bg_img: "/assets/img/service/sv-bg.jpg",
@@ -72,15 +74,9 @@ const ServicesArea = () => {
                     />
                   </video> */}
 <Lootie
-                      options={{
-                        loop: true,
-                        autoplay: true,
-                        animationData: hybrid,  // Animation for Digital Marketing
-                        rendererSettings: {
-                          preserveAspectRatio: "xMidYMid slice"
-                        }
-                      }}
-                  style={{width:'166px',height:'100%'}}
+                        path='/animation/hybrid.json'  // Animation for Digital Marketing
+                                    width='166px'
+   
                     />
 
 
@@ -116,15 +112,9 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: android,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'80%'}}
+                                       
+                                          path='/animation/android.json' // Animation for Digital Marketing
+                                       width='122px'
                                       />
 
                 </div>
@@ -158,15 +148,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: ios,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'80%'}}
+                                   
+                                          path='/animation/ios.json'  // Animation for Digital Marketing
+                                                                         width='122px'
+
                                       />
 
                 </div>
@@ -198,15 +183,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: native,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'186px',height:'100%'}}
+                                      
+                                          path='/animation/native.json'  // Animation for Digital Marketing
+                                                                  width='186px'
+        
                                       />
 
                 </div>
@@ -240,15 +220,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: flutter,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'122px',height:'70%'}}
+                                       
+                                          path='/animation/flutter.json'  // Animation for Digital Marketing
+                                                                          width='122px'
+
                                       />
 
                 </div>
@@ -284,15 +259,10 @@ const ServicesArea = () => {
                     />
                   </video> */}
                   <Lootie
-                                        options={{
-                                          loop: true,
-                                          autoplay: true,
-                                          animationData: progressive,  // Animation for Digital Marketing
-                                          rendererSettings: {
-                                            preserveAspectRatio: "xMidYMid slice"
-                                          }
-                                        }}
-                                    style={{width:'186px',height:'100%'}}
+                                        
+                                          path='/animation/Progressive.json'// Animation for Digital Marketing
+                                                                             width='186px'
+
                                       />
 
                 </div>

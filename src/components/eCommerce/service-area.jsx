@@ -5,15 +5,15 @@ import React from 'react';
 
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-import bigcommerce from '../../../public/animation/bigcommerce.json'
-import woocommerce from '../../../public/animation/woocommerce.json'
-import shopifyplus from '../../../public/animation/shopifyplus.json'
-import shopifyecom from '../../../public/animation/shopifyecom.json'
-import dynamic from 'next/dynamic';
-import mirakalecom from '../../../public/animation/mirakalecom.json'
-import megneto from '../../../public/animation/megneto.json'
+// import bigcommerce from '../../../public/animation/bigcommerce.json'
+// import woocommerce from '../../../public/animation/woocommerce.json'
+// import shopifyplus from '../../../public/animation/shopifyplus.json'
+// import shopifyecom from '../../../public/animation/shopifyecom.json'
+// import dynamic from 'next/dynamic';
+// import mirakalecom from '../../../public/animation/mirakalecom.json'
+// import megneto from '../../../public/animation/megneto.json'
 import styles from '../mobileApp/services-area.module.scss'
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+import Lootie from '../../components/lottie'
 
 const service_content = {
     title: <>Accounting Software <br /> That Handles it All.</>,
@@ -75,15 +75,9 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: woocommerce,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                            path='/animation/woocommerce.json'  // Animation for Digital Marketing
+                                                                               width='122px'
+
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
@@ -105,15 +99,11 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: mirakalecom,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                         
+                                            path='/animation/mirakalecom.json' // Animation for Digital Marketing
+                                            // 
+                                            width='122px'
+
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
@@ -135,15 +125,9 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: megneto,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                            path='/animation/megneto.json'  // Animation for Digital Marketing
+                                                                width='122px'
+
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
@@ -165,15 +149,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: bigcommerce,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                      
+                                            path='/animation/bigcommerce.json'  // Animation for Digital Marketing
+                                                             width='122px'
+               
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
@@ -195,15 +174,10 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: shopifyecom,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                         
+                                            path='/animation/shopifyecom.json'  // Animation for Digital Marketing
+                                                                              width='122px'
+
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>
@@ -225,15 +199,9 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                          options={{
-                                            loop: true,
-                                            autoplay: true,
-                                            animationData: shopifyplus,  // Animation for Digital Marketing
-                                            rendererSettings: {
-                                              preserveAspectRatio: "xMidYMid slice"
-                                            }
-                                          }}
-                                      style={{width:'122px',height:'100%'}}
+                                            path='/animation/shopifyplus.json'  // Animation for Digital Marketing
+                                                                             width='122px'
+
                                         />  
                            </div>
                            <div className={styles["tp-service-sm-content"]}>

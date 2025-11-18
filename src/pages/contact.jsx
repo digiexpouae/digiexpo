@@ -1,6 +1,9 @@
 import React from "react";
 import SEO from "../common/seo";
-import Contact from "../components/contact";
+import dynamic from "next/dynamic";
+const Contact = dynamic(() => import('../components/contact'), {
+  ssr: true, // Enable SSR if needed, set to false if you want to disable SSR for this component
+});
 import Wrapper from "../layout/wrapper";
 
 const index = () => {

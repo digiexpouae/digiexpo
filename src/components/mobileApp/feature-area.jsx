@@ -25,9 +25,9 @@ const feature_content = {
   ),
   integraton_des: (
     <>
-      Collaborate with our <b> mobile app development UAE services</b> <br />{" "}
-      and give us the chance to maintain competitiveness in the fast-paced world
-      of today
+    Collaborate with Digiexpo and let out expert<b>  hybrid mobile apps developers</b> <br /> {" "}chance to maintain competitiveness in the fast-paced world of today
+
+
     </>
   ),
 };
@@ -73,7 +73,9 @@ const FeatureArea = ({style_integraton}) => {
                                         </div>
                                         <div className="tp-feature-five-content">
                                             <h4 className="tp-feature-five-title-sm">Insightful<br/>Research</h4>
-                                            <p>Thorough research and analytical brainstorming sessions are the backbone of our app development process. We go deep into the market trends and user behavior to ensure that the app we  are building is  user-friendly and engaging.</p>
+                                            <p>
+Thorough research and analytical brainstorming sessions are the backbone of our app development process. We go deep into the market trends and user behavior to ensure that the app we are building is user-friendly and engaging.
+</p>
                                         </div>
                                         <div class="tp-service-sm-link-2">
                                             <Link href="/service-details">STEP ONE<i class="far fa-arrow-right"></i></Link>
@@ -93,7 +95,8 @@ const FeatureArea = ({style_integraton}) => {
                                         </div>
                                         <div className="tp-feature-five-content">
                                             <h4 className="tp-feature-five-title-sm">Wireframing &<br/> Prototyping</h4>
-                                            <p>At our company, we understand the importance of wireframing and always take advantage of this crucial step. We assure you that the prototype we will provide will give you a clear vision of what a complete mobile application Dubai looks like. This will help you to be confident in your project’s path.</p>
+                                            <p>At our company, we understand the importance of wireframing and always take advantage of this crucial step. We assure you that the prototype we will provide will give you a clear vision of what a complete mobile application Dubai looks like. This will help you to be confident in your project’s path.
+</p>
                                         </div>
                                         <div class="tp-service-sm-link-2">
                                             <Link href="/service-details">STEP TWO<i class="far fa-arrow-right"></i></Link>

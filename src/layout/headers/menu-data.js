@@ -14,8 +14,19 @@ const menu_data = [
       { link: "/home-5", title: "Saas" },
     ],
   },
-  {
+   {
     id: 2,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "About",
+    link: "/about",
+    active: "",
+  },
+  // {
+ 
+  // {
+  {
+    id: 3,
     mega_menu: false,
     has_dropdown: true,
     title: "Services",
@@ -66,20 +77,25 @@ const menu_data = [
   //   ],
   // },
   {
-    id: 3,
+    id: 4,
     mega_menu: false,
-    has_dropdown: false,
+    has_dropdown: true,
     title: "Case Studies",
     link: "/casestudies",
     active: "",
     sub_menus: [
-      { link: "/hyggeBikes", title: "Hygge Bikes" },
+                    { link: "/casestudies/website/realestate/empire-developments", title: "Empire Developments" },
+                            { link: "/casestudies/website/realestate/kamdar-developments", title: "Kamdar Developments" },
+
+      { link: "/casestudies/website/logistics-and-supply-chain/saami-tradstar", title: "Saami Traderstar" },
+          { link: "/casestudies/website/logistics-and-supply-chain/oceanstar", title: "Oceanstar Shipping" },
+                  
       // { link: "/project-details", title: "Project Details" },
     ],
   },
 
   {
-    id: 4,
+    id: 5,
     mega_menu: false,
     has_dropdown: false,
     title: "Blog",
@@ -92,15 +108,16 @@ const menu_data = [
       { link: "/blog-details-2", title: "Blog Details 02" },
     ],
   },
-
-  {
-    id: 5,
+     {
+    id: 6,
     mega_menu: false,
     has_dropdown: false,
     title: "Contact",
     link: "/contact",
     active: "",
   },
+
+ 
 
 
 ];

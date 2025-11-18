@@ -40,10 +40,10 @@ const index=()=>{
     <Section2 />
     <Section3 />
     <Section4 />
-    <Section5 />
+    {/* <Section5 /> */}
     <Section6 />
     <Section7 steps={steps} maintitle={'How We Make It Happen'} />
-    <Section8 />
+    {/* <Section8 /> */}
     <Brand />
     <ContactArea />
     <Footer />

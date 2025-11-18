@@ -1,3 +1,11 @@
+# =========================================================
+# robots.txt for https://www.digiexpo.ae
+# Purpose: Full AI + LLM Access | SEO Safe | Gulf Region Focus
+# =========================================================
+
+# ===============================
+# General Crawl Rules
+# ===============================
 User-agent: *
 Disallow: /_next/static/
 Disallow: /admin/
@@ -6,4 +14,78 @@ Disallow: /ads.txt/
 Disallow: /?
 Disallow: /*?
 
+# =========================================================
+# LLM & AI Crawler Access (All Major AI & Content Models)
+# =========================================================
+
+# --- OpenAI / ChatGPT / GPTBot ---
+User-agent: ChatGPT-User
+User-agent: ChatGPT-Chat
+User-agent: OAI-SearchBot
+User-agent: GPTBot
+
+# --- Google AI / Gemini / Bard ---
+User-agent: Google-Extended
+
+# --- Anthropic Claude ---
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+
+# --- Perplexity AI ---
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+
+# --- Microsoft / Bing AI / Copilot ---
+User-agent: Bingbot
+User-agent: msnbot-media
+User-agent: BingAI
+
+# --- Amazon AI / Diffbot / Stability / ByteDance ---
+User-agent: Amazonbot
+User-agent: Diffbot
+User-agent: StabilityAI
+User-agent: Bytespider
+
+# --- HuggingFace / Runway / Midjourney / Replika / Jasper / Copy.ai ---
+User-agent: HuggingFaceBot
+User-agent: RunwayBot
+User-agent: MidjourneyBot
+User-agent: ReplikaBot
+User-agent: JasperBot
+User-agent: CopyAIBot
+
+# --- AI Aggregators & Research Bots ---
+User-agent: CCBot
+User-agent: AI2Bot
+User-agent: YouBot
+User-agent: OmgiliBot
+User-agent: ImagesiftBot
+User-agent: DataForSEO
+User-agent: ForefrontAI
+User-agent: DeepSeek
+
+# =========================================================
+# Gulf Region Search Engines & SEO Tools
+# =========================================================
+User-agent: YandexBot
+User-agent: Baiduspider
+User-agent: PetalBot
+User-agent: Majestic-12
+User-agent: AhrefsBot
+User-agent: SEMrushBot
+User-agent: DotBot
+User-agent: Crawler
+
+# =========================================================
+# Major Global Search Engines
+# =========================================================
+User-agent: Googlebot
+User-agent: DuckDuckBot
+User-agent: Yahoo! Slurp
+User-agent: Applebot
+
+# =========================================================
+# Sitemap
+# =========================================================
 Sitemap: https://www.digiexpo.ae/sitemap.xml

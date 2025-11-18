@@ -21,3 +21,12 @@ h4{
     letter-spacing: -3px;
     line-height: 1;
 }
+/* Hide scrollbar while keeping scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+

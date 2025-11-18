@@ -1,3 +1,4 @@
+'use client'; 
 import React, { useEffect, useRef, useState } from "react";
 
 import useCharAnimation from "@/hooks/useCharAnimation";
@@ -33,21 +34,23 @@ const hero_content = {
   ],
   hero_title: (
     <>
-      <span className='tp_title'>
-        <span className='child'>DigiExpo Helps Brand With</span>
+      <span className='tp_title' >
+        <span className='child' >Boost Business Growth with  </span>
       </span>{" "}
       <br />
       <span>
-        <span className='child'>Business Growth</span>
+        <span className='child' >  DigiExpo Expert  </span>
       </span>{" "}
+       <span>
+        <span className='child' > Web Design Dubai </span>
+      </span>{" "}
+      
     </>
   ),
   sub_title: (
     <>
       {" "}
-      Welcome to Dubai’s great digital marketing agency. We specialize in
-      offering digital marketing agency UAE services that help companies grow in
-      competitive industries.
+Welcome to Digiexpo – Dubai’s leading website development company, our expert web design Dubai helps businesses succeed in Dubai's competitive market.
     </>
   ),
   hero_shape_img: [
@@ -129,8 +132,13 @@ const HeroSlider = () => {
         <div className='tp-hero__bg p-relative'>
           <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
             {/* bg-image */}
-            {isMobile ? (<div className="mobile-bg"></div>)
-              // <Image
+  {isMobile ? (
+  <div
+    className="mobile-bg"
+ 
+  ></div>
+  )
+              //  <Image
               //   className="block md:hidden object-cover"
               //   src={Herobg}
               //   alt='hero background'
@@ -180,9 +188,9 @@ const HeroSlider = () => {
               <div className='col-xl-10'>
                 <div className='tp-hero__content-box text-center z-index-3'>
                   <div className='tp-hero__title-box p-relative'>
-                    <h2 className='tp-hero__hero-title tp-title-anim'>
+                    <h1 className='tp-hero__hero-title tp-title-anim tw-text-black'>
                       {hero_title}
-                    </h2>
+                    </h1>
                     <div className='tp-hero__title-shape d-none d-sm-block'>
                       <LineShape />
                     </div>
@@ -195,7 +203,7 @@ const HeroSlider = () => {
                     <HeroForm />
                   </div>
                   <p
-                    className='wow tpfadeUp'
+                    className='wow tpfadeUp '
                     data-wow-duration='.9s'
                     data-wow-delay='.7s'
                   >

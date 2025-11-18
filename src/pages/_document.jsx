@@ -11,6 +11,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+
         {/* Using next/font in _app.jsx, so no Google Fonts preconnects */}
 
         {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
@@ -21,6 +22,7 @@ export default function Document() {
         {/* Removed Bootstrap preload: styles are bundled via SCSS */}
 
         {/* ✅ Inline critical CSS to prevent layout shifts */}
+
         <style
           dangerouslySetInnerHTML={{
             __html: `
@@ -38,6 +40,7 @@ export default function Document() {
             `,
           }}
         />
+
 
         {/* ✅ Viewport meta */}
         <meta
@@ -66,6 +69,10 @@ export default function Document() {
               gtag('config', 'G-KTZJ1X0WSB');
             `,
           }}
+        />
+          <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"
+          strategy="afterInteractive" // ✅ ensures it runs after page loads
         />
 
         {/* ✅ Tawk.to Live Chat - still lazy loaded to avoid blocking */}

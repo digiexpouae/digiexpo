@@ -26,11 +26,12 @@ const hero_content = {
         <i className='child-1'>Redefine Your </i>{" "}
       </i>{" "}
       <i>
-        <h1  style={{fontSize:'65px'}} className='child-1'>Mobile App Development</h1>{" "}
+        <h1  style={{fontSize:'65px'}} className='child-1'>App with the Top App Development
+</h1>{" "}
       </i>{" "}
   
       <i>
-        <h2 style={{fontSize:'65px',color:'white'}} className='child-1'>Company  <br />Dubai  </h2>{" "}
+        <h2 style={{fontSize:'65px',color:'white'}} className='child-1'>Dubai  <br />Company  </h2>{" "}
       </i>
    
       {/* <i><i className="child-1">ways.</i></i> */}
@@ -91,8 +92,8 @@ const HeroArea = () => {
               <div className='tp-hero-2__title-box'>
                 <div className='tp-hero-2__title tp-char-animation'>{title}</div>
                 <p style={{ color: "white" }}>
-                  <b>In today's fast-paced world, application development Dubai is a key. It helps to meet the expectations of the modern public. </b>
-                   Businesses need mobile apps that not only work well but also provide a smooth user experience.
+                  <b>In today's fast-paced world, app development Dubai is key. Digiexpo hybrid mobile apps help businesses meet the expectations of the modern public.  </b>
+               Our mobile apps not only work well but also provide a smooth user experience.
                 </p>
               </div>
               <div className='tp-hero-2__btn'>

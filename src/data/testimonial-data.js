@@ -40,7 +40,8 @@ import brand_icon_9 from "../../public/assets/img/testimonial/testi-logo-5-2.png
 import brand_icon_10 from "../../public/assets/img/testimonial/testi-logo-5-3.png"
 import brand_icon_11 from "../../public/assets/img/testimonial/testi-logo-5-3.png"
 import brand_icon_12 from "../../public/assets/img/testimonial/testi-logo-5-2.png"
-
+import branchicon_13 from '../../public/assets/img/testimonial/testi-logo-2.png'
+import brandicon_14 from '../../public/assets/img/testimonial/VM2bg.png'
 const testimonial_data = [
     // for home 01
     {
@@ -166,7 +167,7 @@ const testimonial_data = [
     {
         id: 13, 
         author_img: author_img_1,
-        brand_icon: brand_icon_1,
+        brand_icon: branchicon_13,
         name: "Joann J.",
         // title: "Community Organiser",  
         description: <>“ This is really awesome. many small businessmen are suffering from this service in different platform and the
@@ -206,7 +207,7 @@ const testimonial_data = [
     {
         id: 17, 
         author_img: author_img_15,
-        brand_icon: brand_icon_5,
+        brand_icon:brandicon_14 ,
         name: "Emily R.",
         // title: "Community Organiser",  
         description: <>“ Working with this agency has completely transformed our online presence. Their SEO and social media strategies helped us attract more clients in just a few months.”</>,

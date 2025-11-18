@@ -6,13 +6,17 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // recently added
+    sassOptions: {
+    sourceMap: false, // explicitly disable
+  },
   async redirects() {
     return [
       { source: "/blog", destination: "/blogs", permanent: true },
       { source: "/service-details", destination: "/services", permanent: true },
       { source: "/blog-details", destination: "/blogs", permanent: true },
       { source: "/mobile-app-development-company-dubai", destination: "/application-development-dubai", permanent: true },
+    
     ];
   },
   
@@ -24,7 +28,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },  
   images: { 
-    unoptimized: true,
+ domains: ['cdn.sanity.io'], // Add Sanity’s CDN domain here
     formats: ['image/webp', 'image/avif'],
   },
   productionBrowserSourceMaps: false, // Disable in production for better performance
@@ -32,6 +36,15 @@ const nextConfig = {
   poweredByHeader: false,
   // Optimize bundle splitting
   webpack: (config, { dev, isServer }) => {
+       // preventing the large 'sass.dart.js' dependency from being bundled.
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'sass': false,
+        'node-sass': false,
+      };
+    }
+
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -59,6 +72,17 @@ const nextConfig = {
     }
     return config;
   },
+  //   webpack: (config, { dev, isServer }) => {
+  //   if (!dev && !isServer) {
+  //     // Disable all chunk splitting
+  //     config.optimization.splitChunks = false;
+
+  //     // Optional: keep runtime inlined for single bundle
+  //     config.optimization.runtimeChunk = 'single';
+  //   }
+  //   return config;
+  // },
+
   env: {
     EMAIL_HOST: process.env.EMAIL_HOST,
     INTERNAL_EMAIL_USERNAME: process.env.INTERNAL_EMAIL_USERNAME,

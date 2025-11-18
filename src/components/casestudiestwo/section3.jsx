@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Section3 = () => {
   const caseStudies = [
     {
@@ -8,20 +8,30 @@ const Section3 = () => {
       category: "Real Estate / Website",
       img: "/assets/img/casestudies/cs-7.png", // Foreground image (project)
       bg: "/assets/img/casestudies/Rectangle 6900.png", // Background behind it
+      link:"/casestudies/website/realestate/empire-developments"
     },
     {
       id: 2,
-      title: "Empire Developments",
+      title: "Kamdar Developments",
       category: "Real Estate / Website",
-      img: "/assets/img/casestudies/cs-7.png",
+      img: "/assets/img/casestudies/Kamdar copy.png",
       bg: "/assets/img/casestudies/Rectangle 6900.png",
+            link:"/casestudies/website/realestate/kamdar-developments"
     },
     {
       id: 3,
-      title: "Empire Developments",
-      category: "Real Estate / Website",
-      img: "/assets/img/casestudies/cs-7.png",
+      title: "saami Tradestar",
+      category: "Logistics & Supply Chain",
+      img: "/assets/img/casestudies/Saami copy.png",
       bg: "/assets/img/casestudies/Rectangle 6900.png",
+            link:"/casestudies/website/logistics-and-supply-chain/saami-tradstar"
+    },{
+      id: 4,
+      title: "Ocean Star Shipping",
+      category: "Logistics & Supply Chain",
+      img: "/assets/img/casestudies/oss.png",
+      bg: "/assets/img/casestudies/Rectangle 6900.png",
+            link:"/casestudies/website/logistics-and-supply-chain/oceanstar"
     },
   ];
 
@@ -45,11 +55,11 @@ const Section3 = () => {
         </div>
 
         {/* Case Studies Grid */}
-        <div className="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
+        <div className="tw-grid tw-grid-cols-1 tww-items-center tw-justify-center sm:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
           {caseStudies.map((item) => (
             <div
               key={item.id}
-              className="tw-relative tw-rounded-2xl tw-overflow-hidden tw-shadow-md tw-transition-transform tw-duration-300 hover:tw-scale-[1.03] hover:tw-shadow-lg "
+              className="tw-relative tw-rounded-3xl tw-w-[80%] tw-mx-auto md:tw-w-full tw-overflow-hidden  tw-shadow-md tw-transition-transform tw-duration-300 hover:tw-scale-[1.03] hover:tw-shadow-lg "
             >
               {/* Background image */}
               <div className="tw-relative  tw-h-[225px] tw-w-full">
@@ -62,15 +72,18 @@ const Section3 = () => {
 
                 {/* Foreground project image */}
                 <div className="tw-absolute tw-inset-0 tw-flex tw-items-center tw-justify-center">
-                  <div className="tw-relative tw-w-[90%] tw-translate-y-4 tw-h-[90%] tw-transition-transform tw-duration-300 hover:tw-scale-105">
+                 <div className="tw-relative tw-w-[90%] tw-translate-y-4 tw-h-[90%] tw-transition-transform tw-duration-300 hover:tw-scale-105">
+                  <Link href={item.link}>
                     <Image
                       src={item.img}
                       alt={item.title}
                       fill
                       className="tw-object-cover tw-rounded-xl"
                     />
+                    </Link>     
                   </div>
-                </div>
+
+                            </div>
               </div>
 
               {/* Text Section */}
@@ -79,6 +92,7 @@ const Section3 = () => {
                   {item.title}
                 </h3>
                 <p className="tw-text-sm tw-text-gray-500">{item.category}</p>
+                <button className="tw-bg-[#803DFF]  hover:tw-bg-purple-400 tw-font-medium tw-rounded-full tw-text-white tw-px-4 tw-py-2"><Link href={item.link}>View Casestudy</Link></button>
               </div>
             </div>
           ))}

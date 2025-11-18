@@ -1,7 +1,10 @@
 import React from "react";
 import SEO from "../common/seo";
-import DesignPage from "../components/designPage";
-import Wrapper from "../layout/wrapper";
+import dynamic from "next/dynamic";  // Import dynamic for code splitting
+// Dynamically import the DesignPage component
+const DesignPage = dynamic(() => import("../components/designPage"), {
+  ssr: true,  // This ensures the component is server-side rendered for SEO purposes
+});import Wrapper from "../layout/wrapper";
 import Head from "next/head";
 
 const Index = () => {
@@ -11,52 +14,59 @@ const Index = () => {
   ];
 
   const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What modern web design trends are dominating Dubai in 2025?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In 2025, Dubai's web design will focus on simplicity and boldness. Expect huge fonts, clear layouts, and standout colors. Design that works well on phones is a necessity because most people use them to browse. To keep things interesting, websites are incorporating small animations and even 3D elements. Some companies use augmented reality to let you try on things before you buy them. AI also changes what you see based on what you like. All this makes sites quick, nice to look at, and easy to use, which is something that Dubai businesses adore."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is mobile-first design essential for UAE businesses?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A lot of people here use their phones to access the web first. Therefore, mobile-first design is quite important. When you design websites with phones in mind, they load quickly and are easy to use on small displays. It also helps the site get a better ranking on Google. Dubai businesses want to make sure that clients have a good experience no matter where they are. This keeps users on the site longer and increases revenue. In a market that moves quickly, mobile-first is no longer a choice; it's the standard."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does AI personalization enhance web conversions for Dubai brands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI personalization helps Dubai websites display things that are important to clients. AI learns what you like by watching what you click on or buy, not by giving you random product lists. Then it suggests goods that are comparable or go well with what you already have, which makes shopping faster and more fun. Customers are more inclined to come back since they have a personalized experience. For brands, this means more sales and happier customers in Dubai's very competitive online market."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What role do immersive technologies like 3D, AR, and AI chatbots play in website design?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Websites in Dubai are getting a lot cooler because of 3D visuals, augmented reality, and AI chatbots. 3D makes things look real. AR allows you to try things out in a virtual world, and chatbots are always there to answer your queries. This technology makes shopping easier and more fun, which makes people feel good about what they buy. Dubai brands may stand out by using these technologies to create new, easy-to-use websites that customers want to visit again and again."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How important is accessible and sustainable web design for UAE enterprises?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Accessible web design makes it easy for everyone; even people with disabilities can use a website. Sustainable design makes sure that sites load quickly and don't waste energy. Companies in Dubai that do each of these things show that they care about both people and the earth. It helps them stay legal, get more consumers, and improve their brand image. Also, it matches Dubai's green aspirations. So, websites that are easy to use and last a long time are good for both businesses and customers."
-        }
-      }
-    ]
-  };
-
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How can UI/UX boost Dubai conversions?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Strong UI/UX design has a direct impact on conversions. At DigiExpo, we design interfaces that naturally lead the user to action—whether it’s a purchase, sign-up, or inquiry. Our approach focuses on clarity, consistency, and emotional connection. DigiExpo helps Dubai companies transform visitors into loyal customers with a blend of psychology and responsive design. This method boosts customer engagement and drives measurable revenue growth with every online interaction."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why Dubai websites fail to engage users?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many Dubai websites fail to engage users because of cluttered designs, slow loading speeds, and confusing navigation. At DigiExpo, we identify these engagement issues and redesign sites with a clean layout, meaningful visuals, and intuitive navigation. We focus on aligning brand emotion with user intent so that every design element has purpose. DigiExpo’s approach keeps audiences engaged and turns passive visitors into active participants."
+    }
+  },{
+    "@type": "Question",
+    "name": "Best way to improve UAE site navigation?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo enhances website navigation by making it simple, structured, and user-centered. We refine menus, improve labeling, and reduce unnecessary clicks on key pages. Our UX designers test navigation flows with real users to ensure they can find what they need easily. DigiExpo applies smart hierarchies and visual cues, making UAE websites seamless and intuitive to explore."
+    }
+  },{
+    "@type": "Question",
+    "name": "How UI/UX design affects SEO in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "UI/UX and SEO are deeply connected. At DigiExpo, we design interfaces that increase engagement metrics like dwell time and click-through rate—key factors in better rankings. A clear structure helps search engines crawl pages more effectively, while fast-loading and responsive designs improve satisfaction for both users and algorithms. DigiExpo ensures your Dubai website not only looks great but also performs exceptionally in Google’s evolving SEO landscape."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why mobile-friendly UI/UX matters in Dubai?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo understands that most Dubai audiences browse through smartphones. A mobile-friendly UI/UX ensures your website loads quickly, looks great, and functions flawlessly on any device. It improves engagement, reduces bounce rates, and increases conversions. Our responsive layouts automatically adapt to all screen sizes, giving Dubai brands the ability to deliver smooth and memorable digital experiences everywhere."
+    }
+  },{
+    "@type": "Question",
+    "name": "Common UI/UX mistakes Dubai startups make?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Many Dubai startups skip user testing, overload designs with unnecessary visuals, or neglect mobile optimization—hurting engagement and credibility. Effective UI/UX must be practical, accessible, and goal-oriented. DigiExpo helps startups avoid poor navigation, slow loading, and confusing layouts, ensuring from the start that their websites are professional, emotional, and user-focused."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do you test UX before site launch?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "DigiExpo performs comprehensive UX testing before any website goes live. We use usability studies, behavioral analysis, and A/B testing to observe real user interactions. Every click, scroll, and navigation path is analyzed to identify friction points early. This ensures that the final product is intuitive, engaging, and optimized for Dubai’s diverse digital audience."
+    }
+  }]
+}
   return (
     <>
       <Head>

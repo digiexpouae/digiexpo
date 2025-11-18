@@ -40,7 +40,7 @@ const HeroArea = () => {
                         <div className="col-xl-7 col-lg-6 order-2">
                            <div className="tp-hero-five-section-wrap">
                               <div className="tp-hero-five-section-box z-index">
-                                 <h3 className="tp-hero-title-5 hero-text-anim-2">
+                                 <h1 className="tp-hero-title-5 hero-text-anim-2 tw-text-black">
                                     <i><i className="child-2">Get More <br /></i></i>
                                     <i>
                                        <i className="child-2">
@@ -51,9 +51,9 @@ const HeroArea = () => {
                                        </i>
                                     </i>
                                     <i><i className="child-2"><span className="child-2">Leads, And Sales</span><br /></i></i>
-                                    <i><i className="child-2">With DigiExpo</i></i>
-                                 </h3>
-                                 <p className="wow tpfadeUp text-black" data-wow-duration=".9s" data-wow-delay=".5s">With Our All In One Digital Marketing Solutions</p>
+                                    <i><i className="child-2" style={{lineHeight:'1'}}>With the top Digital <br />Marketing Agency Dubai</i></i>
+                                 </h1>
+                                 <p className="wow tpfadeUp text-black" data-wow-duration=".9s" data-wow-delay=".5s">With Digiexpo All In One Digital Marketing Solutions</p>
                               </div>
                               <div className="tp-hero-five-btn-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                                  <Link className="tp-btn-blue-lg purple-bg circle-effect mr-15 mb-20" href="/">Get Started</Link>

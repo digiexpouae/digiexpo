@@ -119,7 +119,7 @@ const TestimonialArea = () => {
 
 <p style={{
   display: '-webkit-box',
-  WebkitLineClamp: 5,
+  WebkitLineClamp: 4,
   WebkitBoxOrient: 'vertical',
   overflow: 'hidden'}}>{item.description}</p>
                                  </div>

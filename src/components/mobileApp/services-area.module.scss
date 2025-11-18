@@ -228,6 +228,9 @@
       border-radius: 30px;
       & .tp-service__icon {
         animation: icon-bounce 0.8s 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
@@ -325,3 +328,13 @@
     z-index: -1;
   }
 }
+.tp-service-sm-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tp-service__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }

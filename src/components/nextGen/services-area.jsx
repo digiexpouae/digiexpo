@@ -5,15 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import img from "../../../public/assets/img/service/sv-dashbord.png";
-import artificialintelligence from '../../../public/animation/artificialintelligence.json'
-import augmentedrealtiy from '../../../public/animation/augmentedrealtiy.json'
-import Metaverse  from '../../../public/animation/Metaverse.json'
-import threeD from '../../../public/animation/3D.json'
-import gesture from '../../../public/animation/gesture.json'
-import iotdevelopment from '../../../public/animation/lotdevelopment.json'
+// import artificialintelligence from '../../../public/animation/artificialintelligence.json'
+// import augmentedrealtiy from '../../../public/animation/augmentedrealtiy.json'
+// import Metaverse  from '../../../public/animation/Metaverse.json'
+// import threeD from '../../../public/animation/3D.json'
+// import gesture from '../../../public/animation/gesture.json'
+// import iotdevelopment from '../../../public/animation/lotdevelopment.json'
 import styles from '../mobileApp/services-area.module.scss'
 import dynamic from "next/dynamic";
-const Lootie = dynamic(() => import('react-lottie'), { ssr: false });
+const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
+
 
 
 
@@ -23,9 +24,8 @@ const service_content = {
   title: "Our Emerging Technology Development Services",
   sub_title: (
     <>
-      By using <b> emerging technologies development agency Dubai </b> services
-      help in revolutionizing businesses. It offers modern strategies like IOT,
-      AI, block chain, and machine learning.
+    Digiexpo <b> emerging technologies development services  </b>help businesses transform. Our emerging technology development services include modern strategies like IOT, AI, block chain, and machine learning.
+      
     </>
   ),
 
@@ -80,15 +80,9 @@ const ServicesArea = () => {
                   </video> */}
    
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: artificialintelligence,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                       
+                           path='/animation/artificialintelligence.json'  // Animation for Digital Marketing
+                                              width='122px'
                        /> 
    
    
@@ -124,15 +118,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: augmentedrealtiy,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                    
+                           path='/animation/augmentedrealtiy.json' // Animation for Digital Marketing
+                                              width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -166,15 +155,9 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: Metaverse,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                           path='/animation/Metaverse.json' // Animation for Digital Marketing
+                                           width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -206,15 +189,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: threeD,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                        
+                           path='/animation/3D.json'  // Animation for Digital Marketing
+                                            width='122px'
+  
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -248,15 +226,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: iotdevelopment,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                        
+                           path='/animation/lotdevelopment.json' // Animation for Digital Marketing
+                                               width='122px'
+
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
@@ -292,15 +265,10 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                         options={{
-                           loop: true,
-                           autoplay: true,
-                           animationData: gesture,  // Animation for Digital Marketing
-                           rendererSettings: {
-                             preserveAspectRatio: "xMidYMid slice"
-                           }
-                         }}
-                     style={{width:'122px',height:'100%'}}
+                       
+                           path='/animation/gesture.json'  // Animation for Digital Marketing
+                                           width='122px'
+    
                        /> 
                 </div>
                 <div className={styles["tp-service__content"]}>
