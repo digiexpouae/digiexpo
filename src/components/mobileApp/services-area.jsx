@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
-import progressive from '../../../public/animation/Progressive.json'
-import ios from "../../../public/animation/ios.json"
-import appstore from "../../../public/animation/appstore.json"
-import android from "../../../public/animation/android.json"
-import flutter from "../../../public/animation/flutter.json"
-import hybrid from "../../../public/animation/hybrid.json"
-import native from "../../../public/animation/native.json"
+// import progressive from '../../../public/animation/Progressive.json'
+// import ios from "../../../public/animation/ios.json"
+// import appstore from "../../../public/animation/appstore.json"
+// import android from "../../../public/animation/android.json"
+// import flutter from "../../../public/animation/flutter.json"
+// import hybrid from "../../../public/animation/hybrid.json"
+// import native from "../../../public/animation/native.json"
 import img from "../../../public/assets/img/service/sv-dashbord.png";
 import styles from './services-area.module.scss'
 const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
@@ -74,7 +74,7 @@ const ServicesArea = () => {
                     />
                   </video> */}
 <Lootie
-                        animationData={hybrid}  // Animation for Digital Marketing
+                        path='/animation/hybrid.json'  // Animation for Digital Marketing
                                     width='166px'
    
                     />
@@ -113,7 +113,7 @@ const ServicesArea = () => {
                   </video> */}
                   <Lootie
                                        
-                                          animationData={android}  // Animation for Digital Marketing
+                                          path='/animation/android.json' // Animation for Digital Marketing
                                        width='122px'
                                       />
 
@@ -149,7 +149,7 @@ const ServicesArea = () => {
                   </video> */}
                   <Lootie
                                    
-                                          animationData={ios}  // Animation for Digital Marketing
+                                          path='/animation/ios.json'  // Animation for Digital Marketing
                                                                          width='122px'
 
                                       />
@@ -184,7 +184,7 @@ const ServicesArea = () => {
                   </video> */}
                   <Lootie
                                       
-                                          animationData={native}  // Animation for Digital Marketing
+                                          path='/animation/native.json'  // Animation for Digital Marketing
                                                                   width='186px'
         
                                       />
@@ -221,7 +221,7 @@ const ServicesArea = () => {
                   </video> */}
                   <Lootie
                                        
-                                          animationData={flutter}  // Animation for Digital Marketing
+                                          path='/animation/flutter.json'  // Animation for Digital Marketing
                                                                           width='122px'
 
                                       />
@@ -260,7 +260,7 @@ const ServicesArea = () => {
                   </video> */}
                   <Lootie
                                         
-                                          animationData={progressive}// Animation for Digital Marketing
+                                          path='/animation/Progressive.json'// Animation for Digital Marketing
                                                                              width='186px'
 
                                       />

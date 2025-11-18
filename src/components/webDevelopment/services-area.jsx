@@ -3,12 +3,12 @@ import RightArrow from "@/svg/right-arrow";
 import Link from "next/link";
 import React, { useRef } from "react";
 import dynamic from 'next/dynamic';
-import whatsapp from '../../../public/animation/WhatsApp.json'
-import wordpress from '../../../public/animation/wordpress.json'
-import webmaintain from '../../../public/animation/websitemaintainance.json'
-import php from '../../../public/animation/php.json'
-import cms from '../../../public/animation/CMS.json'
-import laravel from '../../../public/animation/laravel.json'
+// import whatsapp from '../../../public/animation/WhatsApp.json'
+// import wordpress from '../../../public/animation/wordpress.json'
+// import webmaintain from '../../../public/animation/websitemaintainance.json'
+// import php from '../../../public/animation/php.json'
+// import cms from '../../../public/animation/CMS.json'
+// import laravel from '../../../public/animation/laravel.json'
 
 import styles from '../mobileApp/services-area.module.scss'
 import Lootie from '../../components/lottie'
@@ -68,7 +68,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
                  
-                    animationData={wordpress}
+                    path='/animation/wordpress.json'
                      width='295px'
                 />
               </div>
@@ -97,7 +97,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
                  
-                    animationData={laravel}
+                    path='/animation/laravel.json'
                                 width='295px'
                 />
               </div>
@@ -126,7 +126,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
               
-                    animationData={php}
+                    path='/animation/php.json'
                                width='122px'
                 />
               </div>
@@ -152,7 +152,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
               
-                    animationData={cms}
+                    path='/animation/cms.json'
                                           width='122px'               />
               </div>
               <div className={styles['tp-service__content']}>
@@ -179,7 +179,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
              
-                    animationData={webmaintain}
+                    path='/animation/websitemaintainance.json'
                                    width='122px'
                 />
               </div>
@@ -210,7 +210,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
                
-                    animationData={whatsapp}
+                    path='/animation/WhatsApp.json'
                                   width='122px'
                 />
               </div>

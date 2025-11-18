@@ -5,12 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 import img from "../../../public/assets/img/service/sv-dashbord.png";
-import artificialintelligence from '../../../public/animation/artificialintelligence.json'
-import augmentedrealtiy from '../../../public/animation/augmentedrealtiy.json'
-import Metaverse  from '../../../public/animation/Metaverse.json'
-import threeD from '../../../public/animation/3D.json'
-import gesture from '../../../public/animation/gesture.json'
-import iotdevelopment from '../../../public/animation/lotdevelopment.json'
+// import artificialintelligence from '../../../public/animation/artificialintelligence.json'
+// import augmentedrealtiy from '../../../public/animation/augmentedrealtiy.json'
+// import Metaverse  from '../../../public/animation/Metaverse.json'
+// import threeD from '../../../public/animation/3D.json'
+// import gesture from '../../../public/animation/gesture.json'
+// import iotdevelopment from '../../../public/animation/lotdevelopment.json'
 import styles from '../mobileApp/services-area.module.scss'
 import dynamic from "next/dynamic";
 const Lootie = dynamic(() => import('../../components/lottie'), { ssr: false });
@@ -81,7 +81,7 @@ const ServicesArea = () => {
    
    <Lootie 
                        
-                           animationData={artificialintelligence}  // Animation for Digital Marketing
+                           path='/animation/artificialintelligence.json'  // Animation for Digital Marketing
                                               width='122px'
                        /> 
    
@@ -119,7 +119,7 @@ const ServicesArea = () => {
                      
    <Lootie 
                     
-                           animationData={augmentedrealtiy} // Animation for Digital Marketing
+                           path='/animation/augmentedrealtiy.json' // Animation for Digital Marketing
                                               width='122px'
 
                        /> 
@@ -155,7 +155,7 @@ const ServicesArea = () => {
                   </video> */}
                      
    <Lootie 
-                           animationData={Metaverse} // Animation for Digital Marketing
+                           path='/animation/Metaverse.json' // Animation for Digital Marketing
                                            width='122px'
 
                        /> 
@@ -190,7 +190,7 @@ const ServicesArea = () => {
                      
    <Lootie 
                         
-                           animationData={threeD}  // Animation for Digital Marketing
+                           path='/animation/3D.json'  // Animation for Digital Marketing
                                             width='122px'
   
                        /> 
@@ -227,7 +227,7 @@ const ServicesArea = () => {
                      
    <Lootie 
                         
-                           animationData={iotdevelopment} // Animation for Digital Marketing
+                           path='/animation/lotdevelopment.json' // Animation for Digital Marketing
                                                width='122px'
 
                        /> 
@@ -266,7 +266,7 @@ const ServicesArea = () => {
                      
    <Lootie 
                        
-                           animationData={gesture}  // Animation for Digital Marketing
+                           path='/animation/gesture.json'  // Animation for Digital Marketing
                                            width='122px'
     
                        /> 

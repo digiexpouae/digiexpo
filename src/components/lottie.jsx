@@ -2,14 +2,15 @@
 
 import { useEffect, useRef } from 'react';
 
-const LottieComponent = ({ animationData, width, height = '130px' }) => {
+const LottieComponent = ({ animationData, path,width, height = '130px' }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
     if (window.lottie) {
       const animation = window.lottie.loadAnimation({
         container: containerRef.current,
-        animationData,
+                ...(path ? { path } : { animationData }),
+
         loop: true,
         autoplay: true,
         rendererSettings: {
@@ -23,7 +24,7 @@ const LottieComponent = ({ animationData, width, height = '130px' }) => {
         animation.destroy(); // Cleanup
       };
     }
-  }, [animationData]);
+  }, [animationData,path]);
 
   return <div ref={containerRef} style={{ width, height }} />;
 };

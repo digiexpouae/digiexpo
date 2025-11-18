@@ -73,7 +73,7 @@ const ServiceArea = () => {
                                {/* {item.icon} */}
                                <Lootie 
           
-                        animationData={image} 
+                        path='/animation/image.json'
                               width='122px' // Animation for Digital Marketing
                
                     />  
@@ -97,7 +97,7 @@ const ServiceArea = () => {
                               </video> */}
                               <Lootie 
                     
-                        animationData={web}  // Animation for Digital Marketing
+                        path='/animation/php.json'  // Animation for Digital Marketing
                                        width='120px'
                     />  
                            </div>
@@ -119,7 +119,7 @@ const ServiceArea = () => {
                               </video> */}
                                               <Lootie 
                   
-                        animationData={target}  // Animation for Digital Marketing
+                        path='/animation/target-2.json'  // Animation for Digital Marketing
                               width='142px'
 
                     />   
@@ -140,7 +140,7 @@ const ServiceArea = () => {
                                {/* {item.icon} */}
                                <Lootie 
                     
-                        animationData={landing}  // Animation for Digital Marketing
+                        path='/animation/landingpage.json'  // Animation for Digital Marketing
                                      width='132px'
 
                     />  
@@ -163,7 +163,7 @@ const ServiceArea = () => {
                               </video> */}
                                               <Lootie 
                      
-                        animationData={todo}  // Animation for Digital Marketing
+                        path='/animation/checklist-board.json'  // Animation for Digital Marketing
                                          width='122px'
  
                     />  
@@ -186,7 +186,7 @@ const ServiceArea = () => {
                               </video> */}
                                <Lootie 
                   
-                        animationData={graphic}  // Animation for Digital Marketing
+                        path='/animation/graphicdesign.json'  // Animation for Digital Marketing
                      width='122px'
 
                     />  

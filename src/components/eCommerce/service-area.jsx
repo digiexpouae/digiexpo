@@ -5,13 +5,13 @@ import React from 'react';
 
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-import bigcommerce from '../../../public/animation/bigcommerce.json'
-import woocommerce from '../../../public/animation/woocommerce.json'
-import shopifyplus from '../../../public/animation/shopifyplus.json'
-import shopifyecom from '../../../public/animation/shopifyecom.json'
-import dynamic from 'next/dynamic';
-import mirakalecom from '../../../public/animation/mirakalecom.json'
-import megneto from '../../../public/animation/megneto.json'
+// import bigcommerce from '../../../public/animation/bigcommerce.json'
+// import woocommerce from '../../../public/animation/woocommerce.json'
+// import shopifyplus from '../../../public/animation/shopifyplus.json'
+// import shopifyecom from '../../../public/animation/shopifyecom.json'
+// import dynamic from 'next/dynamic';
+// import mirakalecom from '../../../public/animation/mirakalecom.json'
+// import megneto from '../../../public/animation/megneto.json'
 import styles from '../mobileApp/services-area.module.scss'
 import Lootie from '../../components/lottie'
 
@@ -75,7 +75,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                            animationData={woocommerce}  // Animation for Digital Marketing
+                                            path='/animation/woocommerce.json'  // Animation for Digital Marketing
                                                                                width='122px'
 
                                         />  
@@ -100,7 +100,7 @@ const ServiceArea = () => {
                     </video> */}
                      <Lootie 
                                          
-                                            animationData={mirakalecom} // Animation for Digital Marketing
+                                            path='/animation/mirakalecom.json' // Animation for Digital Marketing
                                             // 
                                             width='122px'
 
@@ -125,7 +125,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                            animationData={megneto}  // Animation for Digital Marketing
+                                            path='/animation/megneto.json'  // Animation for Digital Marketing
                                                                 width='122px'
 
                                         />  
@@ -150,7 +150,7 @@ const ServiceArea = () => {
                     </video> */}
                      <Lootie 
                                       
-                                            animationData={bigcommerce}  // Animation for Digital Marketing
+                                            path='/animation/bigcommerce.json'  // Animation for Digital Marketing
                                                              width='122px'
                
                                         />  
@@ -175,7 +175,7 @@ const ServiceArea = () => {
                     </video> */}
                      <Lootie 
                                          
-                                            animationData={shopifyecom}  // Animation for Digital Marketing
+                                            path='/animation/shopifyecom.json'  // Animation for Digital Marketing
                                                                               width='122px'
 
                                         />  
@@ -199,7 +199,7 @@ const ServiceArea = () => {
                       />
                     </video> */}
                      <Lootie 
-                                            animationData={shopifyplus}  // Animation for Digital Marketing
+                                            path='/animation/shopifyplus.json'  // Animation for Digital Marketing
                                                                              width='122px'
 
                                         />  

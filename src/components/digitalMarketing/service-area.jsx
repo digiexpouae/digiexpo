@@ -5,18 +5,18 @@ import Link from 'next/link';
 import React from 'react';
 // import emailmarketing from '../../../public/animation/emailnews.json'
 import dynamic from 'next/dynamic';
-import target from '../../../public/animation/target-2.json'
-import contentcreation from '../../../public/animation/contentcreation.json'
-import appstore from '../../../public/animation/appstore.json'
-import SEO from '../../../public/animation/seo.json'
+// import target from '../../../public/animation/target-2.json'
+// import contentcreation from '../../../public/animation/contentcreation.json'
+// import appstore from '../../../public/animation/appstore.json'
+// import SEO from '../../../public/animation/seo.json'
 import service_icon_1 from "../../../public/assets/img/service/sv-icon-3-1.png"
 import service_icon_2 from "../../../public/assets/img/service/service-shape-3-1.png"
-import videomarketing from "../../../public/animation/videomarketing.json"
-import presentation from '../../../public/animation/presentation.json'
-import content from "../../../public/animation/content.json"
-import SMM from "../../../public/animation/SMM.json"
-import emailmarketing from "../../../public/animation/emailmarketing.json"
-import influencer from '../../../public/animation/influencer.json'
+// import videomarketing from "../../../public/animation/videomarketing.json"
+// import presentation from '../../../public/animation/presentation.json'
+// import content from "../../../public/animation/content.json"
+// import SMM from "../../../public/animation/SMM.json"
+// import emailmarketing from "../../../public/animation/emailmarketing.json"
+// import influencer from '../../../public/animation/influencer.json'
 import styles from '../service/service-area.module.scss'
 
 import Lootie from '../../components/lottie';  // Import your Lottie component
@@ -127,7 +127,7 @@ const ServiceArea = () => {
  
  <Lootie 
             
-                        animationData={SMM}  // Animation for Digital Marketing
+                        path='/animation/SMM.json' // Animation for Digital Marketing
                                  width='132px'
   
                     />  
@@ -164,7 +164,7 @@ const ServiceArea = () => {
                     </video> */}
                            <Lootie 
                  
-                        animationData={SEO}  // Animation for Digital Marketing
+                        path='/animation/SEO.json'  // Animation for Digital Marketing
                   width='122px'
   
                     />  
@@ -201,7 +201,7 @@ const ServiceArea = () => {
                     </video> */}
                          <Lootie 
                      
-                        animationData={target}  // Animation for Digital Marketing
+                        path='/animation/target.json'  // Animation for Digital Marketing
                                     width='152px'
 
                     />   
@@ -233,7 +233,7 @@ const ServiceArea = () => {
                  
                     
   <Lootie 
-                        animationData={emailmarketing}  // Animation for Digital Marketing
+                        path='/animation/emailmarketing.json' // Animation for Digital Marketing
                                      width='122px'
 
                     />  
@@ -269,7 +269,7 @@ const ServiceArea = () => {
                     </video> */}
                                                
                   <Lootie 
-                        animationData={appstore}  // Animation for Digital Marketing
+                        path='/animation/appstore.json'  // Animation for Digital Marketing
                         
                                        width='142px'
 
@@ -306,7 +306,7 @@ const ServiceArea = () => {
                     </video> */}
                       <Lootie 
                      
-                        animationData={ content}  // Animation for Digital Marketing
+                        path='/animation/content.json'  // Animation for Digital Marketing
                                   width='122px'
       
                     />  
@@ -342,7 +342,7 @@ const ServiceArea = () => {
                     </video> */}
                         <Lootie 
                      
-                        animationData={contentcreation}  // Animation for Digital Marketing
+                        path='/animation/contentcreation.json'  // Animation for Digital Marketing
                                     width='122px'
 
                     />  
@@ -378,7 +378,7 @@ const ServiceArea = () => {
                     </video> */}
                         <Lootie 
                   
-                        animationData={presentation}  // Animation for Digital Marketing
+                        path='/animation/presentation.json' // Animation for Digital Marketing
                                   width='132px'
 
                     />  
