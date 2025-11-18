@@ -135,19 +135,7 @@ const HeroSlider = () => {
   {isMobile ? (
   <div
     className="mobile-bg"
-    style={{
-      background: `linear-gradient(
-        180.21deg,
-        #fff9f9 -64.58%,
-        hsla(0, 0%, 100%, 0.1) 115.31%
-      ), linear-gradient(90deg, #6c35de, #a364ff 50%, #ffc7ff)`,
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-      left: 0,
-      top: 0,
-      opacity: 0.9,
-    }}
+ 
   ></div>
   )
               //  <Image
