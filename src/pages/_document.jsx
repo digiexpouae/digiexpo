@@ -22,6 +22,10 @@ export default function Document() {
         {/* Removed Bootstrap preload: styles are bundled via SCSS */}
 
         {/* ✅ Inline critical CSS to prevent layout shifts */}
+                   <style>{`
+         
+           .mobile-bg {
+ background-color: #fff9f9;}`}</style>
         <style
           dangerouslySetInnerHTML={{
             __html: `
@@ -39,10 +43,7 @@ export default function Document() {
             `,
           }}
         />
-           <style>{`
-         
-           .mobile-bg {
- background-color: #fff9f9;}`}</style>
+
 
         {/* ✅ Viewport meta */}
         <meta
