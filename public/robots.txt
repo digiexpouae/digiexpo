@@ -1,8 +1,9 @@
 User-agent: *
+Disallow: /_next/static/
 Disallow: /admin/
 Disallow: /login/
 Disallow: /ads.txt/
 Disallow: /?
 Disallow: /*?
 
-Sitemap:https://www.digiexpo.ae/sitemap.xml
+Sitemap: https://www.digiexpo.ae/sitemap.xml
