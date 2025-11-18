@@ -12,6 +12,9 @@ Disallow: /login/
 Disallow: /ads.txt/
 Disallow: /?
 Disallow: /*?
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.scss$
 
 # =========================================================
 # LLM & AI Crawler Access (All Major AI & Content Models)
