@@ -11,13 +11,20 @@ const nextConfig = {
     sourceMap: false, // explicitly disable
   },
   async redirects() {
-    return [
-      { source: "/blog", destination: "/blogs", permanent: true },
-      { source: "/service-details", destination: "/services", permanent: true },
-      { source: "/blog-details", destination: "/blogs", permanent: true },
-      { source: "/mobile-app-development-company-dubai", destination: "/application-development-dubai", permanent: true },
-    
-    ];
+      return [
+        { source: "/blog", destination: "/blogs", permanent: true },
+        { source: "/service-details", destination: "/services", permanent: true },
+        { source: "/blog-details", destination: "/blogs", permanent: true },
+ {
+        source: "/application-development-dubai",
+        destination: "/mobile-app-development-dubai",
+        permanent: true,
+      },
+      {
+        source: "/best-web-design-company-dubai",
+        destination: "/ui-ux-design-services-dubai",
+        permanent: true,
+      },]
   },
   
   reactStrictMode: true,

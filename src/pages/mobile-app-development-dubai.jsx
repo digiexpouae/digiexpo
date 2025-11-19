@@ -75,7 +75,7 @@ const index = () => {
         />
       </Head>
       <Wrapper>
-      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/application-development-dubai"}/>
+      <SEO pageTitle={title} pageDesc={desc} canonicalUrl={"https://www.digiexpo.ae/mobile-app-development-dubai"}/>
         <MobileApp />
       </Wrapper>
     </>

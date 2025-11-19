@@ -79,7 +79,7 @@ const Index = () => {
         <SEO
           pageTitle={title}
           pageDesc={desc}
-          canonicalUrl="https://www.digiexpo.ae/best-web-design-company-dubai"
+          canonicalUrl="https://www.digiexpo.ae/ui-ux-design-services-dubai"
         />
         <DesignPage />
       </Wrapper>
