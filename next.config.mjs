@@ -36,7 +36,8 @@ const nextConfig = {
   },  
   images: { 
  domains: ['cdn.sanity.io'], // Add Sanity’s CDN domain here
-    formats: ['image/webp', 'image/avif'],
+    // formats: ['image/webp', 'image/avif'],
+    unoptimized:true
   },
   productionBrowserSourceMaps: false, // Disable in production for better performance
   compress: true,
