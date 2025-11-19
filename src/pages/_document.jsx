@@ -16,6 +16,7 @@ export default function Document() {
 
         {/* ✅ DNS Prefetch for Tawk.to (non-blocking) */}
         <link rel="dns-prefetch" href="https://embed.tawk.to" />
+<link rel="preload" as="image" href="/assets/img/herowebp/poster.webp" fetchpriority="high" />
 
         {/* ❌ Removed manual image preload - use next/image with `priority` instead */}
 
