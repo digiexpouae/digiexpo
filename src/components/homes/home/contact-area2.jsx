@@ -50,7 +50,6 @@ const ContactArea2 = () => {
                       <LazyVideo
                       src='/assets/img/contact/Contactp.mp4'
         width="500px"
-        poster="/assets/img/contact/contact-poster.jpg"
       />
                       {/* <source
  
