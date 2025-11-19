@@ -50,7 +50,7 @@ const BlogArea = () => {
                    <LazyVideo
         src="/assets/img/hero/herosection.mp4"
         width="570px"
-        poster="/assets/img/contact/contact-poster.jpg"
+        // poster="/assets/img/contact/contact-poster.jpg"
       />
                   {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                   //     <source
@@ -113,7 +113,7 @@ const BlogArea = () => {
                                <LazyVideo
         src="/assets/img/hero/herosection.mp4"
         width="570px"
-        poster="/assets/img/contact/contact-poster.jpg"
+        // poster="/assets/img/contact/contact-poster.jpg"
       />
                      {/* {Blogvideo && <video autoPlay muted loop playsInline width='570px'>
                       <source
