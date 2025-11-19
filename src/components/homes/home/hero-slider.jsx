@@ -125,6 +125,17 @@ const HeroSlider = () => {
     return () => ctx && ctx.revert?.(); // cleanup if needed
   }, []);
 
+  useEffect(() => {
+  const video = document.getElementById("hero-video");
+  if (!video) return;
+
+  const onLoad = () => {
+    video.play().catch(() => {});
+  };
+
+  window.addEventListener("load", onLoad);
+  return () => window.removeEventListener("load", onLoad);
+}, []);
   return (
     <>
       <div className='tp-hero__area tp-hero__pl-pr'>
@@ -240,28 +251,23 @@ const HeroSlider = () => {
                       <div className='row'>
 
 
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          preload="none"
-                          poster="/assets/img/herowebp/poster.webp"
-                          className="w-full h-[600px] object-cover"
-                          aria-hidden="true"
-                          disablePictureInPicture
-                          
-                        >
-                          <source 
-                            src="/assets/img/hero/hero-video.webm" 
-                            type="video/webm" 
-                          />
-                          <source 
-                            src="/assets/img/hero/herosection.mp4" 
-                            type="video/mp4" 
-                            media="(min-width: 768px)"
-                          />
-                        </video>
+                     <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/assets/img/herowebp/poster.webp"
+  className="w-full h-[600px] object-cover"
+  aria-hidden="true"
+  disablePictureInPicture
+  id="hero-video"
+>
+  <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
+  <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
+</video>
+
+
 
 
                         {/* <source
