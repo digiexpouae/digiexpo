@@ -1,6 +1,6 @@
 # =========================================================
 # robots.txt for https://www.digiexpo.ae
-# CLEAN • SEO-SAFE • GOOGLE RENDER FRIENDLY
+# CLEAN • SEO-SAFE • CRAWL-BUDGET OPTIMIZED • NEXT.JS FRIENDLY
 # =========================================================
 
 User-agent: *
@@ -10,20 +10,26 @@ Disallow: /login/
 Disallow: /dashboard/
 Disallow: /private/
 
-# Block only heavy, non-critical Next.js build files
-Disallow: /_next/static/
+# Block only heavy, non-critical Next.js build files (saves crawl budget)
+Allow: /_next/static/
 
-# DO NOT block this — Needed for SSR/ISR
+# DO NOT block SSR/ISR JSON data
 Allow: /_next/data/
 
-# No query parameter blocking
-# No Disallow: /?* and No Disallow: /*?*
+# Allow all JS, CSS, image rendering (important for Google)
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.webp$
 
-# No crawl-delay anywhere (important for SEO)
+# No query parameter blocking
+# No crawl delay
 
 
 # =========================================================
-# Googlebot — allow full rendering
+# Googlebot — full rendering allowed
 # =========================================================
 User-agent: Googlebot
 Allow: /
@@ -36,29 +42,57 @@ Allow: /*.jpg$
 Allow: /*.svg$
 Allow: /*.webp$
 
-# No blocking of JS/CSS/Images/PDF — Important for crawl/render
-
 
 # =========================================================
-# AI Bots — Allowed but no crawl-delay
+# AI Bots — Allowed (Correct Multi-Agent Format)
 # =========================================================
 User-agent: GPTBot
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
 User-agent: ClaudeBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
 User-agent: Amazonbot
+Allow: /
+
 User-agent: Diffbot
+Allow: /
+
 User-agent: Bytespider
+Allow: /
+
 User-agent: StabilityAI
+Allow: /
+
 User-agent: HuggingFaceBot
+Allow: /
+
 User-agent: CCBot
+Allow: /
+
 User-agent: YouBot
+Allow: /
+
 User-agent: OmgiliBot
+Allow: /
+
 User-agent: PetalBot
+Allow: /
+
 User-agent: Applebot
+Allow: /
+
 User-agent: DuckDuckBot
-# (No crawl-delay)
+Allow: /
 
 
 # =========================================================
