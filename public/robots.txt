@@ -1,132 +1,67 @@
 # =========================================================
 # robots.txt for https://www.digiexpo.ae
-# Purpose: Optimized for reduced server load | SEO Safe | Gulf Region Focus
+# CLEAN • SEO-SAFE • GOOGLE RENDER FRIENDLY
 # =========================================================
 
-# ===============================
-# General Crawl Rules
-# ===============================
 User-agent: *
-Disallow: /_next/static/
-Disallow: /_next/data/
+# Only block truly private/admin areas
 Disallow: /admin/
 Disallow: /login/
-Disallow: /api/
 Disallow: /dashboard/
 Disallow: /private/
-Disallow: /search/
-Disallow: /cart/
-Disallow: /checkout/
-Disallow: /account/
-Disallow: /ads.txt/
-Disallow: /?*
-Disallow: /*?*
-Crawl-delay: 5
 
-# ===============================
-# Google Bot Specific Rules
-# ===============================
+# Block only heavy, non-critical Next.js build files
+Disallow: /_next/static/
+
+# DO NOT block this — Needed for SSR/ISR
+Allow: /_next/data/
+
+# No query parameter blocking
+# No Disallow: /?* and No Disallow: /*?*
+
+# No crawl-delay anywhere (important for SEO)
+
+
+# =========================================================
+# Googlebot — allow full rendering
+# =========================================================
 User-agent: Googlebot
-Crawl-delay: 10
-Allow: /$
-Allow: /[^/]+/$
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /*.svg$
-Disallow: /*.png$
-Disallow: /*.jpg$
-Disallow: /*.jpeg$
-Disallow: /*.gif$
-Disallow: /*.webp$
-Disallow: /*.pdf$
-Disallow: /*.zip$
-Disallow: /*.rar$
-Disallow: /*.exe$
-Disallow: /*.doc$
-Disallow: /*.xls$
-Disallow: /*.ppt$
-Disallow: /*.docx$
-Disallow: /*.xlsx$
-Disallow: /*.pptx$
+Allow: /
+Allow: /_next/
+Allow: /_next/data/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# No blocking of JS/CSS/Images/PDF — Important for crawl/render
+
 
 # =========================================================
-# LLM & AI Crawler Access (With Rate Limiting)
+# AI Bots — Allowed but no crawl-delay
 # =========================================================
-
-# --- OpenAI / ChatGPT / GPTBot ---
-User-agent: ChatGPT-User
-User-agent: ChatGPT-Chat
-User-agent: OAI-SearchBot
 User-agent: GPTBot
-Crawl-delay: 10
-
-# --- Google AI / Gemini / Bard ---
 User-agent: Google-Extended
-Crawl-delay: 10
-
-# --- Anthropic Claude ---
 User-agent: ClaudeBot
-User-agent: Claude-User
-User-agent: Claude-SearchBot
-Crawl-delay: 10
-
-# --- Perplexity AI ---
 User-agent: PerplexityBot
-User-agent: Perplexity-User
-Crawl-delay: 10
-
-# --- Microsoft / Bing AI / Copilot ---
 User-agent: Bingbot
-User-agent: msnbot-media
-User-agent: BingAI
-Crawl-delay: 10
-
-# --- Other AI Bots ---
 User-agent: Amazonbot
 User-agent: Diffbot
-User-agent: StabilityAI
 User-agent: Bytespider
+User-agent: StabilityAI
 User-agent: HuggingFaceBot
-User-agent: RunwayBot
-User-agent: MidjourneyBot
-User-agent: ReplikaBot
-User-agent: JasperBot
-User-agent: CopyAIBot
 User-agent: CCBot
-User-agent: AI2Bot
 User-agent: YouBot
 User-agent: OmgiliBot
-User-agent: ImagesiftBot
-User-agent: DataForSEO
-User-agent: ForefrontAI
-User-agent: DeepSeek
-Crawl-delay: 15
-
-# =========================================================
-# Search Engines & SEO Tools (With Rate Limiting)
-# =========================================================
-User-agent: YandexBot
-User-agent: Baiduspider
 User-agent: PetalBot
-User-agent: Majestic-12
-User-agent: AhrefsBot
-User-agent: SEMrushBot
-User-agent: DotBot
-User-agent: Crawler
-User-agent: DuckDuckBot
-User-agent: Yahoo! Slurp
 User-agent: Applebot
-Crawl-delay: 10
+User-agent: DuckDuckBot
+# (No crawl-delay)
+
 
 # =========================================================
 # Sitemap
 # =========================================================
 Sitemap: https://www.digiexpo.ae/sitemap.xml
-
-# =========================================================
-# Additional Performance Notes
-# 1. Added crawl-delay to prevent server overload
-# 2. Blocked resource-heavy file types from Googlebot
-# 3. Added more restrictive rules for non-essential paths
-# 4. Grouped similar bots for better maintainability
-# =========================================================
