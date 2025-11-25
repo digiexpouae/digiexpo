@@ -19,13 +19,15 @@ const BlogCard = ({ title, mainImage, slug, date }) => {
           style={{ aspectRatio: '4/2' }}
         >
           <Link href={`/blogs/${slugUrl}`}>
-            <Image
+         { bannerImg && 
+         (<Image
               src={urlForImage(bannerImg).url()}
               width={500}
               height={250}
               className="object-cover !w-full !h-full"
               alt="theme-pure"
-            />
+            />)}
+          
           </Link>
         </div>
         <div className={styles['tp-blog-content']}>
