@@ -61,7 +61,7 @@ const BlogPost = ({ blog }) => {
   }
 
 
-  const bannerSrc = urlForImage(mainImage.asset).url();
+const bannerSrc = mainImage ? urlForImage(mainImage.asset).url() : null;
 
   return (
     <Wrapper>
