@@ -152,7 +152,7 @@ const ServicesArea = () => {
               <div className={styles['tp-service__icon']}>
                 <Lootie
               
-                    path='/animation/cms.json'
+                    path='/animation/CMS.json'
                                           width='122px'               />
               </div>
               <div className={styles['tp-service__content']}>
