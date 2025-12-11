@@ -2,33 +2,38 @@ import React from "react";
 import SEO from "../common/seo";
 import Blog from "../components/blog";
 import Wrapper from "../layout/wrapper";
+import { GetAllPosts } from "@/lib/posts";
 import client from "@/sanityConfig";
 
 // Fetch the data using getServerSideProps
 export async function getServerSideProps() {
-  const query = `*[_type == "post"]{
-  title,
-    "currentSlug":slug.current,
-    body,
-    mainImage
-}`;
+	const sanityQuery = `*[_type == "post"]{
+	  title,
+	  "currentSlug":slug.current,
+	  body,
+	  mainImage
+	}`;
 
-  try {
-    const page = await client.fetch(query);
+	try {
+		const [wpPosts, sanityPosts] = await Promise.all([
+			GetAllPosts(),
+			client.fetch(sanityQuery),
+		]);
 
+		const allPosts = [...sanityPosts, ...wpPosts];
 
-    return {
-      props: {
-        page,
-      },
-    };
-  } catch (error) {
-    return {
-      props: {
-        page: [],
-      },
-    };
-  }
+		return {
+			props: {
+				page: allPosts,
+			},
+		};
+	} catch (error) {
+		return {
+			props: {
+				page: [],
+			},
+		};
+	}
 }
 
 const Index = ({ page }) => {
