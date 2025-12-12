@@ -11,6 +11,16 @@ const BlogCard = ({ title, mainImage, slug, date }) => {
   });
 
   const { createdAt, bannerImg, slugUrl } = mapper;
+
+  let imageSrc = "";
+  if (bannerImg?.asset) {
+    imageSrc = urlForImage(bannerImg).url();
+  } else if (typeof bannerImg === "string") {
+    imageSrc = bannerImg;
+  } else if (bannerImg?.node?.mediaDetails?.sizes?.length) {
+    const sizes = bannerImg.node.mediaDetails.sizes;
+    imageSrc = sizes[0]?.sourceUrl || "";
+  }
  return (
     <div className="col-xl-4 col-lg-6 col-md-6 mb-30 grid-item cat1 cat4 cat3 cat5">
       <div className={styles['tp-blog-item']}>
@@ -19,9 +29,9 @@ const BlogCard = ({ title, mainImage, slug, date }) => {
           style={{ aspectRatio: '4/2' }}
         >
           <Link href={`/blogs/${slugUrl}`}>
-         { bannerImg && 
+         { imageSrc && 
          (<Image
-              src={urlForImage(bannerImg).url()}
+              src={imageSrc}
               width={500}
               height={250}
               className="object-cover !w-full !h-full"
