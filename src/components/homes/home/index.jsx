@@ -6,6 +6,7 @@ import Brand from "../../about/brand";
 import FooterFour from "@/layout/footers/footer-4";
 import dynamic from "next/dynamic";
 import FaqArea from "./faq-area";
+import VideoSection from "./videosection";
 // Placeholder Component
 const Placeholder = () => (
   <div className="min-h-[250px] bg-gray-100 animate-pulse rounded-md" />
@@ -65,13 +66,26 @@ const StickyButtons = dynamic(() => import("@/common/sticky-buttons"), { ssr: fa
 const HomeOne = () => {
   return (
     <>
-      <Header />
+      <div
+        className=" tw-h-[110vh] md:tw-h-auto
+    tw-relative
+    lg:tw-bg-none
+    tw-bg-[url('/assets/img/herowebp/home-mb.webp')]
+    tw-bg-cover
+    tw-bg-center
+    tw-bg-no-repeat
+
+   
+  "
+      >        <Header />
+        <HeroSlider />
+
+      </div>
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main className="fix">
             <StickyIcons />
-            <StickyButtons />
-            <HeroSlider />
+            <VideoSection />
             <Brand />
             {/* <Client /> */}
             <ServiceArea />
@@ -80,7 +94,7 @@ const HomeOne = () => {
             <PaymentMethodArea />
             <BusinessBox />
             <ProjectArea />
-     
+
             <AboutArea />
             <FunFactArea />
             <FaqArea />
@@ -90,8 +104,9 @@ const HomeOne = () => {
           <FooterFour />
           <ScrollToTop />
         </div>
-      </div>
+      </div >
     </>
+
   );
 };
 

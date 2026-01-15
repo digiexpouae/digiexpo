@@ -21,12 +21,11 @@ const HeaderFive = () => {
 
   return (
     <>
-      <header className='tp-header-height'>
+      <header className='tp-header-height p-relative '>
         <div
           id='header-sticky'
-          className={`header-bottom__area header-bottom__plr-5 header-bottom__transparent z-index-3 white-bg ${
-            sticky && "header-sticky"
-          }`}
+          className={`header-bottom__area header-bottom__plr-5 header-bottom__transparent white-bg ${sticky && "header-sticky"
+            }`}
         >
           <div className='container-fluid p-0'>
             <div className='row g-0 align-items-center'>
@@ -46,7 +45,7 @@ const HeaderFive = () => {
               </div>
               <div className='col-xxl-2 col-xl-3 col-lg-3 col-md-8 col-6'>
                 <div className='header-bottom__right header-five__btn d-flex align-items-center justify-content-end'>
-                  <div className='header-bottom__action' style={{display:'flex'}}>
+                  <div className='header-bottom__action' style={{ display: 'flex' }}>
                     {/* <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} >
                                     <SearchIconTwo />

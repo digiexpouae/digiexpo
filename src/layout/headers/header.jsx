@@ -14,8 +14,10 @@ import Image from "next/image";
 import logo from "../../../public/assets/img/logo/logo-black.png";
 import mainLogo from "../../../public/assets/img/logo/mainlogo.46431c48 (1).webp";
 import { SocialLinks, SocialLinksTwo } from "@/common/social-links";
-import PhoneFour from "@/svg/phone-4";
-import WhatsappIcon from "@/svg/whatsapp-icon";
+import PhoneFourWhite from "@/svg/phone-4-white.js";
+import WhatsappIconWhite from "@/svg/whatsapp-icon-white.js";
+import PhoneFour from "@/svg/phone-4.js";
+import WhatsappIcon from "@/svg/whatsapp-icon.js";
 import ContactUsFormMuz from "@/forms/contact-us-form-muz";
 
 const Header = () => {
@@ -76,7 +78,7 @@ const Header = () => {
         <div
           id='header-sticky'
           className={`header-bottom__area header-mob-space header-bottom__area-2 header-bottom__transparent z-index-5 
-         ${sticky && "header-sticky"}
+         ${sticky && "header-sticky "}
 `}
         >
           <div className='container'>
@@ -84,12 +86,15 @@ const Header = () => {
               <div className='col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6'>
                 <div className='header-bottom__logo'>
                   <Link href='/'>
-                    <Image src={mainLogo} priority alt='theme-pure' />
+
+
+                    <Image src={mainLogo} priority alt='theme-pure' className={sticky ? "d-block" : "d-none"} />
+                    <Image src={'/assets/img/digi.png'} priority alt='theme-pure' width={120} height={80} className={sticky ? "d-none" : "d-block"} />
                   </Link>
                 </div>
               </div>
               <div className='col-xxl-6 col-xl-6 col-lg-7 d-none d-lg-block'>
-                <div className='header-bottom__main-menu'>
+                <div className={`header-bottom__main-menu home ${sticky ? "header-nav" : ""}`}>
                   <nav id='mobile-menu'>
                     <NavMenu />
                   </nav>
@@ -97,7 +102,7 @@ const Header = () => {
               </div>
               <div className='col-xxl-4 col-xl-4 col-lg-3 col-md-8 col-6'>
                 <div className='header-bottom__right d-flex align-items-center justify-content-end'>
-                  <div className='header-bottom__action' style={{display:'flex'}}>
+                  <div className='header-bottom__action' style={{ display: 'flex' }}>
                     {/* <a className="d-none d-md-inline-block search-open-btn"
                                     onClick={() => setSearchOpen(true)} >
                                     <SearchIconTwo />
@@ -106,13 +111,13 @@ const Header = () => {
                       className='d-none d-lg-inline-block'
                       href='tel:+971552626943'
                     >
-                      <PhoneFour />
+                      {sticky ? <PhoneFour /> : <PhoneFourWhite />}
                     </Link>
                     <Link
                       className='d-none d-lg-inline-block last-child'
                       href='https://api.whatsapp.com/send?phone=971552626943&text=Hello%20DigiExpo!%20%F0%9F%91%8B'
                     >
-                      <WhatsappIcon />
+                      {sticky ? <WhatsappIcon /> : <WhatsappIconWhite />}
                     </Link>
                   </div>
                   <div className='header-bottom__btn d-flex align-items-center'>

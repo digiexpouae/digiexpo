@@ -7,19 +7,19 @@ const gsap = dynamic(() => import('gsap'), { ssr: false });
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
-import left_shape from "../../../../public/assets/img/herowebp/hero-left-shape-3-1.webp" ;
-import gradient_bg from "../../../../public/assets/img/herowebp/hero-gradient-3.webp" ;
+import left_shape from "../../../../public/assets/img/herowebp/hero-left-shape-3-1.webp";
+import gradient_bg from "../../../../public/assets/img/herowebp/hero-gradient-3.webp";
 import img_1 from "../../../../public/assets/img/herowebp/hero-img-3-1.webp";
-import img_2 from "../../../../public/assets/img/herowebp/hero-img-3-1-3.webp" ;
+import img_2 from "../../../../public/assets/img/herowebp/hero-img-3-1-3.webp";
 import Link from 'next/link';
 
-const hero_content = { 
+const hero_content = {
    title_1: <>Great <span>Customer</span></>,
    title_2: "Relationships Start Here.",
    info: <>Softec provides all customer management service within one software. <br /> Our landing works on all devices.</>,
    btn_1: "Live Demo",
    btn_2: "Try it on Browser",
-   
+
 }
 const { title_1, title_2, info, btn_1, btn_2 } = hero_content
 
@@ -51,7 +51,7 @@ const HeroArea = () => {
                         </h2>
                         <p className="tp-char-animation-2 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">{info}</p>
                      </div>
-                     <div className="tp-hero-btn-3 text-center wow tpfadeUp" data-wow-duration="1s" data-wow-delay=".9s">
+                     <div className="tp-hero-btn-3 text-center  wow tpfadeUp" data-wow-duration="1s" data-wow-delay=".9s">
                         <Link className="tp-btn-blue-lg tp-btn-hover alt-color-black purple-bg" href="#">
                            <span>{btn_1}</span>
                            <b></b>

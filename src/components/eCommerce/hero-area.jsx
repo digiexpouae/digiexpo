@@ -1,100 +1,91 @@
-import React,{useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useCharAnimation from '@/hooks/useCharAnimation';
 
 
 import hero_shape from "../../../public/assets/img/herowebp/hero-shape-4-1.webp";
-import hero_img  from "../../../public/assets/img/herowebp/hero-4-3.webp";
-import hero_4_img_1  from "../../../public/assets/img/herowebp/hero-4-1.webp";
-import hero_4_img_2  from "../../../public/assets/img/herowebp/hero-4-2.webp";
+import hero_img from "../../../public/assets/img/herowebp/hero-4-3.webp";
+import hero_4_img_1 from "../../../public/assets/img/herowebp/hero-4-1.webp";
+import hero_4_img_2 from "../../../public/assets/img/herowebp/hero-4-2.webp";
 
 const hero_content = {
   sub_title: "Wellcome to Softec",
   title: (
     <>
-    <div className='head'>
-        <h1 className='child'>Leading Ecommerce </h1></div>
-      {" "}
-      
-       <div className='head'> <h2 className='child'>Websites Development Company Dubai</h2></div>
-     {" "}
-    
-   <div className='head'>     <h2 className='child'>Turns Visitors </h2></div>
-      {" "}
-    
-        <div className='head'><h2 className='child'>Into Loyal Customers</h2></div>
-   
+      <div className='head'>
+        <h1 className='child'>Ecommerce </h1></div>
+
     </>
   ),
   sub_title: (
     <>
-    
 
 
-     Elevate your E-commerce Success With Digiexpo {" "}
-      <b> Cutting Edge E-Commerce Development.</b>
+
+
     </>
   ),
   //  title: "E-commerce web development Dubai turns visitors into loyal customers",
 };
-const { sub_title, title}  = hero_content
+const { sub_title, title } = hero_content
 
 
 const HeroArea = () => {
-   useCharAnimation('.tp-hero-title-4 span.child');
-
-    return (
-      <>
-        <div className='tp-hero-area purple-bg-2 pt-200 pb-115 p-relative'>
-          <div
+  useCharAnimation('.tp-hero-title-4 span.child');
+  const btn_1 = "Our Work";
+  const btn_2 = "Get in Touch";
+  return (
+    <>
+      <div className='tp-hero-area pt-200 pb-115 p-relative'>
+        {/* <div
             className='tp-hero-4-shape-img  wow tpfadeLeft'
             data-wow-duration='.9s'
             data-wow-delay='.5s'
           >
             <Image src={hero_shape} alt='theme-pure' />
-          </div>
-          <div className='tp-hero-glob-img'>
+          </div> */}
+        {/* <div className='tp-hero-glob-img'>
             <Image src={hero_img} alt='theme-pure' />
-          </div>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-xl-7 col-lg-7'>
-                <div className='tp-hero-4-section-box pt-10 z-index-3'>
-                  {/* <h5 className="tp-section-subtitle-4 tp-char-animation wow tpfadeRight" data-wow-duration="1s" data-wow-delay=".6s">{sub_title}</h5> */}
+          </div> */}
+        <div className='container'>
+          <div className='row'>
+            <div className='col-xl-7 col-lg-7'>
+              <div className='tp-hero-4-section-box pt-10 z-index-3'>
+                {/* <h5 className="tp-section-subtitle-4 tp-char-animation wow tpfadeRight" data-wow-duration="1s" data-wow-delay=".6s">{sub_title}</h5> */}
 
-                  <div className='tp-hero-title-4 pb-35 tp-char-animation ecom'>
-                    {title}
-                  </div>
-                  <p style={{ color: "white" }}> {sub_title}</p>
+                <div className='tp-hero-title-4 pb-35 tp-char-animation ecom'>
+                  {title}
+                </div>
+                <p style={{ color: "white" }}> {sub_title}</p>
 
-                  <Link
-                    className='tp-btn-yellow-border wow tpfadeRight'
-                    data-wow-duration='.9s'
-                    data-wow-delay='.7s'
-                    href='/contact'
-                  >
-                    <span>
-                      Get in Touch<i className='far fa-angle-right'></i>
-                    </span>
+                <div className="tp-hero-btn-3 wow tpfadeUp" data-wow-duration="1s" data-wow-delay=".9s">
+                  <Link className="tp-btn-blue-sm tp-btn-hover alt-color-black purple-bg" href="#">
+                    <span>{btn_1}</span>
+                    <b></b>
+                  </Link>
+                  <Link className="tp-btn-yellow-sm-two tp-btn-hover alt-color-black purple-border" href="#">
+                    <span className="!tw-text-black">{btn_2}</span>
+                    <b></b>
                   </Link>
                 </div>
               </div>
-              <div className='col-xl-5 col-lg-5'>
-                <div className='tp-hero-4-img-wrapper p-relative'>
-                  <div className='tp-hero-4-main-img text-center z-index-3'>
-                    <Image src={hero_4_img_1} alt='theme-pure' />
-                  </div>
-                  <div className='tp-hero-4-sub-img z-index-3'>
-                    <Image src={hero_4_img_2} alt='theme-pure' />
-                  </div>
+            </div>
+            <div className='col-xl-5 col-lg-5'>
+              {/* <div className='tp-hero-4-img-wrapper p-relative'>
+                <div className='tp-hero-4-main-img text-center z-index-3'>
+                  <Image src={hero_4_img_1} alt='theme-pure' />
                 </div>
-              </div>
+                <div className='tp-hero-4-sub-img z-index-3'>
+                  <Image src={hero_4_img_2} alt='theme-pure' />
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 };
 
 export default HeroArea;

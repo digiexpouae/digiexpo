@@ -28,9 +28,8 @@ const HeaderSix = ({ style_2 = false }) => {
       <header>
         <div
           id='header-sticky'
-          className={`header-bottom__area header-sticky-bg-2 header-bottom__transparent header-bottom__bdr z-index-5 ${
-            style_2 ? "inner-header-2" : ""
-          } ${sticky ? "header-sticky" : ""}`}
+          className={`header-bottom__area header-sticky-bg-2 header-bottom__transparent header-bottom__bdr z-index-5 ${style_2 ? "inner-header-2" : ""
+            } ${sticky ? "header-sticky" : ""}`}
         >
           <div className='container'>
             <div className='row g-0 align-items-center'>
@@ -53,7 +52,7 @@ const HeaderSix = ({ style_2 = false }) => {
                 </div>
               </div>
               <div className='col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block'>
-                <div className='header-bottom__main-menu header-bottom__main-menu-4 header-bottom__main-menu-inner'>
+                <div className='tp-header-2__main-menu text-center'>
                   <nav id='mobile-menu'>
                     <NavMenu />
                   </nav>
@@ -61,7 +60,7 @@ const HeaderSix = ({ style_2 = false }) => {
               </div>
               <div className='col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-6'>
                 <div className='header-bottom__right d-flex align-items-center justify-content-end'>
-                  <div className='header-bottom__action' style={{display:'flex'}}>
+                  <div className='header-bottom__action' style={{ display: 'flex' }}>
                     <Link
                       className='d-none d-lg-inline-block'
                       href='tel:+971552626943'
@@ -77,11 +76,10 @@ const HeaderSix = ({ style_2 = false }) => {
                   </div>
                   <div className='header-bottom__btn d-flex align-items-center'>
                     <Link
-                      className={`${
-                        style_2
-                          ? "tp-btn-inner alt-color-orange"
-                          : "tp-btn-white alt-color-black"
-                      } tp-btn-hover d-none d-md-inline-block`}
+                      className={`${style_2
+                        ? "tp-btn-inner alt-color-orange"
+                        : "tp-btn-white alt-color-black"
+                        } tp-btn-hover d-none d-md-inline-block`}
                       href='#'
                       onClick={toggleForm}
                     >

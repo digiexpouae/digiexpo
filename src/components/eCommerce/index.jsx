@@ -2,9 +2,9 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // Critical / above-the-fold components
-import HeaderSix from "@/layout/headers/header-6";
-import HeroArea from "./hero-area";
-
+import HeaderSix from "@/layout/headers/header-2";
+import HeroArea from "../mobileApp/hero-area";
+import Image from "next/image";
 // Dynamically imported components (below-the-fold / non-critical)
 const Brand = dynamic(() => import("../about/brand"));
 const ServiceArea = dynamic(() => import("./service-area"));
@@ -27,13 +27,53 @@ const ScrollToTop = dynamic(() => import("../../../hooks/scroll-to-top"), { ssr:
 const Ecommerce = () => {
   return (
     <>
-      <HeaderSix />
+
+
+
+      <div className="tw-relative tw-h-screen tw-w-full">
+        {/* 1. Header stays on top */}
+        <HeaderSix />
+
+        {/* 2. Background Images Layer */}
+        <div className="tw-absolute tw-inset-0 ">
+          {/* Desktop Background */}
+          <div className="tw-hidden md:tw-block tw-relative tw-h-full tw-w-full">
+            <Image
+              src="/assets/img/herowebp/ecommerce-banner.webp"
+              alt="Background Desktop"
+              fill
+              className="tw-object-cover"
+              priority
+            />
+            {/* Optional: Add an overlay if the text is hard to read */}
+            <div className="tw-absolute tw-inset-0 tw-bg-black/20" />
+          </div>
+
+          {/* Mobile Background */}
+          <div className="tw-block md:tw-hidden tw-relative tw-h-full tw-w-full">
+            <Image
+              src="/assets/img/herowebp/ecommerce-mob.webp"
+              alt="Background Mobile"
+              fill
+              className="tw-object-cover"
+              priority
+            />
+            <div className="tw-absolute tw-inset-0 tw-bg-black/20" />
+          </div>
+        </div>
+
+        {/* 3. Content Layer (Hero Area) */}
+        <div className="tw-relative tw-z-0  tw-h-full tw-flex tw-flex-col tw-justify-start md:tw-justify-center">
+          <HeroArea main_title="Ecommerce " />
+
+        </div>
+      </div>
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
             <StickyIcons />
             <StickyButtons />
-            <HeroArea />
+
             <Brand />
             <ServiceArea />
             <ContactArea2 />

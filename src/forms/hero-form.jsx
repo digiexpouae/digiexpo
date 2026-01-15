@@ -43,7 +43,8 @@ const HeroForm = () => {
         <div className="p-relative">
           <input
             type="email"
-            placeholder="Business email address"
+            className="tw-text-white"
+            placeholder="Email address"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
@@ -51,7 +52,7 @@ const HeroForm = () => {
           {/* email icon */}
           <EmailIcon />
         </div>
-        <button className="tp-btn tp-btn-hover alt-color-black" type="submit" disabled={isSubmitted}>
+        <button className="tp-btn-2 tp-btn-hover alt-color-black" type="submit" disabled={isSubmitted}>
           <span>{isSubmitted ? "Sending..." : "Get In Touch"}</span>
           <b></b>
         </button>

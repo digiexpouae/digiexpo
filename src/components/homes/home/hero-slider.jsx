@@ -15,7 +15,7 @@ import thumb_2 from "../../../../public/assets/img/herowebp/hero-sm-4.webp";
 import hero_thumb_2 from "../../../../public/assets/img/herowebp/hero-sm-2.webp";
 import HeroForm from "@/forms/hero-form";
 import LineShape from "@/svg/line-shape";
-import Herobg from '../../../../public/assets/img/herowebp/Hero BG Image.webp'
+import Herobg from '../../../../public/assets/img/herowebp/h-banner.webp'
 
 // hero content data
 const hero_content = {
@@ -40,16 +40,34 @@ const hero_content = {
       <span>
         <span className='child' >  DigiExpo Expert  </span>
       </span>{" "}
-       <span>
+      <span>
         <span className='child' > Web Design Dubai </span>
       </span>{" "}
-      
+
     </>
   ),
+
+
+  mobile_title: (
+    <>
+      <span className='tp_title' >
+        <span className='child' >Boost Business Growth  </span>
+      </span>{" "}
+      <br />
+      <span>
+        <span className='child' > with DigiExpo Expert  </span>
+      </span>{" "}
+      <span>
+        <span className='child' > Web Design Dubai </span>
+      </span>{" "}
+
+    </>
+  ),
+
   sub_title: (
     <>
       {" "}
-Welcome to Digiexpo – Dubai’s leading website development company, our expert web design Dubai helps businesses succeed in Dubai's competitive market.
+      Welcome to Digiexpo – Dubai’s leading website development company, our expert web design Dubai helps businesses succeed in Dubai's competitive market.
     </>
   ),
   hero_shape_img: [
@@ -80,11 +98,14 @@ Welcome to Digiexpo – Dubai’s leading website development company, our exper
     },
   ],
 };
-const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs } =
+const { hero_shape, hero_title, sub_title, hero_shape_img, hero_thumbs, mobile_title } =
   hero_content;
 
 const HeroSlider = () => {
-  let hero_bg = useRef(null);
+  const hero_bg = useRef(null);
+
+  const sub_title_ref = useRef(null);
+  const hero_form_ref = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -108,16 +129,28 @@ const HeroSlider = () => {
       mainTl.fromTo(
         hero_bg.current,
         { opacity: 0, scale: 1.2 },
-        { opacity: 1, scale: 1, duration: 0.5 }
+        { opacity: 1, scale: 1, duration: 1.4 }
       );
 
       mainTl.to(title, {
         opacity: 1,
         y: 0,
-        duration: 0.3,
-        stagger: 0.1,
+        duration: 0.5,
+        stagger: 0.5,
         ease: "power4.out",
       });
+
+      mainTl.fromTo(
+        sub_title_ref.current,
+        { opacity: 0 },
+        { opacity: 1, ease: "power4.out" }
+      );
+
+      mainTl.fromTo(
+        hero_form_ref.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: "power4.out" }
+      );
     };
 
     loadGsap();
@@ -126,60 +159,32 @@ const HeroSlider = () => {
   }, []);
 
   useEffect(() => {
-  const video = document.getElementById("hero-video");
-  if (!video) return;
+    const video = document.getElementById("hero-video");
+    if (!video) return;
 
-  const onLoad = () => {
-    video.play().catch(() => {});
-  };
+    const onLoad = () => {
+      video.play().catch(() => { });
+    };
 
-  window.addEventListener("load", onLoad);
-  return () => window.removeEventListener("load", onLoad);
-}, []);
+    window.addEventListener("load", onLoad);
+    return () => window.removeEventListener("load", onLoad);
+  }, []);
   return (
     <>
-      <div className='tp-hero__area tp-hero__pl-pr'>
-        <div className='tp-hero__bg p-relative'>
-          <div className='tp-hero-bg tp-hero-bg-single ' ref={hero_bg}>
+      <div className='tp-hero__area tp-hero__pl-pr '  >
+        <div className='tp-hero__bg p-relative md:tw-mx-[20px] tw-flex tw-pb-0 tw-items-end  tw-justify-center !tw-pb-0 tw-h-[110vh]'>
+          <div className='tp-hero-bg tp-hero-bg-single p-relative tw-hidden lg:tw-block' ref={hero_bg} >
             {/* bg-image */}
-  {isMobile ? (
-  <div
-    className="mobile-bg"
- 
-  ></div>
-  )
-              //  <Image
-              //   className="block md:hidden object-cover"
-              //   src={Herobg}
-              //   alt='hero background'
-              //   priority
-              //   fetchPriority="high"
-              //   quality={85}
-              //   sizes="100vw"
-              //   placeholder="blur"
-              //   fill
-              //   loading="eager"
-              //   decoding="async"
-              // />
-           
-             : (<Image
-                src={hero_frame}
-                alt='hero frame'
-                priority
-                fetchPriority="high"
-                quality={85}
-                sizes="100vw"
-                className="image-1"
-                fill
-                loading="eager"
-                decoding="async"
-              />)
-            }
+
+
+
+            <Image src={Herobg} alt="hero background" />
+
           </div>
 
-          {!isMobile &&
+          {/* {!isMobile &&
             <div className='tp-hero-shape'>
-              {hero_shape.map((item, i) => (
+              {/* {hero_shape.map((item, i) => (
                 <Image
                   key={i}
                   className={item.cls}
@@ -191,107 +196,52 @@ const HeroSlider = () => {
                   loading={i === 0 ? 'eager' : 'lazy'}
                   decoding="async"
                 />
-              ))}
-            </div>}
-          <div className='container'>
+              ))} */}
+          {/* </div> */}
+          <div className='container tw-absolute tw-top-[50%] md:tw-top-[55%]  '>
             <div className='row justify-content-center'>
-              <div className='col-xl-10'>
-                <div className='tp-hero__content-box text-center z-index-3'>
-                  <div className='tp-hero__title-box p-relative'>
-                    <h1 className='tp-hero__hero-title tp-title-anim tw-text-black'>
+              <div className='col-xl-10 col-12 col-md-11'>
+                <div className='tp-hero__content-box tw-text-center z-index-3 '>
+                  <div className='tp-hero__title-box p-relative '>
+                    <h1 className='tp-hero__hero-title tp-title-anim   tw-hidden md:tw-block tw-text-white'>
                       {hero_title}
                     </h1>
-                    <div className='tp-hero__title-shape d-none d-sm-block'>
+                    <h1 className='tp-hero__hero-title tp-title-anim  md:tw-hidden tw-block tw-text-white'>
+                      {mobile_title}
+                    </h1>
+
+
+
+                    {/* <div className='tp-hero__title-shape d-none d-sm-block'>
                       <LineShape />
-                    </div>
+                    </div> */}
+                    <p
+                      className='!tw-text-white  tw-max-w-3xl tw-mx-auto wow tpfadeUp '
+                      data-wow-duration='.9s'
+                      data-wow-delay='.7s'
+
+                      ref={sub_title_ref}
+                    >
+                      {sub_title}
+                    </p>
                   </div>
                   <div
-                    className='tp-hero__input p-relative wow tpfadeUp'
+                    className='tp-hero__input search p-relative wow tpfadeUp'
                     data-wow-duration='.9s'
                     data-wow-delay='.5s'
+                    ref={hero_form_ref}
                   >
                     <HeroForm />
                   </div>
-                  <p
-                    className='wow tpfadeUp '
-                    data-wow-duration='.9s'
-                    data-wow-delay='.7s'
-                  >
-                    {sub_title}
-                  </p>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className='tp-hero__bottom z-index-5'>
-          <div className='container'>
-            <div className='row justify-content-center'>
-              <div className='col-xl-10'>
-                <div className='tp-hero__thumb-wrapper-main p-relative'>
-                  {hero_shape_img.map((item, i) => (
-                    <div
-                      key={i}
-                      className={`tp-hero__shape-img-${item.cls} d-none d-xl-block`}
-                    >
-                      <Image 
-                        src={item.img} 
-                        alt='decorative shape' 
-                        width={120} 
-                        height={150}
-                        quality={85}
-                        loading="lazy"
-                        className="object-contain"
-                      />
-                    </div>
-                  ))}
-                  <div>
-                    <div className='tp-hero__thumb-wrapper p-relative'>
-                      <div className='row'>
 
-
-                     <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  poster="/assets/img/herowebp/poster.webp"
-  className="w-full h-[600px] object-cover"
-  aria-hidden="true"
-  disablePictureInPicture
-  id="hero-video"
->
-  <source src="/assets/img/hero/hero-video.webm" type="video/webm" />
-  <source src="/assets/img/hero/herosection.mp4" type="video/mp4" />
-</video>
-
-
-
-
-                        {/* <source
-                            src='/assets/img/hero/hero-video.mov'
-                            type='video/quicktime'
-                          /> */}
-
-                        {/* <iframe src="https://player.vimeo.com/video/1051407991?h=2a87efaafb&autoplay=1&muted=1&loop=1&background=1" 
-        width="640" height="360" frameborder="0" 
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" 
-        allowfullscreen title="hero-video compress">
-</iframe> */}
-                        {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/MqffbpjhriQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div >
     </>
   );
 };
