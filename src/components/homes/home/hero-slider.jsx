@@ -123,34 +123,60 @@ const HeroSlider = () => {
       const { gsap } = await import("gsap"); // dynamic import ✅
 
       const title = document.querySelectorAll(".tp-hero__hero-title span.child");
-
+      const mm = gsap.matchMedia();
       const mainTl = gsap.timeline();
 
-      mainTl.fromTo(
-        hero_bg.current,
-        { opacity: 0, scale: 1.2 },
-        { opacity: 1, scale: 1, duration: 1.4 }
-      );
+      // Desktop only (LG and up)
+      mm.add("(min-width: 1024px)", () => {
+        mainTl.fromTo(
+          hero_bg.current,
+          { opacity: 0, scale: 1.2 },
+          { opacity: 1, scale: 1, duration: 1.4 }
+        );
 
-      mainTl.to(title, {
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        stagger: 0.5,
-        ease: "power4.out",
+        mainTl.to(title, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.5,
+          ease: "power4.out",
+        });
+
+        mainTl.fromTo(
+          sub_title_ref.current,
+          { opacity: 0 },
+          { opacity: 1, ease: "power4.out" }
+        );
+
+        mainTl.fromTo(
+          hero_form_ref.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.5, ease: "power4.out" }
+        );
       });
+      mm.add("(max-width: 1023px)", () => {
 
-      mainTl.fromTo(
-        sub_title_ref.current,
-        { opacity: 0 },
-        { opacity: 1, ease: "power4.out" }
-      );
 
-      mainTl.fromTo(
-        hero_form_ref.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5, ease: "power4.out" }
-      );
+        mainTl.to(title, {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.5,
+          ease: "power4.out",
+        });
+
+        mainTl.fromTo(
+          sub_title_ref.current,
+          { opacity: 0 },
+          { opacity: 1, ease: "power4.out" }
+        );
+
+        mainTl.fromTo(
+          hero_form_ref.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.5, ease: "power4.out" }
+        );
+      })
     };
 
     loadGsap();
