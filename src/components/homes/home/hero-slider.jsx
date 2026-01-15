@@ -50,7 +50,7 @@ const hero_content = {
 
   mobile_title: (
     <>
-      <span className='tp_title' >
+      <span className='tp_title  tw-text-nowrap' >
         <span className='child' >Boost Business Growth  </span>
       </span>{" "}
       <br />
