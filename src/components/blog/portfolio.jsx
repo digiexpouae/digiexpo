@@ -10,7 +10,6 @@ const categories = [
 
 const Portfolio = ({blogArr}) => {
 
-
     return (
         <>
             <div className={"portfolio" + styles["blog-grid-inner"] + "mb-80 mt-80"}>
@@ -26,7 +25,12 @@ const Portfolio = ({blogArr}) => {
                   </div>
                   <div className={"row grid" + styles["blog-grid-inner"]}>
                    {blogArr?.map((item) => {
-                     return  <BlogCard title={item.title} mainImage={item.mainImage?.asset} slug={item.currentSlug} />
+                     // Support both legacy Sanity posts and new WordPress GraphQL posts
+                     const title = item.title?.rendered ?? item.title ?? '';
+                     const slug = item.currentSlug ?? item.slug ?? '';
+                     const mainImage = item.mainImage || item.featuredImage || null;
+                     const date = item.date || '';
+                     return  <BlogCard key={slug} title={title} mainImage={mainImage} slug={slug} date={date} />
                    })}
                   </div>
                </div>
