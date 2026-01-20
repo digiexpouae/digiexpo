@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 
-const HeroBanner = ({ bg_img,title="Get In",subtitle="Touch" }) => {
+const HeroBanner = ({ bg_img, title = "Get In", subtitle = "Touch" }) => {
     const [offset, setOffset] = useState(0);
 
-   function handleScroll() {
-      setOffset(window.scrollY);
-   }
-   // Add an event listener to update the offset on scroll
-   React.useEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-   }, []);
+    function handleScroll() {
+        setOffset(window.scrollY);
+    }
+    // Add an event listener to update the offset on scroll
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <>

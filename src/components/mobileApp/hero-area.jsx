@@ -114,7 +114,7 @@ const HeroArea = ({ main_title }) => {
           <ArrowLine />
         </div> */}
         <div className='container-fluid g-0'>
-          <div className='row g-0 align-items-end'>
+          <div className='row g-0 align-items-center'>
             <div className='col-xl-6 col-lg-6'>
               <div className='tp-hero-2__title-box'>
                 <div className='tp-hero-2__title tp-char-animation tw-text-center md:tw-text-start tw-opacity-0' ref={titleRef}>{title}</div>
@@ -124,7 +124,7 @@ const HeroArea = ({ main_title }) => {
                 </p> */}
               </div>
               <div className='tp-hero-2__btn '>
-                <div className="tp-hero-btn-3 wow tpfadeUp tw-flex " data-wow-duration="1s" data-wow-delay=".9s">
+                <div className="tp-hero-btn-3 wow tpfadeUp tw-flex tw-items-center tw-justify-center md:tw-justify-start  md:tw-items-start" data-wow-duration="1s" data-wow-delay=".9s">
                   <Link className="tp-btn-white-2 tp-btn-hover alt-color-black tw-inline-block tw-opacity-0" href="/casestudies" ref={ref_two}>
                     <span className='white-text'>{btn_1}</span>
                     <b></b>
