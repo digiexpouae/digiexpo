@@ -25,7 +25,7 @@ const Service = () => {
           {/* Desktop Background */}
           <div className="tw-hidden md:tw-block tw-relative tw-h-full tw-w-full">
             <Image
-              src="/assets/img/herowebp/service.webp"
+              src="/assets/img/herowebp/service-desktop.webp"
               alt="Background Desktop"
               fill
               className="tw-object-cover "
@@ -38,7 +38,7 @@ const Service = () => {
           {/* Mobile Background */}
           <div className="tw-block md:tw-hidden tw-relative tw-h-full tw-w-full">
             <Image
-              src="/assets/img/herowebp/services-mob.webp"
+              src="/assets/img/herowebp/service-mob.webp"
               alt="Background Mobile"
               fill
               className="tw-object-cover "

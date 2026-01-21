@@ -16,11 +16,11 @@ const HeroSection = ({ text1, text2, image, imagemob, bgVariant }) => {
     md:tw-bg-[url('/assets/img/herowebp/casestudy-bg.webp')]
   `,
     ocean: `
-    tw-bg-[url('/assets/img/herowebp/ocean.webp')]
+    tw-bg-[url('/assets/img/herowebp/ocean-mob.webp')]
     md:tw-bg-[url('/assets/img/herowebp/casestudy-bg.webp')]
   `,
     saami: `
-    tw-bg-[url('/assets/img/herowebp/saami.webp')]
+    tw-bg-[url('/assets/img/herowebp/saami-mob.webp')]
     md:tw-bg-[url('/assets/img/herowebp/casestudy-bg.webp')]
   `,
 
@@ -33,11 +33,11 @@ const HeroSection = ({ text1, text2, image, imagemob, bgVariant }) => {
 
     >
       {/* Inner content */}
-      <div className=" lg:tw-w-1/2   lg:tw-h-full tw-flex tw-flex-col lg:tw-pl-24 tw-justify-center tw-mb-10 md:tw-py-0 tw-px-4">
+      <div className=" lg:tw-w-1/2   lg:tw-h-full tw-flex tw-flex-col lg:tw-pl-24 tw-justify-center tw-mb-4 md:tw-py-0 tw-px-4">
         <h1 className="tw-text-white tw-text-center  md:tw-text-start tw-text-3xl md:tw-text-5xl tw-font-bold ">
           {title}
         </h1>
-        <p className="tw-text-white tw-text-center md:tw-text-start tw-text-xs md:tw-text-base  ">{text}</p>
+        <p className="tw-text-white tw-text-center md:tw-text-start tw-text-sm md:tw-text-base  ">{text}</p>
 
         {/* <div className="tw-flex tw-gap-4">
           <Link
