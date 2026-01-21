@@ -16,15 +16,15 @@ import styles from '../../components/blog/blogCard.module.scss'
 // }
 // const {sub_title, title, author_name, author_info}  = breadcrumb_content
 
-const BreadcrumbSix = ({sub_title , title}) => {
-    return (
-        <>
-            <div className="breadcrumb__area breadcrumb-ptb-4 p-relative blue-bg-2">
+const BreadcrumbSix = ({ sub_title, title }) => {
+   return (
+      <>
+         <div className="breadcrumb__area breadcrumb-ptb-4 p-relative tw-bg-[url('/assets/img/herowebp/casestudy-bg.webp')] tw-bg-cover tw-bg-center">
             <div className="breadcrumb__shape-1">
-               <Image src={img_1} alt="theme-pure" />
+               {/* <Image src={img_1} alt="theme-pure" /> */}
             </div>
             <div className="breadcrumb__shape-2">
-               <Image src={img_2} alt="theme-pure" />
+               {/* <Image src={img_2} alt="theme-pure" /> */}
             </div>
             <div className="container">
                <div className="row align-items-end">
@@ -47,14 +47,14 @@ const BreadcrumbSix = ({sub_title , title}) => {
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-3">
                      <div className={`${styles["blog-details-social-box"]} z-index-3 text-md-end text-start`}>
-                        <SocialLinks />  
+                        <SocialLinks />
                      </div>
                   </div>
                </div>
             </div>
          </div>
-        </>
-    );
+      </>
+   );
 };
 
 export default BreadcrumbSix;
