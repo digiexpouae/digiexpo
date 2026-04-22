@@ -13,6 +13,7 @@ import Image from "next/image";
 import signature from '../../../public/assets/img/image.jpeg'
 
 import logo from "../../../public/assets/img/logo/logo-black.png";
+import Logo from '../../../public/assets/img/logo_2.png'
 import mainLogo from "../../../public/assets/img/logo/mainlogo.46431c48 (1).webp";
 import { SocialLinks, SocialLinksTwo } from "@/common/social-links";
 import PhoneFourWhite from "@/svg/phone-4-white.js";
@@ -49,7 +50,6 @@ const Header = () => {
       });
     })();
   }, []);
-console.log("image url:", signature.src) // paste this at top of any existing component
 
   return (
     
@@ -91,7 +91,7 @@ console.log("image url:", signature.src) // paste this at top of any existing co
                   <Link href='/'>
 
 
-                    <Image src={mainLogo} priority alt='theme-pure' className={sticky ? "d-block" : "d-none"} />
+                    <Image src={Logo} priority alt='theme-pure' className={sticky ? "d-block" : "d-none"} width={120} height={80}/>
                     <Image src={'/assets/img/digi.png'} priority alt='theme-pure' width={120} height={80} className={sticky ? "d-none" : "d-block"} />
                   </Link>
                 </div>
