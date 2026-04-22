@@ -10,6 +10,7 @@ import Link from "next/link";
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import NavMenu from "./nav-menu";
 import Image from "next/image";
+import signature from '../../../public/assets/img/image.jpeg'
 
 import logo from "../../../public/assets/img/logo/logo-black.png";
 import mainLogo from "../../../public/assets/img/logo/mainlogo.46431c48 (1).webp";
