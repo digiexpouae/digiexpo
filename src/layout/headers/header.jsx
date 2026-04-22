@@ -49,8 +49,10 @@ const Header = () => {
       });
     })();
   }, []);
+console.log("image url:", signature.src) // paste this at top of any existing component
 
   return (
+    
     <>
       <header className='header-bottom__transparent z-index-6 tp-header-height'>
         <div
@@ -158,6 +160,8 @@ const Header = () => {
       </header>
       <SearchPopup searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
       <Offcanvus sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+    
+    
     </>
   );
 };
