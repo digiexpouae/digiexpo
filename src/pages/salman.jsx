@@ -1,21 +1,18 @@
 import React, { useEffect } from 'react';
 import SEO from "../common/seo";
+import FooterFour from "@/layout/footers/footer-4";
+
+import Header from "@/layout/headers/header-3";
 
 const VCARD_URL = "/assets/Salman-Hussain-1.vcf";
 
 export default function SalmanContactPage() {
-  useEffect(() => {
-    const link = document.createElement("a");
-    link.href = VCARD_URL;
-    link.download = "Salman-Hussain-1.vcf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }, []);
 
   return (
     <>
       <SEO pageTitle={"Salman Hussain"} canonicalUrl={"https://www.digiexpo.ae/salman"} />
+     
+     <Header />
       <div
         style={{
           minHeight: "100vh",
@@ -41,6 +38,7 @@ export default function SalmanContactPage() {
           <b></b>
         </a>
       </div>
+      <FooterFour />
     </>
   );
 }
